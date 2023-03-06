@@ -1,0 +1,5 @@
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\TmdbAPI\bin\Release\TheMovieDBLib.dll
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\TmdbAPI\bin\Release\TheMovieDBLib.pdb
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\TmdbAPI\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\TmdbAPI\obj\Release\TheMovieDBLib.dll
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\TmdbAPI\obj\Release\TheMovieDBLib.pdb

@@ -1,0 +1,1744 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SchedulesDirect</name>
+    </assembly>
+    <members>
+        <member name="T:SchedulesDirect.SchedulesDirectMd5Response">
+            <summary>
+            The class that describes a Schedules Direct MD5 response.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMd5Response.LastModified">
+            <summary>
+            The last modified date.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMd5Response.Md5">
+            <summary>
+            The MD5 checksum.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectMd5Response.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectMd5Response class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectCastMember">
+            <summary>
+            The class that describes a Schedules Direct cast member.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectCastMember.PersonId">
+            <summary>
+            Get or set the identification code.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectCastMember.NameId">
+            <summary>
+            Get or set the name identification.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectCastMember.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectCastMember.Role">
+            <summary>
+            Get or set the role.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectCastMember.CharacterName">
+            <summary>
+            Get or set the name of the character.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectCastMember.BillingOrder">
+            <summary>
+            Get or set the billing order.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectCastMember.BillingOrderNumber">
+            <summary>
+            Get the billing order.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectCastMember.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectCastMember class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectConfig">
+            <summary>
+            The class that describes the Schedules Direct configuration.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectConfig.Instance">
+            <summary>
+            Get the single instance of the SchedulesDirectConfig class.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectConfig.IsLoaded">
+            <summary>
+            Returns true if the instance has been successfully loaded; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectConfig.UserName">
+            <summary>
+            Get or set the user name.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectConfig.Password">
+            <summary>
+            Get or set the password.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectConfig.Load">
+            <summary>
+            Load the instance from a file.
+            </summary>
+            <returns>Null if the load is successful; asn error message otherwise.</returns>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectConfig.Unload">
+            <summary>
+            Unload the instance to a file.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectDescription">
+            <summary>
+            The class that describes a Schedules Direct description.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectDescription.Language">
+            <summary>
+            Get or set the language.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectDescription.Description">
+            <summary>
+            Get or set the description.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectDescription.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectDescription class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectDescriptions">
+            <summary>
+            The class that describes the 2 types of SchedulesDirect description.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectDescriptions.ShortDescriptions">
+            <summary>
+            Get or set the list of short descriptions.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectDescriptions.LongDescriptions">
+            <summary>
+            Get or set the list of long descriptions.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectDescriptions.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectDescriptions class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectEpisodeImage">
+            <summary>
+            The class that describes a SchedulesDirect episode image.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectEpisodeImage.Width">
+            <summary>
+            Get or set the width of the image.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectEpisodeImage.Height">
+            <summary>
+            Get or set the height of the image.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectEpisodeImage.Uri">
+            <summary>
+            Get or set the URL of the image.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectEpisodeImage.Category">
+            <summary>
+            Get or set the category of the image.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectEpisodeImage.Primary">
+            <summary>
+            Get or set the primary setting for the image.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectEpisodeImage.Tier">
+            <summary>
+            Get or set the level of the image.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectEpisodeImage.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectEpisodeImage class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectEventDetails">
+            <summary>
+            The class that describes Schedules Direct event details.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectEventDetails.Subtype">
+            <summary>
+            Get or set the subtype.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectEventDetails.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectEventDetails class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectImageEntry">
+            <summary>
+            The class the describes a Schedules Direct image entry.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectImageEntry.Width">
+            <summary>
+            Get or set the width of the image.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectImageEntry.Height">
+            <summary>
+            Get or set the height of the entry.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectImageEntry.Uri">
+            <summary>
+            Get or set the URL of the image.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectImageEntry.Size">
+            <summary>
+            Get or set the size of the image.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectImageEntry.Aspect">
+            <summary>
+            Get or set the aspect ratio of the image.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectImageEntry.Category">
+            <summary>
+            Get or set the category of the image.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectImageEntry.Text">
+            <summary>
+            Get or set the text associated with the image.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectImageEntry.Primary">
+            <summary>
+            Get or set the primary setting for the image.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectImageEntry.Tier">
+            <summary>
+            Get or set the level of the image.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectImageEntry.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectImageEntry class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectImageError">
+            <summary>
+            The class that describes a Schedules Direct image error message.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectImageError.Response">
+            <summary>
+            Get or set the response.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectImageError.Code">
+            <summary>
+            Get or set the error code.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectImageError.ServerId">
+            <summary>
+            Get or set the servier ID.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectImageError.Message">
+            <summary>
+            Get or set the error message.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectImageError.Date">
+            <summary>
+            Get or set the timestamp.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectImageError.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectImageError class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectImageResponse">
+            <summary>
+            The class that describes a Schedules Direct image response.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectImageResponse.ImageList">
+            <summary>
+            Get or set the list of program images.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectImageResponse.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectImageResponse class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectMetadataEntry">
+            <summary>
+            The class that describes a Schedules Direct metadata entry.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMetadataEntry.Season">
+            <summary>
+            Get or set the season number.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMetadataEntry.Episode">
+            <summary>
+            Get or set the episode number.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMetadataEntry.TotalSeasons">
+            <summary>
+            Get or set the total number of seasons.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMetadataEntry.TotalEpisodes">
+            <summary>
+            Get or set the total number of episodes.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMetadataEntry.SeriesId">
+            <summary>
+            Get or set the series ID.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMetadataEntry.EpisodeId">
+            <summary>
+            Get or set the episode ID.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectMetadataEntry.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectMetadataEntry class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectMd5Entry">
+            <summary>
+            The class that describes a Schedules Direct MD5 entry.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMd5Entry.StationId">
+            <summary>
+            Get the station ID.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMd5Entry.Date">
+            <summary>
+            Get the date.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMd5Entry.Md5">
+            <summary>
+            Get the MD5 checksum.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMd5Entry.LastModifiedDate">
+            <summary>
+            Get the last modified date.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectMd5Entry.#ctor(System.String,System.DateTime,System.String,System.DateTime)">
+            <summary>
+            Initialize a new instance of the SchedulesDirectMd5Entry class.
+            </summary>
+            <param name="stationId">The station ID.</param>
+            <param name="date">The date.</param>
+            <param name="md5">The MD5 checksum.</param>
+            <param name="lastModifiedDate">The last modified date.</param>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectMd5Entry.IsCurrent(System.String,System.DateTime,System.String,System.DateTime,System.Collections.ObjectModel.Collection{SchedulesDirect.SchedulesDirectMd5Entry})">
+            <summary>
+            Determine if a specified MD5 entry is current.
+            </summary>
+            <param name="stationId">The station ID.</param>
+            <param name="date">The date.</param>
+            <param name="md5">The MD5 checksum.</param>
+            <param name="lastModifiedDate">The last modified date.</param>
+            <param name="md5Entries">The list of MD5 entries to check against.</param>
+            <returns>True if the entry is current; false otherwise.</returns>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectMovie">
+            <summary>
+            The class that describes a SchedulesDirect movie.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMovie.Year">
+            <summary>
+            Get or set the release year.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMovie.Duration">
+            <summary>
+            Get or set the running time.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMovie.Ratings">
+            <summary>
+            Get or set the list of ratings.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectMovie.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectMovie class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectProgramImageList">
+            <summary>
+            The class that describes a Schedules Direct image list.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramImageList.ProgramId">
+            <summary>
+            Get or set the program identifier.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramImageList.ImageEntries">
+            <summary>
+            Get or set the list of image entries.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramImageList.Error">
+            <summary>
+            Get or set the error information.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectProgramImageList.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectImageList class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectProgramInformation">
+            <summary>
+            The class the describes the Schedules Direct programme information.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformation.ProgramId">
+            <summary>
+            Get or set the programme identifier.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformation.Titles">
+            <summary>
+            Get or set the list of programme titles.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformation.EpisodeTitle">
+            <summary>
+            Get or set the episode title.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformation.Descriptions">
+            <summary>
+            Get or set the programme descriptions.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformation.EventDetails">
+            <summary>
+            Get the event details information.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformation.OriginalAirDate">
+            <summary>
+            Get or set the original air date.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformation.Genres">
+            <summary>
+            Get or set the list of genres.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformation.MetadataEntries">
+            <summary>
+            Get or set the programme metadata entries.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformation.Cast">
+            <summary>
+            Get or set the list of cast members.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformation.Crew">
+            <summary>
+            Get or set the list of crew members.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformation.EntityType">
+            <summary>
+            Get or set the entity type.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformation.ShowType">
+            <summary>
+            Get or set the show type.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformation.HasImageArtwork">
+            <summary>
+            Returns true if the programme has artwork; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformation.HasSeriesArtwork">
+            <summary>
+            Returns true if there is series artwork available; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformation.HasEpisodeArtwork">
+            <summary>
+            Returns true if there is episode artwork available; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformation.Movie">
+            <summary>
+            Get or set movie information for the programme.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformation.EpisodeImage">
+            <summary>
+            Get or set the episode image.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformation.Md5">
+            <summary>
+            Get or set the MD5 checksum for the programme.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectProgramInformation.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirecProgrammeInfoirmation class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectProgramMetadata">
+            <summary>
+            The class that describes the SchedulesDirect program metadata.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramMetadata.GracenoteMetadata">
+            <summary>
+            Get or set the Gracenote metadata.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramMetadata.TvdbMetadata">
+            <summary>
+            Get or set the TVDB metadata.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectProgramMetadata.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectProgramMetadata class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectProgramInformationResponse">
+            <summary>
+            The class that describes the Schedules Direct program information response.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramInformationResponse.Programmes">
+            <summary>
+            Get or set the list of programmes.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectProgramInformationResponse.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectProgramInformationResponse class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectMultipart">
+            <summary>
+            The class that describes a Schedules Direct multipart definition.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMultipart.PartNumber">
+            <summary>
+            get or set the part number.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMultipart.TotalParts">
+            <summary>
+            Get or set the total number of parts.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectMultipart.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectMultipart class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectProgramTitle">
+            <summary>
+            The class that describes the Schedules Direct programme title.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramTitle.Title">
+            <summary>
+            Get or set the programme title.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectProgramTitle.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectProgramTitle class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectQualityRating">
+            <summary>
+            The class that describes the Schedules Direct movie rating.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectQualityRating.RatingsBody">
+            <summary>
+            Get or set the ratings body.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectQualityRating.Rating">
+            <summary>
+            Get or set the rating.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectQualityRating.MinumumRating">
+            <summary>
+            Get or set the minimum rating from the rating body.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectQualityRating.MaximumRating">
+            <summary>
+            Get or set the maximum rating from the rating body.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectQualityRating.Increment">
+            <summary>
+            Get or set the rating increment.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectQualityRating.StarRating">
+            <summary>
+            Get the rating as a star rating string.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectQualityRating.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectQualityRating class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectContentRating">
+            <summary>
+            The class that describes the Schedules Direct proramme content rating.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectContentRating.Body">
+            <summary>
+            Get or set the rating body.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectContentRating.Code">
+            <summary>
+            Get or set the rating code.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectContentRating.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectContentRating class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectScheduleMetadata">
+            <summary>
+            The class that describes the Schedules Direct programme schedule metadata.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectScheduleMetadata.Modified">
+            <summary>
+            Get or set the last modified date.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectScheduleMetadata.Md5">
+            <summary>
+            Get or set the MD5 checksum.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectScheduleMetadata.StartDateString">
+            <summary>
+            Get or set the schedule start date.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectScheduleMetadata.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectScheduleMetadata class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectBroadcaster">
+            <summary>
+            The class that describes a Schedules Direct broadcaster.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectBroadcaster.City">
+            <summary>
+            Get or set the city.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectBroadcaster.State">
+            <summary>
+            Get or set the state.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectBroadcaster.PostalCode">
+            <summary>
+            Get or set the postcode.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectBroadcaster.Country">
+            <summary>
+            Get or set the country.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectBroadcaster.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectBroadcaster class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectHeadend">
+            <summary>
+            The class that describes a Schedules Direct headend.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectHeadend.Headend">
+            <summary>
+            Get or set the headend identification.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectHeadend.Transport">
+            <summary>
+            Get or set the transport.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectHeadend.Location">
+            <summary>
+            Get or set the location.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectHeadend.Lineups">
+            <summary>
+            Get or set the lineups in the headend.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectHeadend.LineupID">
+            <summary>
+            Get or set the internal identity of the lineup.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectHeadend.Name">
+            <summary>
+            Get or set the name of the lineup.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectHeadend.Uri">
+            <summary>
+            Get or ser the URL associated with the lineup.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectHeadend.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirect headend class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectHeadendsResponse">
+            <summary>
+            The class that describes a Schedules Direct headend response.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectHeadendsResponse.Headends">
+            <summary>
+            Get or set the list of headends.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectHeadendsResponse.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectHeadendsResponse class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectLineupsResponse">
+            <summary>
+            The class that describes a Schedules Direct lineups response.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectLineupsResponse.Lineups">
+            <summary>
+            Get or set the list of lineups.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectLineupsResponse.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectLineupsResponse class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectLogo">
+            <summary>
+            The class that describes a Schedules Direct logo.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectLogo.Uri">
+            <summary>
+            Get or set the URI.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectLogo.Url">
+            <summary>
+            Get or set the URL.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectLogo.Height">
+            <summary>
+            Get or set the logo height.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectLogo.Width">
+            <summary>
+            Get or set the logo width.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectLogo.Md5">
+            <summary>
+            Get or set the MD5 checksum for the logo.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectLogo.Source">
+            <summary>
+            Get or set the source of the logo.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectLogo.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectLogo class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectMapEntry">
+            <summary>
+            The class that describes a Schedules Direct map entry.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.StationId">
+            <summary>
+            Get or set the station identity.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.UhfVhf">
+            <summary>
+            Get or set the UHF/VHF flag.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.AtscMajor">
+            <summary>
+            Get or set the ATSC major channel number.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.AtscMinor">
+            <summary>
+            Get or set the minor ATSC channel number.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.Channel">
+            <summary>
+            Get or set the channel number.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.ProviderCallSign">
+            <summary>
+            Get or set the call sign.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.LogicalChannelNumber">
+            <summary>
+            Get or set the logical channel number.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.MatchType">
+            <summary>
+            Get or set the match type.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.Frequency">
+            <summary>
+            Get or set the frequency.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.ServiceId">
+            <summary>
+            Get or set the DVB service ID.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.NetworkId">
+            <summary>
+            Get or set the DVB network ID.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.TransportId">
+            <summary>
+            Get or set the DVB transport ID.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.DeliverySystem">
+            <summary>
+            Get or set the DVB delivery system.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.ModulationSystem">
+            <summary>
+            Get or set the DVB modulation system.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.SymbolRate">
+            <summary>
+            Get or set the DVB symbol rate.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.Polarization">
+            <summary>
+            Get or set the DVB polarization.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.Fec">
+            <summary>
+            Get or set the DVB FEC.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.VirtualChannel">
+            <summary>
+            Get or set the virtual channel number.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.ChannelMajor">
+            <summary>
+            Get or set the major channel number.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapEntry.ChannelMinor">
+            <summary>
+            Get or set the minor channel number.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectMapEntry.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectMapEntry class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectMapResponse">
+            <summary>
+            The class that describes a Schedules Direct map response.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapResponse.MapEntries">
+            <summary>
+            Get or set the list of map entries.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapResponse.Stations">
+            <summary>
+            Get or set the list of station definitions.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectMapResponse.Metadata">
+            <summary>
+            Get or set the metadata.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectMapResponse.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectMapResponse class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectStationMetadata">
+            <summary>
+            The class that describes the Schedules Direct station metadata.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStationMetadata.Lineup">
+            <summary>
+            Get or set the lineup containing the station.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStationMetadata.Modified">
+            <summary>
+            Get the date of the last modification.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStationMetadata.Transport">
+            <summary>
+            Get the transport description.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStationMetadata.Modulation">
+            <summary>
+            Get the modulation used by the station.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectStationMetadata.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectStationMetadata class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectPreviewResponse">
+            <summary>
+            The class that describes the Schedules Direct Preview response.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectPreviewResponse.Channels">
+            <summary>
+            Get or set the list of channels.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectPreviewResponse.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectPreviewResponse class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectProgram">
+            <summary>
+            The class that describes a Schedules Direct programme.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.ProgramId">
+            <summary>
+            Get or set the programme identifier.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.AirDateTime">
+            <summary>
+            Get or set the air date and time.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.Duration">
+            <summary>
+            Get or set the duration of the programme.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.Md5">
+            <summary>
+            Get or set the MD5 checksum for the programme.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.New">
+            <summary>
+            Returns true if the programme is new; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.CableInTheClassroom">
+            <summary>
+            Returns true if the programme is from cable in the classroom; false otherwise. 
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.Catchup">
+            <summary>
+            Returns true if the programme is a catchup; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.Continued">
+            <summary>
+            Returns true if the programme is a continuation; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.Educational">
+            <summary>
+            Returns true if the programme is educational; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.JoinedInProgress">
+            <summary>
+            Returns true if the programme is joined while in progress; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.LeftInProgress">
+            <summary>
+            Returns true if the programme has been left in progress; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.Premiere">
+            <summary>
+            Returns true if the programme is a premiere showing; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.ProgramBreak">
+            <summary>
+            Returnsd true if the programme is a break; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.Repeat">
+            <summary>
+            Returns true if the programme is a repeat; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.Signed">
+            <summary>
+            Returns true if the programme is signed; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.SubjectToBlackout">
+            <summary>
+            Returns true if the programme is subject to blackout; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.TimeApproximate">
+            <summary>
+            Returns true if the duration is approximate; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.Free">
+            <summary>
+            Returns true if the programme is free on a paid for service; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.AudioProperties">
+            <summary>
+            Get or set the collection of audio properties.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.VideoProperties">
+            <summary>
+            Get the collection of video properties.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.LiveTapeDelay">
+            <summary>
+            Get or set if the programme is from a live tape delay; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.IsPremiereOrFinale">
+            <summary>
+            Get or set if the programme is a premiere or finale.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.ContentRatings">
+            <summary>
+            Get or set the list of content ratings.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgram.Multipart">
+            <summary>
+            Get or set the multipart information.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectProgram.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectProgram class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectResponse">
+            <summary>
+            The base class for Schedules Direct response messages.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectResponse.Response">
+            <summary>
+            Get or set the response description.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectResponse.Code">
+            <summary>
+            Get or set the response code.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectResponse.Message">
+            <summary>
+            Get or set the response message.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectResponse.ServerId">
+            <summary>
+            Get or set the server identification.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectResponse.DateTime">
+            <summary>
+            Get or set the timestamp.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectResponse.ChangesRemaining">
+            <summary>
+            Get or set the lineup changes still available.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectResponse.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectResponse class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectSchedule">
+            <summary>
+            The class that describes a Schedules Direct programme schedule.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectSchedule.StationId">
+            <summary>
+            Get or set the station identifier.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectSchedule.Programmes">
+            <summary>
+            Get or set the list of programmes in the schedule.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectSchedule.Metadata">
+            <summary>
+            Get or set the schedule metadata.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectSchedule.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectSchedule class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectSchedulesResponse">
+            <summary>
+            The class that describes the Sachedules Direct schedules response.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectSchedulesResponse.Schedules">
+            <summary>
+            Get or set the list of schedules.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectSchedulesResponse.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectSchedulesResponse class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectStation">
+            <summary>
+            The class that describes a Schedules Direct station.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStation.StationId">
+            <summary>
+            Get or set the station identifier.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStation.Name">
+            <summary>
+            Get or set the name of the station.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStation.CallSign">
+            <summary>
+            Get or set the station call sign.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStation.Affiliate">
+            <summary>
+            Get or set the affiliate.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStation.BroadcastLanguages">
+            <summary>
+            Get or set the list of languages broadcast by the station.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStation.DescriptionLanguages">
+            <summary>
+            Get or set the list of languages used for descriptions from the station.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStation.Broadcaster">
+            <summary>
+            Get or set the broadcaster information.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStation.StationLogos">
+            <summary>
+            Get or set the list of station logos.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStation.IsCommercialFree">
+            <summary>
+            Returns true if the station is commercial free; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStation.Metadata">
+            <summary>
+            Get or set the metadata for the station.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectStation.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectStation class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectTransmitter">
+            <summary>
+            The class that describes a terrestrial transmitter.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectTransmitter.Name">
+            <summary>
+            Get the transmitter name.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectTransmitter.Identity">
+            <summary>
+            Get the identifier for the transmitter.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectTransmitter.#ctor(System.String,System.String)">
+            <summary>
+            Initialize a new instance of the SchedulesDirectTransmitter class.
+            </summary>
+            <param name="name">The name of the transmitter.</param>
+            <param name="identity">The identifier for the transmitter.</param>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectTransmitter.ToString">
+            <summary>
+            Get a description of this instance.
+            </summary>
+            <returns>The description of the instance.</returns>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectContinent">
+            <summary>
+            The class that describes a Schedules Direct continent.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectContinent.Name">
+            <summary>
+            Get or set the name of the continent.
+            </summary>
+        </member>
+        <member name="F:SchedulesDirect.SchedulesDirectContinent.Countries">
+            <summary>
+            Get or set the list of countries in the continent.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectContinent.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectContinent class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectCountry">
+            <summary>
+            The class that describes a Schedules Direct country.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectCountry.FullName">
+            <summary>
+            Get or set the full name.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectCountry.ShortName">
+            <summary>
+            Get or set the short name.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectCountry.PostalCodeExample">
+            <summary>
+            Get or set the postcode example.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectCountry.PostalCode">
+            <summary>
+            Get or set the single postcode.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectCountry.OnePostalCode">
+            <summary>
+            True if the country only has a single postcode; false otherwise.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectCountry.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectCountry class.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectCountry.ToString">
+            <summary>
+            Get the description of this instance.
+            </summary>
+            <returns>The description of this instance.</returns>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectCountriesResponse">
+            <summary>
+            The class that describes a SchedulesDirectCountries response.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectCountriesResponse.Countries">
+            <summary>
+            Get or set the list of countries.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectCountriesResponse.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectCountries response.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectAccount">
+            <summary>
+            The class that describes a Schedules Direct account.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectAccount.Expires">
+            <summary>
+            Get or set the account expiry date.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectAccount.Messages">
+            <summary>
+            Get or set the Schedules Direct web site messages.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectAccount.MaxLineups">
+            <summary>
+            Get or set the maximum number of lineups.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectAccount.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectAccount class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectAvailableResponse">
+            <summary>
+            The class that describes a Schedules Direct availability response.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectAvailableResponse.Services">
+            <summary>
+            Get or set the list of available services.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectAvailableResponse.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectAvailableResponse class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectController">
+            <summary>
+            The class that controls access to the Schedules Direct API.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectController.AssemblyVersion">
+            <summary>
+            Get the full assembly version number.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectController.Instance">
+            <summary>
+            Get the single instance of the SchdulesDirectController class.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectController.IsInitialized">
+            <summary>
+            Return true if the instance has been initialized; false otherwise.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectController.Initialize(System.String,System.String)">
+            <summary>
+            Initialize the instance.
+            </summary>
+            <param name="userName">The user name.</param>
+            <param name="password">The password.</param>
+            <returns>A ReplyBase instance.</returns>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectController.LoadCountries">
+            <summary>
+            Load the Schedules Direct country list.
+            </summary>
+            <returns>A ReplyBase instance.</returns>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectController.LoadSatellites">
+            <summary>
+            Load the Schedules Direct satellite list.
+            </summary>
+            <returns>A ReplyBase instance.</returns>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectController.LoadTransmitters(System.String)">
+            <summary>
+            Load the Schedules Direct terrestrial transmitter list.
+            </summary>
+            <param name="countryCode">The country code.</param>
+            <returns>A ReplyBase instance.</returns>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectController.LoadLineups(System.String,System.String)">
+            <summary>
+            Load the lineups for a postcode.
+            </summary>
+            <param name="countryCode">The country code.</param>
+            <param name="otherCode">The postcode.></param>
+            <returns>A ReplyBase instance.</returns>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectController.GetLineups">
+            <summary>
+            Get the users lineup list.
+            </summary>
+            <returns>A ReplyBase instance.</returns>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectController.AddLineup(System.String)">
+            <summary>
+            Add a lineup to the users account.
+            </summary>
+            <param name="lineup">The identity of the lineup.</param>
+            <returns>A ReplyBase instance.</returns>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectController.DeleteLineup(System.String)">
+            <summary>
+            Delete a lineup from a users account.
+            </summary>
+            <param name="lineup">The identification of the lineup to delete.</param>
+            <returns>A ReplyBase instance.</returns>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectController.LoadPreview(System.String)">
+            <summary>
+            Load the channels in a lineup.
+            </summary>
+            <param name="lineupIdentity">The identity of the lineup.</param>
+            <returns>A ReplyBase instance.</returns>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectController.LoadStations(System.String)">
+            <summary>
+            Load the Schedules Direct station map and details.
+            </summary>
+            <param name="uri">The URL of the map.</param>
+            <returns>A ReplyBase instance.</returns>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectController.LoadEpg(System.Collections.ObjectModel.Collection{DomainObjects.SchedulesDirectChannel})">
+            <summary>
+            Load the EPG data for a list of channels.
+            </summary>
+            <param name="channels">The list of channels.</param>
+            <returns>A ReplyBase instance.</returns>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectController.LogStats">
+            <summary>
+            Log collection statistics.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectController.StoreImageLocally(System.String)">
+            <summary>
+            Get an icon and optionally output to a file.
+            </summary>
+            <param name="url">The URL of the icon.</param>
+            <returns>The original URL if the icon cannot be located or the path to the stored icon.</returns>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectSatellite">
+            <summary>
+            The class that describes a satellite.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectSatellite.Name">
+            <summary>
+            Get the satellite name.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectSatellite.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the SchedulesDirectSatellite class.
+            </summary>
+            <param name="name">The name of the satellite.</param>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectSatellite.ToString">
+            <summary>
+            Get a description of this instance.
+            </summary>
+            <returns>The description of this instance.</returns>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectService">
+            <summary>
+            The class that describes a Schedules Direct service.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectService.Type">
+            <summary>
+            Get or set the type of service.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectService.Description">
+            <summary>
+            Get or set the description of the service.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectService.Url">
+            <summary>
+            Get or set the URL of the service.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectService.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectService class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectStatusResponse">
+            <summary>
+            The class that describes the Schedules Direct status response.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStatusResponse.Account">
+            <summary>
+            Get or set the account information.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStatusResponse.Lineups">
+            <summary>
+            Get or set the list of lineups associated with the account.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStatusResponse.LineupChangesRemaining">
+            <summary>
+            Get or set the number of lineup changes still available.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStatusResponse.SystemStatuses">
+            <summary>
+            Get the system status information.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectStatusResponse.LastDataUpdate">
+            <summary>
+            Get or set the date of the last modification.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectStatusResponse.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectStatusResponse class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectSystemStatus">
+            <summary>
+            The class that describes the Schedules Direct system status.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectSystemStatus.Date">
+            <summary>
+            Get or set the date of the status.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectSystemStatus.Status">
+            <summary>
+            Get or set the status.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectSystemStatus.Message">
+            <summary>
+            Get or set the message.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectSystemStatus.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectSystemStatus class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectTokenResponse">
+            <summary>
+            The class that describes a Schedules Direct token response.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectTokenResponse.Token">
+            <summary>
+            Get or set the token.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectTokenResponse.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectToken class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectLineupsPreviewResponse">
+            <summary>
+            The class that describes the Schedules Direct lineups preview response.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectLineupsPreviewResponse.Channels">
+            <summary>
+            Get or set the list of channels in the lineup.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectLineupsPreviewResponse.#ctor">
+            <summary>
+            Initialize a new instance of the SchedulesDirectLineupsPreview class.
+            </summary>
+        </member>
+        <member name="T:SchedulesDirect.SchedulesDirectProgramCategory">
+            <summary>
+            The class that describes a Schedules Direct program category.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramCategory.Categories">
+            <summary>
+            Get the collection of Schedules Direct categories.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramCategory.UndefinedCategories">
+            <summary>
+            Get the collection of undefined Schedules Direct categories.
+            </summary>
+        </member>
+        <member name="P:SchedulesDirect.SchedulesDirectProgramCategory.FileName">
+            <summary>
+            Get the XMLTV categories standard filename.
+            </summary>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectProgramCategory.FindCategory(System.String)">
+            <summary>
+            Find a category.
+            </summary>
+            <param name="categoryTag">The category tag.</param>
+            <returns>A category instance or null if the category is undefined.</returns>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectProgramCategory.AddCategory(System.String,System.String)">
+            <summary>
+            Add a category.
+            </summary>
+            <param name="categoryTag">The category tag.</param>
+            <param name="description">The full category description.</param>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectProgramCategory.Load">
+            <summary>
+            Load the categories from the standard file.
+            </summary>
+            <returns>True if load was successful; false otherwise.</returns>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectProgramCategory.Load(System.String)">
+            <summary>
+            Load the categories from a specified file.
+            </summary>
+            <param name="fileName">The specied filename.</param>
+            <returns>True if load was successful; false otherwise.</returns>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectProgramCategory.Save(System.String)">
+            <summary>
+            Save the categories to a specified file.
+            </summary>
+            <param name="fileName">The specied filename.</param>
+            <returns>Error message if it failed; null otherwise.</returns>
+        </member>
+        <member name="M:SchedulesDirect.SchedulesDirectProgramCategory.AddUndefinedCategory(System.String,System.String)">
+            <summary>
+            Add an undefined category to the collection of undefined contents.
+            </summary>
+            <param name="category">The category identifier.</param>
+            <param name="sampleEvent">The description of a sample event.</param>
+        </member>
+    </members>
+</doc>

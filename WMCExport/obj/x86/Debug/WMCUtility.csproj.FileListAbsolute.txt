@@ -1,0 +1,6 @@
+C:\Cygnus Consulting\EPGCollector 4.3\WMCExport\bin\Debug\WMCUtility.exe.config
+C:\Cygnus Consulting\EPGCollector 4.3\WMCExport\bin\Debug\WMCUtility.exe
+C:\Cygnus Consulting\EPGCollector 4.3\WMCExport\bin\Debug\WMCUtility.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\WMCExport\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\WMCExport\obj\x86\Debug\WMCUtility.exe
+C:\Cygnus Consulting\EPGCollector 4.3\WMCExport\obj\x86\Debug\WMCUtility.pdb

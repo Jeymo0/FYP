@@ -1,0 +1,644 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>XmltvParser</name>
+    </assembly>
+    <members>
+        <member name="T:XmltvParser.XmltvAudio">
+            <summary>
+            The class that describes an XMLTV audio tag.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvAudio.Present">
+            <summary>
+            Get the present indicator.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvAudio.Stereo">
+            <summary>
+            Get the stereo indicator.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvAudio.IsPresent">
+            <summary>
+            Return true if audio is present; false otherwise.
+            </summary>
+        </member>
+        <member name="M:XmltvParser.XmltvAudio.GetInstance(System.Xml.XmlReader)">
+            <summary>
+            Get a loaded instance of the class.
+            </summary>
+            <param name="xmlReader">An XmlReader instance for the tag.</param>
+            <returns>An instance of the class with the tag data loaded.</returns>
+        </member>
+        <member name="T:XmltvParser.XmltvChannel">
+            <summary>
+            The class that describes an XMLTV channel.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvChannel.Channels">
+            <summary>
+            Get or set the collection of channels in an XMLTV file.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvChannel.Id">
+            <summary>
+            Get the ID of the channel.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvChannel.DisplayNames">
+            <summary>
+            Get the display names of a channel.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvChannel.Icon">
+            <summary>
+            Get the icon that represents the channel.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvChannel.Urls">
+            <summary>
+            Get the URL's that are related to the channel.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvChannel.IdFormat">
+            <summary>
+            Get or set the format of the ID attribute.
+            </summary>
+        </member>
+        <member name="M:XmltvParser.XmltvChannel.GetInstance(System.Xml.XmlReader)">
+            <summary>
+            Get a new instance of the XmltvChannel class with data loaded.
+            </summary>
+            <param name="xmlReader">An XmlReader instance for the channel tag.</param>
+            <returns>An XmltvChannel instance with data loaded.</returns>
+        </member>
+        <member name="T:XmltvParser.XmltvController">
+            <summary>
+            The class that describes the Xmltv parser controller.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvController.AssemblyVersion">
+            <summary>
+            Get the full assembly version number.
+            </summary>
+        </member>
+        <member name="M:XmltvParser.XmltvController.Process(System.String,DomainObjects.ImportFileSpec)">
+            <summary>
+            Process an XMLTV file.
+            </summary>
+            <param name="fileName">The actual file path.</param>
+            <param name="fileSpec">The file definition.</param>
+            <returns>An error message or null if the file is processed successfully.</returns>
+        </member>
+        <member name="M:XmltvParser.XmltvController.ProcessChannels(DomainObjects.LanguageCode,DomainObjects.ImportImageMode)">
+            <summary>
+            Create stations from the XMLTV channel data.
+            </summary>
+            <param name="languageCode">The language code. May be null</param>
+            <param name="storeImagesLocally">True to download images; false otherwise.</param>
+            <returns>A list of stations or null if no channel data exists.</returns>
+        </member>
+        <member name="M:XmltvParser.XmltvController.ProcessChannels(System.String,DomainObjects.ImportFileSpec)">
+            <summary>
+            Process the channel information from an XMLTV file.
+            </summary>
+            <param name="fileName">The actual file path.</param>
+            <param name="fileSpec">The file definition.</param>
+            <returns>An error message or null if the file was processed successfully.</returns>
+        </member>
+        <member name="M:XmltvParser.XmltvController.Clear">
+            <summary>
+            Clear the XMLTV data.
+            </summary>
+        </member>
+        <member name="M:XmltvParser.XmltvController.LogStats">
+            <summary>
+            Log the import statistics.
+            </summary>
+        </member>
+        <member name="T:XmltvParser.XmltvEpisodeNumber">
+            <summary>
+            The class that describes an XMLTV episode number tag.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvEpisodeNumber.System">
+            <summary>
+            Get the system type.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvEpisodeNumber.Episode">
+            <summary>
+            Get the episode.
+            </summary>
+        </member>
+        <member name="M:XmltvParser.XmltvEpisodeNumber.GetInstance(System.Xml.XmlReader)">
+            <summary>
+            Get a loaded instance of the class.
+            </summary>
+            <param name="xmlReader">An XmlReader instance for the tag.</param>
+            <returns>An instance of the class with the tag data loaded.</returns>
+        </member>
+        <member name="T:XmltvParser.XmltvIcon">
+            <summary>
+            The class that describes an XMLTV icon tag.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvIcon.Source">
+            <summary>
+            Get the source.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvIcon.Width">
+            <summary>
+            Get the width.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvIcon.Height">
+            <summary>
+            Get the height.
+            </summary>
+        </member>
+        <member name="M:XmltvParser.XmltvIcon.GetInstance(System.Xml.XmlReader)">
+            <summary>
+            Get a loaded instance of the class.
+            </summary>
+            <param name="xmlReader">An XmlReader instance for the tag.</param>
+            <returns>An instance of the class with the tag data loaded.</returns>
+        </member>
+        <member name="T:XmltvParser.XmltvLength">
+            <summary>
+            The class that describes an XMLTV length tag.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvLength.Units">
+            <summary>
+            Get the units.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvLength.Length">
+            <summary>
+            Get the length.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvLength.Duration">
+            <summary>
+            Get the duration.
+            </summary>
+        </member>
+        <member name="M:XmltvParser.XmltvLength.GetInstance(System.Xml.XmlReader)">
+            <summary>
+            Get a loaded instance of the class.
+            </summary>
+            <param name="xmlReader">An XmlReader instance for the tag.</param>
+            <returns>An instance of the class with the tag data loaded.</returns>
+        </member>
+        <member name="T:XmltvParser.XmltvPerson">
+            <summary>
+            The class that describes an XMLTV person.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvPerson.Role">
+            <summary>
+            Get the role.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvPerson.Name">
+            <summary>
+            Get the name.
+            </summary>
+        </member>
+        <member name="M:XmltvParser.XmltvPerson.GetInstance(System.Xml.XmlReader)">
+            <summary>
+            Get a loaded instance of the class.
+            </summary>
+            <param name="xmlReader">An XmlReader instance for the tag.</param>
+            <returns>An instance of the class with the tag data loaded.</returns>
+        </member>
+        <member name="T:XmltvParser.XmltvPreviouslyShown">
+            <summary>
+            The class that describes an XMLTV previously shown tag.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvPreviouslyShown.Start">
+            <summary>
+            Get the start time.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvPreviouslyShown.Channel">
+            <summary>
+            Get the channel.
+            </summary>
+        </member>
+        <member name="M:XmltvParser.XmltvPreviouslyShown.GetInstance(System.Xml.XmlReader)">
+            <summary>
+            Get a loaded instance of the class.
+            </summary>
+            <param name="xmlReader">An XmlReader instance for the tag.</param>
+            <returns>An instance of the class with the tag data loaded.</returns>
+        </member>
+        <member name="T:XmltvParser.XmltvProgramme">
+            <summary>
+            The class that describes an XMLTV programme.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Programmes">
+            <summary>
+            Get or set the list of programmes.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.StartTime">
+            <summary>
+            Get the start time.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.StopTime">
+            <summary>
+            Get the stop time.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.PdcStart">
+            <summary>
+            Get the PDC start time.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.VpsStart">
+            <summary>
+            Get the VPS start time.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.ShowView">
+            <summary>
+            Get the show view value.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.VideoPlus">
+            <summary>
+            Get the video plus code.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Channel">
+            <summary>
+            Get the channel.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.ClumpIdx">
+            <summary>
+            Get the climp IDX value.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Titles">
+            <summary>
+            Get the titles.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.SubTitles">
+            <summary>
+            Get the sub-titles.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Descriptions">
+            <summary>
+            Get the descriptions.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Directors">
+            <summary>
+            Get the directors.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Actors">
+            <summary>
+            Get the actors.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Writers">
+            <summary>
+            Get the writers.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Adapters">
+            <summary>
+            Get the adapters.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Producers">
+            <summary>
+            Get the producers.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Presenters">
+            <summary>
+            Get the presenters.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Commentators">
+            <summary>
+            Get the commentators.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Guests">
+            <summary>
+            Get the guests.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Date">
+            <summary>
+            Get the date.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Categories">
+            <summary>
+            Get the programme categories.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Language">
+            <summary>
+            Get the language.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.OriginalLanguage">
+            <summary>
+            Get the original language.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Length">
+            <summary>
+            Get the duration.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Icon">
+            <summary>
+            Get the icon.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Country">
+            <summary>
+            Get the country code.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.EpisodeNumbers">
+            <summary>
+            Get the episode number.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Video">
+            <summary>
+            Get the video quality.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Audio">
+            <summary>
+            Get the audio quality.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.PreviouslyShown">
+            <summary>
+            Get the previously shown tag.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Premiere">
+            <summary>
+            Get the premiere tag.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.LastChance">
+            <summary>
+            Get the last chance tag.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.New">
+            <summary>
+            Get the new tag.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Live">
+            <summary>
+            Get the live tag.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Subtitlings">
+            <summary>
+            Get the subtitling tags.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Rating">
+            <summary>
+            Get the rating.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.StarRating">
+            <summary>
+            Get the star rating.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvProgramme.Review">
+            <summary>
+            Get the review.
+            </summary>
+        </member>
+        <member name="M:XmltvParser.XmltvProgramme.FindEpisodeType(System.String)">
+            <summary>
+            Locate an episode number with a specific system type.
+            </summary>
+            <param name="episodeType">The system type to search for.</param>
+            <returns>The episode number if found; null otherwise.</returns>
+        </member>
+        <member name="M:XmltvParser.XmltvProgramme.GetInstance(System.Xml.XmlReader)">
+            <summary>
+            Get a loaded instance of the class.
+            </summary>
+            <param name="xmlReader">An XmlReader instance for the tag.</param>
+            <returns>An instance of the class with the tag data loaded.</returns>
+        </member>
+        <member name="T:XmltvParser.XmltvRating">
+            <summary>
+            The class that describes the XMLTV rating tag.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvRating.System">
+            <summary>
+            Get the system type.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvRating.Value">
+            <summary>
+            Get the value;
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvRating.Icon">
+            <summary>
+            Get the icon.
+            </summary>
+        </member>
+        <member name="M:XmltvParser.XmltvRating.GetInstance(System.Xml.XmlReader)">
+            <summary>
+            Get a loaded instance of the class.
+            </summary>
+            <param name="xmlReader">An XmlReader instance for the tag.</param>
+            <returns>An instance of the class with the tag data loaded.</returns>
+        </member>
+        <member name="T:XmltvParser.XmltvReview">
+            <summary>
+            The class that describes an XMLTV review tag.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvReview.Type">
+            <summary>
+            Get the type.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvReview.Source">
+            <summary>
+            Get the source.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvReview.Reviewer">
+            <summary>
+            Get the reviewer.
+            </summary>
+        </member>
+        <member name="M:XmltvParser.XmltvReview.GetInstance(System.Xml.XmlReader)">
+            <summary>
+            Get a loaded instance of the class.
+            </summary>
+            <param name="xmlReader">An XmlReader instance for the tag.</param>
+            <returns>An instance of the class with the tag data loaded.</returns>
+        </member>
+        <member name="T:XmltvParser.XmltvStarRating">
+            <summary>
+            The class that describes an XMLTV star rating tag.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvStarRating.System">
+            <summary>
+            Get the system.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvStarRating.Value">
+            <summary>
+            Get the value.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvStarRating.Icon">
+            <summary>
+            Get the icon.
+            </summary>
+        </member>
+        <member name="M:XmltvParser.XmltvStarRating.GetInstance(System.Xml.XmlReader)">
+            <summary>
+            Get a loaded instance of the class.
+            </summary>
+            <param name="xmlReader">An XmlReader instance for the tag.</param>
+            <returns>An instance of the class with the tag data loaded.</returns>
+        </member>
+        <member name="T:XmltvParser.XmltvSubtitling">
+            <summary>
+            The class that describes an XMLTV subtitles tag.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvSubtitling.Type">
+            <summary>
+            Get the type.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvSubtitling.Language">
+            <summary>
+            Get the language.
+            </summary>
+        </member>
+        <member name="M:XmltvParser.XmltvSubtitling.GetInstance(System.Xml.XmlReader)">
+            <summary>
+            Get a loaded instance of the class.
+            </summary>
+            <param name="xmlReader">An XmlReader instance for the tag.</param>
+            <returns>An instance of the class with the tag data loaded.</returns>
+        </member>
+        <member name="T:XmltvParser.XmltvText">
+            <summary>
+            The class that describes an XMLTV text tag.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvText.Language">
+            <summary>
+            Get the language.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvText.Text">
+            <summary>
+            Get the text.
+            </summary>
+        </member>
+        <member name="M:XmltvParser.XmltvText.GetInstance(System.Xml.XmlReader)">
+            <summary>
+            Get a loaded instance of the class.
+            </summary>
+            <param name="xmlReader">An XmlReader instance for the tag.</param>
+            <returns>An instance of the class with the tag data loaded.</returns>
+        </member>
+        <member name="T:XmltvParser.XmltvTime">
+            <summary>
+            The class that describes an XMLTV time tag.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvTime.Time">
+            <summary>
+            Get the time.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvTime.Offset">
+            <summary>
+            Get the offset.
+            </summary>
+        </member>
+        <member name="M:XmltvParser.XmltvTime.GetInstance(System.String)">
+            <summary>
+            Get a loaded instance of the class.
+            </summary>
+            <param name="timeData">An XMLTV date/time string.</param>
+            <returns>An instance of the class with the tag data loaded.</returns>
+        </member>
+        <member name="T:XmltvParser.XmltvVideo">
+            <summary>
+            The class that describes an XMLTV video tag.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvVideo.Present">
+            <summary>
+            Get the present indicator.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvVideo.Color">
+            <summary>
+            Get the color.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvVideo.Aspect">
+            <summary>
+            Get the aspect ratio.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvVideo.Quality">
+            <summary>
+            Get the quality.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvVideo.IsPresent">
+            <summary>
+            Return true if video is present; false otherwise.
+            </summary>
+        </member>
+        <member name="P:XmltvParser.XmltvVideo.IsColor">
+            <summary>
+            Return true if the programme is in colour; false otherwise.
+            </summary>
+        </member>
+        <member name="M:XmltvParser.XmltvVideo.GetInstance(System.Xml.XmlReader)">
+            <summary>
+            Get a loaded instance of the class.
+            </summary>
+            <param name="xmlReader">An XmlReader instance for the tag.</param>
+            <returns>An instance of the class with the tag data loaded.</returns>
+        </member>
+    </members>
+</doc>

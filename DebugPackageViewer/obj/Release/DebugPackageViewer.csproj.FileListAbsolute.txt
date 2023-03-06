@@ -1,0 +1,17 @@
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\bin\Release\DebugPackageViewer.exe.config
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\bin\Release\DebugPackageViewer.exe
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\bin\Release\DebugPackageViewer.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\bin\Release\Newtonsoft.Json.dll
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\bin\Release\Brotli.NET.dll
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\bin\Release\DomainObjects.xml
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\obj\Release\DebugPackageViewer.Form1.resources
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\obj\Release\DebugPackageViewer.Properties.Resources.resources
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\obj\Release\DebugPackageViewer.exe
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\obj\Release\DebugPackageViewer.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\obj\Release\DebugPackageViewer.csproj.AssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\obj\Release\DebugPackageViewer.csproj.SuggestedBindingRedirects.cache
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\obj\Release\DebugPackageViewer.csproj.GenerateResource.cache
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\obj\Release\DebugPackageViewer.csproj.CoreCompileInputs.cache
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\obj\Release\DebugPackageViewer.csproj.CopyComplete

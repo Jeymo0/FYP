@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChannelUpdate</name>
+    </assembly>
+    <members>
+        <member name="M:ChannelUpdate.DVBLinkElement.Load(System.Xml.XmlReader)">
+            <summary>
+            Load the node.
+            </summary>
+            <param name="xmlReader">An XmlReader instance for the node.</param>
+            <returns>True if the load succeeds; false otherwise.</returns>
+        </member>
+        <member name="P:ChannelUpdate.DVBLinkEPGMapChannel.Source">
+            <summary>
+            v4.1 properties
+            </summary>
+        </member>
+        <member name="P:ChannelUpdate.DVBLinkEPGMapChannel.ControlID">
+            <summary>
+            v4.5 properties
+            </summary>
+        </member>
+        <member name="M:ChannelUpdate.DVBLinkHeadEnd.ToString">
+            <summary>
+            Get the description of this head end.
+            </summary>
+            <returns>The head end ID.</returns>
+        </member>
+        <member name="T:ChannelUpdate.DVBLinkPhysicalChannelLink">
+            <summary>
+            The class that describes a DVBLink physical channel.
+            </summary>
+        </member>
+        <member name="P:ChannelUpdate.DVBLinkPhysicalChannelLink.Id">
+            <summary>
+            Get or set the physical channel ID.
+            </summary>
+        </member>
+        <member name="P:ChannelUpdate.DVBLinkPhysicalChannelLink.SourceID">
+            <summary>
+            4.1 properties
+            </summary>
+        </member>
+        <member name="P:ChannelUpdate.DVBLinkPhysicalChannelLink.ControlID">
+            <summary>
+            4.5 properties
+            </summary>
+        </member>
+        <member name="P:ChannelUpdate.DVBLinkPhysicalChannelLink.EPGID">
+            <summary>
+            Only used to aid in creating configuration EPG map entry
+            </summary>
+        </member>
+        <member name="T:ChannelUpdate.DVBLinkController">
+            <summary>
+            The class that controls the DVBLink update process.
+            </summary>
+        </member>
+        <member name="P:ChannelUpdate.DVBLinkController.AssemblyVersion">
+            <summary>
+            Get the full assembly version number.
+            </summary>
+        </member>
+        <member name="P:ChannelUpdate.DVBLinkController.MaxFrequency">
+            <summary>
+            Get or set the maximum frequency field.
+            </summary>
+        </member>
+        <member name="M:ChannelUpdate.DVBLinkController.Load">
+            <summary>
+            Load the DVBLink configuration files.
+            </summary>
+            <returns>True if the load succeeds; false otherwise.</returns>
+        </member>
+        <member name="M:ChannelUpdate.DVBLinkController.Unload">
+            <summary>
+            Unload the DVBLink configuration files.
+            </summary>
+            <returns>True if the unload succeeds; false otherwise.</returns>
+        </member>
+        <member name="M:ChannelUpdate.DVBLinkController.Process(DomainObjects.TuningFrequency)">
+            <summary>
+            Process updates.
+            </summary>
+            <param name="frequency">The frequency being updated.</param>
+            <returns>True if the update succeeds; false otherwise.</returns>
+        </member>
+        <member name="M:ChannelUpdate.DVBLinkController.ClearData">
+            <summary>
+            Clear existing data.
+            </summary>
+        </member>
+        <member name="M:ChannelUpdate.DVBLinkController.LogChannelMap(System.Boolean)">
+            <summary>
+            Log the channel map.
+            </summary>
+        </member>
+        <member name="P:ChannelUpdate.DVBLinkSource.GUID">
+            <summary>
+            Common properties
+            </summary>
+        </member>
+        <member name="P:ChannelUpdate.DVBLinkSource.ColorID">
+            <summary>
+            v4.1 properties
+            </summary>
+        </member>
+        <member name="P:ChannelUpdate.DVBLinkSource.ProductID">
+            <summary>
+            v4.5 properties
+            </summary>
+        </member>
+        <member name="M:ChannelUpdate.DVBLinkSource.ToString">
+            <summary>
+            Get the name of the source.
+            </summary>
+            <returns>The normalized name.</returns>
+        </member>
+        <member name="T:ChannelUpdate.DVBLinkLogicalChannel">
+            <summary>
+            The class that describes a DVBLink logical channel.
+            </summary>
+        </member>
+        <member name="P:ChannelUpdate.DVBLinkLogicalChannel.PhysicalChannelLinks">
+            <summary>
+            Get the collection of physical channels linked to this logical channels.
+            </summary>
+        </member>
+        <member name="M:ChannelUpdate.DVBLinkLogicalChannel.FindChannel(System.Int32)">
+            <summary>
+            Locate a channel by frequency.
+            </summary>
+            <param name="frequency">The frequency of the channel.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ChannelUpdate.DVBLinkLogicalChannel.FindChannel(ChannelUpdate.DVBLinkPhysicalChannel)">
+            <summary>
+            Locate a channel by physical channel.
+            </summary>
+            <param name="physicalChannel">The physical channel.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

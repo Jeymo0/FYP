@@ -1,0 +1,10 @@
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\bin\x86\Debug\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\bin\x86\Debug\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\bin\x86\Debug\Brotli.NET.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\x86\Debug\DomainObjects.Properties.Resources.resources
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\x86\Debug\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\x86\Debug\DomainObjects.pdb

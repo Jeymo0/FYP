@@ -1,0 +1,58 @@
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\obj\Debug\ResolveAssemblyReference.cache
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\bin\Debug\DomainObjects.dll
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\bin\Debug\DomainObjects.pdb
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\obj\Debug\DomainObjects.dll
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\obj\Debug\DomainObjects.pdb
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\obj\Debug\DomainObjects.csproj.GenerateResource.Cache
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\bin\Debug\Player.exe
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\bin\Debug\VLanControl.dll
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\bin\Debug\Player.pdb
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\bin\Debug\VLanControl.pdb
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\obj\Debug\DomainObjects.Properties.Resources.resources
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\obj\Debug\DomainObjects.dll.licenses
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\bin\Debug\Interop.WMPLib.dll
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DomainObjects\obj\Debug\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DomainObjects\obj\Debug\DomainObjects.Properties.Resources.resources
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DomainObjects\obj\Debug\DomainObjects.csproj.GenerateResource.Cache
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DomainObjects\obj\Debug\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DomainObjects\obj\Debug\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DomainObjects\bin\Debug\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DomainObjects\bin\Debug\DomainObjects.pdb
+D:\Dump\Steve\EPGCollector\DomainObjects\bin\Debug\DomainObjects.dll
+D:\Dump\Steve\EPGCollector\DomainObjects\bin\Debug\DomainObjects.pdb
+D:\Dump\Steve\EPGCollector\DomainObjects\obj\Debug\ResolveAssemblyReference.cache
+D:\Dump\Steve\EPGCollector\DomainObjects\obj\Debug\DomainObjects.Properties.Resources.resources
+D:\Dump\Steve\EPGCollector\DomainObjects\obj\Debug\DomainObjects.csproj.GenerateResource.Cache
+D:\Dump\Steve\EPGCollector\DomainObjects\obj\Debug\DomainObjects.dll
+D:\Dump\Steve\EPGCollector\DomainObjects\obj\Debug\DomainObjects.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.14\EPGCollector\DomainObjects\bin\Debug\DomainObjects.dll
+D:\SourceCode\DVB\EPGCollector\2.0.14\EPGCollector\DomainObjects\bin\Debug\DomainObjects.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.14\EPGCollector\DomainObjects\obj\Debug\ResolveAssemblyReference.cache
+D:\SourceCode\DVB\EPGCollector\2.0.14\EPGCollector\DomainObjects\obj\Debug\DomainObjects.Properties.Resources.resources
+D:\SourceCode\DVB\EPGCollector\2.0.14\EPGCollector\DomainObjects\obj\Debug\DomainObjects.csproj.GenerateResource.Cache
+D:\SourceCode\DVB\EPGCollector\2.0.14\EPGCollector\DomainObjects\obj\Debug\DomainObjects.dll
+D:\SourceCode\DVB\EPGCollector\2.0.14\EPGCollector\DomainObjects\obj\Debug\DomainObjects.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DomainObjects\bin\Debug\DomainObjects.dll
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DomainObjects\bin\Debug\DomainObjects.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DomainObjects\obj\Debug\ResolveAssemblyReference.cache
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DomainObjects\obj\Debug\DomainObjects.Properties.Resources.resources
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DomainObjects\obj\Debug\DomainObjects.csproj.GenerateResource.Cache
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DomainObjects\obj\Debug\DomainObjects.dll
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DomainObjects\obj\Debug\DomainObjects.pdb
+D:\2.0.15\EPGCollector\DomainObjects\bin\Debug\DomainObjects.dll
+D:\2.0.15\EPGCollector\DomainObjects\bin\Debug\DomainObjects.pdb
+D:\2.0.15\EPGCollector\DomainObjects\obj\Debug\ResolveAssemblyReference.cache
+D:\2.0.15\EPGCollector\DomainObjects\obj\Debug\DomainObjects.Properties.Resources.resources
+D:\2.0.15\EPGCollector\DomainObjects\obj\Debug\DomainObjects.csproj.GenerateResource.Cache
+D:\2.0.15\EPGCollector\DomainObjects\obj\Debug\DomainObjects.dll
+D:\2.0.15\EPGCollector\DomainObjects\obj\Debug\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\bin\Debug\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\bin\Debug\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\bin\Debug\Newtonsoft.Json.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Debug\DomainObjects.Properties.Resources.resources
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Debug\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Debug\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Debug\DomainObjects.csproj.AssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Debug\DomainObjects.csproj.GenerateResource.cache
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Debug\DomainObjects.csproj.CoreCompileInputs.cache
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Debug\DomainObjects.csproj.CopyComplete

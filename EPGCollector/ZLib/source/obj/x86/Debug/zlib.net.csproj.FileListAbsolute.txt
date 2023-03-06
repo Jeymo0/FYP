@@ -1,0 +1,5 @@
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\ZLib\source\bin\x86\Debug\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\ZLib\source\bin\x86\Debug\zlib.net.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\ZLib\source\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\ZLib\source\obj\x86\Debug\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\ZLib\source\obj\x86\Debug\zlib.net.pdb

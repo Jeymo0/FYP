@@ -1,0 +1,999 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SatIp</name>
+    </assembly>
+    <members>
+        <member name="T:SatIp.AnnouncementPacket">
+            <summary>
+            The class that describes a SAT>IP announcement packet.
+            </summary>
+        </member>
+        <member name="P:SatIp.AnnouncementPacket.MediaFormat">
+            <summary>
+            Get the media format.
+            </summary>
+        </member>
+        <member name="M:SatIp.AnnouncementPacket.GetInstance">
+            <summary>
+            Get an instance of the packet processor.
+            </summary>
+            <returns>An instance of the processor.</returns>
+        </member>
+        <member name="M:SatIp.AnnouncementPacket.Process(System.Byte[],System.Int32)">
+            <summary>
+            Parse the announcement packet.
+            </summary>
+            <param name="buffer">The buffer holding the data to parse.</param>
+            <param name="offset">The offset to the first byte of the packet.</param>
+            <returns>An ErrorSpec instance if an error occurs; null otherwise.</returns>
+        </member>
+        <member name="M:SatIp.AnnouncementPacket.ToString">
+            <summary>
+            Get a text representation of this instance.
+            </summary>
+            <returns>The text representation.</returns>
+        </member>
+        <member name="T:SatIp.SatIpConfiguration">
+            <summary>
+            The class that describes the Sat>IP configuration.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpConfiguration.SatIpEnabled">
+            <summary>
+            Get the state of the Sat>IP feature.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpConfiguration.SatIpEnabledFile">
+            <summary>
+            Get the name of the configuration file.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpConfiguration.Frontend">
+            <summary>
+            Get the frontend value.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpConfiguration.NoAnnouncements">
+            <summary>
+            Get the announcement flag.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpConfiguration.RtspPort">
+            <summary>
+            Get the RTSP port number
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpConfiguration.NoSendRtspPort">
+            <summary>
+            Get or set the flag that inhibits sending the port number in the RTSP Setup message.
+            </summary>
+        </member>
+        <member name="M:SatIp.SatIpConfiguration.#ctor">
+            <summary>
+            Initialize a new instance of the SatIpConfiguration class.
+            </summary>
+        </member>
+        <member name="M:SatIp.SatIpConfiguration.Load">
+            <summary>
+            Load the configuration.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SatIp.SatIpConfiguration.Unload">
+            <summary>
+            Unload the configuration.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SatIp.SatIpControlAttribute">
+            <summary>
+            The class that describes a SAT>IP control attribute.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpControlAttribute.StreamId">
+            <summary>
+            Get the stream identifier.
+            </summary>
+        </member>
+        <member name="M:SatIp.SatIpControlAttribute.#ctor">
+            <summary>
+            Initialize a new instance of the SatIpControlAttribute class.
+            </summary>
+        </member>
+        <member name="M:SatIp.SatIpControlAttribute.CreateControl">
+            <summary>
+            Create an instance of the processor.
+            </summary>
+            <returns>An instance of the processor.</returns>
+        </member>
+        <member name="M:SatIp.SatIpControlAttribute.Process(System.String)">
+            <summary>
+            Parse the attribute data.
+            </summary>
+            <param name="parameters">The data to be parsed.</param>
+            <returns>An ErrorSpec instance if an error occurs; null otherwise.</returns>
+        </member>
+        <member name="T:SatIp.SatIpController">
+            <summary>
+            The class that describes the SAT>IP controller.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpController.AssemblyVersion">
+            <summary>
+            Get the full assembly version number.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpController.SatIpProtocolId">
+            <summary>
+            Get the protocol identification.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpController.BufferSpaceUsed">
+            <summary>
+            Get the buffer spaces used receiving data.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpController.BufferAddress">
+            <summary>
+            Get the buffer address.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpController.SyncByteSearches">
+            <summary>
+            Get the count of sync byte searches.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpController.SamplesDropped">
+            <summary>
+            Get the number of samples dropped.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpController.MaximumSampleSize">
+            <summary>
+            Get the maximum sample size.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpController.DumpFileSize">
+            <summary>
+            Get the dump file size.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpController.DataFlowing">
+            <summary>
+            Return true if data is flowing; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpController.Frequency">
+            <summary>
+            Get the tuning frequency.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpController.SignalStrength">
+            <summary>
+            Get the signal strength.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpController.SignalQuality">
+            <summary>
+            Get the signal quality.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpController.SignalPresent">
+            <summary>
+            Return true if a signal is present; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpController.SignalLocked">
+            <summary>
+            Return true if the signal is locked; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpController.Tuner">
+            <summary>
+            Get the tuner.
+            </summary>
+        </member>
+        <member name="M:SatIp.SatIpController.#ctor">
+            <summary>
+            Initialize a new instance of the SatIpController class.
+            </summary>
+        </member>
+        <member name="M:SatIp.SatIpController.Dispose">
+            <summary>
+            Dispose the controller.
+            </summary>
+        </member>
+        <member name="M:SatIp.SatIpController.LoadServers(System.Collections.ObjectModel.Collection{SatIp.SatIpServer})">
+            <summary>
+            Load all SAT>IP servers.
+            </summary>
+            <param name="servers">The list to be updated.</param>
+            <returns>An ErrorSpec instance if an error occurs; null otherwise.</returns>
+        </member>
+        <member name="M:SatIp.SatIpController.ChangePidMapping(System.Int32)">
+            <summary>
+            Change the PID mapping.
+            </summary>
+            <param name="pid">The pid to be mapped.</param>
+        </member>
+        <member name="M:SatIp.SatIpController.ChangePidMapping(System.Int32[])">
+            <summary>
+            Change the PID mapping.
+            </summary>
+            <param name="pids">The list of PID's to be mapped.</param>
+        </member>
+        <member name="M:SatIp.SatIpController.Run(SatIp.SatIpServer,SatIpDomainObjects.TuningParameters,System.String,System.String)">
+            <summary>
+            Start collecting data.
+            </summary>
+            <param name="server">The server to use.</param>
+            <param name="tuningParameters">The tuning parameters.</param>
+            <param name="path">The path.</param>
+            <param name="dumpFileName">The file to dump the data to. Null if not used.</param>
+            <returns>An ErrorSpec instance if an error occurs; null otherwise.</returns>
+        </member>
+        <member name="M:SatIp.SatIpController.Run(SatIp.SatIpServer,System.Int32,SatIpDomainObjects.TuningParameters,System.String,System.String,System.Boolean)">
+            <summary>
+            Start collecting data.
+            </summary>
+            <param name="server">The server to use.</param>
+            <param name="serverPort">The server port.</param>
+            <param name="tuningParameters">The tuning parameters.</param>
+            <param name="path">The path.</param>
+            <param name="dumpFileName">The file to dump the data to. Null if not used.</param>        
+            <param name="noSendPort">True to not send the port number in the SETUP message; false otherwise.</param>
+            <returns>An ErrorSpec instance if an error occurs; null otherwise.</returns>
+        </member>
+        <member name="M:SatIp.SatIpController.Stop">
+            <summary>
+            Stop receiving data.
+            </summary>
+            <returns>An ErrorSpec instance if an error occurs; null otherwise.</returns>
+        </member>
+        <member name="M:SatIp.SatIpController.FindReceiver(System.Collections.ObjectModel.Collection{DomainObjects.SelectedTuner},DomainObjects.TunerNodeType,DomainObjects.TuningSpec,DomainObjects.Tuner,System.Int32)">
+            <summary>
+            Find a receiver.
+            </summary>
+            <param name="tuners">The list of tuners to try.</param>
+            <param name="tunerNodeType">The node type the tuner must have.</param>
+            <param name="tuningSpec">A tuning spec instance with tuning details.</param>
+            <param name="lastTuner">The last tuner used or null if all are to be considered.</param>
+            <param name="diseqcSetting">The Diseqc parameters.</param>
+            <returns>A Sat>IP controller instance or null if no tuner available.</returns>
+        </member>
+        <member name="M:SatIp.SatIpController.FindReceiver(System.Collections.ObjectModel.Collection{DomainObjects.SelectedTuner},DomainObjects.TunerNodeType,DomainObjects.TuningSpec,DomainObjects.Tuner,System.Int32,System.String)">
+            <summary>
+            Find a receiver.
+            </summary>
+            <param name="tuners">The list of tuners to try.</param>
+            <param name="tunerNodeType">The node type the tuner must have.</param>
+            <param name="tuningSpec">A tuning spec instance with tuning details.</param>
+            <param name="lastTuner">The last tuner used or null if all are to be considered.</param>
+            <param name="diseqcSetting">The Diseqc parameters.</param>
+            <param name="dumpFileName">The full path of the duump file. Null if not used.</param>
+            <returns>A Sat>IP controller instance or null if no tuner available.</returns>
+        </member>
+        <member name="T:SatIp.SatIpCap">
+            <summary>
+            The class that describes the SAT>IP capabilities line.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpCap.NameSpace">
+            <summary>
+            Get the name space.
+            </summary>
+        </member>
+        <member name="F:SatIp.SatIpCap.ModulationSystems">
+            <summary>
+            Get the list of modulation systems.
+            </summary>
+        </member>
+        <member name="M:SatIp.SatIpCap.#ctor">
+            Initialize a new instance of the SatIpCap class. 
+        </member>
+        <member name="M:SatIp.SatIpCap.IsLoader(System.String)">
+            <summary>
+            Determine if the instance processes a specified line.
+            </summary>
+            <param name="identity">The identity of the line.</param>
+            <returns>True if the identity is processed; false otherwise.</returns>
+        </member>
+        <member name="M:SatIp.SatIpCap.CreateLoader(System.String)">
+            <summary>
+            Create an instance of the processor.
+            </summary>
+            <param name="identity">The name of the instance.</param>
+            <returns>An instance of the processor.</returns>
+        </member>
+        <member name="M:SatIp.SatIpCap.Load(System.Xml.XmlReader)">
+            <summary>
+            Load the instance with data.
+            </summary>
+            <param name="xmlReader">An XmlReader instance containing the data to load.</param>
+            <returns>An ErrorSpec instance if an error occurs; null otherwise.</returns>
+        </member>
+        <member name="T:SatIp.SatIpMediaFormat">
+            <summary>
+            The class that describes a SAT>IP media format.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.Version">
+            <summary>
+            Get the version.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.Source">
+            <summary>
+            Get the source.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.FrontEnd">
+            <summary>
+            Get the front end.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.Level">
+            <summary>
+            Get the level.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.SignalLock">
+            <summary>
+            Return true if the signal is locked; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.Quality">
+            <summary>
+            Get the signal quality.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.Frequency">
+            <summary>
+            Get the frequency.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.Polarization">
+            <summary>
+            Get the polarization.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.System">
+            <summary>
+            Get the transmission system.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.Type">
+            <summary>
+            Get the modulation system.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.Pilot">
+            <summary>
+            Get the pilot.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.RollOff">
+            <summary>
+            Get the roll off.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.SymbolRate">
+            <summary>
+            Get the symbol rate.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.Fec">
+            <summary>
+            Get the FEC.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.Bandwidth">
+            <summary>
+            Get the bandwidth.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.TransmissionMode">
+            <summary>
+            Get the transmission system.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.GuardInterval">
+            <summary>
+            Get the guard interval.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.Plp">
+            <summary>
+            Get the PLP.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.SystemId">
+            <summary>
+            Get the T2 system identity.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.SisoMiso">
+            <summary>
+            Return true if the signal is miso; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.TuningFrequencyType">
+            <summary>
+            Get the tuning frequency type.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.DataSlice">
+            <summary>
+            Get the data slice.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.SpectrumInversion">
+            <summary>
+            Return true if the spectrum inversion is off; false otherwise.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpMediaFormat.Pids">
+            <summary>
+            Get the list of PID's.
+            </summary>
+        </member>
+        <member name="M:SatIp.SatIpMediaFormat.#ctor">
+            <summary>
+            Initialize a new instance of the SatIpMediaFormat class.
+            </summary>
+        </member>
+        <member name="M:SatIp.SatIpMediaFormat.IsFormat(System.String)">
+            <summary>
+            Check if the processor supports the format.
+            </summary>
+            <param name="identity">The name of the format.</param>
+            <returns>Returns true if the format is supported; false otherwise.</returns>
+        </member>
+        <member name="M:SatIp.SatIpMediaFormat.CreateFormat(System.String)">
+            <summary>
+            Create an instance of the format processor.
+            </summary>
+            <param name="identity">The name of the processor.</param>
+            <returns>An instance of the processor.</returns>
+        </member>
+        <member name="M:SatIp.SatIpMediaFormat.Process(System.String)">
+            <summary>
+            Parse the format line.
+            </summary>
+            <param name="parameters">The data to be parsed.</param>
+            <returns>An ErrorSpec instance if an error occurs; null otherwise.</returns>
+        </member>
+        <member name="M:SatIp.SatIpMediaFormat.ToString">
+            <summary>
+            Convert the instance data to a readable string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:SatIp.SatIpServer">
+            <summary>
+            The class that describes a SAT>IP server.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpServer.Name">
+            <summary>
+            Get the server name.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpServer.Address">
+            <summary>
+            Get the server address.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpServer.Port">
+            <summary>
+            Get the server port.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpServer.UniqueIdentity">
+            <summary>
+            Get the unique identification.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpServer.DvbsFrontEnds">
+            <summary>
+            Get the number of DVB-S/S2 tuners.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpServer.DvbtFrontEnds">
+            <summary>
+            Get the number of DVB-T/T2 tuners.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpServer.DvbcFrontEnds">
+            <summary>
+            Get the number of DVB-C/C2 tuners.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpServer.IsServerTuner">
+            <summary>
+            Returns true to indicate a server tuner.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpServer.IsSatIpTuner">
+            <summary>
+            Returns true to indicate a SAT>IP tuner.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpServer.IsVBoxTuner">
+            <summary>
+            Returns false to indicate not a VBox tuner.
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpServer.DVBSatelliteNode">
+            <summary>
+            Get the tuner node that supports DVB-S. 
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpServer.DVBTerrestrialNode">
+            <summary>
+            Get the tuner node that supports DVB-T. 
+            </summary>
+        </member>
+        <member name="P:SatIp.SatIpServer.DVBCableNode">
+            <summary>
+            Get the tuner node that supports DVB-C. 
+            </summary>
+        </member>
+        <member name="M:SatIp.SatIpServer.#ctor">
+            <summary>
+            Initialize a new instance of the SatIpServer class.
+            </summary>
+        </member>
+        <member name="M:SatIp.SatIpServer.Supports(DomainObjects.TunerType)">
+            <summary>
+            Check if the server supports a tuner type.
+            </summary>
+            <param name="checkTunerType">The tuner type.</param>
+            <returns>True if the tuner type is supported; false otherwise.</returns>
+        </member>
+        <member name="M:SatIp.SatIpServer.Supports(DomainObjects.TunerNodeType)">
+            <summary>
+            Check if the server supports a tuner node type.
+            </summary>
+            <param name="checkTunerNodeType">The tuner node type.</param>
+            <returns>True if the tuner type is supported; false otherwise.</returns>
+        </member>
+        <member name="M:SatIp.SatIpServer.ToString">
+            <summary>
+            Get a description of the server.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SatIp.SatIpServer.LoadServers">
+            <summary>
+            Load all servers.
+            </summary>
+        </member>
+        <member name="T:SatIp.StreamController">
+            <summary>
+            The class that describes the stream controller.
+            </summary>
+        </member>
+        <member name="P:SatIp.StreamController.StreamProtocolId">
+            <summary>
+            Get the protocol identification.
+            </summary>
+        </member>
+        <member name="P:SatIp.StreamController.Frequency">
+            <summary>
+            Get the current tuning frequency.
+            </summary>
+        </member>
+        <member name="P:SatIp.StreamController.BufferSpaceUsed">
+            <summary>
+            Get the buffer spaces used receiving data.
+            </summary>
+        </member>
+        <member name="P:SatIp.StreamController.BufferAddress">
+            <summary>
+            Get the buffer address.
+            </summary>
+        </member>
+        <member name="P:SatIp.StreamController.SyncByteSearches">
+            <summary>
+            Get the count of sync byte searches.
+            </summary>
+        </member>
+        <member name="P:SatIp.StreamController.SamplesDropped">
+            <summary>
+            Get the number of samples dropped.
+            </summary>
+        </member>
+        <member name="P:SatIp.StreamController.MaximumSampleSize">
+            <summary>
+            Get the maximum sample size.
+            </summary>
+        </member>
+        <member name="P:SatIp.StreamController.DumpFileSize">
+            <summary>
+            Get the dump file size.
+            </summary>
+        </member>
+        <member name="P:SatIp.StreamController.DataFlowing">
+            <summary>
+            Return true if data is flowing; false otherwise.
+            </summary>
+        </member>
+        <member name="M:SatIp.StreamController.#ctor(System.String,System.Int32)">
+            <summary>
+            Initialize a new instance of the StreamController class.
+            </summary>
+        </member>
+        <member name="M:SatIp.StreamController.Dispose">
+            <summary>
+            Dispose the controller.
+            </summary>
+        </member>
+        <member name="M:SatIp.StreamController.ChangePidMapping(System.Int32)">
+            <summary>
+            Change the PID mapping.
+            </summary>
+            <param name="pid">The pid to be mapped.</param>
+        </member>
+        <member name="M:SatIp.StreamController.ChangePidMapping(System.Int32[])">
+            <summary>
+            Change the PID mapping.
+            </summary>
+            <param name="pids">The list of PID's to be mapped.</param>
+        </member>
+        <member name="M:SatIp.StreamController.Run(DomainObjects.StreamFrequency,System.String)">
+            <summary>
+            Start collecting data.
+            </summary>
+            <param name="streamFrequency">The tuning parameters.</param>
+            <param name="dumpFileName">The file to dump the data to. Null if not used.</param>
+            <returns>An ErrorSpec instance if an error occurs; null otherwise.</returns>
+        </member>
+        <member name="M:SatIp.StreamController.Stop">
+            <summary>
+            Stop receiving data.
+            </summary>
+            <returns>An ErrorSpec instance if an error occurs; null otherwise.</returns>
+        </member>
+        <member name="T:SatIpDomainObjects.Dvbc2Parameters">
+            <summary>
+            The class that describes DVB-C2 specific tuning parameters.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.Dvbc2Parameters.ModulationSystem">
+            <summary>
+            Get the modulation system.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.Dvbc2Parameters.FrequencyType">
+            <summary>
+            Get or set the frequency type value.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.Dvbc2Parameters.BandWidth">
+            <summary>
+            Get or set the bandwidth.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.Dvbc2Parameters.DataSlice">
+            <summary>
+            Get or set the data slice.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.Dvbc2Parameters.Plp">
+            <summary>
+            Get or set the PLP value.
+            </summary>
+        </member>
+        <member name="M:SatIpDomainObjects.Dvbc2Parameters.#ctor(System.Int32)">
+            <summary>
+            Initialize a new instance of the Dvbc2Parameters class.
+            </summary>
+            <param name="frequency">The tuning frequency.</param>
+        </member>
+        <member name="M:SatIpDomainObjects.Dvbc2Parameters.ToString">
+            <summary>
+            Return a SAT>IP formatted string for this instance.
+            </summary>
+            <returns>A string containing this instances values.</returns>
+        </member>
+        <member name="T:SatIpDomainObjects.DvbcParameters">
+            <summary>
+            The class that describes DVB-C specific tuning parameters.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.DvbcParameters.ModulationSystem">
+            <summary>
+            Get the modulation system.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.DvbcParameters.ModulationType">
+            <summary>
+            Get or set the modulation type.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.DvbcParameters.SymbolRate">
+            <summary>
+            Get or set the symbol rate.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.DvbcParameters.SpectralInversion">
+            <summary>
+            Get or set the symbol rate.
+            </summary>
+        </member>
+        <member name="M:SatIpDomainObjects.DvbcParameters.#ctor(System.Int32)">
+            <summary>
+            Initialize a new instance of the DvbcParameters class.
+            </summary>
+            <param name="frequency">The tuning frequency.</param>
+        </member>
+        <member name="M:SatIpDomainObjects.DvbcParameters.ToString">
+            <summary>
+            Return a SAT>IP formatted string for this instance.
+            </summary>
+            <returns>A string containing this instances values.</returns>
+        </member>
+        <member name="M:SatIpDomainObjects.DvbcParameters.ToString(System.Boolean)">
+            <summary>
+            Return a SAT>IP formatted string for this instance.
+            </summary>
+            <param name="includeModulationSystem">True if the modulation system value is to be included.</param>
+            <returns>A string containing this instances values.</returns>
+        </member>
+        <member name="T:SatIpDomainObjects.Dvbs2Parameters">
+            <summary>
+            The class that describes DVB-S2 specific tuning parameters.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.Dvbs2Parameters.ModulationSystem">
+            <summary>
+            Get the modulation system.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.Dvbs2Parameters.RollOff">
+            <summary>
+            Get or set the roll off value.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.Dvbs2Parameters.Pilot">
+            <summary>
+            Get or set the pilot value.
+            </summary>
+        </member>
+        <member name="M:SatIpDomainObjects.Dvbs2Parameters.#ctor(System.Int32)">
+            <summary>
+            Initialize a new instance of the Dvbs2Parameters class.
+            </summary>
+            <param name="frequency">The tuning frequency.</param>
+        </member>
+        <member name="M:SatIpDomainObjects.Dvbs2Parameters.ToString">
+            <summary>
+            Return a SAT>IP formatted string for this instance.
+            </summary>
+            <returns>A string containing this instances values.</returns>
+        </member>
+        <member name="T:SatIpDomainObjects.DvbsParameters">
+            <summary>
+            The class that describes DVB-S specific tuning parameters.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.DvbsParameters.ModulationSystem">
+            <summary>
+            Get the modulation system.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.DvbsParameters.ModulationType">
+            <summary>
+            Get or set the modulation type.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.DvbsParameters.Polarity">
+            <summary>
+            Get or set the polarity.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.DvbsParameters.SymbolRate">
+            <summary>
+            Get or set the symbol rate.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.DvbsParameters.Fec">
+            <summary>
+            Get or set the FEC value.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.DvbsParameters.Source">
+            <summary>
+            Get or set the source value.
+            </summary>
+        </member>
+        <member name="M:SatIpDomainObjects.DvbsParameters.#ctor(System.Int32)">
+            <summary>
+            Initialize a new instance of the DvbsParameters class.
+            </summary>
+            <param name="frequency">The tuning frequency.</param>
+        </member>
+        <member name="M:SatIpDomainObjects.DvbsParameters.ToString">
+            <summary>
+            Return a SAT>IP formatted string for this instance.
+            </summary>
+            <returns>A string containing this instances values.</returns>
+        </member>
+        <member name="M:SatIpDomainObjects.DvbsParameters.ToString(System.Boolean)">
+            <summary>
+            Return a SAT>IP formatted string for this instance.
+            </summary>
+            <param name="includeModulationSystem">True if the modulation system value is to be included.</param>
+            <returns>A string containing this instances values.</returns>
+        </member>
+        <member name="T:SatIpDomainObjects.Dvbt2Parameters">
+            <summary>
+            The class that describes DVB-T2 specific tuning parameters.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.Dvbt2Parameters.ModulationSystem">
+            <summary>
+            Get the modulation system.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.Dvbt2Parameters.Plp">
+            <summary>
+            Get or set the PLP value.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.Dvbt2Parameters.SystemId">
+            <summary>
+            Get or set the system ID.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.Dvbt2Parameters.SisoMode">
+            <summary>
+            Get or set the SISO mode.
+            </summary>
+        </member>
+        <member name="M:SatIpDomainObjects.Dvbt2Parameters.#ctor(System.Int32)">
+            <summary>
+            Initialize a new instance of the Dvbt2Parameters class.
+            </summary>
+            <param name="frequency">The tuning frequency.</param>
+        </member>
+        <member name="M:SatIpDomainObjects.Dvbt2Parameters.ToString">
+            <summary>
+            Return a SAT>IP formatted string for this instance.
+            </summary>
+            <returns>A string containing this instances values.</returns>
+        </member>
+        <member name="T:SatIpDomainObjects.DvbtParameters">
+            <summary>
+            The class that describes DVB-T specific tuning parameters.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.DvbtParameters.ModulationSystem">
+            <summary>
+            Get the modulation system.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.DvbtParameters.BandWidth">
+            <summary>
+            Get or set the bandwidth.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.DvbtParameters.TransmissionMode">
+            <summary>
+            Get or set the transmission mode.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.DvbtParameters.ModulationType">
+            <summary>
+            Get or set the modulation type.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.DvbtParameters.GuardInterval">
+            <summary>
+            Get or set the guard interval.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.DvbtParameters.Fec">
+            <summary>
+            Get or set the FEC value.
+            </summary>
+        </member>
+        <member name="M:SatIpDomainObjects.DvbtParameters.#ctor(System.Int32)">
+            <summary>
+            Initialize a new instance of the DvbtParameters class.
+            </summary>
+            <param name="frequency">The tuning frequency.</param>
+        </member>
+        <member name="M:SatIpDomainObjects.DvbtParameters.ToString">
+            <summary>
+            Return a SAT>IP formatted string for this instance.
+            </summary>
+            <returns>A string containing this instances values.</returns>
+        </member>
+        <member name="M:SatIpDomainObjects.DvbtParameters.ToString(System.Boolean)">
+            <summary>
+            Return a SAT>IP formatted string for this instance.
+            </summary>
+            <param name="includeModulationSystem">True if the modulation system value is to be included.</param>
+            <returns>A string containing this instances values.</returns>
+        </member>
+        <member name="T:SatIpDomainObjects.SatIpLogger">
+            <summary>
+            The class that describes the SAT>IP logger.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.SatIpLogger.Instance">
+            <summary>
+            Get an instance of a logger.
+            </summary>
+        </member>
+        <member name="M:SatIpDomainObjects.SatIpLogger.Write(System.String)">
+            <summary>
+            Write a log message.
+            </summary>
+            <param name="message">The message to be written.</param>
+        </member>
+        <member name="M:SatIpDomainObjects.SatIpLogger.LogReply(System.String,System.Byte[],System.Int32)">
+            <summary>
+            Log a message response.
+            </summary>
+            <param name="title">The name of the response.</param>
+            <param name="buffer">The buffer containing the response.</param>
+            <param name="count">The length of the response.</param>
+        </member>
+        <member name="M:SatIpDomainObjects.SatIpLogger.LogReply(System.String,System.IO.StreamReader)">
+            <summary>
+            Log a message response.
+            </summary>
+            <param name="title">The name of the response.</param>
+            <param name="streamReader">The stream containing the response.</param>
+        </member>
+        <member name="T:SatIpDomainObjects.TuningParameters">
+            <summary>
+            The base class for tuning parameters.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.TuningParameters.FrontEnd">
+            <summary>
+            Get or set the frontend value.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.TuningParameters.Frequency">
+            <summary>
+            Get or set the frequency.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.TuningParameters.Pids">
+            <summary>
+            Get or set the list of PID's.
+            </summary>
+        </member>
+        <member name="P:SatIpDomainObjects.TuningParameters.ModulationSystem">
+            <summary>
+            Get the modulation system. Overridden by derived classes.
+            </summary>
+        </member>
+        <member name="M:SatIpDomainObjects.TuningParameters.#ctor(System.Int32)">
+            <summary>
+            Initialize a new instance of the TuningParameters class.
+            </summary>
+            <param name="frequency">The tuning frequency.</param>
+        </member>
+        <member name="M:SatIpDomainObjects.TuningParameters.ToString">
+            <summary>
+            Return a SAT>IP formatted string for this instance.
+            </summary>
+            <returns>A string containing this instances values.</returns>
+        </member>
+        <member name="M:SatIpDomainObjects.TuningParameters.GetParameters(DomainObjects.TuningSpec,System.Int32)">
+            <summary>
+            Convert a tuning spec to SAT>IP values.
+            </summary>
+            <param name="tuningSpec">The tuning spec instance.</param>
+            <param name="diseqcSetting">The DiSEqC value (1-4).</param>
+            <returns>A TuningParameter instance containg the tuning spec values.</returns>
+        </member>
+    </members>
+</doc>

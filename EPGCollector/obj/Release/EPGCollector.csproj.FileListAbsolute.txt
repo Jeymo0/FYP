@@ -1,0 +1,232 @@
+C:\Cygnus Consulting\EPGCollector\EPGCollector\bin\Release\EPGCollector.exe
+C:\Cygnus Consulting\EPGCollector\EPGCollector\bin\Release\EPGCollector.pdb
+C:\Cygnus Consulting\EPGCollector\EPGCollector\bin\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector\EPGCollector\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector\EPGCollector\bin\Release\DVBServices.dll
+C:\Cygnus Consulting\EPGCollector\EPGCollector\bin\Release\DirectShowLib-2005.dll
+C:\Cygnus Consulting\EPGCollector\EPGCollector\bin\Release\DVBServices.pdb
+C:\Cygnus Consulting\EPGCollector\EPGCollector\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector\EPGCollector\bin\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector\EPGCollector\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector\EPGCollector\obj\Release\EPGCollector.exe
+C:\Cygnus Consulting\EPGCollector\EPGCollector\obj\Release\EPGCollector.pdb
+C:\Cygnus Consulting\EPGCollector\EPGCollector\bin\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\obj\Release\EPGCollector.exe
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\obj\Release\EPGCollector.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\bin\Release\EPGCollector.exe
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\bin\Release\EPGCollector.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\bin\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\bin\Release\DVBServices.dll
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\bin\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\bin\Release\DirectShowLib-2005.dll
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\bin\Release\DVBServices.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\bin\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\obj\Release\ResolveAssemblyReference.cache
+D:\Dump\Steve\EPGCollector\obj\Release\EPGCollector.exe
+D:\2.0.15\EPGCollector\obj\Release\EPGCollector.exe
+D:\2.0.15\EPGCollector\obj\Release\EPGCollector.pdb
+D:\2.0.15\EPGCollector\bin\Release\EPGCollector.exe
+D:\2.0.15\EPGCollector\bin\Release\EPGCollector.pdb
+D:\2.0.15\EPGCollector\bin\Release\DirectShow.dll
+D:\2.0.15\EPGCollector\bin\Release\DomainObjects.dll
+D:\2.0.15\EPGCollector\bin\Release\DVBServices.dll
+D:\2.0.15\EPGCollector\bin\Release\zlib.net.dll
+D:\2.0.15\EPGCollector\bin\Release\DirectShowLib-2005.dll
+D:\2.0.15\EPGCollector\bin\Release\DVBServices.pdb
+D:\2.0.15\EPGCollector\bin\Release\DomainObjects.pdb
+D:\2.0.15\EPGCollector\bin\Release\DirectShow.pdb
+D:\2.0.15\EPGCollector\obj\Release\ResolveAssemblyReference.cache
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\obj\Release\ResolveAssemblyReference.cache
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\bin\Release\EPGCollector.exe
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\bin\Release\EPGCollector.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\bin\Release\DirectShow.dll
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\bin\Release\DomainObjects.dll
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\bin\Release\DVBServices.dll
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\bin\Release\zlib.net.dll
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\bin\Release\DirectShowLib-2005.dll
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\bin\Release\DVBServices.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\bin\Release\DomainObjects.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\bin\Release\DirectShow.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\obj\Release\EPGCollector.exe
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\obj\Release\EPGCollector.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\obj\Release\EPGCollector.exe
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\obj\Release\EPGCollector.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\bin\Release\EPGCollector.exe
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\bin\Release\EPGCollector.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\bin\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\bin\Release\DVBServices.dll
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\bin\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\bin\Release\DirectShowLib-2005.dll
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\bin\Release\DVBServices.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\bin\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\bin\Release\DVBServices.xml
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\bin\Release\DomainObjects.xml
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\bin\Release\DirectShow.xml
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\bin\Release\EPGCollector.XML
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\bin\Release\EPGCollector.exe
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\bin\Release\EPGCollector.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\bin\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\bin\Release\DVBServices.dll
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\bin\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\bin\Release\DVBServices.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\bin\Release\DVBServices.xml
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\bin\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\bin\Release\DirectShow.xml
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\obj\Release\EPGCollector.exe
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\obj\Release\EPGCollector.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\bin\Release\DirectShowLib-2005.dll
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\bin\Release\DomainObjects.xml
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\bin\Release\EPGCollector.XML
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\bin\Release\EPGCollector.exe
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\bin\Release\EPGCollector.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\bin\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\bin\Release\DVBServices.dll
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\bin\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\bin\Release\DirectShowLib-2005.dll
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\bin\Release\DVBServices.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\bin\Release\DVBServices.xml
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\bin\Release\DomainObjects.xml
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\bin\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\bin\Release\DirectShow.xml
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\obj\Release\EPGCollector.exe
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\obj\Release\EPGCollector.pdb
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\bin\Release\EPGCollector.exe
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\bin\Release\EPGCollector.pdb
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\bin\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\bin\Release\DVBServices.dll
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\bin\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\bin\Release\DirectShowLib-2005.dll
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\bin\Release\DVBServices.pdb
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\bin\Release\DVBServices.xml
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\bin\Release\DomainObjects.xml
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\bin\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\bin\Release\DirectShow.xml
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\obj\Release\EPGCollector.exe
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\obj\Release\EPGCollector.pdb
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\bin\Release\Interop.DVBViewerServer.dll
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\bin\Release\EPGCollector.XML
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\bin\Release\EPGCollector.exe
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\bin\Release\EPGCollector.pdb
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\bin\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\bin\Release\DVBServices.dll
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\bin\Release\Interop.DVBViewerServer.dll
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\bin\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\bin\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\bin\Release\DomainObjects.xml
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\bin\Release\DVBServices.pdb
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\bin\Release\DVBServices.xml
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\obj\Release\EPGCollector.exe
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\obj\Release\EPGCollector.pdb
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\bin\Release\mcepg.dll
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\bin\Release\mcstore.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\EPGCollector.exe.config
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\EPGCollector.exe
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\EPGCollector.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\ChannelUpdate.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\DVBServices.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\Lookups.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\MxfParser.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\NetReceiver.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\NetworkProtocols.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\SatIp.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\VBox.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\XmltvParser.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\Newtonsoft.Json.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\Brotli.NET.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\ChannelUpdate.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\ChannelUpdate.xml
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\Lookups.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\Lookups.xml
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\MxfParser.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\NetReceiver.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\NetworkProtocols.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\SatIp.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\SatIp.xml
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\VBox.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\VBox.xml
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\XmltvParser.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\XmltvParser.xml
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\DirectShow.xml
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\DomainObjects.xml
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\DVBServices.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\DVBServices.xml
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.exe
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\SchedulesDirect.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\SchedulesDirect.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\SchedulesDirect.xml
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\EPGCollector.XML
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\bin\Release\SchedulesDirect.dll.config
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.csproj.AssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.csproj.SuggestedBindingRedirects.cache
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.csproj.CoreCompileInputs.cache
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.csproj.CopyComplete
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\EPGCollector.exe.config
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\EPGCollector.XML
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\EPGCollector.exe
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\EPGCollector.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\ChannelUpdate.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\DirectShow.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\DomainObjects.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\DVBServices.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\Lookups.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\MxfParser.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\NetReceiver.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\NetworkProtocols.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\SatIp.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\SchedulesDirect.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\VBox.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\XmltvParser.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\Newtonsoft.Json.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\Brotli.NET.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\zlib.net.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\ChannelUpdate.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\ChannelUpdate.xml
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\Lookups.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\Lookups.xml
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\MxfParser.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\NetReceiver.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\NetworkProtocols.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\SatIp.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\SatIp.xml
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\SchedulesDirect.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\SchedulesDirect.xml
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\SchedulesDirect.dll.config
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\VBox.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\VBox.xml
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\XmltvParser.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\XmltvParser.xml
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\DirectShow.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\DirectShow.xml
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\DomainObjects.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\DomainObjects.xml
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\DVBServices.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\DVBServices.xml
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.csproj.AssemblyReference.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.csproj.SuggestedBindingRedirects.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.csproj.CoreCompileInputs.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.csproj.CopyComplete
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.exe
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.pdb

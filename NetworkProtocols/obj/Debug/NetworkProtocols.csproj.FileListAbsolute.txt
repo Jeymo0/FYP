@@ -1,0 +1,11 @@
+C:\Cygnus Consulting\EPGCollector 4.3\NetworkProtocols\bin\Debug\NetworkProtocols.dll
+C:\Cygnus Consulting\EPGCollector 4.3\NetworkProtocols\bin\Debug\NetworkProtocols.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\NetworkProtocols\bin\Debug\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\NetworkProtocols\bin\Debug\Newtonsoft.Json.dll
+C:\Cygnus Consulting\EPGCollector 4.3\NetworkProtocols\bin\Debug\Brotli.NET.dll
+C:\Cygnus Consulting\EPGCollector 4.3\NetworkProtocols\bin\Debug\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\NetworkProtocols\obj\Debug\NetworkProtocols.dll
+C:\Cygnus Consulting\EPGCollector 4.3\NetworkProtocols\obj\Debug\NetworkProtocols.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\NetworkProtocols\obj\Debug\NetworkProtocols.csproj.AssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\NetworkProtocols\obj\Debug\NetworkProtocols.csproj.CoreCompileInputs.cache
+C:\Cygnus Consulting\EPGCollector 4.3\NetworkProtocols\obj\Debug\NetworkProtocols.csproj.CopyComplete

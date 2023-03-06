@@ -1,0 +1,126 @@
+F:\Quintek\DotNet\HomeBroadcastingSystem\DirectShow\obj\Release\ResolveAssemblyReference.cache
+F:\Quintek\DotNet\HomeBroadcastingSystem\DirectShow\bin\Release\DirectShow.dll
+F:\Quintek\DotNet\HomeBroadcastingSystem\DirectShow\bin\Release\DirectShow.pdb
+F:\Quintek\DotNet\HomeBroadcastingSystem\DirectShow\bin\Release\DomainObjects.dll
+F:\Quintek\DotNet\HomeBroadcastingSystem\DirectShow\bin\Release\Player.dll
+F:\Quintek\DotNet\HomeBroadcastingSystem\DirectShow\bin\Release\Interop.WMPLib.dll
+F:\Quintek\DotNet\HomeBroadcastingSystem\DirectShow\bin\Release\Network.dll
+F:\Quintek\DotNet\HomeBroadcastingSystem\DirectShow\bin\Release\Player.pdb
+F:\Quintek\DotNet\HomeBroadcastingSystem\DirectShow\bin\Release\DomainObjects.pdb
+F:\Quintek\DotNet\HomeBroadcastingSystem\DirectShow\bin\Release\Network.pdb
+F:\Quintek\DotNet\HomeBroadcastingSystem\DirectShow\obj\Release\DirectShow.dll
+F:\Quintek\DotNet\HomeBroadcastingSystem\DirectShow\obj\Release\DirectShow.pdb
+F:\Quintek\DotNet\HomeBroadcastingSystem\DirectShow\obj\Release\DirectShow.EventWindow.resources
+F:\Quintek\DotNet\HomeBroadcastingSystem\DirectShow\obj\Release\DirectShow.csproj.GenerateResource.Cache
+F:\Quintek\DotNet\HomeBroadcastingSystem\DirectShow\bin\Release\WindowsMedia.pdb
+C:\Cygnus Consulting\Home Broadcasting System\DirectShow\bin\Release\DirectShow.dll
+C:\Cygnus Consulting\Home Broadcasting System\DirectShow\bin\Release\DirectShow.pdb
+C:\Cygnus Consulting\Home Broadcasting System\DirectShow\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\Home Broadcasting System\DirectShow\bin\Release\Player.dll
+C:\Cygnus Consulting\Home Broadcasting System\DirectShow\bin\Release\Interop.WMPLib.dll
+C:\Cygnus Consulting\Home Broadcasting System\DirectShow\bin\Release\Network.dll
+C:\Cygnus Consulting\Home Broadcasting System\DirectShow\bin\Release\Player.pdb
+C:\Cygnus Consulting\Home Broadcasting System\DirectShow\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\Home Broadcasting System\DirectShow\bin\Release\Network.pdb
+C:\Cygnus Consulting\Home Broadcasting System\DirectShow\bin\Release\WindowsMedia.pdb
+C:\Cygnus Consulting\Home Broadcasting System\DirectShow\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\Home Broadcasting System\DirectShow\obj\Release\DirectShow.EventWindow.resources
+C:\Cygnus Consulting\Home Broadcasting System\DirectShow\obj\Release\DirectShow.csproj.GenerateResource.Cache
+C:\Cygnus Consulting\Home Broadcasting System\DirectShow\obj\Release\DirectShow.dll
+C:\Cygnus Consulting\Home Broadcasting System\DirectShow\obj\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DirectShow\bin\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DirectShow\bin\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DirectShow\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DirectShow\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DirectShow\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DirectShow\obj\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DirectShow\obj\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\DirectShow\bin\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\DirectShow\bin\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\DirectShow\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\DirectShow\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\DirectShow\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\DirectShow\obj\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\DirectShow\obj\Release\DirectShow.pdb
+D:\2.0.15\EPGCollector\DirectShow\bin\Release\DirectShow.dll
+D:\2.0.15\EPGCollector\DirectShow\bin\Release\DirectShow.pdb
+D:\2.0.15\EPGCollector\DirectShow\bin\Release\DirectShowLib-2005.dll
+D:\2.0.15\EPGCollector\DirectShow\bin\Release\DomainObjects.dll
+D:\2.0.15\EPGCollector\DirectShow\bin\Release\DomainObjects.pdb
+D:\2.0.15\EPGCollector\DirectShow\obj\Release\ResolveAssemblyReference.cache
+D:\2.0.15\EPGCollector\DirectShow\obj\Release\DirectShow.dll
+D:\2.0.15\EPGCollector\DirectShow\obj\Release\DirectShow.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DirectShow\bin\Release\DirectShow.dll
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DirectShow\bin\Release\DirectShow.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DirectShow\bin\Release\DirectShowLib-2005.dll
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DirectShow\bin\Release\DomainObjects.dll
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DirectShow\bin\Release\DomainObjects.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DirectShow\obj\Release\ResolveAssemblyReference.cache
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DirectShow\obj\Release\DirectShow.dll
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DirectShow\obj\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\DirectShow\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\DirectShow\obj\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\DirectShow\obj\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\DirectShow\bin\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\DirectShow\bin\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\DirectShow\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\DirectShow\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\DirectShow\bin\Release\DomainObjects.xml
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\DirectShow\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\DirectShow\obj\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\DirectShow\obj\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\DirectShow\bin\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\DirectShow\bin\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\DirectShow\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\DirectShow\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\DirectShow\bin\Release\DomainObjects.xml
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\DirectShow\bin\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\DirectShow\bin\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\DirectShow\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\DirectShow\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\DirectShow\bin\Release\DomainObjects.xml
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\DirectShow\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\DirectShow\obj\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\DirectShow\obj\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\DirectShow\bin\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\DirectShow\bin\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\DirectShow\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\DirectShow\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\DirectShow\bin\Release\DomainObjects.xml
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\DirectShow\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\DirectShow\obj\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\DirectShow\obj\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\DirectShow\bin\Release\Interop.DVBViewerServer.dll
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\DirectShow\bin\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\DirectShow\bin\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\DirectShow\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\DirectShow\bin\Release\Interop.DVBViewerServer.dll
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\DirectShow\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\DirectShow\bin\Release\DomainObjects.xml
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\DirectShow\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\DirectShow\obj\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\DirectShow\obj\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\bin\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\bin\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\bin\Release\Newtonsoft.Json.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\bin\Release\Brotli.NET.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\bin\Release\DomainObjects.xml
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\obj\Release\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\obj\Release\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\obj\Release\DirectShow.csproj.CoreCompileInputs.cache
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\obj\Release\DirectShow.csproj.CopyComplete
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\obj\Release\DirectShow.csproj.AssemblyReference.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\bin\Release\DirectShow.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\bin\Release\DirectShow.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\bin\Release\DomainObjects.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\bin\Release\Brotli.NET.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\bin\Release\Newtonsoft.Json.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\bin\Release\DomainObjects.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\bin\Release\DomainObjects.xml
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\obj\Release\DirectShow.csproj.AssemblyReference.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\obj\Release\DirectShow.csproj.CoreCompileInputs.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\obj\Release\DirectShow.csproj.CopyComplete
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\obj\Release\DirectShow.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\obj\Release\DirectShow.pdb

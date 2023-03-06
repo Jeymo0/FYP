@@ -1,0 +1,569 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WMCUtility</name>
+    </assembly>
+    <members>
+        <member name="T:WMCUtility.BackupAssembly">
+            <summary>
+            The class that describes a backup file assembly.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupAssembly.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupAssembly.CultureInfo">
+            <summary>
+            Get or set the culture information.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupAssembly.PublicKey">
+            <summary>
+            Get or set the public key.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupAssembly.NameSpaces">
+            <summary>
+            Get or set the namespace.
+            </summary>
+        </member>
+        <member name="M:WMCUtility.BackupAssembly.#ctor">
+            <summary>
+            Initialize a new instance of the BackupAssembly class.
+            </summary>
+        </member>
+        <member name="T:WMCUtility.BackupNameSpace">
+            <summary>
+            The class that describes a backup name space.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupNameSpace.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupNameSpace.Types">
+            <summary>
+            Get or set the types.
+            </summary>
+        </member>
+        <member name="M:WMCUtility.BackupNameSpace.#ctor">
+            <summary>
+            Initialize a new instance of the BackupNameSpace class.
+            </summary>
+        </member>
+        <member name="T:WMCUtility.BackupType">
+            <summary>
+            The class that describes a backup type.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupType.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupType.GroupName">
+            <summary>
+            Get or set the group name.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupType.ParentFieldName">
+            <summary>
+            Get or set the parent field name.
+            </summary>
+        </member>
+        <member name="M:WMCUtility.BackupType.#ctor">
+            <summary>
+            Initialize a new instance of the BackupType class.
+            </summary>
+        </member>
+        <member name="T:WMCUtility.BackupDevice">
+            <summary>
+            The class that describes a backup device.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDevice.Id">
+            <summary>
+            Get or set the ID.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDevice.IdRef">
+            <summary>
+            Get or set the ID reference.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDevice.DeviceType">
+            <summary>
+            Get or set the device type.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDevice.Guid">
+            <summary>
+            Get or set the guid.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDevice.CountryCode">
+            <summary>
+            Get or set the country code.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDevice.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDevice.RecorderId">
+            <summary>
+            Get or set the recorder ID.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDevice.PreferredOrder">
+            <summary>
+            Get or set the preferred order.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDevice.IsChannelTuningInfoSupported">
+            <summary>
+            Get or set the channel tuning info supported flag.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDevice.IsDVBTuningInfoSupported">
+            <summary>
+            Get or set the DVB tuning info supported flag.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDevice.IsStringTuningInfoSupported">
+            <summary>
+            Get or set the string tuning info supported flag.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDevice.WmisLineups">
+            <summary>
+            Get or set the wmis lineups.
+            </summary>
+        </member>
+        <member name="M:WMCUtility.BackupDevice.#ctor">
+            <summary>
+            Initialize a new instance of the BackupDevice class.
+            </summary>
+        </member>
+        <member name="T:WMCUtility.BackupDeviceGroup">
+            <summary>
+            The class that describes a backup device group element.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceGroup.Uid">
+            <summary>
+            Get or set the uid.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceGroup.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceGroup.LastConfigurationChange">
+            <summary>
+            Get or set the last configuration change.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceGroup.Rank">
+            <summary>
+            Get or set the rank.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceGroup.PermitAnyDeviceType">
+            <summary>
+            Get or set the permit any device type falg.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceGroup.IsEnabled">
+            <summary>
+            Get or set the enabled flag.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceGroup.FirstRunProcessId">
+            <summary>
+            Get or set the first run process ID.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceGroup.OnlyShowDynamicLineups">
+            <summary>
+            Get or set the only show dynamic lineups flag.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceGroup.ExclusiveDeviceTypes">
+            <summary>
+            Get or set the exclusive device types.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceGroup.PermittedDeviceTypes">
+            <summary>
+            Get or set the permitted device types.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceGroup.DynamicLineups">
+            <summary>
+            Get or set the dynamic lineups.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceGroup.GuideImage">
+            <summary>
+            Get or set the guide image.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceGroup.Devices">
+            <summary>
+            Get or set the list of devices.
+            </summary>
+        </member>
+        <member name="M:WMCUtility.BackupDeviceGroup.#ctor">
+            <summary>
+            Initialize a new instance of the BackupDeviceGroup class.
+            </summary>
+        </member>
+        <member name="T:WMCUtility.BackupDevices">
+            <summary>
+            The class that describes the list of backup devices.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDevices.Devices">
+            <summary>
+            Get or set the list of devices.
+            </summary>
+        </member>
+        <member name="M:WMCUtility.BackupDevices.#ctor">
+            <summary>
+            Initialize a new instance of the BackupDevices class.
+            </summary>
+        </member>
+        <member name="T:WMCUtility.BackupDeviceType">
+            <summary>
+            The class that describes a backup device type.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceType.Uid">
+            <summary>
+            Get or set the uid.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceType.NetworkType">
+            <summary>
+            Get or set the network type.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceType.HeadendType">
+            <summary>
+            Get or set the headend type.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceType.VideoSource">
+            <summary>
+            Get or set the video source.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceType.IsSetTopBox">
+            <summary>
+            Get or set the set top box flag.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceType.TuningSpaceName">
+            <summary>
+            Get or set the tuning space name.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceType.DisplayName">
+            <summary>
+            Get or set the display name.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceType.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceType.SqmId">
+            <summary>
+            Get or set the sqmid.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceType.ViewPriority">
+            <summary>
+            Get or set the view priority.
+            </summary>
+        </member>
+        <member name="M:WMCUtility.BackupDeviceType.#ctor">
+            <summary>
+            Initialize a new instance of the BackupDeviceType class.
+            </summary>
+        </member>
+        <member name="T:WMCUtility.BackupDeviceTypes">
+            <summary>
+            The class that describes the backup device types.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDeviceTypes.DeviceTypes">
+            <summary>
+            Get or set the device types.
+            </summary>
+        </member>
+        <member name="M:WMCUtility.BackupDeviceTypes.#ctor">
+            <summary>
+            Initiialize a new instance of the BackupDeviceTypes class.
+            </summary>
+        </member>
+        <member name="T:WMCUtility.BackupDynamicLineup">
+            <summary>
+            The class that describes a backup dynamic lineup.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDynamicLineup.Uid">
+            <summary>
+            Get or set the uid.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDynamicLineup.DeviceType">
+            <summary>
+            Get or set the device type.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDynamicLineup.IsAutoGenerated">
+            <summary>
+            Get or set the auto generated flag.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDynamicLineup.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDynamicLineup.IsAutoEnabled">
+            <summary>
+            Get or set the auto enabled flag.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDynamicLineup.Priority">
+            <summary>
+            Get or set the priority.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDynamicLineup.Onid">
+            <summary>
+            Get or set the ONID.
+            </summary>
+        </member>
+        <member name="M:WMCUtility.BackupDynamicLineup.#ctor">
+            <summary>
+            Initialize a new instance of the BackupDynamicLineup class.
+            </summary>
+        </member>
+        <member name="T:WMCUtility.BackupDynamicLineups">
+            <summary>
+            The class that describes the backup dynamic lineups.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupDynamicLineups.DynamicLineup">
+            <summary>
+            Get or set the dynamic lineups.
+            </summary>
+        </member>
+        <member name="M:WMCUtility.BackupDynamicLineups.#ctor">
+            <summary>
+            Initiialize a new instance of the BackupDynamicLineup class.
+            </summary>
+        </member>
+        <member name="T:WMCUtility.BackupGuideImage">
+            <summary>
+            The class that describes a backup guide image.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupGuideImage.Uid">
+            <summary>
+            Get or set the uid.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupGuideImage.ImageUrl">
+            <summary>
+            Get or set the image URL.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupGuideImage.Format">
+            <summary>
+            Get or set the image format.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupGuideImage.Version">
+            <summary>
+            Get or set the uid.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupGuideImage.Image">
+            <summary>
+            Get or set the image.
+            </summary>
+        </member>
+        <member name="M:WMCUtility.BackupGuideImage.#ctor">
+            <summary>
+            Initialize a new instance of the BackupGuideImage class.
+            </summary>
+        </member>
+        <member name="T:WMCUtility.BackupLineup">
+            <summary>
+            The class that describes a backup lineup.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupLineup.Uid">
+            <summary>
+            Get or set the uid.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupLineup.Guid">
+            <summary>
+            Get or set the guid.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupLineup.SecondaryProvider">
+            <summary>
+            Get or set the secondary provider.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupLineup.PrimaryProviderAttribute">
+            <summary>
+            Get or set the primary provider.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupLineup.PrimaryProvider">
+            <summary>
+            Get or set the primary provider.
+            </summary>
+        </member>
+        <member name="M:WMCUtility.BackupLineup.#ctor">
+            <summary>
+            Initialize a new instance of the BackupLineup class.
+            </summary>
+        </member>
+        <member name="T:WMCUtility.BackupPrimaryProvider">
+            <summary>
+            The class that describes a backup primary provider element.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupPrimaryProvider.Uid">
+            <summary>
+            Get or set the uid.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupPrimaryProvider.Guid">
+            <summary>
+            Get or set the guid.
+            </summary>
+        </member>
+        <member name="M:WMCUtility.BackupPrimaryProvider.#ctor">
+            <summary>
+            Initialize a new instance of the BackupPrimaryProvider class.
+            </summary>
+        </member>
+        <member name="T:WMCUtility.BackupWmisLineup">
+            <summary>
+            The class that describes a wmis lineup.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupWmisLineup.Uid">
+            <summary>
+            Get or set the uid.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupWmisLineup.Guid">
+            <summary>
+            Get or set the guid.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupWmisLineup.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupWmisLineup.Language">
+            <summary>
+            Get or set the language.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupWmisLineup.State">
+            <summary>
+            Get or set the state.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupWmisLineup.LineupTypes">
+            <summary>
+            Get or set the lineup types.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupWmisLineup.AlternateLineupTypes">
+            <summary>
+            Get or set the alternate lineup types.
+            </summary>
+        </member>
+        <member name="M:WMCUtility.BackupWmisLineup.#ctor">
+            <summary>
+            Initialize a new instance of the BackupWmisLineup class.
+            </summary>
+        </member>
+        <member name="T:WMCUtility.BackupWmisLineups">
+            <summary>
+            The class that describes the list of wmis lineups.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupWmisLineups.WmisLineups">
+            <summary>
+            Get or set the list of wmis lineups.
+            </summary>
+        </member>
+        <member name="M:WMCUtility.BackupWmisLineups.#ctor">
+            <summary>
+            Initialize a new instance of the BackupWmisLineups class.
+            </summary>
+        </member>
+        <member name="T:WMCUtility.Logger">
+            <summary>
+            The class that describes the system logger.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.Logger.Instance">
+            <summary>
+            Get an instance of a logger.
+            </summary>
+        </member>
+        <member name="M:WMCUtility.Logger.Write(System.String)">
+            <summary>
+            Write a log record.
+            </summary>
+            <param name="message">The message to be logged.</param>
+        </member>
+        <member name="T:WMCUtility.BackupLineupRoot">
+            <summary>
+            The class that describes a lineup backup file top level node.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupLineupRoot.Assemblies">
+            <summary>
+            Get or set the list of assemblies.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupLineupRoot.Lineups">
+            <summary>
+            Get or set the list of lineups.
+            </summary>
+        </member>
+        <member name="P:WMCUtility.BackupLineupRoot.DeviceGroups">
+            <summary>
+            Get or set the list of device groups.
+            </summary>
+        </member>
+        <member name="M:WMCUtility.BackupLineupRoot.#ctor">
+            <summary>
+            Initialize a new instance of the BackupLineupRoot class.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,7 @@
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\ZLib\source\bin\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\ZLib\source\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\ZLib\source\obj\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\ZLib\source\bin\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\ZLib\source\obj\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\ZLib\source\obj\Release\zlib.net.csproj.AssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\ZLib\source\obj\Release\zlib.net.csproj.CoreCompileInputs.cache

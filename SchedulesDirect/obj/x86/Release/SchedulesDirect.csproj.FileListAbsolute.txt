@@ -1,0 +1,10 @@
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\bin\Release\SchedulesDirect.dll.config
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\bin\Release\SchedulesDirect.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\bin\Release\SchedulesDirect.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\bin\Release\Brotli.NET.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\bin\Release\DomainObjects.xml
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\obj\x86\Release\SchedulesDirect.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\obj\x86\Release\SchedulesDirect.pdb

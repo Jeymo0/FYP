@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfDVBTTuning xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DVBTTuning>
+    	<Frequency>57000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>63000</Frequency>
+    	<BandWidth>6</BandWidth>
+	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>  
+    	<Frequency>69000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>  
+    	<Frequency>75000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>79000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>85000</Frequency>
+    	<BandWidth>6</BandWidth>
+	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>177000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>183000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>189000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>195000</Frequency>
+    	<BandWidth>6</BandWidth>
+	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>201000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>207000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>213000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>473000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>479000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>485000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>491000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>497000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>503000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>509000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>512000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>521000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>527000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>533000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>539000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>545000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>551000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>557000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>563000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>569000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>575000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>581000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>587000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>593000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>599000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>605000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>617000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>623000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>629000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>635000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>641000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>647000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>653000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>659000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>665000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>671000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>677000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>683000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>689000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>695000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>701000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>707000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>713000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>719000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>725000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>731000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>737000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>743000</Frequency>
+    	<BandWidth>6</BandWidth>
+    	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>749000</Frequency>
+    	<BandWidth>6</BandWidth>
+	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>755000</Frequency>
+    	<BandWidth>6</BandWidth>
+	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>761000</Frequency>
+    	<BandWidth>6</BandWidth>
+	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>767000</Frequency>
+    	<BandWidth>6</BandWidth>
+	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>773000</Frequency>
+    	<BandWidth>6</BandWidth>
+	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>779000</Frequency>
+    	<BandWidth>6</BandWidth>
+	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>785000</Frequency>
+    	<BandWidth>6</BandWidth>
+	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>791000</Frequency>
+    	<BandWidth>6</BandWidth>
+	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>797000</Frequency>
+    	<BandWidth>6</BandWidth>
+	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+  <DVBTTuning>
+    	<Frequency>803000</Frequency>
+    	<BandWidth>6</BandWidth>
+	<CollectionType>EIT</CollectionType>
+  </DVBTTuning>
+</ArrayOfDVBTTuning> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

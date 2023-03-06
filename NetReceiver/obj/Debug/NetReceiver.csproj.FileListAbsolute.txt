@@ -1,0 +1,11 @@
+C:\Cygnus Consulting\EPGCollector 4.3\NetReceiver\bin\Debug\NetReceiver.dll
+C:\Cygnus Consulting\EPGCollector 4.3\NetReceiver\bin\Debug\NetReceiver.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\NetReceiver\bin\Debug\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\NetReceiver\bin\Debug\Newtonsoft.Json.dll
+C:\Cygnus Consulting\EPGCollector 4.3\NetReceiver\bin\Debug\Brotli.NET.dll
+C:\Cygnus Consulting\EPGCollector 4.3\NetReceiver\bin\Debug\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\NetReceiver\obj\Debug\NetReceiver.dll
+C:\Cygnus Consulting\EPGCollector 4.3\NetReceiver\obj\Debug\NetReceiver.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\NetReceiver\obj\Debug\NetReceiver.csproj.AssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\NetReceiver\obj\Debug\NetReceiver.csproj.CoreCompileInputs.cache
+C:\Cygnus Consulting\EPGCollector 4.3\NetReceiver\obj\Debug\NetReceiver.csproj.CopyComplete

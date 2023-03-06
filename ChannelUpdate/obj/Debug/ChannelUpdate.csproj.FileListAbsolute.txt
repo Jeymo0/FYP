@@ -1,0 +1,11 @@
+C:\Cygnus Consulting\EPGCollector 4.3\ChannelUpdate\bin\Debug\ChannelUpdate.dll
+C:\Cygnus Consulting\EPGCollector 4.3\ChannelUpdate\bin\Debug\ChannelUpdate.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\ChannelUpdate\bin\Debug\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\ChannelUpdate\bin\Debug\Newtonsoft.Json.dll
+C:\Cygnus Consulting\EPGCollector 4.3\ChannelUpdate\bin\Debug\Brotli.NET.dll
+C:\Cygnus Consulting\EPGCollector 4.3\ChannelUpdate\bin\Debug\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\ChannelUpdate\obj\Debug\ChannelUpdate.dll
+C:\Cygnus Consulting\EPGCollector 4.3\ChannelUpdate\obj\Debug\ChannelUpdate.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\ChannelUpdate\obj\Debug\ChannelUpdate.csproj.AssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\ChannelUpdate\obj\Debug\ChannelUpdate.csproj.CoreCompileInputs.cache
+C:\Cygnus Consulting\EPGCollector 4.3\ChannelUpdate\obj\Debug\ChannelUpdate.csproj.CopyComplete

@@ -1,0 +1,13 @@
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\x86\Debug\SatIp.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\x86\Debug\SatIp.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\x86\Debug\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\x86\Debug\NetReceiver.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\x86\Debug\NetworkProtocols.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\x86\Debug\Brotli.NET.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\x86\Debug\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\x86\Debug\NetReceiver.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\x86\Debug\NetworkProtocols.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\obj\x86\Debug\SatIp.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\obj\x86\Debug\SatIp.pdb

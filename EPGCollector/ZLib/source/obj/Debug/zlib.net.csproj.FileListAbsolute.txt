@@ -1,0 +1,5 @@
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\ZLib\source\bin\Debug\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\ZLib\source\bin\Debug\zlib.net.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\ZLib\source\obj\Debug\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\ZLib\source\obj\Debug\zlib.net.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\ZLib\source\obj\Debug\zlib.net.csproj.CoreCompileInputs.cache

@@ -1,0 +1,868 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VBox</name>
+    </assembly>
+    <members>
+        <member name="T:VBox.VBoxQuerySwVersionResponse">
+            <summary>
+            The class that describes the response to a QuerySwVersion request.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxQuerySwVersionResponse.DeviceType">
+            <summary>
+            Get the device type.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxQuerySwVersionResponse.VersionPrefix">
+            <summary>
+            Get the version prefix.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxQuerySwVersionResponse.SoftwareVersion">
+            <summary>
+            Get the software version.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxQuerySwVersionResponse.UbootVersion">
+            <summary>
+            Get the Uboot version.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxQuerySwVersionResponse.CompareSoftwareVersions(System.String)">
+            <summary>
+            Compare version number with this instance.
+            </summary>
+            <param name="otherVersion">The other version number.</param>
+            <returns>0 if equal, -1 if less than, otherwise +1.</returns>
+        </member>
+        <member name="M:VBox.VBoxQuerySwVersionResponse.ToString">
+            <summary>
+            Get a text representation of the response.
+            </summary>
+            <returns>The text description.</returns>
+        </member>
+        <member name="T:VBox.VBoxOpenMuxStreamResponse">
+            <summary>
+            The class that describes the response to an OpenMuxStream request.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxOpenMuxStreamResponse.MuxUrl">
+            <summary>
+            Get the response Url.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxOpenMuxStreamResponse.MuxAddress">
+            <summary>
+            Get the mux address element of the response Url.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxOpenMuxStreamResponse.MuxPort">
+            <summary>
+            Get the mux port element of the response Url.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxOpenMuxStreamResponse.MuxPath">
+            <summary>
+            Get the mux path element of the response Url.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxOpenMuxStreamResponse.ToString">
+            <summary>
+            Get a text representation of the response.
+            </summary>
+            <returns>The text description.</returns>
+        </member>
+        <member name="T:VBox.VBoxDvbcParameters">
+            <summary>
+            The class that describes DVB-C specific tuning parameters.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbcParameters.ModulationSystem">
+            <summary>
+            Get the modulation system.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbcParameters.ModulationType">
+            <summary>
+            Get or set the modulation type.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbcParameters.SymbolRate">
+            <summary>
+            Get or set the symbol rate.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbcParameters.SpectralInversion">
+            <summary>
+            Get or set the symbol rate.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxDvbcParameters.#ctor(System.Int32)">
+            <summary>
+            Initialize a new instance of the DvbcParameters class.
+            </summary>
+            <param name="frequency">The tuning frequency.</param>
+        </member>
+        <member name="M:VBox.VBoxDvbcParameters.ToString">
+            <summary>
+            Return a SAT>IP formatted string for this instance.
+            </summary>
+            <returns>A string containing this instances values.</returns>
+        </member>
+        <member name="M:VBox.VBoxDvbcParameters.ToString(System.Boolean)">
+            <summary>
+            Return a SAT>IP formatted string for this instance.
+            </summary>
+            <param name="includeModulationSystem">True if the modulation system value is to be included.</param>
+            <returns>A string containing this instances values.</returns>
+        </member>
+        <member name="T:VBox.VBoxDvbt2Parameters">
+            <summary>
+            The class that describes DVB-T2 specific tuning parameters.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbt2Parameters.ModulationSystem">
+            <summary>
+            Get the modulation system.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbt2Parameters.Plp">
+            <summary>
+            Get or set the PLP value.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbt2Parameters.SystemId">
+            <summary>
+            Get or set the system ID.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbt2Parameters.SisoMode">
+            <summary>
+            Get or set the SISO mode.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxDvbt2Parameters.#ctor(System.Int32)">
+            <summary>
+            Initialize a new instance of the Dvbt2Parameters class.
+            </summary>
+            <param name="frequency">The tuning frequency.</param>
+        </member>
+        <member name="M:VBox.VBoxDvbt2Parameters.ToString">
+            <summary>
+            Return a VBox formatted string for this instance.
+            </summary>
+            <returns>A string containing this instances values.</returns>
+        </member>
+        <member name="T:VBox.VBoxDvbtParameters">
+            <summary>
+            The class that describes DVB-T specific tuning parameters.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbtParameters.ModulationSystem">
+            <summary>
+            Get the modulation system.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbtParameters.BandWidth">
+            <summary>
+            Get or set the bandwidth.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbtParameters.TransmissionMode">
+            <summary>
+            Get or set the transmission mode.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbtParameters.ModulationType">
+            <summary>
+            Get or set the modulation type.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbtParameters.GuardInterval">
+            <summary>
+            Get or set the guard interval.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbtParameters.Fec">
+            <summary>
+            Get or set the FEC value.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxDvbtParameters.#ctor(System.Int32)">
+            <summary>
+            Initialize a new instance of the DvbtParameters class.
+            </summary>
+            <param name="frequency">The tuning frequency.</param>
+        </member>
+        <member name="M:VBox.VBoxDvbtParameters.ToString">
+            <summary>
+            Return a VBOX formatted string for this instance.
+            </summary>
+            <returns>A string containing this instances values.</returns>
+        </member>
+        <member name="T:VBox.VBoxDvbs2Parameters">
+            <summary>
+            The class that describes DVB-S2 specific tuning parameters.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbs2Parameters.ModulationSystem">
+            <summary>
+            Get the modulation system.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbs2Parameters.RollOff">
+            <summary>
+            Get or set the roll off value.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbs2Parameters.Pilot">
+            <summary>
+            Get or set the pilot value.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxDvbs2Parameters.#ctor(System.Int32)">
+            <summary>
+            Initialize a new instance of the Dvbs2Parameters class.
+            </summary>
+            <param name="frequency">The tuning frequency.</param>
+        </member>
+        <member name="M:VBox.VBoxDvbs2Parameters.ToString">
+            <summary>
+            Return a SAT>IP formatted string for this instance.
+            </summary>
+            <returns>A string containing this instances values.</returns>
+        </member>
+        <member name="T:VBox.VBoxDvbsParameters">
+            <summary>
+            The class that describes DVB-S specific tuning parameters.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbsParameters.ModulationSystem">
+            <summary>
+            Get the modulation system.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbsParameters.ModulationType">
+            <summary>
+            Get or set the modulation type.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbsParameters.Polarity">
+            <summary>
+            Get or set the polarity.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbsParameters.SymbolRate">
+            <summary>
+            Get or set the symbol rate.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbsParameters.Fec">
+            <summary>
+            Get or set the FEC value.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbsParameters.LnbLow">
+            <summary>
+            Get or set the LNB low frequency.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbsParameters.LnbHigh">
+            <summary>
+            Get or set the LNB high frequency.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbsParameters.LnbSwitch">
+            <summary>
+            Get or set the LNB switch frequency.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxDvbsParameters.LnbType">
+            <summary>
+            Get the LNB type.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxDvbsParameters.#ctor(System.Int32)">
+            <summary>
+            Initialize a new instance of the DvbsParameters class.
+            </summary>
+            <param name="frequency">The tuning frequency.</param>
+        </member>
+        <member name="M:VBox.VBoxDvbsParameters.ToString">
+            <summary>
+            Return a VBox formatted string for this instance.
+            </summary>
+            <returns>A string containing this instances values.</returns>
+        </member>
+        <member name="T:VBox.VBoxTuningParameters">
+            <summary>
+            The base class for tuning parameters.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxTuningParameters.Frequency">
+            <summary>
+            Get or set the frequency.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxTuningParameters.ModulationSystem">
+            <summary>
+            Get the modulation system. Overridden by derived classes.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxTuningParameters.#ctor(System.Int32)">
+            <summary>
+            Initialize a new instance of the TuningParameters class.
+            </summary>
+            <param name="frequency">The tuning frequency.</param>
+        </member>
+        <member name="M:VBox.VBoxTuningParameters.GetParameters(DomainObjects.TuningSpec,System.Int32)">
+            <summary>
+            Convert a tuning spec to SAT>IP values.
+            </summary>
+            <param name="tuningSpec">The tuning spec instance.</param>
+            <param name="diseqcSetting">The DiSEqC value (1-4).</param>
+            <returns>A TuningParameter instance containg the tuning spec values.</returns>
+        </member>
+        <member name="T:VBox.VBoxConfiguration">
+            <summary>
+            The class that describes the VBox configuration.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxConfiguration.VBoxEnabled">
+            <summary>
+            Get the state of the VBox feature.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxConfiguration.VBoxEnabledFile">
+            <summary>
+            Get the name of the configuration file.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxConfiguration.#ctor">
+            <summary>
+            Initialize a new instance of the VBoxConfiguration class.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxConfiguration.Load">
+            <summary>
+            Load the configuration.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VBox.VBoxConfiguration.Unload">
+            <summary>
+            Unload the configuration.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VBox.VBoxLogger">
+            <summary>
+            The class that describes the VBox logger.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxLogger.Instance">
+            <summary>
+            Get an instance of a logger.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxLogger.Write(System.String)">
+            <summary>
+            Write a log message.
+            </summary>
+            <param name="message">The message to be logged.</param>
+        </member>
+        <member name="M:VBox.VBoxLogger.LogReply(System.String,System.Byte[],System.Int32)">
+            <summary>
+            Log a message block.
+            </summary>
+            <param name="title">The title of the data.</param>
+            <param name="buffer">The message block.</param>
+            <param name="count">The length of the block.</param>
+        </member>
+        <member name="M:VBox.VBoxLogger.LogReply(System.String,System.IO.StreamReader)">
+            <summary>
+            Log a message.
+            </summary>
+            <param name="title">The title of the message.</param>
+            <param name="streamReader">A StreamReader instance to read the message from.</param>
+        </member>
+        <member name="T:VBox.VBoxApi">
+            <summary>
+            The class the defines the VBox requests.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxApi.ProtocolId">
+            <summary>
+            Get the protocol ID.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxApi.SoftwareVersion">
+            <summary>
+            Get or set the software version info.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxApi.QuerySoftwareVersion(System.String)">
+            <summary>
+            Call the QuerySwVersion API.
+            </summary>
+            <param name="address">The IP address of the VBox.</param>
+            <returns>A VBox response instance containing the reply.</returns>
+        </member>
+        <member name="M:VBox.VBoxApi.RegisterTuning(System.String,System.Int32)">
+            <summary>
+            Call the RegisterTuning API.
+            </summary>
+            <param name="address">The IP address of the VBox.</param>
+            <param name="tunerId">The identity of the tuner.</param>
+            <returns>A VBox response instance containing the reply.</returns>
+        </member>
+        <member name="M:VBox.VBoxApi.UnregisterTuning(System.String,System.Int32)">
+            <summary>
+            Call the UnregisterTuning API.
+            </summary>
+            <param name="address">The IP address of the VBox.</param>
+            <param name="tunerId">The identity of the tuner.</param>
+            <returns>A VBox response instance containing the reply.</returns>
+        </member>
+        <member name="M:VBox.VBoxApi.GetCountOfTuners(System.String)">
+            <summary>
+            Call the QueryNumOfTuners API.
+            </summary>
+            <param name="address">The IP address of the VBox.</param>
+            <returns>A VBox response instance containing the reply.</returns>
+        </member>
+        <member name="M:VBox.VBoxApi.GetTunerType(System.String,System.Int32)">
+            <summary>
+            Call the QueryTunerType API.
+            </summary>
+            <param name="address">The IP address of the VBox.</param>
+            <param name="tunerId">The identity of the tuner.</param>
+            <returns>A VBox response instance containing the reply.</returns>
+        </member>
+        <member name="M:VBox.VBoxApi.SetSatLnb(System.String,System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>
+            Call the SetSatLnb API.
+            </summary>
+            <param name="address">The IP address of the VBox.</param>
+            <param name="tunerId">The identity of the tuner.</param>
+            <param name="type">The type of LNB (SINGLE/DUAL).</param>
+            <param name="lowLnb">The LNB low value.</param>
+            <param name="highLnb">The LNB high value.</param>
+            <returns>A VBox response instance containing the reply.</returns>
+        </member>
+        <member name="M:VBox.VBoxApi.SetFrequency(System.String,System.Int32,VBox.VBoxTuningParameters)">
+            <summary>
+            Call the SetFrequency API.
+            </summary>
+            <param name="address">The IP address of the VBox.</param>
+            <param name="tunerId">The identity of the tuner.</param>
+            <param name="tuningParameters">The tuning parameters.</param>
+        </member>
+        <member name="M:VBox.VBoxApi.QueryLockStatus(System.String,System.Int32)">
+            <summary>
+            Call the QueryLockStatus API.
+            </summary>
+            <param name="address">The IP address of the VBox.</param>
+            <param name="tunerId">The identity of the tuner.</param>
+            <returns>A VBox response instance containing the reply.</returns>
+        </member>
+        <member name="M:VBox.VBoxApi.OpenMuxStream(System.String,System.Int32,System.Int32,System.Int32[])">
+            <summary>
+            Call the OpenMuxStream API.
+            </summary>
+            <param name="address">The IP address of the VBox.</param>
+            <param name="tunerId">The identity of the tuner.</param>
+            <param name="muxId">The identity of the mux (1-8).</param>
+            <param name="pids">A list of pids to begin receiving.</param>
+            <returns>A VBox response instance containing the reply.</returns>
+        </member>
+        <member name="M:VBox.VBoxApi.CloseMuxStream(System.String,System.Int32,System.Int32)">
+            <summary>
+            Call the CloseMuxStream API.
+            </summary>
+            <param name="address">The IP address of the VBox.</param>
+            <param name="tunerId">The identity of the tuner.</param>
+            <param name="muxId">The identity of the mux.</param>
+        </member>
+        <member name="M:VBox.VBoxApi.AddPidsToMuxStream(System.String,System.Int32,System.Int32,System.Int32[])">
+            <summary>
+            Call the AddPidsToMuxStream API.
+            </summary>
+            <param name="address">The IP address of the VBox.</param>
+            <param name="tunerId">The identity of the tuner.</param>
+            <param name="muxId">The identity of the mux.</param>
+            <param name="pids">The list of pids to add.</param>
+            <returns>A VBox response instance containing the reply.</returns>
+        </member>
+        <member name="M:VBox.VBoxApi.RemovePidsFromMuxStream(System.String,System.Int32,System.Int32,System.Int32[])">
+            <summary>
+            Call the RemovePidsFromMuxStream API.
+            </summary>
+            <param name="address">The IP address of the VBox.</param>
+            <param name="tunerId">The identity of the tuner.</param>
+            <param name="muxId">The identity of the mux.</param>
+            <param name="pids">The list of pids to remove. If null or zero entries all pids will be removed</param>
+            <returns>A VBox response instance containing the reply.</returns>
+        </member>
+        <member name="T:VBox.VBoxController">
+            <summary>
+            The class that describes the VBox controller.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxController.AssemblyVersion">
+            <summary>
+            Get the full assembly version number.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxController.BufferSpaceUsed">
+            <summary>
+            Get the buffer spaces used receiving data.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxController.BufferAddress">
+            <summary>
+            Get the buffer address.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxController.SyncByteSearches">
+            <summary>
+            Get the count of sync byte searches.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxController.SamplesDropped">
+            <summary>
+            Get the number of samples dropped.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxController.MaximumSampleSize">
+            <summary>
+            Get the maximum sample size.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxController.DumpFileSize">
+            <summary>
+            Get the dump file size.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxController.DataFlowing">
+            <summary>
+            Return true if data is flowing; false otherwise.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxController.Frequency">
+            <summary>
+            Get the tuning frequency.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxController.SignalStrength">
+            <summary>
+            Get the signal strength.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxController.SignalQuality">
+            <summary>
+            Get the signal quality.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxController.SignalPresent">
+            <summary>
+            Return true if a signal is present; false otherwise.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxController.SignalLocked">
+            <summary>
+            Return true if the signal is locked; false otherwise.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxController.Tuner">
+            <summary>
+            Get the tuner.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxController.#ctor">
+            <summary>
+            Initialize a new instance of the VBoxController class.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxController.Dispose">
+            <summary>
+            Dispose the controller.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxController.LoadServers(System.Collections.ObjectModel.Collection{VBox.VBoxTuner})">
+            <summary>
+            Load all VBox servers.
+            </summary>
+            <param name="servers">The list to be updated.</param>
+            <returns>An ErrorSpec instance if an error occurs; null otherwise.</returns>
+        </member>
+        <member name="M:VBox.VBoxController.ChangePidMapping(System.Int32)">
+            <summary>
+            Change the PID mapping.
+            </summary>
+            <param name="pid">The pid to be mapped.</param>
+        </member>
+        <member name="M:VBox.VBoxController.ChangePidMapping(System.Int32[])">
+            <summary>
+            Change the PID mapping.
+            </summary>
+            <param name="pids">The list of PID's to be mapped.</param>
+        </member>
+        <member name="M:VBox.VBoxController.Run(VBox.VBoxTuner,VBox.VBoxTuningParameters,System.String,System.Boolean)">
+            <summary>
+            Tune the VBox.
+            </summary>
+            <param name="server">The server to use.</param>
+            <param name="tuningParameters">The tuning parameters.</param>
+            <param name="dumpFileName">The file to dump the data to. Null if not used.</param>
+            <param name="completeTs">True if the open mux request should specify all pids; false otherwise.</param>   
+            <returns>An ErrorSpec instance if an error occurs; null otherwise.</returns>
+        </member>
+        <member name="M:VBox.VBoxController.Stop">
+            <summary>
+            Stop receiving data.
+            </summary>
+            <returns>An ErrorSpec instance if an error occurs; null otherwise.</returns>
+        </member>
+        <member name="M:VBox.VBoxController.FindReceiver(System.Collections.ObjectModel.Collection{DomainObjects.SelectedTuner},DomainObjects.TunerNodeType,DomainObjects.TuningSpec,DomainObjects.Tuner,System.Int32,System.Boolean)">
+            <summary>
+            Find a receiver.
+            </summary>
+            <param name="tuners">The list of tuners to try.</param>
+            <param name="tunerNodeType">The node type the tuner must have.</param>
+            <param name="tuningSpec">A tuning spec instance with tuning details.</param>
+            <param name="lastTuner">The last tuner used or null if all are to be considered.</param>
+            <param name="diseqcSetting">The Diseqc parameters.</param>
+            <param name="completeTs">True if the complete TS is to be processed; false otherwise.</param>
+            <returns>A VBox controller instance or null if no tuner available.</returns>
+        </member>
+        <member name="M:VBox.VBoxController.FindReceiver(System.Collections.ObjectModel.Collection{DomainObjects.SelectedTuner},DomainObjects.TunerNodeType,DomainObjects.TuningSpec,DomainObjects.Tuner,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Find a receiver.
+            </summary>
+            <param name="tuners">The list of tuners to try.</param>
+            <param name="tunerNodeType">The node type the tuner must have.</param>
+            <param name="tuningSpec">A tuning spec instance with tuning details.</param>
+            <param name="lastTuner">The last tuner used or null if all are to be considered.</param>
+            <param name="diseqcSetting">The Diseqc parameters.</param>
+            <param name="dumpFileName">The full path of the duump file. Null if not used.</param>
+            <param name="completeTs">True if the complete TS is to be processed; false otherwise.</param>
+            <returns>A VBox controller instance or null if no tuner available.</returns>
+        </member>
+        <member name="T:VBox.VBoxQueryLockStatusResponse">
+            <summary>
+            The class that describes the response to a QueryLockStatus request.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxQueryLockStatusResponse.LockStatus">
+            <summary>
+            Get the lock status.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxQueryLockStatusResponse.SignalStrength">
+            <summary>
+            Get the signal strength.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxQueryLockStatusResponse.RfLevel">
+            <summary>
+            Get the RF level.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxQueryLockStatusResponse.SignalToNoiseRatio">
+            <summary>
+            Get the SNR value.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxQueryLockStatusResponse.IsLocked">
+            <summary>
+            Return true is signal is locked; false otherwise.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxQueryLockStatusResponse.ToString">
+            <summary>
+            Get a text representation of the response.
+            </summary>
+            <returns>The text description.</returns>
+        </member>
+        <member name="T:VBox.VBoxQueryNumOfTunersResponse">
+            <summary>
+            The class that describes the response to a QueryNumOfTuners request.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxQueryNumOfTunersResponse.TunerCount">
+            <summary>
+            Get the number of tuners.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxQueryNumOfTunersResponse.ToString">
+            <summary>
+            Get a text representation of the response.
+            </summary>
+            <returns>The text description.</returns>
+        </member>
+        <member name="T:VBox.VBoxQueryTunerTypeResponse">
+            <summary>
+            The class that describes the response to the QueryTunerType request.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxQueryTunerTypeResponse.Type">
+            <summary>
+            Get the type of tuner.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxQueryTunerTypeResponse.IsDvbs">
+            <summary>
+            Return true if the tuner supports DVB-S or DVB-S2; false otherwise.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxQueryTunerTypeResponse.IsDvbt">
+            <summary>
+            Return true if the tuner supports DVB-T; false otherwise.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxQueryTunerTypeResponse.IsDvbc">
+            <summary>
+            Return true if the tuner supports DVB-C;false otherwise.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxQueryTunerTypeResponse.ToString">
+            <summary>
+            Get a text representation of the response.
+            </summary>
+            <returns>The text description.</returns>
+        </member>
+        <member name="T:VBox.VBoxResponse">
+            <summary>
+            The base class for VBox responses.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxResponse.ErrorCode">
+            <summary>
+            Get the error code.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxResponse.ErrorDescription">
+            <summary>
+            Get the error description.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxResponse.IsOK">
+            <summary>
+            Return true if the request was successful; false otherwise.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxResponse.ToString">
+            <summary>
+            Get a string representation of the response.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:VBox.VBoxTuner">
+            <summary>
+            The class that describes a VBox server.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxTuner.Name">
+            <summary>
+            Get the server name.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxTuner.Address">
+            <summary>
+            Get the server address.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxTuner.TunerId">
+            <summary>
+            Get the tuner ID.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxTuner.UniqueIdentity">
+            <summary>
+            Get the unique identification.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxTuner.DvbsFrontEnds">
+            <summary>
+            Get the number of DVB-S/S2 tuners.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxTuner.DvbtFrontEnds">
+            <summary>
+            Get the number of DVB-T/T2 tuners.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxTuner.DvbcFrontEnds">
+            <summary>
+            Get the number of DVB-C/C2 tuners.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxTuner.IsServerTuner">
+            <summary>
+            Returns true to indicate a server tuner.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxTuner.IsSatIpTuner">
+            <summary>
+            Returns false to indicate not a Sat>IP tuner.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxTuner.IsVBoxTuner">
+            <summary>
+            Returns true to indicate a VBox tuner.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxTuner.DVBSatelliteNode">
+            <summary>
+            Get the tuner node that supports DVB-S. 
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxTuner.LnbSet">
+            <summary>
+            Get or set the flag that indicates the LNB parameters hve been set.
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxTuner.DVBTerrestrialNode">
+            <summary>
+            Get the tuner node that supports DVB-T. 
+            </summary>
+        </member>
+        <member name="P:VBox.VBoxTuner.DVBCableNode">
+            <summary>
+            Get the tuner node that supports DVB-C. 
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxTuner.#ctor">
+            <summary>
+            Initialize a new instance of the SatIpServer class.
+            </summary>
+        </member>
+        <member name="M:VBox.VBoxTuner.Supports(DomainObjects.TunerType)">
+            <summary>
+            Check if the server supports a tuner type.
+            </summary>
+            <param name="checkTunerType">The tuner type.</param>
+            <returns>True if the tuner type is supported; false otherwise.</returns>
+        </member>
+        <member name="M:VBox.VBoxTuner.Supports(DomainObjects.TunerNodeType)">
+            <summary>
+            Check if the server supports a tuner node type.
+            </summary>
+            <param name="checkTunerNodeType">The tuner node type.</param>
+            <returns>True if the tuner type is supported; false otherwise.</returns>
+        </member>
+        <member name="M:VBox.VBoxTuner.ToString">
+            <summary>
+            Get a description of the server.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VBox.VBoxTuner.LoadServers">
+            <summary>
+            Load all servers.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,8 @@
+C:\Cygnus Consulting\EPGCollector 4.3\WMCExport\bin\Debug\WMCUtility.exe.config
+C:\Cygnus Consulting\EPGCollector 4.3\WMCExport\bin\Debug\WMCUtility.exe
+C:\Cygnus Consulting\EPGCollector 4.3\WMCExport\bin\Debug\WMCUtility.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\WMCExport\obj\Debug\WMCUtility.exe
+C:\Cygnus Consulting\EPGCollector 4.3\WMCExport\obj\Debug\WMCUtility.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\WMCExport\obj\Debug\WMCUtility.csproj.AssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\WMCExport\obj\Debug\WMCUtility.csproj.SuggestedBindingRedirects.cache
+C:\Cygnus Consulting\EPGCollector 4.3\WMCExport\obj\Debug\WMCUtility.csproj.CoreCompileInputs.cache

@@ -1,0 +1,11 @@
+C:\Cygnus Consulting\EPGCollector 4.3\Lookups\bin\Debug\Lookups.dll
+C:\Cygnus Consulting\EPGCollector 4.3\Lookups\bin\Debug\Lookups.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\Lookups\bin\Debug\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\Lookups\bin\Debug\Newtonsoft.Json.dll
+C:\Cygnus Consulting\EPGCollector 4.3\Lookups\bin\Debug\Brotli.NET.dll
+C:\Cygnus Consulting\EPGCollector 4.3\Lookups\bin\Debug\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\Lookups\obj\Debug\Lookups.dll
+C:\Cygnus Consulting\EPGCollector 4.3\Lookups\obj\Debug\Lookups.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\Lookups\obj\Debug\Lookups.csproj.AssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\Lookups\obj\Debug\Lookups.csproj.CoreCompileInputs.cache
+C:\Cygnus Consulting\EPGCollector 4.3\Lookups\obj\Debug\Lookups.csproj.CopyComplete

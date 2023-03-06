@@ -1,0 +1,5 @@
+C:\Cygnus Consulting\EPGCollector 4.3\Documentation\bin\Debug\Documentation.dll
+C:\Cygnus Consulting\EPGCollector 4.3\Documentation\bin\Debug\Documentation.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\Documentation\obj\Debug\Documentation.dll
+C:\Cygnus Consulting\EPGCollector 4.3\Documentation\obj\Debug\Documentation.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\Documentation\obj\Debug\Documentation.csproj.CoreCompileInputs.cache

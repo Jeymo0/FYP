@@ -1,0 +1,12 @@
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\bin\Debug\SchedulesDirect.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\bin\Debug\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\bin\Debug\Newtonsoft.Json.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\bin\Debug\Brotli.NET.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\bin\Debug\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\obj\Debug\SchedulesDirect.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\bin\Debug\SchedulesDirect.dll.config
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\bin\Debug\SchedulesDirect.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\obj\Debug\SchedulesDirect.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\obj\Debug\SchedulesDirect.csproj.AssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\obj\Debug\SchedulesDirect.csproj.CoreCompileInputs.cache
+C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\obj\Debug\SchedulesDirect.csproj.CopyComplete

@@ -1,0 +1,4241 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DirectShow</name>
+    </assembly>
+    <members>
+        <member name="T:DirectShow.RecordingAttribute">
+            <summary>
+            The class that describes a WMC recording attribute.
+            </summary>
+        </member>
+        <member name="M:DirectShow.RecordingAttribute.#ctor(System.String,System.String,System.Object)">
+            <summary>
+            Initialize a new instance of the RecordingAttribute class.
+            </summary>
+            <param name="name">The name of the attribute.</param>
+            <param name="attributeType">The type of the attribute.</param>
+            <param name="attributeValue">The value of the attribute.</param>
+        </member>
+        <member name="M:DirectShow.RecordingAttribute.GetValueAsInt">
+            <summary>
+            Get the attribute value as an Int.
+            </summary>
+            <returns>The attribute value as an Int.</returns>
+        </member>
+        <member name="M:DirectShow.RecordingAttribute.GetValueAsString">
+            <summary>
+            Get the attribute value as an string.
+            </summary>
+            <returns>The attribute value as an string.</returns>
+        </member>
+        <member name="M:DirectShow.RecordingAttribute.GetValueAsByte">
+            <summary>
+            Get the attribute value as a byte array.
+            </summary>
+            <returns>The attribute value as a byte array.</returns>
+        </member>
+        <member name="M:DirectShow.RecordingAttribute.GetValueAsBool">
+            <summary>
+            Get the attribute value as a boolean.
+            </summary>
+            <returns>The attribute value as an boolean.</returns>
+        </member>
+        <member name="M:DirectShow.RecordingAttribute.GetValueAsLong">
+            <summary>
+            Get the attribute value as a long.
+            </summary>
+            <returns>The attribute value as a long.</returns>
+        </member>
+        <member name="M:DirectShow.RecordingAttribute.GetValueAsShort">
+            <summary>
+            Get the attribute value as a short.
+            </summary>
+            <returns>The attribute value as an Int.</returns>
+        </member>
+        <member name="M:DirectShow.RecordingAttribute.GetValueAsGuid">
+            <summary>
+            Get the attribute value as a GUID.
+            </summary>
+            <returns>The attribute value as an Int.</returns>
+        </member>
+        <member name="M:DirectShow.RecordingAttribute.FindAttribute(System.String)">
+            <summary>
+            Find an attribute by name.
+            </summary>
+            <param name="name">The name of the attribute.</param>
+            <returns>The attribute or null if it cannot be located.</returns>
+        </member>
+        <member name="M:DirectShow.RecordingAttribute.Load(System.String)">
+            <summary>
+            Load the attribute collection from a recording file (dvr-ms or wtv).
+            </summary>
+            <param name="fileName"></param>
+            <returns>An error message or null if the load succeeds.</returns>
+        </member>
+        <member name="P:DirectShow.RecordingAttribute.Attributes">
+            <summary>
+            Get the collection of attributes.
+            </summary>
+        </member>
+        <member name="P:DirectShow.RecordingAttribute.Name">
+            <summary>
+            Get the attribute name.
+            </summary>
+        </member>
+        <member name="P:DirectShow.RecordingAttribute.AttributeType">
+            <summary>
+            Get the attribute type.
+            </summary>
+        </member>
+        <member name="T:DirectShow.Mpeg2Section">
+            <summary>
+            The class that describes an MPEG2 section.
+            </summary>
+        </member>
+        <member name="M:DirectShow.Mpeg2Section.#ctor">
+            <summary>
+            Initialize a new instance of the Mpeg2Section class.
+            </summary>
+        </member>
+        <member name="M:DirectShow.Mpeg2Section.CheckCRC">
+            <summary>
+            Check the section CRC.
+            </summary>
+            <returns>True if the CRC is correct; false otherwise.</returns>
+        </member>
+        <member name="P:DirectShow.Mpeg2Section.Data">
+            <summary>
+            Get or the data bytes of the section.
+            </summary>
+        </member>
+        <member name="P:DirectShow.Mpeg2Section.Length">
+            <summary>
+            Get or set the length of the section.
+            </summary>
+        </member>
+        <member name="P:DirectShow.Mpeg2Section.PID">
+            <summary>
+            Get or set the PID the section came from.
+            </summary>
+        </member>
+        <member name="P:DirectShow.Mpeg2Section.Table">
+            <summary>
+            Get the table the section contains.
+            </summary>
+        </member>
+        <member name="T:DirectShow.DiseqcHandlerBase">
+            <summary>
+            The base class for Diseqc handlers.
+            </summary>
+        </member>
+        <member name="M:DirectShow.DiseqcHandlerBase.ConvertToHex(System.Byte[])">
+            <summary>
+            Convert an array of bytes to a hex string.
+            </summary>
+            <param name="byteData">The array of bytes.</param>
+            <returns>The converted hex string.</returns>
+        </member>
+        <member name="M:DirectShow.DiseqcHandlerBase.IsGeneric(System.String)">
+            <summary>
+            Check if a string represents the generic handler.
+            </summary>
+            <param name="name">The string to check.</param>
+            <returns>True if it is generic; false otherwise.</returns>
+        </member>
+        <member name="P:DirectShow.DiseqcHandlerBase.Description">
+            <summary>
+            Get the description of the handler.
+            </summary>
+        </member>
+        <member name="P:DirectShow.DiseqcHandlerBase.CardCapable">
+            <summary>
+            Return true if the card is Diseqc capable.
+            </summary>
+        </member>
+        <member name="P:DirectShow.DiseqcHandlerBase.Handlers">
+            <summary>
+            Get a list of DiSEqC handlers.
+            </summary>
+        </member>
+        <member name="T:DirectShow.DiseqcHandlerBase.BdaDigitalModulator">
+            <summary>
+            Modulator settings.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.BdaDigitalModulator.MODULATION_TYPE">
+            <summary>
+            Type.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.BdaDigitalModulator.INNER_FEC_TYPE">
+            <summary>
+            Inner FEC type..
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.BdaDigitalModulator.INNER_FEC_RATE">
+            <summary>
+            Inner FEC rate.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.BdaDigitalModulator.OUTER_FEC_TYPE">
+            <summary>
+            Outer FEC type.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.BdaDigitalModulator.OUTER_FEC_RATE">
+            <summary>
+            Outer FEC rate.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.BdaDigitalModulator.SYMBOL_RATE">
+            <summary>
+            Symbol rate.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.BdaDigitalModulator.SPECTRAL_INVERSION">
+            <summary>
+            Spectral inversion.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.BdaDigitalModulator.GUARD_INTERVAL">
+            <summary>
+            Guard interval.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.BdaDigitalModulator.TRANSMISSION_MODE">
+            <summary>
+            Transmission mode.
+            </summary>
+        </member>
+        <member name="T:DirectShow.DiseqcHandlerBase.BdaTunerExtension">
+            <summary>
+            The tuner extension properties.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.BdaTunerExtension.KSPROPERTY_BDA_DISEQC">
+            <summary>
+            DiSEqC property.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.BdaTunerExtension.KSPROPERTY_BDA_SCAN_FREQ">
+            <summary>
+            Scan frequency property.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.BdaTunerExtension.KSPROPERTY_BDA_CHANNEL_CHANGE">
+            <summary>
+            Channel change property.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.BdaTunerExtension.KSPROPERTY_BDA_EFFECTIVE_FREQ">
+            <summary>
+            Effective frequency property.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.BdaTunerExtension.KSPROPERTY_BDA_PILOT">
+            <summary>
+            Pilot property.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.BdaTunerExtension.KSPROPERTY_BDA_ROLL_OFF">
+            <summary>
+            Rolloff property.
+            </summary>
+        </member>
+        <member name="T:DirectShow.DiseqcHandlerBase.DisEqcVersion">
+            <summary>
+            The DiSEqC version.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.DisEqcVersion.DISEQC_VER_1X">
+            <summary>
+            DiSEqC version 1X.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.DisEqcVersion.DISEQC_VER_2">
+            <summary>
+            DiSEqC version 2.
+            </summary>
+        </member>
+        <member name="T:DirectShow.DiseqcHandlerBase.BurstModulationType">
+            <summary>
+            Burst modulation type.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.BurstModulationType.TONE_BURST_UNMODULATED">
+            <summary>
+            Unmodulated.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.BurstModulationType.TONE_BURST_MODULATED">
+            <summary>
+            Modulated.
+            </summary>
+        </member>
+        <member name="T:DirectShow.DiseqcHandlerBase.RxMode">
+            <summary>
+            Receive mode.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.RxMode.RXMODE_INTERROGATION">
+            <summary>
+            Interrogation mode.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.RxMode.RXMODE_QUICKREPLY">
+            <summary>
+            Quick reply mode.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.RxMode.RXMODE_NOREPLY">
+            <summary>
+            No reply mode.
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqcHandlerBase.RxMode.RXMODE_DEFAULT">
+            <summary>
+            Default mode.
+            </summary>
+        </member>
+        <member name="M:DirectShow.LegacyDiseqcHandler.#ctor(DirectShowAPI.IBaseFilter)">
+            <summary>
+            Initializes a new instance of the GenericDiseqcHandler class.
+            </summary>
+            <param name="tunerFilter">The tuner filter.</param>
+        </member>
+        <member name="M:DirectShow.LegacyDiseqcHandler.SendDiseqcCommand(DomainObjects.TuningSpec,System.String,DirectShow.DiseqcRequest)">
+            <summary>
+            Sends the diseq command.
+            </summary>
+            <param name="tuningSpec">A tuning spec instance.</param>
+            <param name="port">The Diseqc port ( eg AB).</param>        
+            <param name="diseqcRequest">Additional parameters.</param>
+            <returns>True if successful; false otherwise.</returns>
+        </member>
+        <member name="T:DirectShow.SIPacket">
+            <summary>
+            The class that describes a stream information packet.
+            </summary>
+        </member>
+        <member name="M:DirectShow.SIPacket.#ctor">
+            <summary>
+            Initialize a new instance of the SIPacket class.
+            </summary>
+        </member>
+        <member name="M:DirectShow.SIPacket.Process(System.Byte[],DirectShow.TransportPacket)">
+            <summary>
+            Process the packet.
+            </summary>
+            <param name="byteData">The first byte of the packet.</param>
+            <param name="transportPacket">The tranport packet containing this packet.</param>
+        </member>
+        <member name="M:DirectShow.SIPacket.Validate">
+            <summary>
+            Validate the packet fields.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            A packet field is not valid.
+            </exception>
+        </member>
+        <member name="M:DirectShow.SIPacket.LogMessage">
+            <summary>
+            Log the packet fields.
+            </summary>
+        </member>
+        <member name="P:DirectShow.SIPacket.TransportPacket">
+            <summary>
+            Get the transport information packet.
+            </summary>
+        </member>
+        <member name="P:DirectShow.SIPacket.ByteData">
+            <summary>
+            Get the data bytes.
+            </summary>
+        </member>
+        <member name="P:DirectShow.SIPacket.Pointer">
+            <summary>
+            Get the data pointer.
+            </summary>
+        </member>
+        <member name="P:DirectShow.SIPacket.DataIndex">
+            <summary>
+            Get the data index.
+            </summary>
+        </member>
+        <member name="P:DirectShow.SIPacket.Index">
+            <summary>
+            Get the current index position.
+            </summary>
+        </member>
+        <member name="P:DirectShow.DVBS2HandlerBase.Description">
+            <summary>
+            Get the description of the handler.
+            </summary>
+        </member>
+        <member name="P:DirectShow.DVBS2HandlerBase.DVBS2Capable">
+            <summary>
+            Return true if the card is DVB-S2 capable.
+            </summary>
+        </member>
+        <member name="T:DirectShow.TeviiDiseqcHandler">
+            <summary>
+            The class that controls Diseqc access to a Tevii tuner.
+            </summary>
+        </member>
+        <member name="M:DirectShow.TeviiDiseqcHandler.FindDevices">
+            <summary>
+            Enumerate devices in system.
+            </summary>
+            <returns>Number of devices.</returns>
+        </member>
+        <member name="M:DirectShow.TeviiDiseqcHandler.GetDevicePath(System.Int32)">
+            <summary>
+            Get the device path.
+            </summary>
+            <param name="deviceNumber">The device index.</param>
+            <returns>The device path or null for an invalid device number.</returns>
+        </member>
+        <member name="M:DirectShow.TeviiDiseqcHandler.GetDeviceName(System.Int32)">
+            <summary>
+            Get the device name.
+            </summary>
+            <param name="deviceNumber">The device index.</param>
+            <returns>The device name or null for an invalid device number.</returns>
+        </member>
+        <member name="M:DirectShow.TeviiDiseqcHandler.OpenDevice(System.Int32,System.IntPtr,System.IntPtr)">
+            <summary>
+            Open device.  
+            </summary>
+            <param name="deviceNumber">The device index.</param>
+            <param name="func">Capture function which will receive stream.</param>
+            <param name="lParam">Application defined parameter which will be passed to capture function</param>
+            <returns>Non-zero on success; zero otherwise.</returns>
+        </member>
+        <member name="M:DirectShow.TeviiDiseqcHandler.CloseDevice(System.Int32)">
+            <summary>
+            Close device
+            </summary>
+            <param name="deviceNumber">The device index.</param>
+            <returns>Non-zero on success; zero otherwise.</returns>
+        </member>
+        <member name="M:DirectShow.TeviiDiseqcHandler.SendDiSEqC(System.Int32,System.Byte[],System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Send DiSEqC message.
+            </summary>
+            <param name="deviceNumber">The device index.</param>
+            <param name="Data">The command to be sent.</param>
+            <param name="Len">Length of data.</param>
+            <param name="Repeats">Number of repeats.</param>
+            <param name="Flg">Non-zero means replace first byte (0xE0) of DiSEqC message with 0xE1 on second and following repeats.</param>
+            <returns>Non-zero on success; zero otherwise.</returns>
+        </member>
+        <member name="M:DirectShow.TeviiDiseqcHandler.#ctor(DirectShowAPI.IBaseFilter,DomainObjects.Tuner)">
+            <summary>
+            Initializes a new instance of the TeviiDiseqcHandler class.
+            </summary>
+            <param name="tunerFilter">The tuner filter.</param>
+            <param name="tunerSpec">The current tuner.</param>
+        </member>
+        <member name="M:DirectShow.TeviiDiseqcHandler.SendDiseqcCommand(DomainObjects.TuningSpec,System.String,DirectShow.DiseqcRequest)">
+            <summary>
+            Sends the diseq command.
+            </summary>
+            <param name="tuningSpec">A tuning spec instance.</param>
+            <param name="port">The LNB port (eg AB).</param>        
+            <param name="diseqcRequest">Additional parameters.</param>
+            <returns>True if successful; false otherwise.</returns>
+        </member>
+        <member name="T:DirectShow.TransportPacket">
+            <summary>
+            The class that describes a transport packet.
+            </summary>
+        </member>
+        <member name="M:DirectShow.TransportPacket.#ctor">
+            <summary>
+            Initialize a new instance of the TransportPacket class.
+            </summary>
+        </member>
+        <member name="M:DirectShow.TransportPacket.Process(System.Byte[])">
+            <summary>
+            Parse the packet.
+            </summary>
+            <param name="byteData">The buffer section containing the packet.</param>        
+        </member>
+        <member name="M:DirectShow.TransportPacket.Validate">
+            <summary>
+            Validate the packet fields.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            A packet field is not valid.
+            </exception>
+        </member>
+        <member name="M:DirectShow.TransportPacket.LogMessage">
+            <summary>
+            Log the packet fields.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TransportPacket.SyncByte">
+            <summary>
+            Get the sync byte.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TransportPacket.ErrorIndicator">
+            <summary>
+            Get the error indicator.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TransportPacket.StartIndicator">
+            <summary>
+            Get the start indicator.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TransportPacket.PriorityIndicator">
+            <summary>
+            Get the priority indicator.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TransportPacket.PID">
+            <summary>
+            Gets the PID.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TransportPacket.ScramblingControl">
+            <summary>
+            Get the scambling control.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TransportPacket.AdaptionControl">
+            <summary>
+            Get the adaption control.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TransportPacket.ContinuityCount">
+            <summary>
+            Get the continuity count.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TransportPacket.IsNullPacket">
+            <summary>
+            Returns true if it is a null packet; false otherwise.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TransportPacket.HasPayload">
+            <summary>
+            Returns true if the packet has a payload; false otherwise.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TransportPacket.IsScrambled">
+            <summary>
+            Returns true if the packet is scrmabled; false otherwise.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TransportPacket.Index">
+            <summary>
+            Get the index of the next byte in the section following this packet.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+            The packet has not been processed.
+            </exception>
+        </member>
+        <member name="T:DirectShow.PluginDataProvider">
+            <summary>
+            The class that provides data for a plugin from a shared memory block.
+            </summary>
+        </member>
+        <member name="M:DirectShow.PluginDataProvider.CreateFileMapping(System.IntPtr,System.IntPtr,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            Create a file mapping object.
+            </summary>
+            <param name="handle">Handle to a file or InvalidHandle to create memory objects.</param>
+            <param name="lpAttributes">Security attributes. Set to null.</param>
+            <param name="dwDesiredAccess">Access desired.</param>
+            <param name="dwFileOffsetHigh">The memory size high.</param>
+            <param name="dwFileOffsetLow">The memory size low.</param>
+            <param name="lpName">The name of the shared memory.</param>
+            <returns>A handle to the memory object.</returns>
+        </member>
+        <member name="M:DirectShow.PluginDataProvider.OpenFileMapping(System.Int32,System.Boolean,System.String)">
+            <summary>
+            Open a file mapping object.
+            </summary>
+            <param name="dwDesiredAccess">The type of access.</param>
+            <param name="bInheritHandle">True to allow handle to be inherited; false otherwise.</param>
+            <param name="lpName">The name of the shared memory.</param>
+            <returns>A handle to the memory object.</returns>
+        </member>
+        <member name="M:DirectShow.PluginDataProvider.MapViewOfFile(System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Map a shared memory object.
+            </summary>
+            <param name="hFileMappingObject">The handle returned by the file mapping API.</param>
+            <param name="dwDesiredAccess">The access desired.</param>
+            <param name="dwFileOffsetHigh">The offset high.</param>
+            <param name="dwFileOffsetLow">The offset low.</param>
+            <param name="dwNumBytesToMap">The number of bytes to map.</param>
+            <returns>A pointer to the memory block.</returns>
+        </member>
+        <member name="M:DirectShow.PluginDataProvider.UnmapViewOfFile(System.IntPtr)">
+            <summary>
+            Unmap a memory object.
+            </summary>
+            <param name="baseAddress">The memory address of the memory object.</param>
+            <returns>Nonzero if the function succeeds; zero otherwise.</returns>
+        </member>
+        <member name="M:DirectShow.PluginDataProvider.#ctor(DomainObjects.TuningFrequency,System.String)">
+            <summary>
+            Initialise a new instance of the PluginDataProvider class.
+            </summary>
+            <param name="tuningFrequency">The tuning frequency.</param>
+            <param name="runReference">A unique reference for this run.</param>
+        </member>
+        <member name="M:DirectShow.PluginDataProvider.Run(System.String)">
+            <summary>
+            Start the provider.
+            </summary>
+            <param name="runReference">A unique reference identifying the run.</param>
+        </member>
+        <member name="M:DirectShow.PluginDataProvider.Stop">
+            <summary>
+            Stop the reader.
+            </summary>
+        </member>
+        <member name="M:DirectShow.PluginDataProvider.ChangePidMapping(System.Int32)">
+            <summary>
+            Change the PID mappings.
+            </summary>
+            <param name="newPid">The new PID to be set.</param>
+        </member>
+        <member name="M:DirectShow.PluginDataProvider.ChangePidMapping(System.Int32[])">
+            <summary>
+            Change the PID mappings.
+            </summary>
+            <param name="pids">A list of the new PID's to be set.</param>
+        </member>
+        <member name="P:DirectShow.PluginDataProvider.BufferSpaceUsed">
+            <summary>
+            Get the amount of buffer space currently used by the provider.
+            </summary>
+        </member>
+        <member name="P:DirectShow.PluginDataProvider.BufferAddress">
+            <summary>
+            Get the address of the buffer used by the provider.
+            </summary>
+        </member>
+        <member name="P:DirectShow.PluginDataProvider.Frequency">
+            <summary>
+            Get the frequency the provider is using.
+            </summary>
+        </member>
+        <member name="P:DirectShow.PluginDataProvider.SyncByteSearches">
+            <summary>
+            Get the number of sync byte searches.
+            </summary>
+        </member>
+        <member name="P:DirectShow.PluginDataProvider.SamplesDropped">
+            <summary>
+            Get the number of sync byte searches.
+            </summary>
+        </member>
+        <member name="P:DirectShow.PluginDataProvider.MaximumSampleSize">
+            <summary>
+            Get the maximum sample size.
+            </summary>
+        </member>
+        <member name="P:DirectShow.PluginDataProvider.DumpFileSize">
+            <summary>
+            Get the dump file size (not applicable - returns zero).
+            </summary>
+        </member>
+        <member name="T:DirectShow.PidHandler">
+            <summary>
+            The class that describes a PID handler.
+            </summary>
+        </member>
+        <member name="M:DirectShow.PidHandler.#ctor(System.Int32)">
+            <summary>
+            Initialize a new instance of the PidHandler class.
+            </summary>
+            <param name="pid">The PID to be processed by this handler.</param>
+        </member>
+        <member name="M:DirectShow.PidHandler.Process(System.Byte[],DirectShow.TransportPacket)">
+            <summary>
+            Process a sample.
+            </summary>
+            <param name="byteData">The sample data.</param>
+            <param name="transportPacket">The transport packet header.</param>
+        </member>
+        <member name="P:DirectShow.PidHandler.Pid">
+            <summary>
+             Get the PID processed by this handler.
+            </summary>
+        </member>
+        <member name="P:DirectShow.PidHandler.Sections">
+            <summary>
+            Get the completed sections for the PID.
+            </summary>
+        </member>
+        <member name="P:DirectShow.PidHandler.Discontinuities">
+            <summary>
+            Get the number of discontinuities encountered.
+            </summary>
+        </member>
+        <member name="T:DirectShow.KSProperty">
+            <summary>
+            The KSProperty structure.
+            </summary>
+        </member>
+        <member name="F:DirectShow.KSProperty.Set">
+            <summary>
+            The GUID that identifies the property set.
+            </summary>
+        </member>
+        <member name="F:DirectShow.KSProperty.Id">
+            <summary>
+            The member of the property set.
+            </summary>
+        </member>
+        <member name="F:DirectShow.KSProperty.Flags">
+            <summary>
+            The request type.
+            </summary>
+        </member>
+        <member name="T:DirectShow.KSPNode">
+            <summary>
+            The KSPNode structure
+            </summary>
+        </member>
+        <member name="F:DirectShow.KSPNode.Property">
+            <summary>
+            The property.
+            </summary>
+        </member>
+        <member name="F:DirectShow.KSPNode.Node">
+            <summary>
+            The node.
+            </summary>
+        </member>
+        <member name="F:DirectShow.KSPNode.Reserved">
+            <summary>
+            Not used
+            </summary>
+        </member>
+        <member name="T:DirectShow.BDADiseqcSend">
+            <summary>
+            The Diseqc Send structure.
+            </summary>
+        </member>
+        <member name="F:DirectShow.BDADiseqcSend.commandID">
+            <summary>
+            The command ID.
+            </summary>
+        </member>
+        <member name="F:DirectShow.BDADiseqcSend.commandLength">
+            <summary>
+            The command length.
+            </summary>
+        </member>
+        <member name="F:DirectShow.BDADiseqcSend.command">
+            <summary>
+            The command.
+            </summary>
+        </member>
+        <member name="T:DirectShow.IKsControl">
+            <summary>
+            The IKsControl interface definition
+            </summary>
+        </member>
+        <member name="M:DirectShow.IKsControl.KsProperty(DirectShow.KSPNode@,System.UInt64,System.UInt64@,System.UInt64,System.UInt64@)">
+            <summary>
+            The KsProperty method of the interface.
+            </summary>
+            <param name="node">The property identifier.</param>
+            <param name="nodeLength">The length of the property identifier.</param>
+            <param name="propertyData">The property data.</param>
+            <param name="dataLength">The length of the property data.</param>
+            <param name="bytesReturned">The number of bytes returned in the property data.</param>
+            <returns></returns>
+        </member>
+        <member name="T:DirectShow.KSPropertyType">
+            <summary>
+            The KSPropertyType that species the request type.
+            </summary>
+        </member>
+        <member name="F:DirectShow.KSPropertyType.Get">
+            <summary>
+            Retrieves the value of the specified property item.
+            </summary>
+        </member>
+        <member name="F:DirectShow.KSPropertyType.Set">
+            <summary>
+            Sets the value of the specified property item.
+            </summary>
+        </member>
+        <member name="F:DirectShow.KSPropertyType.SetSupport">
+            <summary>
+            Queries if the driver supports this property set.
+            </summary>
+        </member>
+        <member name="T:DirectShow.DiseqCommand">
+            <summary>
+            Diseqc command values
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqCommand.Enable">
+            <summary>
+            Enable driver commands
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqCommand.LnbSource">
+            <summary>
+            Set the signal source
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqCommand.UseToneBurst">
+            <summary>
+            Use tone burst
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqCommand.Repeats">
+            <summary>
+            Set the number of repeats
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqCommand.Send">
+            <summary>
+            Send a diseqc command
+            </summary>
+        </member>
+        <member name="F:DirectShow.DiseqCommand.Response">
+            <summary>
+            Get a command response
+            </summary>
+        </member>
+        <member name="T:DirectShow.PropertySetIds">
+            <summary>
+            Static class that defines PropertySet GUID's.
+            </summary>
+        </member>
+        <member name="P:DirectShow.PropertySetIds.BDADiseqCommand">
+            <summary>
+            Get the BDA_Diseq_Command property set GUID.
+            </summary>
+        </member>
+        <member name="M:DirectShow.GenericDiseqcHandler.#ctor(DirectShowAPI.IBaseFilter)">
+            <summary>
+            Initializes a new instance of the GenericDiseqcHandler class.
+            </summary>
+            <param name="tunerFilter">The tuner filter.</param>
+        </member>
+        <member name="M:DirectShow.GenericDiseqcHandler.SendDiseqcCommand(DomainObjects.TuningSpec,System.String,DirectShow.DiseqcRequest)">
+            <summary>
+            Sends the diseq command.
+            </summary>
+            <param name="tuningSpec">A tuning spec instance.</param>
+            <param name="port">The Diseqc port ( eg AB).</param>        
+            <param name="diseqcRequest">Additional parameters.</param>
+            <returns>True if successful; false otherwise.</returns>
+        </member>
+        <member name="M:DirectShow.TechnoTrendDiseqcHandler.bdaapiOpenHWIdx(DirectShow.TechnoTrendDiseqcHandler.deviceCategory,System.Int32)">
+            <summary>
+            Open hardware.
+            </summary>
+            <param name="deviceType"></param>
+            <param name="deviceIdentifier"></param>
+            <returns>handle to opened device</returns>
+        </member>
+        <member name="M:DirectShow.TechnoTrendDiseqcHandler.bdaapiClose(System.IntPtr)">
+            <summary>
+            Close API
+            </summary>
+            <param name="device"></param>
+        </member>
+        <member name="M:DirectShow.TechnoTrendDiseqcHandler.bdaapiSetDiSEqCMsg(System.IntPtr,System.IntPtr,System.Byte,System.Byte,System.Byte,System.Int32)">
+            <summary>
+            Diseqc
+            </summary>
+            <param name="device"></param>
+            <param name="data"></param>
+            <param name="length"></param>
+            <param name="repeat"></param>
+            <param name="toneburst"></param>
+            <param name="polarity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DirectShow.TechnoTrendDiseqcHandler.#ctor(DirectShowAPI.IBaseFilter)">
+            <summary>
+            Initialize a new instance of the TechnoTrendDiseqcHandler class.
+            </summary>
+            <param name="tunerFilter">tunerfilter</param>
+        </member>
+        <member name="M:DirectShow.TechnoTrendDiseqcHandler.sendCommand(System.Byte[],DirectShowAPI.Polarisation)">
+            <summary>
+            Sends the DiSEqC command.
+            </summary>
+            <param name="command">The DiSEqC command.</param>
+            <param name="polarisation">The horizontal or vertical polarisation..</param>
+            <returns>True if succeeded: false otherwise.</returns>
+        </member>
+        <member name="T:DirectShow.TBSDVBS2Handler">
+            <summary>
+            The class that sets DVB-S2 parameters for a TBS tuner.
+            </summary>
+        </member>
+        <member name="T:DirectShow.TwinhanDiseqcHandler">
+            <summary>
+            The class that controls Diseqc access to a Twinhan tuner.
+            </summary>
+        </member>
+        <member name="M:DirectShow.TwinhanDiseqcHandler.sendCommand(System.Byte[])">
+            <summary>
+            Sends the Diseqc command.
+            </summary>
+            <param name="command">The Diseqc command byte string.</param>
+            <returns>True if succeeded; false otherwise.</returns>
+        </member>
+        <member name="T:DirectShowAPI.StreamBufferAttrDataType">
+            <summary>
+            From STREAMBUFFER_ATTR_DATATYPE
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferAttrDataType.DWord">
+            <summary>
+            Double word
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferAttrDataType.String">
+            <summary>
+            String
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferAttrDataType.Binary">
+            <summary>
+            Binary
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferAttrDataType.Bool">
+            <summary>
+            Bool
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferAttrDataType.QWord">
+            <summary>
+            Quad word
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferAttrDataType.Word">
+            <summary>
+            Word
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferAttrDataType.Guid">
+            <summary>
+            Guid
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.StreamBufferEngine">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.Duration">
+            <summary>
+            Duration attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.Bitrate">
+            <summary>
+            Bitrate attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.Seekable">
+            <summary>
+            Seekable attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.Stridable">
+            <summary>
+            Stridable attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.Broadcast">
+            <summary>
+            Broadcast attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.Protected">
+            <summary>
+            Is protected attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.Trusted">
+            <summary>
+            Is trusted attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.Signature_Name">
+            <summary>
+            Signature name attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.HasAudio">
+            <summary>
+            Has audio attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.HasImage">
+            <summary>
+            Has image attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.HasScript">
+            <summary>
+            Has script attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.HasVideo">
+            <summary>
+            Has video attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.CurrentBitrate">
+            <summary>
+            Current bitrate attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.OptimalBitrate">
+            <summary>
+            Optimal bitrate attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.HasAttachedImages">
+            <summary>
+            Has attached images attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.SkipBackward">
+            <summary>
+            Can skip backward attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.SkipForward">
+            <summary>
+            Can skip forward attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.NumberOfFrames">
+            <summary>
+            Number of frames attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.FileSize">
+            <summary>
+            File size attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.HasArbitraryDataStream">
+            <summary>
+            Has arbitrary data stream attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.HasFileTransferStream">
+            <summary>
+            Has file transfer stream.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.Title">
+            <summary>
+            Content title.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.Author">
+            <summary>
+            Content author.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.Description">
+            <summary>
+            Content description.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.Rating">
+            <summary>
+            Content rating.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.Copyright">
+            <summary>
+            Content copyright.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.AlbumTitle">
+            <summary>
+            Album title attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.Track">
+            <summary>
+            Track attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.PromotionURL">
+            <summary>
+            Promotion URL attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.AlbumCoverURL">
+            <summary>
+            Album cover URL attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.Genre">
+            <summary>
+            Genre attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.Year">
+            <summary>
+            Year of release attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.GenreID">
+            <summary>
+            Genre ID attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.MCDI">
+            <summary>
+            MCDI attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.Composer">
+            <summary>
+            Composer attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.Lyrics">
+            <summary>
+            Lyrics attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.TrackNumber">
+            <summary>
+            Track number attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.ToolName">
+            <summary>
+            Tool name attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.ToolVersion">
+            <summary>
+            Tool version attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.IsVBR">
+            <summary>
+            Is VBR attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.AlbumArtist">
+            <summary>
+            Album and artist attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.BannerImageType">
+            <summary>
+            Banner image type attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.BannerImageData">
+            <summary>
+            Banner image data attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.BannerImageURL">
+            <summary>
+            Banner image URL attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.CopyrightURL">
+            <summary>
+            Copyright attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.AspectRatioX">
+            <summary>
+            Video stream aspect ratio X.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.AspectRatioY">
+            <summary>
+            Video stream aspect ratio Y.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.NSCName">
+            <summary>
+            NSC name attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.NSCAddress">
+            <summary>
+            NSC address attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.NSCPhone">
+            <summary>
+            NSC phone number attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.NSCEmail">
+            <summary>
+            NSC email address attribute.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.StreamBufferEngine.NSCDescription">
+            <summary>
+            NSC description attribute.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.StreamBufferAttribute">
+            <summary>
+            From STREAMBUFFER_ATTRIBUTE
+            </summary>
+        </member>
+        <member name="T:DirectShow.TSFileReader">
+            <summary>
+            The class that describes a transport stream file reader.
+            </summary>
+        </member>
+        <member name="T:DirectShow.TSReaderBase">
+            <summary>
+            The base class for transport stream readers.
+            </summary>
+        </member>
+        <member name="M:DirectShow.TSReaderBase.Run">
+            <summary>
+            Start the reader.
+            </summary>
+        </member>
+        <member name="M:DirectShow.TSReaderBase.Stop">
+            <summary>
+            Stop the reader.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TSReaderBase.Sections">
+            <summary>
+            Get the collection of sections stored by the reader.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TSReaderBase.Discontinuities">
+            <summary>
+            Get the number of discontinuities.
+            </summary>
+        </member>
+        <member name="M:DirectShow.TSFileReader.#ctor(System.Int32,System.String)">
+            <summary>
+            Initialize a new instance of the TSFileReader class.
+            </summary>
+            <param name="maxSections">The maximum number of sections to be loaded.</param>
+            <param name="fileName">The name of the file holding the transport stream.</param>
+        </member>
+        <member name="M:DirectShow.TSFileReader.#ctor(System.Int16,System.Int32,System.String)">
+            <summary>
+            Initialize a new instance of the TSFileReader class.
+            </summary>
+            <param name="pid">The PID to be read.</param>
+            <param name="maxSections">The maximum number of sections to be loaded.</param>
+            <param name="fileName">The name of the file holding the transport stream.</param>
+        </member>
+        <member name="M:DirectShow.TSFileReader.#ctor(System.Collections.ObjectModel.Collection{System.Int16},System.Int32,System.String)">
+            <summary>
+            Initialize a new instance of the TSFileReader class filtering by a list of PID's.
+            </summary>
+            <param name="pids">The PID's to be filtered.</param>
+            <param name="maxSections">The maximum number of sections to be buffered by the reader.</param>
+            <param name="fileName">The name of the file holding the transport stream.</param>
+        </member>
+        <member name="M:DirectShow.TSFileReader.#ctor(System.Byte,System.Int32,System.String)">
+            <summary>
+            Initialize a new instance of the TSFileReader class.
+            </summary>
+            <param name="table">The table to be read.</param>
+            <param name="maxSections">The maximum number of sections to be loaded.</param>
+            <param name="fileName">The name of the file holding the transport stream.</param>
+        </member>
+        <member name="M:DirectShow.TSFileReader.#ctor(System.Collections.ObjectModel.Collection{System.Byte},System.Int32,System.String)">
+            <summary>
+            Initialize a new instance of the TSFileReader class filtering by a list of tables.
+            </summary>
+            <param name="tables">The tables to be filtered.</param>
+            <param name="maxSections">The maximum number of sections to be buffered by the reader.</param>
+            <param name="fileName">The name of the file holding the transport stream.</param>
+        </member>
+        <member name="M:DirectShow.TSFileReader.#ctor(System.Int16,System.Byte,System.Int32,System.String)">
+            <summary>
+            Initialize a new instance of the TSFileReader class.
+            </summary>
+            <param name="pid">The PID to filter on.</param>
+            <param name="table">The table to be read.</param>
+            <param name="maxSections">The maximum number of sections to be loaded.</param>
+            <param name="fileName">The name of the file holding the transport stream.</param>
+        </member>
+        <member name="M:DirectShow.TSFileReader.#ctor(System.Int16,System.Collections.ObjectModel.Collection{System.Byte},System.Int32,System.String)">
+            <summary>
+            Initialize a new instance of the TSFileReader class.
+            </summary>
+            <param name="pid">The PID to filter on.</param>
+            <param name="tables">The tables to be read.</param>
+            <param name="maxSections">The maximum number of sections to be loaded.</param>
+            <param name="fileName">The name of the file holding the transport stream.</param>
+        </member>
+        <member name="M:DirectShow.TSFileReader.#ctor(System.Collections.ObjectModel.Collection{System.Int16},System.Byte,System.Int32,System.String)">
+            <summary>
+            Initialize a new instance of the TSFileReader class.
+            </summary>
+            <param name="pids">The PID's to filter on.</param>
+            <param name="table">The table to be read.</param>
+            <param name="maxSections">The maximum number of sections to be loaded.</param>
+            <param name="fileName">The name of the file holding the transport stream.</param>
+        </member>
+        <member name="M:DirectShow.TSFileReader.#ctor(System.Collections.ObjectModel.Collection{System.Int16},System.Collections.ObjectModel.Collection{System.Byte},System.Int32,System.String)">
+            <summary>
+            Initialize a new instance of the TSFileReader class.
+            </summary>
+            <param name="pids">The PID's to filter on.</param>
+            <param name="tables">The table to be read.</param>
+            <param name="maxSections">The maximum number of sections to be loaded.</param>
+            <param name="fileName">The name of the file holding the transport stream.</param>
+        </member>
+        <member name="M:DirectShow.TSFileReader.Run">
+            <summary>
+            Start the reader.
+            </summary>
+        </member>
+        <member name="M:DirectShow.TSFileReader.Stop">
+            <summary>
+            Stop the reader.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TSFileReader.Sections">
+            <summary>
+            Get the collection of sections read.
+            </summary>
+        </member>
+        <member name="T:DirectShow.PSIMemorySinkFilter">
+            <summary>
+            CLSID_PSIMemorySink
+            </summary>
+        </member>
+        <member name="T:DirectShow.IMemSinkSettings">
+            <summary>
+            The memory sink interface definition. 
+            </summary>
+        </member>
+        <member name="M:DirectShow.IMemSinkSettings.get_IsDataFlowing(System.Boolean@)">
+            <summary>
+            Return true if data is flowing; false otherwise.
+            </summary>
+            <param name="flowing">An indication of data flowing.</param>
+        </member>
+        <member name="M:DirectShow.IMemSinkSettings.clear">
+            <summary>
+            Clear the filter buffers.
+            </summary>
+        </member>
+        <member name="M:DirectShow.IMemSinkSettings.get_BufferUsed(System.Int32@)">
+            <summary>
+            Get the number of bytes of the buffer used.
+            </summary>
+            <param name="bufferUsed">The amount of buffer space used.</param>
+        </member>
+        <member name="M:DirectShow.IMemSinkSettings.get_BufferAddress(System.Int32@)">
+            <summary>
+            Get the address of the memory buffer.
+            </summary>
+            <param name="bufferAddress">The address of the filters buffer.</param>
+        </member>
+        <member name="M:DirectShow.IMemSinkSettings.clearPIDs">
+            <summary>
+            Clear the mapped pid's.
+            </summary>
+        </member>
+        <member name="M:DirectShow.IMemSinkSettings.mapPID(System.Int32)">
+            <summary>
+            Map a pid.
+            </summary>
+        </member>
+        <member name="M:DirectShow.IMemSinkSettings.get_SyncByteSearchCount(System.Int32@)">
+            <summary>
+            Get the number of sync byte searches.
+            </summary>
+            <param name="syncByteSearchCount">The no of sync byte searches.</param>
+        </member>
+        <member name="M:DirectShow.IMemSinkSettings.get_SamplesDropped(System.Int32@)">
+            <summary>
+            Get the number of samples dropped because no sync byte.
+            </summary>
+            <param name="samplesDropped">The no of samples dropped.</param>
+        </member>
+        <member name="M:DirectShow.IMemSinkSettings.get_DumpFileSize(System.Int32@)">
+            <summary>
+            Get the size of the dump file.
+            </summary>
+            <param name="dumpFileSize">The size of the dump file.</param>
+        </member>
+        <member name="M:DirectShow.IMemSinkSettings.get_MaximumSampleSize(System.Int32@)">
+            <summary>
+            Get the maximum sample size.
+            </summary>
+            <param name="maximumSampleSize">The maximum size of the samples.</param>
+        </member>
+        <member name="T:DirectShowAPI.PinInfo">
+            <summary>
+            From PIN_INFO.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.PinInfo.filter">
+            <summary>
+            The pin filter.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.PinInfo.dir">
+            <summary>
+            The pin direction.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.PinInfo.name">
+            <summary>
+            The name of the pin.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.AMMediaType">
+            <summary>
+            From AM_MEDIA_TYPE.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.AMMediaType.majorType">
+            <summary>
+            The major type.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.AMMediaType.subType">
+            <summary>
+            The subtype.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.AMMediaType.fixedSizeSamples">
+            <summary>
+            True if fixed size samples; false otherwise.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.AMMediaType.temporalCompression">
+            <summary>
+            True if temporal compression; false otherwise.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.AMMediaType.sampleSize">
+            <summary>
+            Sample size.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.AMMediaType.formatType">
+            <summary>
+            Format type.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.AMMediaType.unkPtr">
+            <summary>
+            Unknown pointer.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.AMMediaType.formatSize">
+            <summary>
+            Format size.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.AMMediaType.formatPtr">
+            <summary>
+            Format pointer.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.PinDirection">
+            <summary>
+            From PIN_DIRECTION
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.PinDirection.Input">
+            <summary>
+            Input pin.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.PinDirection.Output">
+            <summary>
+            Output pin.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.FilterState">
+            <summary>
+            From FILTER_STATE
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.FilterState.Stopped">
+            <summary>
+            Filter is stopped.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.FilterState.Paused">
+            <summary>
+            Filter is paused.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.FilterState.Running">
+            <summary>
+            Filter is running.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.FilterInfo">
+            <summary>
+            From FILTER_INFO
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.FilterInfo.achName">
+            <summary>
+            Filter name.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.FilterInfo.pGraph">
+            <summary>
+            The filter graph.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.RegFilter">
+            <summary>
+            From REGFILTER
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.RegFilter.Clsid">
+            <summary>
+            The filters class ID.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.RegFilter.Name">
+            <summary>
+            The filters name.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.RegPinMedium">
+            <summary>
+            From REGPINMEDIUM
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.RegPinMedium.clsMedium">
+            <summary>
+            The pin medium.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.RegPinMedium.dw1">
+            <summary>
+            Parameter 1.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.RegPinMedium.dw2">
+            <summary>
+            Parameter 2.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.AMRenderExFlags">
+            <summary>
+            From _AM_RENDEREXFLAGS
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.AMRenderExFlags.None">
+            <summary>
+            No flags.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.AMRenderExFlags.RenderToExistingRenderers">
+            <summary>
+            Existing renderer flag.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.KSPropertySupport">
+            <summary>
+            From KSPROPERTY_SUPPORT_* defines
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.KSPropertySupport.Get">
+            <summary>
+            Get property.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.KSPropertySupport.Set">
+            <summary>
+            Set property.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.AMTunerModeType">
+            <summary>
+            From AMTunerModeType
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.AMTunerModeType.Default">
+            <summary>
+            Default mode.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.AMTunerModeType.TV">
+            <summary>
+            TV mode.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.AMTunerModeType.FMRadio">
+            <summary>
+            FM radio.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.AMTunerModeType.AMRadio">
+            <summary>
+            AM radio.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.AMTunerModeType.Dss">
+            <summary>
+            DSS mODE.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.AMTunerModeType.DTV">
+            <summary>
+            DTV mODE.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.TunerInputType">
+            <summary>
+            From TunerInputType
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.TunerInputType.Cable">
+            <summary>
+            Tuner uses cable.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.TunerInputType.Antenna">
+            <summary>
+            Tuner uses antenna.
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.IPin.ConnectionMediaType(DirectShowAPI.AMMediaType)">
+            <summary>
+            Release returned parameter with DsUtils.FreeAMMediaType
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.IPin.QueryPinInfo(DirectShowAPI.PinInfo@)">
+            <summary>
+            Release returned parameter with DsUtils.FreePinInfo
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.IPersist">
+            <summary>
+            The persistance interface.
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.IPersist.GetClassID(System.Guid@)">
+            <summary>
+            Get the class ID.
+            </summary>
+            <param name="pClassID">The returned class ID.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="T:DirectShow.TSStreamReader">
+            <summary>
+            The class that describes a transport stream reader.
+            </summary>
+        </member>
+        <member name="M:DirectShow.TSStreamReader.#ctor(System.Int32,System.IntPtr)">
+            <summary>
+            Initialize a new instance of the TSStreamReader class.
+            </summary>
+            <param name="maxSections">The maximum number of sections to be buffered by the reader.</param>
+            <param name="bufferAddress">The address of the memory buffer holding the transport stream.</param>
+        </member>
+        <member name="M:DirectShow.TSStreamReader.#ctor(System.Byte,System.Int32,System.IntPtr)">
+            <summary>
+            Initialize a new instance of the TSStreamReader class filtering by table.
+            </summary>
+            <param name="table">The table ID to be filtered.</param>
+            <param name="maxSections">The maximum number of sections to be buffered by the reader.</param>
+            <param name="bufferAddress">The address of the memory buffer holding the transport stream.</param>
+        </member>
+        <member name="M:DirectShow.TSStreamReader.#ctor(System.Collections.ObjectModel.Collection{System.Byte},System.Int32,System.IntPtr)">
+            <summary>
+            Initialize a new instance of the TSStreamReader class filtering by a list of tables.
+            </summary>
+            <param name="tables">The tables to be filtered.</param>
+            <param name="maxSections">The maximum number of sections to be buffered by the reader.</param>
+            <param name="bufferAddress">The address of the memory buffer holding the transport stream.</param>
+        </member>
+        <member name="M:DirectShow.TSStreamReader.Run">
+            <summary>
+            Start the reader.
+            </summary>
+        </member>
+        <member name="M:DirectShow.TSStreamReader.Stop">
+            <summary>
+            Stop the reader.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TSStreamReader.Sections">
+            <summary>
+            Get the collection of sections currently held by the reader.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TSStreamReader.Discontinuities">
+            <summary>
+            Get the total number of discontinuities.
+            </summary>
+        </member>
+        <member name="T:DirectShow.SimulationDataProvider">
+            <summary>
+            The class that provides simulated DVB data.
+            </summary>
+        </member>
+        <member name="M:DirectShow.SimulationDataProvider.#ctor(System.String,DomainObjects.TuningFrequency)">
+            <summary>
+            Initialise a new instance of the SimulationDataProvider class.
+            </summary>
+            <param name="fileName"></param>
+            <param name="tuningFrequency"></param>
+        </member>
+        <member name="M:DirectShow.SimulationDataProvider.#ctor(System.String,DomainObjects.TuningFrequency,System.String)">
+            <summary>
+            Initialise a new instance of the SimulationDataProvider class to dump the input stream.
+            </summary>
+            <param name="fileName"></param>
+            <param name="tuningFrequency"></param>
+            <param name="dumpName"></param>
+        </member>
+        <member name="M:DirectShow.SimulationDataProvider.Run">
+            <summary>
+            Start the provider.
+            </summary>
+        </member>
+        <member name="M:DirectShow.SimulationDataProvider.Stop">
+            <summary>
+            Stop the reader.
+            </summary>
+        </member>
+        <member name="M:DirectShow.SimulationDataProvider.ChangePidMapping(System.Int32)">
+            <summary>
+            Change the PID mappings.
+            </summary>
+            <param name="newPid">The new PID to be set.</param>
+        </member>
+        <member name="M:DirectShow.SimulationDataProvider.ChangePidMapping(System.Int32[])">
+            <summary>
+            Change the PID mappings.
+            </summary>
+            <param name="newPids">A list of the new PID's to be set.</param>
+        </member>
+        <member name="P:DirectShow.SimulationDataProvider.BufferSpaceUsed">
+            <summary>
+            Get the amount of buffer space currently used by the provider.
+            </summary>
+        </member>
+        <member name="P:DirectShow.SimulationDataProvider.BufferAddress">
+            <summary>
+            Get the address of the buffer used by the provider.
+            </summary>
+        </member>
+        <member name="P:DirectShow.SimulationDataProvider.Frequency">
+            <summary>
+            Get the frequency the provider is using.
+            </summary>
+        </member>
+        <member name="P:DirectShow.SimulationDataProvider.SyncByteSearches">
+            <summary>
+            Get the number of sync byte searches.
+            </summary>
+        </member>
+        <member name="P:DirectShow.SimulationDataProvider.SamplesDropped">
+            <summary>
+            Get the number of sync byte searches.
+            </summary>
+        </member>
+        <member name="P:DirectShow.SimulationDataProvider.MaximumSampleSize">
+            <summary>
+            Get the maximum sample size.
+            </summary>
+        </member>
+        <member name="P:DirectShow.SimulationDataProvider.DumpFileSize">
+            <summary>
+            Get the dump file size (not applicable - returns zero).
+            </summary>
+        </member>
+        <member name="T:DirectShow.ConexantDiseqcHandler">
+            <summary>
+            The class that controls Diseqc access to a Conexant chipset tuner.
+            </summary>
+        </member>
+        <member name="M:DirectShow.ConexantDiseqcHandler.#ctor(DirectShowAPI.IBaseFilter,DomainObjects.Tuner)">
+            <summary>
+            Initializes a new instance of the ConexantDiseqcHandler class.
+            </summary>
+            <param name="tunerFilter">The tuner filter.</param>
+            <param name="tuner">The tuner.</param>
+        </member>
+        <member name="M:DirectShow.ConexantDiseqcHandler.SendDiseqcCommand(DomainObjects.TuningSpec,System.String,DirectShow.DiseqcRequest)">
+            <summary>
+            Sends the diseq command.
+            </summary>
+            <param name="tuningSpec">A tuning spec instance.</param>
+            <param name="port">The LNB port (eg AB).</param>
+            <param name="diseqcRequest">Additional parameters.</param>
+            <returns>True if successful; false otherwise.</returns>
+        </member>
+        <member name="T:DirectShow.DirectShowGraph">
+            <summary>
+            The class that describes a DirectShow graph.
+            </summary>
+        </member>
+        <member name="M:DirectShow.DirectShowGraph.#ctor(System.String)">
+            <summary>
+            Initialize a new instance of the DirectShowGraph class.
+            </summary>
+            <param name="componentName">The name of the component owning the graph.</param>
+        </member>
+        <member name="M:DirectShow.DirectShowGraph.Dispose">
+            <summary>
+            Decompose the graph and release resources.
+            </summary>
+        </member>
+        <member name="M:DirectShow.DirectShowGraph.Play">
+            <summary>
+            Start the graph.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DirectShow.DirectShowGraph.Stop">
+            <summary>
+            Stop the graph.
+            </summary>
+        </member>
+        <member name="M:DirectShow.DirectShowGraph.Pause(System.Boolean)">
+            <summary>
+            Pause or restart the graph.
+            </summary>
+            <param name="pause">True to pause the graph; false otherwise.</param>
+        </member>
+        <member name="M:DirectShow.DirectShowGraph.BuildGraph">
+            <summary>
+            Build the graph.
+            </summary>
+        </member>
+        <member name="M:DirectShow.DirectShowGraph.LogFilters">
+            <summary>
+            Log the filters in the graph.
+            </summary>
+        </member>
+        <member name="M:DirectShow.DirectShowGraph.LogMessage(System.String)">
+            <summary>
+            Log a BDA message.
+            </summary>
+            <param name="message">The message to be logged.</param>
+        </member>
+        <member name="P:DirectShow.DirectShowGraph.AssemblyVersion">
+            <summary>
+            Get the full assembly version number.
+            </summary>
+        </member>
+        <member name="P:DirectShow.DirectShowGraph.CaptureGraphBuilder">
+            <summary>
+            Get the capture builder for the graph.
+            </summary>
+        </member>
+        <member name="P:DirectShow.DirectShowGraph.GraphBuilder">
+            <summary>
+            Get the graph builder for the graph.
+            </summary>
+        </member>
+        <member name="P:DirectShow.DirectShowGraph.MediaControl">
+            <summary>
+            Get the media control for the graph.
+            </summary>
+        </member>
+        <member name="P:DirectShow.DirectShowGraph.ComponentName">
+            <summary>
+            Get the component name for the graph.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.StreamBufferRecordingAttributes">
+            <summary>
+            CLSID_StreamBufferRecordingAttributes
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.CreateDevEnum">
+            <summary>
+            CLSID_SystemDeviceEnum
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.FilterGraph">
+            <summary>
+            CLSID_FilterGraph
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.CaptureGraphBuilder2">
+            <summary>
+            CLSID_CaptureGraphBuilder2
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.CaptureGraphBuilder">
+            <summary>
+            CLSID_CaptureGraphBuilder
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.NullRenderer">
+            <summary>
+            CLSID_NullRenderer
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.ATSCNetworkProvider">
+            <summary>
+            CLSID_ATSCNetworkProvider
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.DVBCNetworkProvider">
+            <summary>
+            CLSID_DVBCNetworkProvider
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.DVBSNetworkProvider">
+            <summary>
+            CLSID_DVBSNetworkProvider
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.DVBTNetworkProvider">
+            <summary>
+            CLSID_DVBTNetworkProvider
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.NetworkProvider">
+            <summary>
+            CLSID_NetworkProvider
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.InfTee">
+            <summary>
+            CLSID_InfTee
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.MPEG2Demultiplexer">
+            <summary>
+            CLSID_MPEG2Demultiplexer
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.FilterCategory.BDAReceiverComponentsCategory">
+            <summary> KSCATEGORY_BDA_RECEIVER_COMPONENT, BDA Receiver Components category</summary>
+        </member>
+        <member name="F:DirectShowAPI.FilterCategory.BDASourceFiltersCategory">
+            <summary> KSCATEGORY_BDA_SOURCE_FILTER, BDA Source Filters category</summary>
+        </member>
+        <member name="F:DirectShowAPI.FilterCategory.BDATransportInformationRenderersCategory">
+            <summary> KSCATEGORY_BDA_TRANSPORT_INFORMATION, BDA Transport Information Renderers category</summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.Video">
+            <summary> MEDIATYPE_Video 'vids' </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.Interleaved">
+            <summary> MEDIATYPE_Interleaved 'iavs' </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.Audio">
+            <summary> MEDIATYPE_Audio 'auds' </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.Texts">
+            <summary> MEDIATYPE_Text 'txts' </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.Stream">
+            <summary> MEDIATYPE_Stream </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.VBI">
+            <summary> MEDIATYPE_VBI </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.Midi">
+            <summary> MEDIATYPE_Midi </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.File">
+            <summary> MEDIATYPE_File </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.ScriptCommand">
+            <summary> MEDIATYPE_ScriptCommand </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.AuxLine21Data">
+            <summary> MEDIATYPE_AUXLine21Data </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.Timecode">
+            <summary> MEDIATYPE_Timecode </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.LMRT">
+            <summary> MEDIATYPE_LMRT </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.URLStream">
+            <summary> MEDIATYPE_URL_STREAM </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.AnalogVideo">
+            <summary> MEDIATYPE_AnalogVideo </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.AnalogAudio">
+            <summary> MEDIATYPE_AnalogAudio </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.Mpeg2Sections">
+            <summary> MEDIATYPE_MPEG2_SECTIONS </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.DTVCCData">
+            <summary> MEDIATYPE_DTVCCData </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.MSTVCaption">
+            <summary> MEDIATYPE_MSTVCaption </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.AUXTeletextPage">
+            <summary> MEDIATYPE_AUXTeletextPage </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaType.CC_Container">
+            <summary> MEDIATYPE_CC_CONTAINER </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.CLPL">
+            <summary> MEDIASUBTYPE_CLPL </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.YUYV">
+            <summary> MEDIASUBTYPE_YUYV </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.IYUV">
+            <summary> MEDIASUBTYPE_IYUV </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.YVU9">
+            <summary> MEDIASUBTYPE_YVU9 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.Y411">
+            <summary> MEDIASUBTYPE_Y411 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.Y41P">
+            <summary> MEDIASUBTYPE_Y41P </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.YUY2">
+            <summary> MEDIASUBTYPE_YUY2 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.YVYU">
+            <summary> MEDIASUBTYPE_YVYU </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.UYVY">
+            <summary> MEDIASUBTYPE_UYVY </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.Y211">
+            <summary> MEDIASUBTYPE_Y211 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.CLJR">
+            <summary> MEDIASUBTYPE_CLJR </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.IF09">
+            <summary> MEDIASUBTYPE_IF09 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.CPLA">
+            <summary> MEDIASUBTYPE_CPLA </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.MJPG">
+            <summary> MEDIASUBTYPE_MJPG </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.TVMJ">
+            <summary> MEDIASUBTYPE_TVMJ </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.WAKE">
+            <summary> MEDIASUBTYPE_WAKE </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.CFCC">
+            <summary> MEDIASUBTYPE_CFCC </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.IJPG">
+            <summary> MEDIASUBTYPE_IJPG </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.PLUM">
+            <summary> MEDIASUBTYPE_Plum </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.DVCS">
+            <summary> MEDIASUBTYPE_DVCS </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.DVSD">
+            <summary> MEDIASUBTYPE_DVSD </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.MDVF">
+            <summary> MEDIASUBTYPE_MDVF </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.RGB1">
+            <summary> MEDIASUBTYPE_RGB1 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.RGB4">
+            <summary> MEDIASUBTYPE_RGB4 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.RGB8">
+            <summary> MEDIASUBTYPE_RGB8 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.RGB565">
+            <summary> MEDIASUBTYPE_RGB565 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.RGB555">
+            <summary> MEDIASUBTYPE_RGB555 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.RGB24">
+            <summary> MEDIASUBTYPE_RGB24 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.RGB32">
+            <summary> MEDIASUBTYPE_RGB32 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.ARGB1555">
+            <summary> MEDIASUBTYPE_ARGB1555 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.ARGB4444">
+            <summary> MEDIASUBTYPE_ARGB4444 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.ARGB32">
+            <summary> MEDIASUBTYPE_ARGB32 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.A2R10G10B10">
+            <summary> MEDIASUBTYPE_A2R10G10B10 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.A2B10G10R10">
+            <summary> MEDIASUBTYPE_A2B10G10R10 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AYUV">
+            <summary> MEDIASUBTYPE_AYUV </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AI44">
+            <summary> MEDIASUBTYPE_AI44 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.IA44">
+            <summary> MEDIASUBTYPE_IA44 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.RGB32_D3D_DX7_RT">
+            <summary> MEDIASUBTYPE_RGB32_D3D_DX7_RT </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.RGB16_D3D_DX7_RT">
+            <summary> MEDIASUBTYPE_RGB16_D3D_DX7_RT </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.ARGB32_D3D_DX7_RT">
+            <summary> MEDIASUBTYPE_ARGB32_D3D_DX7_RT </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.ARGB4444_D3D_DX7_RT">
+            <summary> MEDIASUBTYPE_ARGB4444_D3D_DX7_RT </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.ARGB1555_D3D_DX7_RT">
+            <summary> MEDIASUBTYPE_ARGB1555_D3D_DX7_RT </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.RGB32_D3D_DX9_RT">
+            <summary> MEDIASUBTYPE_RGB32_D3D_DX9_RT </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.RGB16_D3D_DX9_RT">
+            <summary> MEDIASUBTYPE_RGB16_D3D_DX9_RT </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.ARGB32_D3D_DX9_RT">
+            <summary> MEDIASUBTYPE_ARGB32_D3D_DX9_RT </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.ARGB4444_D3D_DX9_RT">
+            <summary> MEDIASUBTYPE_ARGB4444_D3D_DX9_RT </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.ARGB1555_D3D_DX9_RT">
+            <summary> MEDIASUBTYPE_ARGB1555_D3D_DX9_RT </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.YV12">
+            <summary> MEDIASUBTYPE_YV12 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.NV12">
+            <summary> MEDIASUBTYPE_NV12 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.IMC1">
+            <summary> MEDIASUBTYPE_IMC1 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.IMC2">
+            <summary> MEDIASUBTYPE_IMC2 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.IMC3">
+            <summary> MEDIASUBTYPE_IMC3 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.IMC4">
+            <summary> MEDIASUBTYPE_IMC4 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.S340">
+            <summary> MEDIASUBTYPE_S340 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.S342">
+            <summary> MEDIASUBTYPE_S342 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.Overlay">
+            <summary> MEDIASUBTYPE_Overlay </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.MPEG1Packet">
+            <summary> MEDIASUBTYPE_MPEG1Packet </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.MPEG1Payload">
+            <summary> MEDIASUBTYPE_MPEG1Payload </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.MPEG1AudioPayload">
+            <summary> MEDIASUBTYPE_MPEG1AudioPayload </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.MPEG1SystemStream">
+            <summary> MEDIATYPE_MPEG1SystemStream </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.MPEG1System">
+            <summary> MEDIASUBTYPE_MPEG1System </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.MPEG1VideoCD">
+            <summary> MEDIASUBTYPE_MPEG1VideoCD </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.MPEG1Video">
+            <summary> MEDIASUBTYPE_MPEG1Video </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.MPEG1Audio">
+            <summary> MEDIASUBTYPE_MPEG1Audio </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.Avi">
+            <summary> MEDIASUBTYPE_Avi </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.Asf">
+            <summary> MEDIASUBTYPE_Asf </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.QTMovie">
+            <summary> MEDIASUBTYPE_QTMovie </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.QTRpza">
+            <summary> MEDIASUBTYPE_QTRpza </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.QTSmc">
+            <summary> MEDIASUBTYPE_QTSmc </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.QTRle">
+            <summary> MEDIASUBTYPE_QTRle </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.QTJpeg">
+            <summary> MEDIASUBTYPE_QTJpeg </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.PCMAudio_Obsolete">
+            <summary> MEDIASUBTYPE_PCMAudio_Obsolete </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.PCM">
+            <summary> MEDIASUBTYPE_PCM </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.WAVE">
+            <summary> MEDIASUBTYPE_WAVE </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AU">
+            <summary> MEDIASUBTYPE_AU </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AIFF">
+            <summary> MEDIASUBTYPE_AIFF </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.dvhd">
+            <summary> MEDIASUBTYPE_dvhd </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.dvsl">
+            <summary> MEDIASUBTYPE_dvsl </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.dv25">
+            <summary> MEDIASUBTYPE_dv25 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.dv50">
+            <summary> MEDIASUBTYPE_dv50 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.dvh1">
+            <summary> MEDIASUBTYPE_dvh1 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.Line21_BytePair">
+            <summary> MEDIASUBTYPE_Line21_BytePair </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.Line21_GOPPacket">
+            <summary> MEDIASUBTYPE_Line21_GOPPacket </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.Line21_VBIRawData">
+            <summary> MEDIASUBTYPE_Line21_VBIRawData </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.TELETEXT">
+            <summary> MEDIASUBTYPE_TELETEXT </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.WSS">
+            <summary> MEDIASUBTYPE_WSS </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.VPS">
+            <summary> MEDIASUBTYPE_VPS </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.DRM_Audio">
+            <summary> MEDIASUBTYPE_DRM_Audio </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.IEEE_FLOAT">
+            <summary> MEDIASUBTYPE_IEEE_FLOAT </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.DOLBY_AC3_SPDIF">
+            <summary> MEDIASUBTYPE_DOLBY_AC3_SPDIF </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.RAW_SPORT">
+            <summary> MEDIASUBTYPE_RAW_SPORT </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.SPDIF_TAG_241h">
+            <summary> MEDIASUBTYPE_SPDIF_TAG_241h </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.DssVideo">
+            <summary> MEDIASUBTYPE_DssVideo </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.DssAudio">
+            <summary> MEDIASUBTYPE_DssAudio </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.VPVideo">
+            <summary> MEDIASUBTYPE_VPVideo </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.VPVBI">
+            <summary> MEDIASUBTYPE_VPVBI </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AnalogVideo_NTSC_M">
+            <summary> MEDIASUBTYPE_AnalogVideo_NTSC_M </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AnalogVideo_PAL_B">
+            <summary> MEDIASUBTYPE_AnalogVideo_PAL_B </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AnalogVideo_PAL_D">
+            <summary> MEDIASUBTYPE_AnalogVideo_PAL_D </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AnalogVideo_PAL_G">
+            <summary> MEDIASUBTYPE_AnalogVideo_PAL_G </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AnalogVideo_PAL_H">
+            <summary> MEDIASUBTYPE_AnalogVideo_PAL_H </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AnalogVideo_PAL_I">
+            <summary> MEDIASUBTYPE_AnalogVideo_PAL_I </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AnalogVideo_PAL_M">
+            <summary> MEDIASUBTYPE_AnalogVideo_PAL_M </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AnalogVideo_PAL_N">
+            <summary> MEDIASUBTYPE_AnalogVideo_PAL_N </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AnalogVideo_PAL_N_COMBO">
+            <summary> MEDIASUBTYPE_AnalogVideo_PAL_N_COMBO </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AnalogVideo_SECAM_B">
+            <summary> MEDIASUBTYPE_AnalogVideo_SECAM_B </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AnalogVideo_SECAM_D">
+            <summary> MEDIASUBTYPE_AnalogVideo_SECAM_D </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AnalogVideo_SECAM_G">
+            <summary> MEDIASUBTYPE_AnalogVideo_SECAM_G </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AnalogVideo_SECAM_H">
+            <summary> MEDIASUBTYPE_AnalogVideo_SECAM_H </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AnalogVideo_SECAM_K">
+            <summary> MEDIASUBTYPE_AnalogVideo_SECAM_K </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AnalogVideo_SECAM_K1">
+            <summary> MEDIASUBTYPE_AnalogVideo_SECAM_K1 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AnalogVideo_SECAM_L">
+            <summary> MEDIASUBTYPE_AnalogVideo_SECAM_L </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.I420">
+            <summary> not in uuids.h </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.VideoImage">
+            <summary> WMMEDIASUBTYPE_VIDEOIMAGE </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.Mpeg2Video">
+            <summary> WMMEDIASUBTYPE_MPEG2_VIDEO </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.WebStream">
+            <summary> WMMEDIASUBTYPE_WebStream </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.Mpeg2Audio">
+            <summary> MEDIASUBTYPE_MPEG2_AUDIO </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.DolbyAC3">
+            <summary> MEDIASUBTYPE_DOLBY_AC3 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.DvbSI">
+            <summary> MEDIASUBTYPE_DVB_SI </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.AtscSI">
+            <summary> MEDIASUBTYPE_ATSC_SI </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.Mpeg2Data">
+            <summary> MEDIASUBTYPE_MPEG2DATA </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.Mpeg2Program">
+            <summary> MEDIASUBTYPE_MPEG2_PROGRAM </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.Mpeg2Transport">
+            <summary> MEDIASUBTYPE_MPEG2_TRANSPORT </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.Mpeg2TransportStride">
+            <summary> MEDIASUBTYPE_MPEG2_TRANSPORT_STRIDE </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.None">
+            <summary> MEDIASUBTYPE_None </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.H264">
+            <summary> MEDIASUBTYPE_H264 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.NV24">
+            <summary> MEDIASUBTYPE_NV24 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.Data708_608">
+            <summary> MEDIASUBTYPE_708_608Data </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.DtvCcData">
+            <summary> MEDIASUBTYPE_DtvCcData </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.DVB_Subtitles">
+            <summary> MEDIASUBTYPE_DVB_SUBTITLES </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.ISDB_Captions">
+            <summary> MEDIASUBTYPE_ISDB_CAPTIONS </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.ISDB_Superimpose">
+            <summary> MEDIASUBTYPE_ISDB_SUPERIMPOSE </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.NV11">
+            <summary> MEDIASUBTYPE_NV11 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.P208">
+            <summary> MEDIASUBTYPE_P208 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.P210">
+            <summary> MEDIASUBTYPE_P210 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.P216">
+            <summary> MEDIASUBTYPE_P216 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.P010">
+            <summary> MEDIASUBTYPE_P010 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.P016">
+            <summary> MEDIASUBTYPE_P016 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.Y210">
+            <summary> MEDIASUBTYPE_Y210 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.Y216">
+            <summary> MEDIASUBTYPE_Y216 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.P408">
+            <summary> MEDIASUBTYPE_P408 </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.CC_Container">
+            <summary> MEDIASUBTYPE_CC_CONTAINER </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.VBI">
+            <summary> MEDIASUBTYPE_VBI </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.XDS">
+            <summary> MEDIASUBTYPE_XDS </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.ETDTFilter_Tagged">
+            <summary> MEDIASUBTYPE_ETDTFilter_Tagged </summary>
+        </member>
+        <member name="F:DirectShowAPI.MediaSubType.CPFilters_Processed">
+            <summary> MEDIASUBTYPE_CPFilters_Processed </summary>
+        </member>
+        <member name="F:DirectShowAPI.FormatType.None">
+            <summary> FORMAT_None </summary>
+        </member>
+        <member name="F:DirectShowAPI.FormatType.VideoInfo">
+            <summary> FORMAT_VideoInfo </summary>
+        </member>
+        <member name="F:DirectShowAPI.FormatType.VideoInfo2">
+            <summary> FORMAT_VideoInfo2 </summary>
+        </member>
+        <member name="F:DirectShowAPI.FormatType.WaveEx">
+            <summary> FORMAT_WaveFormatEx </summary>
+        </member>
+        <member name="F:DirectShowAPI.FormatType.MpegVideo">
+            <summary> FORMAT_MPEGVideo </summary>
+        </member>
+        <member name="F:DirectShowAPI.FormatType.MpegStreams">
+            <summary> FORMAT_MPEGStreams </summary>
+        </member>
+        <member name="F:DirectShowAPI.FormatType.DvInfo">
+            <summary> FORMAT_DvInfo </summary>
+        </member>
+        <member name="F:DirectShowAPI.FormatType.AnalogVideo">
+            <summary> FORMAT_AnalogVideo </summary>
+        </member>
+        <member name="F:DirectShowAPI.FormatType.Mpeg2Video">
+            <summary> FORMAT_MPEG2Video </summary>
+        </member>
+        <member name="F:DirectShowAPI.FormatType.DolbyAC3">
+            <summary> FORMAT_DolbyAC3 </summary>
+        </member>
+        <member name="F:DirectShowAPI.FormatType.Mpeg2Audio">
+            <summary> FORMAT_MPEG2Audio </summary>
+        </member>
+        <member name="F:DirectShowAPI.FormatType.WSS525">
+            <summary> FORMAT_525WSS </summary>
+        </member>
+        <member name="F:DirectShowAPI.FormatType.ETDTFilter_Tagged">
+            <summary> FORMATTYPE_ETDTFilter_Tagged </summary>
+        </member>
+        <member name="F:DirectShowAPI.FormatType.CPFilters_Processed">
+            <summary> FORMATTYPE_CPFilters_Processed </summary>
+        </member>
+        <member name="F:DirectShowAPI.PropSetID.Pin">
+            <summary> AMPROPSETID_Pin</summary>
+        </member>
+        <member name="F:DirectShowAPI.BDANodeCategory.QAMDemodulator">
+            <summary> KSNODE_BDA_QAM_DEMODULATOR </summary>
+        </member>
+        <member name="F:DirectShowAPI.BDANodeCategory.QPSKDemodulator">
+            <summary> KSNODE_BDA_QPSK_DEMODULATOR </summary>
+        </member>
+        <member name="F:DirectShowAPI.BDANodeCategory.EightVSBDemodulator">
+            <summary> KSNODE_BDA_8VSB_DEMODULATOR </summary>
+        </member>
+        <member name="F:DirectShowAPI.BDANodeCategory.COFDMDemodulator">
+            <summary> KSNODE_BDA_COFDM_DEMODULATOR </summary>
+        </member>
+        <member name="F:DirectShowAPI.BDANodeCategory.ISDBSDemodulator">
+            <summary> KSNODE_BDA_ISDB_S_DEMODULATOR </summary>
+        </member>
+        <member name="F:DirectShowAPI.BDANodeCategory.ISDBTDemodulator">
+            <summary> KSNODE_BDA_ISDB_T_DEMODULATOR </summary>
+        </member>
+        <member name="T:DirectShow.Utils">
+            <summary>
+            Helper methods.
+            </summary>
+        </member>
+        <member name="M:DirectShow.Utils.GetNativeFECRate(DomainObjects.FECRate)">
+            <summary>
+            Get the DirectShow FEC rate.
+            </summary>
+        </member>
+        <member name="M:DirectShow.Utils.GetNativeModulation(DomainObjects.SignalModulation.Modulation)">
+            <summary>
+            Get the DirectShow modulation.
+            </summary>
+        </member>
+        <member name="M:DirectShow.Utils.GetNativePolarization(DomainObjects.SignalPolarization)">
+            <summary>
+            Get the DirectShow polarization for a local polarization.
+            </summary>
+            <param name="polarization">The local polarization.</param>
+            <returns>The native polarization.</returns>
+        </member>
+        <member name="M:DirectShow.Utils.GetNativePolarization(System.String)">
+            <summary>
+            Get the DirectShow polarization for a local polarization.
+            </summary>
+            <param name="polarization">The local polarization.</param>
+            <returns>The native polarization.</returns>
+        </member>
+        <member name="T:DirectShow.HauppaugeDVBS2Handler">
+            <summary>
+            The class that sets DVB-S2 parameters for a Hauppauge tuner.
+            </summary>
+        </member>
+        <member name="T:DirectShow.DiseqcRequest">
+            <summary>
+            The class that encapsulates a diseqc request.
+            </summary>
+        </member>
+        <member name="M:DirectShow.DiseqcRequest.#ctor">
+            <summary>
+            Initialize a new instance of the DiseqcRequest class.
+            </summary>
+        </member>
+        <member name="P:DirectShow.DiseqcRequest.UseSafeDiseqc">
+            <summary>
+            Get or set the option that controls whether safe diseqc switching is used.
+            </summary>
+        </member>
+        <member name="P:DirectShow.DiseqcRequest.SwitchAfterPlay">
+            <summary>
+            Get or set the option that controls when switching takes place.
+            </summary>
+        </member>
+        <member name="P:DirectShow.DiseqcRequest.SwitchAfterTune">
+            <summary>
+            Get or set the option that controls when switching takes place.
+            </summary>
+        </member>
+        <member name="P:DirectShow.DiseqcRequest.RepeatDiseqc">
+            <summary>
+            Get or set the option that controls if switching is repeated in the event of an error.
+            </summary>
+        </member>
+        <member name="P:DirectShow.DiseqcRequest.DisableDriverDiseqc">
+            <summary>
+            Get or set the option that controls whether driver diseqc commands are allowed.
+            </summary>
+        </member>
+        <member name="P:DirectShow.DiseqcRequest.UseDiseqcCommand">
+            <summary>
+            Get or set the option that controls whether diseqc commands or LNB source is used.
+            </summary>
+        </member>
+        <member name="P:DirectShow.DiseqcRequest.DiseqcHandler">
+            <summary>
+            Get or set the name of the diseqc handler. Null indicates default handling.
+            </summary>
+        </member>
+        <member name="T:DirectShow.HauppaugeDiseqcHandler">
+            <summary>
+            The class that controls Diseqc access to a Hauppauge tuner.
+            </summary>
+        </member>
+        <member name="M:DirectShow.HauppaugeDiseqcHandler.#ctor(DirectShowAPI.IBaseFilter)">
+            <summary>
+            Initializes a new instance of the HauppaugeDiseqcHandler class.
+            </summary>
+            <param name="tunerFilter">The tuner filter.</param>
+        </member>
+        <member name="M:DirectShow.HauppaugeDiseqcHandler.SendDiseqcCommand(DomainObjects.TuningSpec,System.String,DirectShow.DiseqcRequest)">
+            <summary>
+            Sends the diseq command.
+            </summary>
+            <param name="tuningSpec">A tuning spec instance.</param>
+            <param name="port">The LNB port (eg AB).</param>
+            <param name="diseqcRequest">Additional parameters.</param>
+            <returns>True if successful; false otherwise.</returns>
+        </member>
+        <member name="T:DirectShow.DigitalEverywhereDiseqcHandler">
+            <summary>
+            The class that controls Diseqc access to a DigitalEverywhere tuner.
+            </summary>
+        </member>
+        <member name="M:DirectShow.DigitalEverywhereDiseqcHandler.#ctor(DirectShowAPI.IBaseFilter)">
+            <summary>
+            Initializes a new instance of the DigitalEverywhereDiseqcHandler class.
+            </summary>
+            <param name="tunerFilter">The tuner filter.</param>
+        </member>
+        <member name="M:DirectShow.DigitalEverywhereDiseqcHandler.SendDiseqcCommand(DomainObjects.TuningSpec,System.String,DirectShow.DiseqcRequest)">
+            <summary>
+            Sends a DiSEqC command.
+            </summary>
+            <param name="tuningSpec">The tuning spec.</param>
+            <param name="port">The port.</param>
+            <param name="diseqcRequest">Additionla parameters.</param>
+            <returns>True if successful; false otherwise.</returns>
+        </member>
+        <member name="T:DirectShowAPI.IDigitalCableTuneRequest">
+            <summary>
+            Digital cable tuner request interface.
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuneRequest.get_TuningSpace(DirectShowAPI.ITuningSpace@)">
+            <summary>
+            Get the tuning space.
+            </summary>
+            <param name="TuningSpace">The tuning space returned.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuneRequest.get_Components(DirectShowAPI.IComponents@)">
+            <summary>
+            Get the components interface.
+            </summary>
+            <param name="Components">The returned components.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuneRequest.Clone(DirectShowAPI.ITuneRequest@)">
+            <summary>
+            Clone the tune request.
+            </summary>
+            <param name="NewTuneRequest">The new tune request.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuneRequest.get_Locator(DirectShowAPI.ILocator@)">
+            <summary>
+            Get the locator.
+            </summary>
+            <param name="Locator">The locator.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuneRequest.put_Locator(DirectShowAPI.ILocator)">
+            <summary>
+            Set the locator.
+            </summary>
+            <param name="Locator">The locator to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuneRequest.get_Channel(System.Int32@)">
+            <summary>
+            Get the channel number.
+            </summary>
+            <param name="Channel">The returned channel number.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuneRequest.put_Channel(System.Int32)">
+            <summary>
+            Set the channel number.
+            </summary>
+            <param name="Channel">The channel number.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuneRequest.get_MinorChannel(System.Int32@)">
+            <summary>
+            Get the minor channel number.
+            </summary>
+            <param name="MinorChannel">The returned channel number.</param>
+            <returns>Zero if successful; false otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuneRequest.put_MinorChannel(System.Int32)">
+            <summary>
+            Put the minor channel number.
+            </summary>
+            <param name="MinorChannel">The channel number.</param>
+            <returns>Zero if successful; false otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuneRequest.get_MajorChannel(System.Int32@)">
+            <summary>
+            Get the major channel number.
+            </summary>
+            <param name="pMajorChannel">The channel number.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuneRequest.put_MajorChannel(System.Int32)">
+            <summary>
+            Set the major channel number;
+            </summary>
+            <param name="MajorChannel">The channel number.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuneRequest.get_SourceID(System.Int32@)">
+            <summary>
+            Get the source ID.
+            </summary>
+            <param name="pSourceID">The source ID.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuneRequest.put_SourceID(System.Int32)">
+            <summary>
+            Set the source ID.
+            </summary>
+            <param name="SourceID">The source ID.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IATSCLocator2.get_ProgramNumber(System.Int32@)">
+            <summary>
+            Get the program number.
+            </summary>
+            <param name="ProgramNumber">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IATSCLocator2.put_ProgramNumber(System.Int32)">
+            <summary>
+            Set the program number.
+            </summary>
+            <param name="ProgramNumber">The value to be set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="T:DirectShowAPI.IDigitalCableTuningSpace">
+            <summary>
+            Digital cable tuning space.
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_UniqueName(System.String@)">
+            <summary>
+            Get the unique name.
+            </summary>
+            <param name="Name">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put_UniqueName(System.String)">
+            <summary>
+            Set the unique name.
+            </summary>
+            <param name="Name">The value to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_FriendlyName(System.String@)">
+            <summary>
+            Get the friendly name.
+            </summary>
+            <param name="Name">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put_FriendlyName(System.String)">
+            <summary>
+            Set the friendly name.
+            </summary>
+            <param name="Name">The value to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_CLSID(System.String@)">
+            <summary>
+            Get the CLSID.
+            </summary>
+            <param name="SpaceCLSID">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_NetworkType(System.String@)">
+            <summary>
+            Get the network type.
+            </summary>
+            <param name="NetworkTypeGuid">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put_NetworkType(System.String)">
+            <summary>
+            Set the network type.
+            </summary>
+            <param name="NetworkTypeGuid">The value to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get__NetworkType(System.Guid@)">
+            <summary>
+            Get the network type.
+            </summary>
+            <param name="NetworkTypeGuid">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put__NetworkType(System.Guid)">
+            <summary>
+            Set the network type.
+            </summary>
+            <param name="NetworkTypeGuid">The value to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.CreateTuneRequest(DirectShowAPI.ITuneRequest@)">
+            <summary>
+            Create the tune request.
+            </summary>
+            <param name="TuneRequest">The returned tune request.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.EnumCategoryGUIDs(System.Object@)">
+            <summary>
+            Enumerate the category GUID's.
+            </summary>
+            <param name="ppEnum">The returned enumerator.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.EnumDeviceMonikers(System.Runtime.InteropServices.ComTypes.IEnumMoniker@)">
+            <summary>
+            Enumerate the device monikers.
+            </summary>
+            <param name="ppEnum">The returned enumerator.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_DefaultPreferredComponentTypes(DirectShowAPI.IComponentTypes@)">
+            <summary>
+            Get the default preferred component types.
+            </summary>
+            <param name="ComponentTypes">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put_DefaultPreferredComponentTypes(DirectShowAPI.IComponentTypes)">
+            <summary>
+            Set the default preferred component types.
+            </summary>
+            <param name="NewComponentTypes">The value to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_FrequencyMapping(System.String@)">
+            <summary>
+            Get the frequency mapping.
+            </summary>
+            <param name="pMapping">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put_FrequencyMapping(System.String)">
+            <summary>
+            Set the frequency mapping.
+            </summary>
+            <param name="Mapping">The value to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_DefaultLocator(DirectShowAPI.ILocator@)">
+            <summary>
+            Get the default locator.
+            </summary>
+            <param name="LocatorVal">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put_DefaultLocator(DirectShowAPI.ILocator)">
+            <summary>
+            Set the default locator.
+            </summary>
+            <param name="LocatorVal">The value to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.Clone(DirectShowAPI.ITuningSpace@)">
+            <summary>
+            Clone the tuning space.
+            </summary>
+            <param name="NewTS">The cloned tuning space.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_MinChannel(System.Int32@)">
+            <summary>
+            Get the minimum channel number.
+            </summary>
+            <param name="MinChannelVal">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put_MinChannel(System.Int32)">
+            <summary>
+            Set the minimum channel number.
+            </summary>
+            <param name="NewMinChannelVal">The value to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_MaxChannel(System.Int32@)">
+            <summary>
+            Get the maximum channel number.
+            </summary>
+            <param name="MaxChannelVal">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put_MaxChannel(System.Int32)">
+            <summary>
+            Set the maximum channel number.
+            </summary>
+            <param name="NewMaxChannelVal">The value to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_InputType(DirectShowAPI.TunerInputType@)">
+            <summary>
+            Get the input type.
+            </summary>
+            <param name="InputTypeVal">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put_InputType(DirectShowAPI.TunerInputType)">
+            <summary>
+            Set the input type.
+            </summary>
+            <param name="NewInputTypeVal">The value to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_CountryCode(System.Int32@)">
+            <summary>
+            Get the country code.
+            </summary>
+            <param name="CountryCodeVal">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put_CountryCode(System.Int32)">
+            <summary>
+            Set the country code.
+            </summary>
+            <param name="NewCountryCodeVal">The value to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_MinMinorChannel(System.Int32@)">
+            <summary>
+            Get the minor channel number.
+            </summary>
+            <param name="MinMinorChannelVal">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put_MinMinorChannel(System.Int32)">
+            <summary>
+            Set the minor channel number.
+            </summary>
+            <param name="NewMinMinorChannelVal">The value to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_MaxMinorChannel(System.Int32@)">
+            <summary>
+            Get the maximum minor channel number.
+            </summary>
+            <param name="MaxMinorChannelVal">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put_MaxMinorChannel(System.Int32)">
+            <summary>
+            Set the maximum minor channel number.
+            </summary>
+            <param name="NewMaxMinorChannelVal">The value to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_MinPhysicalChannel(System.Int32@)">
+            <summary>
+            Get the minimum physical channel number.
+            </summary>
+            <param name="MinPhysicalChannelVal">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put_MinPhysicalChannel(System.Int32)">
+            <summary>
+            Set the minimum physical channel number.
+            </summary>
+            <param name="NewMinPhysicalChannelVal">The value to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_MaxPhysicalChannel(System.Int32@)">
+            <summary>
+            Get the maximum physical channel number.
+            </summary>
+            <param name="MaxPhysicalChannelVal">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put_MaxPhysicalChannel(System.Int32)">
+            <summary>
+            Set the maximum physical channel number.
+            </summary>
+            <param name="NewMaxPhysicalChannelVal">The value to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_MinMajorChannel(System.Int32@)">
+            <summary>
+            Get the major and minor channel.
+            </summary>
+            <param name="MinMajorChannelVal">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put_MinMajorChannel(System.Int32)">
+            <summary>
+            Set the major and minor channel.
+            </summary>
+            <param name="NewMinMajorChannelVal">The value to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_MaxMajorChannel(System.Int32@)">
+            <summary>
+            Get the maximum major channel.
+            </summary>
+            <param name="MaxMajorChannelVal">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put_MaxMajorChannel(System.Int32)">
+            <summary>
+            Set the maximum major channel.
+            </summary>
+            <param name="NewMaxMajorChannelVal">The value to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_MinSourceID(System.Int32@)">
+            <summary>
+            Get the minimum source ID.
+            </summary>
+            <param name="MinSourceIDVal">The returned value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put_MinSourceID(System.Int32)">
+            <summary>
+            Set the minimum source ID.
+            </summary>
+            <param name="NewMinSourceIDVal">The value to set.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.get_MaxSourceID(System.Int32@)">
+            <summary>
+            Get the maximum source ID.
+            </summary>
+            <param name="MaxSourceIDVal">The returned value.</param>
+            <returns>Zero if successful; non-zero otherwsie.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IDigitalCableTuningSpace.put_MaxSourceID(System.Int32)">
+            <summary>
+            Set the maximum source ID.
+            </summary>
+            <param name="NewMaxSourceIDVal">The maximum value.</param>
+            <returns>Zero if successful; non-zero otherwsie.</returns>
+        </member>
+        <member name="T:DirectShowAPI.FilterGraphTools">
+            <summary>
+            A collection of methods to do common DirectShow tasks.
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.FilterGraphTools.AddFilterFromClsid(DirectShowAPI.IGraphBuilder,System.Guid,System.String)">
+            <summary>
+            Add a filter to a DirectShow Graph using its CLSID.
+            </summary>
+            <param name="graphBuilder">The IGraphBuilder interface of the graph.</param>
+            <param name="clsid">A valid CLSID. This object must implement IBaseFilter.</param>
+            <param name="name">The name used in the graph or null.</param>
+            <returns>An instance of the filter if the method successfully created it or null if not.</returns>
+        </member>
+        <member name="M:DirectShowAPI.FilterGraphTools.RemoveAllFilters(DirectShowAPI.IGraphBuilder)">
+            <summary>
+            Remove and release all filters from a DirectShow Graph.
+            </summary>
+            <param name="graphBuilder">The IGraphBuilder interface of the graph.</param>
+        </member>
+        <member name="M:DirectShowAPI.FilterGraphTools.IsThisComObjectInstalled(System.Guid)">
+            <summary>
+            Check if a COM Object is available.
+            </summary>
+            <param name="clsid">The CLSID of the object.</param>
+            <returns>True if the object is available; false otherwise.</returns>
+        </member>
+        <member name="T:DirectShow.TSMemoryReader">
+            <summary>
+            The class that describes a transport stream memory reader.
+            </summary>
+        </member>
+        <member name="M:DirectShow.TSMemoryReader.#ctor(System.Int16,System.Byte,System.Int32)">
+            <summary>
+            Initialize a new instance of the TSMemoryReader class.
+            </summary>
+            <param name="pid">The PID.</param>
+            <param name="table">The table ID.</param>
+            <param name="maxSections">The maximum number of sections to be loaded.</param>
+        </member>
+        <member name="M:DirectShow.TSMemoryReader.Run">
+            <summary>
+            Start the reader.
+            </summary>
+        </member>
+        <member name="M:DirectShow.TSMemoryReader.Stop">
+            <summary>
+            Stop the reader.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TSMemoryReader.PID">
+            <summary>
+            Get the PID.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TSMemoryReader.Table">
+            <summary>
+            Get the table ID.
+            </summary>
+        </member>
+        <member name="P:DirectShow.TSMemoryReader.Sections">
+            <summary>
+            Get the sections loaded by the reader.
+            </summary>
+        </member>
+        <member name="T:DirectShow.PidSpec">
+            <summary>
+            The class that describes a PID and it's tables.
+            </summary>
+        </member>
+        <member name="M:DirectShow.PidSpec.#ctor(System.Int32)">
+            <summary>
+            Initialize a new instance of the PidSpec class.
+            </summary>
+            <param name="pid">The PID descibed by this instance.</param>
+        </member>
+        <member name="M:DirectShow.PidSpec.ProcessPacket(System.Byte[],DirectShow.TransportPacket,System.Int32)">
+            <summary>
+            Process a transport packet.
+            </summary>
+            <param name="buffer">The buffer containing the transport packet.</param>
+            <param name="packet">The transport packet.</param>
+            <param name="packetNumber">The sequence number of the packet.</param>
+        </member>
+        <member name="P:DirectShow.PidSpec.Pid">
+            <summary>
+            Get the PID.
+            </summary>
+        </member>
+        <member name="P:DirectShow.PidSpec.Tables">
+            <summary>
+            Get the tables associated with the PID.
+            </summary>
+        </member>
+        <member name="P:DirectShow.PidSpec.ContinuityErrorCount">
+            <summary>
+            Get the number of continuity errors.
+            </summary>
+        </member>
+        <member name="P:DirectShow.PidSpec.ErrorBlockCount">
+            <summary>
+            Get the number of error blocks
+            </summary>
+        </member>
+        <member name="T:DirectShow.Win7APIDVBS2Handler">
+            <summary>
+            The class that sets DVB-S2 parameters using the Windows 7 API interface.
+            </summary>
+        </member>
+        <member name="M:DirectShow.Win7APIDVBS2Handler.SetDVBS2Parameters(DomainObjects.TuningSpec,DirectShowAPI.IBaseFilter,DirectShowAPI.ITuneRequest)">
+            <summary>
+            Set the DVB-S2 parameters.
+            </summary>
+            <param name="tuningSpec">The tuning spec.</param>
+            <param name="tunerFilter">The tuner filter.</param>
+            <param name="tuneRequest">The tune request.</param>
+            <returns>True if successful; false otherwise.</returns>
+        </member>
+        <member name="T:DirectShowAPI.BDAChangeState">
+            <summary>
+            From BDA_CHANGE_STATE
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.BDAChangeState.ChangesComplete">
+            <summary>
+            Changes are complete.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.BDAChangeState.ChangesPending">
+            <summary>
+            Changes still pending.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.BDANodeDescriptor">
+            <summary>
+            From BDANODE_DESCRIPTOR
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.BDANodeDescriptor.ulBdaNodeType">
+            <summary>
+            Node type.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.BDANodeDescriptor.guidFunction">
+            <summary>
+            Node function.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.BDANodeDescriptor.guidName">
+            <summary>
+            Node name.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.IMediaControl">
+            <summary>
+            Media control interface.
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.IMediaControl.Run">
+            <summary>
+            Run the graph.
+            </summary>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IMediaControl.Pause">
+            <summary>
+            Pause the graph.
+            </summary>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IMediaControl.Stop">
+            <summary>
+            Stop the graph.
+            </summary>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IMediaControl.GetState(System.Int32,DirectShowAPI.FilterState@)">
+            <summary>
+            Get the graph state.
+            </summary>
+            <param name="msTimeout">Timeout in milliseconds.</param>
+            <param name="pfs">Pointer to FilterState structure for reply.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IMediaControl.StopWhenReady">
+            <summary>
+            Stop the graph when ready.
+            </summary>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="T:DirectShowAPI.IKsPin">
+            <summary>
+            The KsPin interface.
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.IKsPin.KsQueryMediums(System.IntPtr@)">
+            <summary>
+            Query the pin mediums.
+            </summary>
+            <param name="ip">A pointer to the medium list.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="T:DirectShowAPI.IPropertyBag">
+            <summary>
+            The property bag interface.
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.IPropertyBag.Read(System.String,System.Object@,DirectShowAPI.IErrorLog)">
+            <summary>
+            Read the property.
+            </summary>
+            <param name="pszPropName">The propert name.</param>
+            <param name="pVar">The returned property.</param>
+            <param name="pErrorLog">The error log interface.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShowAPI.IPropertyBag.Write(System.String,System.Object@)">
+            <summary>
+            Set the property.
+            </summary>
+            <param name="pszPropName">The property name.</param>
+            <param name="pVar">The value.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="T:DirectShowAPI.IErrorLog">
+            <summary>
+            The error log interface.
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.IErrorLog.AddError(System.String,System.Runtime.InteropServices.ComTypes.EXCEPINFO)">
+            <summary>
+            Add an error.
+            </summary>
+            <param name="pszPropName">The property name.</param>
+            <param name="pExcepInfo">Exception information.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="T:DirectShow.ProfRedDiseqcHandler">
+            <summary>
+            The class that controls Diseqc access to a ProfRed tuner.
+            </summary>
+        </member>
+        <member name="M:DirectShow.ProfRedDiseqcHandler.#ctor(DirectShowAPI.IBaseFilter)">
+            <summary>
+            Initializes a new instance of the ProfRedDiseqcHandler class.
+            </summary>
+            <param name="tunerFilter">The tuner filter.</param>
+        </member>
+        <member name="M:DirectShow.ProfRedDiseqcHandler.SendDiseqcCommand(DomainObjects.TuningSpec,System.String,DirectShow.DiseqcRequest)">
+            <summary>
+            Sends the diseq command.
+            </summary>
+            <param name="tuningSpec">A tuning spec instance.</param>
+            <param name="port">The LNB port (eg AB).</param>        
+            <param name="diseqcRequest">Additional parameters.</param>
+            <returns>True if successful; false otherwise.</returns>
+        </member>
+        <member name="T:DirectShow.Device">
+            <summary>
+            The class that describes a tuner device.
+            </summary>
+        </member>
+        <member name="M:DirectShow.Device.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initialize a new instance of the Device clas.
+            </summary>
+            <param name="name">The name of the device.</param>
+            <param name="description">The description of the device.</param>
+            <param name="path">The path to the device.</param>
+        </member>
+        <member name="M:DirectShow.Device.ToString">
+            <summary>
+            Get a description of the device.
+            </summary>
+            <returns>The description of the device.</returns>
+        </member>
+        <member name="P:DirectShow.Device.Name">
+            <summary>
+            Get the name of the device.
+            </summary>
+        </member>
+        <member name="P:DirectShow.Device.Description">
+            <summary>
+            Get the description of the device.
+            </summary>
+        </member>
+        <member name="P:DirectShow.Device.Path">
+            <summary>
+            Get the path to the device.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.CDef">
+            <summary>
+            From CDEF_CLASS_* defines
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.CDef.None">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.CDef.ClassDefault">
+            <summary>
+            Class default.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.CDef.BypassClassManager">
+            <summary>
+            By passes the class manager.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.CDef.ClassLegacy">
+            <summary>
+            Legacy class.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.CDef.MeritAboveDoNotUse">
+            <summary>
+            Above do not use.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.CDef.DevmonCMGRDevice">
+            <summary>
+            Device monitor for device.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.CDef.DevmonDMO">
+            <summary>
+            Device monitor for DMO's.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.CDef.DevmonPNPDevice">
+            <summary>
+            Device monitor for plug and play.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.CDef.DevmonFilter">
+            <summary>
+            Device monitor for filter.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.CDef.DevmonSelectiveMask">
+            <summary>
+            Device monitor all.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.ICreateDevEnum">
+            <summary>
+            Create a device enumerator.
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.ICreateDevEnum.CreateClassEnumerator(System.Guid,System.Runtime.InteropServices.ComTypes.IEnumMoniker@,DirectShowAPI.CDef)">
+            <summary>
+            Create enumerator.
+            </summary>
+            <param name="pType">The type.</param>
+            <param name="ppEnumMoniker">The returned moniker.</param>
+            <param name="dwFlags">Flags controlling the enumerator.</param>
+            <returns>Zero if successful; error code otherwise.</returns>
+        </member>
+        <member name="T:DirectShowAPI.PinConnectedStatus">
+            <summary>
+            The connected status of a pin. These are not DirectShow values.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.PinConnectedStatus.Unconnected">
+            <summary>
+            Pin is not connected.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.PinConnectedStatus.Connected">
+            <summary>
+            Pin is connected.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.DsLong">
+            <summary>
+            DsLong is a wrapper class around a <see cref="T:System.Int64"/> value type.
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.DsLong.#ctor(System.Int64)">
+            <summary>
+            Constructor
+            Initialize a new instance of DsLong with the Value parameter
+            </summary>
+            <param name="Value">Value to assign to this new instance</param>
+        </member>
+        <member name="M:DirectShowAPI.DsLong.ToString">
+            <summary>
+            Get a string representation of this DsLong Instance.
+            </summary>
+            <returns>A string representing this instance</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsLong.GetHashCode">
+            <summary>
+            Get a hash code.
+            </summary>
+            <returns>The hash code.</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsLong.op_Implicit(DirectShowAPI.DsLong)~System.Int64">
+            <summary>
+            Define implicit cast between DsLong and Int64.
+            </summary>
+            <param name="l">DsLong to be cast.</param>
+            <returns>A casted System.Int64.</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsLong.op_Implicit(System.Int64)~DirectShowAPI.DsLong">
+            <summary>
+            Define implicit cast between System.Int64 and DsLong.
+            </summary>
+            <param name="l">System.Int64 to be cast.</param>
+            <returns>A casted DsLong.</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsLong.ToInt64">
+            <summary>
+            Get the System.Int64 equivalent to this  instance.
+            </summary>
+            <returns>A System.Int64.</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsLong.FromInt64(System.Int64)">
+            <summary>
+            Get a new DsLong instance for a given System.Int64
+            </summary>
+            <param name="l">The System.Int64 to wrap into a DsLong.</param>
+            <returns>A new instance of DsLong.</returns>
+        </member>
+        <member name="T:DirectShowAPI.DsGuid">
+            <summary>
+            DirectShowLib.DsGuid is a wrapper class around a System.Guid value type.
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.DsGuid.#ctor">
+            <summary>
+            Empty constructor. 
+            Initialize it with System.Guid.Empty
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.DsGuid.#ctor(System.String)">
+            <summary>
+            Constructor.
+            Initialize this instance with a given System.Guid string representation.
+            </summary>
+            <param name="g">A valid System.Guid as string</param>
+        </member>
+        <member name="M:DirectShowAPI.DsGuid.#ctor(System.Guid)">
+            <summary>
+            Constructor.
+            Initialize this instance with a given System.Guid.
+            </summary>
+            <param name="g">A System.Guid value type</param>
+        </member>
+        <member name="M:DirectShowAPI.DsGuid.ToString">
+            <summary>
+            Get a string representation of this DirectShowLib.DsGuid Instance.
+            </summary>
+            <returns>A string representing this instance</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsGuid.ToString(System.String)">
+            <summary>
+            Get a string representation of this DirectShowLib.DsGuid Instance with a specific format.
+            </summary>
+            <param name="format">The format string.</param>
+            <returns>A string representing this instance according to the format parameter</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsGuid.op_Implicit(DirectShowAPI.DsGuid)~System.Guid">
+             <summary>
+             Define implicit cast between DirectShowLib.DsGuid and System.Guid for languages supporting this feature.
+             VB.Net doesn't support implicit cast. <see cref="!:DirectShowLib.DsGuid.ToGuid"/> for similar functionality.
+             <code>
+               // Define a new DsGuid instance
+               DsGuid dsG = new DsGuid("{33D57EBF-7C9D-435e-A15E-D300B52FBD91}");
+               // Do implicit cast between DsGuid and Guid
+               Guid g = dsG;
+            
+               Console.WriteLine(g.ToString());
+             </code>
+             </summary>
+             <param name="g">DirectShowLib.DsGuid to be cast</param>
+             <returns>A casted System.Guid</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsGuid.op_Implicit(System.Guid)~DirectShowAPI.DsGuid">
+             <summary>
+             Define implicit cast between System.Guid and DirectShowLib.DsGuid for languages supporting this feature.
+             VB.Net doesn't support implicit cast. <see cref="!:DirectShowLib.DsGuid.FromGuid"/> for similar functionality.
+             <code>
+               // Define a new Guid instance
+               Guid g = new Guid("{B9364217-366E-45f8-AA2D-B0ED9E7D932D}");
+               // Do implicit cast between Guid and DsGuid
+               DsGuid dsG = g;
+            
+               Console.WriteLine(dsG.ToString());
+             </code>
+             </summary>
+             <param name="g">System.Guid to be cast</param>
+             <returns>A casted DirectShowLib.DsGuid</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsGuid.ToGuid">
+            <summary>
+            Get the System.Guid equivalent to this DirectShowLib.DsGuid instance.
+            </summary>
+            <returns>A System.Guid</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsGuid.FromGuid(System.Guid)">
+            <summary>
+            Get a new DirectShowLib.DsGuid instance for a given System.Guid
+            </summary>
+            <param name="g">The System.Guid to wrap into a DirectShowLib.DsGuid</param>
+            <returns>A new instance of DirectShowLib.DsGuid</returns>
+        </member>
+        <member name="T:DirectShowAPI.DsInt">
+            <summary>
+            DirectShowLib.DsInt is a wrapper class around a <see cref="T:System.Int32"/> value type.
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.DsInt.#ctor(System.Int32)">
+            <summary>
+            Constructor
+            Initialize a new instance of DirectShowLib.DsInt with the Value parameter
+            </summary>
+            <param name="Value">Value to assign to this new instance</param>
+        </member>
+        <member name="M:DirectShowAPI.DsInt.ToString">
+            <summary>
+            Get a string representation of this DirectShowLib.DsInt Instance.
+            </summary>
+            <returns>A string representing this instance</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsInt.op_Implicit(DirectShowAPI.DsInt)~System.Int32">
+             <summary>
+             Define implicit cast between DirectShowLib.DsInt and System.Int64 for languages supporting this feature.
+             VB.Net doesn't support implicit cast. <see cref="!:DirectShowLib.DsInt.ToInt64"/> for similar functionality.
+             <code>
+               // Define a new DsInt instance
+               DsInt dsI = new DsInt(0x12345678);
+               // Do implicit cast between DsInt and Int32
+               int i = dsI;
+            
+               Console.WriteLine(i.ToString());
+             </code>
+             </summary>
+             <param name="g">DirectShowLib.DsInt to be cast</param>
+             <returns>A casted System.Int32</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsInt.op_Implicit(System.Int32)~DirectShowAPI.DsInt">
+             <summary>
+             Define implicit cast between System.Int32 and DirectShowLib.DsInt for languages supporting this feature.
+             VB.Net doesn't support implicit cast. <see cref="!:DirectShowLib.DsGuid.FromInt32"/> for similar functionality.
+             <code>
+               // Define a new Int32 instance
+               int i = 0x12345678;
+               // Do implicit cast between Int64 and DsInt
+               DsInt dsI = i;
+            
+               Console.WriteLine(dsI.ToString());
+             </code>
+             </summary>
+             <param name="g">System.Int32 to be cast</param>
+             <returns>A casted DirectShowLib.DsInt</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsInt.ToInt32">
+            <summary>
+            Get the System.Int32 equivalent to this DirectShowLib.DsInt instance.
+            </summary>
+            <returns>A System.Int32</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsInt.FromInt32(System.Int32)">
+            <summary>
+            Get a new DirectShowLib.DsInt instance for a given System.Int32
+            </summary>
+            <param name="g">The System.Int32 to wrap into a DirectShowLib.DsInt</param>
+            <returns>A new instance of DirectShowLib.DsInt</returns>
+        </member>
+        <member name="T:DirectShowAPI.DsShort">
+            <summary>
+            DirectShowLib.DsShort is a wrapper class around a <see cref="T:System.Int16"/> value type.
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.DsShort.#ctor(System.Int16)">
+            <summary>
+            Constructor
+            Initialize a new instance of DirectShowLib.DsShort with the Value parameter
+            </summary>
+            <param name="Value">Value to assign to this new instance</param>
+        </member>
+        <member name="M:DirectShowAPI.DsShort.ToString">
+            <summary>
+            Get a string representation of this DirectShowLib.DsShort Instance.
+            </summary>
+            <returns>A string representing this instance</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsShort.op_Implicit(DirectShowAPI.DsShort)~System.Int16">
+             <summary>
+             Define implicit cast between DirectShowLib.DsShort and System.Int16 for languages supporting this feature.
+             VB.Net doesn't support implicit cast. <see cref="!:DirectShowLib.DsShort.ToInt64"/> for similar functionality.
+             <code>
+               // Define a new DsShort instance
+               DsShort dsS = new DsShort(0x1234);
+               // Do implicit cast between DsShort and Int16
+               short s = dsS;
+            
+               Console.WriteLine(s.ToString());
+             </code>
+             </summary>
+             <param name="g">DirectShowLib.DsShort to be cast</param>
+             <returns>A casted System.Int16</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsShort.op_Implicit(System.Int16)~DirectShowAPI.DsShort">
+             <summary>
+             Define implicit cast between System.Int16 and DirectShowLib.DsShort for languages supporting this feature.
+             VB.Net doesn't support implicit cast. <see cref="!:DirectShowLib.DsGuid.FromInt16"/> for similar functionality.
+             <code>
+               // Define a new Int16 instance
+               short s = 0x1234;
+               // Do implicit cast between Int64 and DsShort
+               DsShort dsS = s;
+            
+               Console.WriteLine(dsS.ToString());
+             </code>
+             </summary>
+             <param name="g">System.Int16 to be cast</param>
+             <returns>A casted DirectShowLib.DsShort</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsShort.ToInt16">
+            <summary>
+            Get the System.Int16 equivalent to this DirectShowLib.DsShort instance.
+            </summary>
+            <returns>A System.Int16</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsShort.FromInt16(System.Int16)">
+            <summary>
+            Get a new DirectShowLib.DsShort instance for a given System.Int64
+            </summary>
+            <param name="g">The System.Int16 to wrap into a DirectShowLib.DsShort</param>
+            <returns>A new instance of DirectShowLib.DsShort</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsError.ThrowExceptionForHR(System.Int32)">
+            <summary>
+            If hr has a "failed" status code (E_*), throw an exception.  Note that status
+            messages (S_*) are not considered failure codes.  If DirectShow error text
+            is available, it is used to build the exception, otherwise a generic com error
+            is thrown.
+            </summary>
+            <param name="hr">The HRESULT to check</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:DirectShowAPI.DsError.GetErrorText(System.Int32)" -->
+        <member name="M:DirectShowAPI.DsUtils.GetNativePilot(DomainObjects.SignalPilot.Pilot)">
+            <summary>
+            Convert an EPG Collector DVB-S2 pilot value to a BDA value.
+            </summary>
+            <param name="pilot">The EPG Collector pilot value.</param>
+            <returns>The BDA pilot value.</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsUtils.GetNativeRollOff(DomainObjects.SignalRollOff.RollOff)">
+            <summary>
+            Convert an EPG Collector DVB-S2 rolloff value to a BDA value.
+            </summary>
+            <param name="rollOff">The EPG Collector rolloff value.</param>
+            <returns>The BDA rolloff value.</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsUtils.FreeAMMediaType(DirectShowAPI.AMMediaType)">
+            <summary>
+             Free the nested structures and release any
+             COM objects within an AMMediaType struct.
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.DsUtils.FreePinInfo(DirectShowAPI.PinInfo)">
+            <summary>
+             Free the nested interfaces within a PinInfo struct.
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.DsDevice.GetDevicesOfCat(System.Guid)">
+            <summary>
+            Returns an array of DsDevices for a filter category.
+            </summary>
+            <param name="filterCategory">Any one of FilterCategory</param>
+        </member>
+        <member name="M:DirectShowAPI.DsDevice.getPropBagValue(System.String)">
+            <summary>
+            Get a specific PropertyBag value from a moniker
+            </summary>
+            <param name="sPropName">The name of the value to retrieve</param>
+            <returns>String or null on error</returns>
+        </member>
+        <member name="P:DirectShowAPI.DsDevice.DevicePath">
+            <summary>
+            Returns a unique identifier for a device
+            </summary>
+        </member>
+        <member name="P:DirectShowAPI.DsDevice.ClassID">
+            <summary>
+            Returns the ClassID for a device
+            </summary>
+        </member>
+        <member name="M:DirectShowAPI.DsFindPin.ByDirection(DirectShowAPI.IBaseFilter,DirectShowAPI.PinDirection,System.Int32)">
+            <summary>
+            Scans a filter's pins looking for a pin in the specified direction
+            </summary>
+            <param name="vSource">The filter to scan</param>
+            <param name="vDir">The direction to find</param>
+            <param name="iIndex">Zero based index (ie 2 will return the third pin in the specified direction)</param>
+            <returns>The matching pin, or null if not found</returns>
+        </member>
+        <member name="M:DirectShowAPI.DsFindPin.ByName(DirectShowAPI.IBaseFilter,System.String)">
+            <summary>
+            Scans a filter's pins looking for a pin with the specified name
+            </summary>
+            <param name="vSource">The filter to scan</param>
+            <param name="vPinName">The pin name to find</param>
+            <returns>The matching pin, or null if not found</returns>
+        </member>
+        <member name="T:DirectShowAPI.ScanModulationTypes">
+            <summary>
+            From ScanModulationTypes
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod16QAM">
+            <summary>
+            16QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod32QAM">
+            <summary>
+            32QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod64QAM">
+            <summary>
+            64QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod80QAM">
+            <summary>
+            80QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod96QAM">
+            <summary>
+            96QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod112QAM">
+            <summary>
+            112QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod128QAM">
+            <summary>
+            128QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod160QAM">
+            <summary>
+            160QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod192QAM">
+            <summary>
+            192QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod224QAM">
+            <summary>
+            224QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod256QAM">
+            <summary>
+            256QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod320QAM">
+            <summary>
+            320QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod384QAM">
+            <summary>
+            384QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod448QAM">
+            <summary>
+            448QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod512QAM">
+            <summary>
+            512QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod640QAM">
+            <summary>
+            640QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod768QAM">
+            <summary>
+            768QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod896QAM">
+            <summary>
+            896QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod1024QAM">
+            <summary>
+            1024QAM.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanModQPSK">
+            <summary>
+            QPSK.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanModBPSK">
+            <summary>
+            BPSK.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanModOQPSK">
+            <summary>
+            OQPSK.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod8VSB">
+            <summary>
+            8VSB.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod16VSB">
+            <summary>
+            16VSB.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanModAM_RADIO">
+            <summary>
+            AM Radio.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanModFM_RADIO">
+            <summary>
+            FM Radio.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanMod8PSK">
+            <summary>
+            8PSK.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.ScanModRF">
+            <summary>
+            RF.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.MCEDigitalCable">
+            <summary>
+            WMC digital cable.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.MCETerrestrialATSC">
+            <summary>
+            WMC terrestrial ATSC.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.MCEAnalogTv">
+            <summary>
+            WMC analogue TV.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.ScanModulationTypes.MCEAll_TV">
+            <summary>
+            WMC TV.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.RollOff">
+            <summary>
+            Rolloff values.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.RollOff.NotSet">
+            <summary>
+            Rolloff not set.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.RollOff.NotDefined">
+            <summary>
+            Rolloff not defined.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.RollOff.Twenty">
+            <summary>
+            Rolloff is 0.20.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.RollOff.TwentyFive">
+            <summary>
+            Rolloff is 0.25.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.RollOff.ThirtyFive">
+            <summary>
+            Rolloff is 0.35.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.RollOff.Max">
+            <summary>
+            Maximum value.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.Pilot">
+            <summary>
+            Pilot values.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.Pilot.NotSet">
+            <summary>
+            Pilot not set.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.Pilot.NotDefined">
+            <summary>
+            Pilot not defined.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.Pilot.Off">
+            <summary>
+            Pilot off.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.Pilot.On">
+            <summary>
+            Pilot on.
+            </summary>
+        </member>
+        <member name="F:DirectShowAPI.Pilot.Max">
+            <summary>
+            Maximum value.
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.FECMethod">
+            <summary>
+            From FECMethod
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.BinaryConvolutionCodeRate">
+            <summary>
+            From BinaryConvolutionCodeRate
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.Polarisation">
+            <summary>
+            From Polarisation
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.SpectralInversion">
+            <summary>
+            From SpectralInversion
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.ModulationType">
+            <summary>
+            From ModulationType
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.DVBSystemType">
+            <summary>
+            From DVBSystemType
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.HierarchyAlpha">
+            <summary>
+            From HierarchyAlpha
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.GuardInterval">
+            <summary>
+            From GuardInterval
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.TransmissionMode">
+            <summary>
+            From TransmissionMode
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.ComponentStatus">
+            <summary>
+            From ComponentStatus
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.ComponentCategory">
+            <summary>
+            From ComponentCategory
+            </summary>
+        </member>
+        <member name="T:DirectShowAPI.BDATemplateConnection">
+            <summary>
+            From BDA_TEMPLATE_CONNECTION
+            </summary>
+        </member>
+        <member name="T:DirectShow.BDAGraph">
+            <summary>
+            The class the supports a BDA DirectShow graph.
+            </summary>
+        </member>
+        <member name="F:DirectShow.BDAGraph.PatPid">
+            <summary>
+            The PID of the Program Association table.
+            </summary>
+        </member>
+        <member name="F:DirectShow.BDAGraph.NitPid">
+            <summary>
+            The PID of the Network Information table.
+            </summary>
+        </member>
+        <member name="F:DirectShow.BDAGraph.SdtPid">
+            <summary>
+            The PID of the Service Description table.
+            </summary>
+        </member>
+        <member name="F:DirectShow.BDAGraph.EitPid">
+            <summary>
+            The PID of the Event Information table.
+            </summary>
+        </member>
+        <member name="F:DirectShow.BDAGraph.PatTable">
+            <summary>
+            The table number of the Program Association table.
+            </summary>
+        </member>
+        <member name="F:DirectShow.BDAGraph.PmtTable">
+            <summary>
+            The table number of the Program Map table.
+            </summary>
+        </member>
+        <member name="F:DirectShow.BDAGraph.SdtTable">
+            <summary>
+            The table number of the Service Description table.
+            </summary>
+        </member>
+        <member name="F:DirectShow.BDAGraph.SdtOtherTable">
+            <summary>
+            The table number of the Service Description table for the 'other' transport stream.
+            </summary>
+        </member>
+        <member name="F:DirectShow.BDAGraph.EitTable">
+            <summary>
+            The table number of the now/next table for the Event Information table for the 'current' transport stream.
+            </summary>
+        </member>
+        <member name="M:DirectShow.BDAGraph.CreatePSIMemoryFilter(DirectShowAPI.IGraphBuilder,System.Boolean,System.String,System.Boolean,System.String,System.Int32)">
+            <summary>
+            Create the custom PSI memory filter (32-bit).
+            </summary>
+            <param name="graphBuilder">The graph builder instance.</param>
+            <param name="logging">True to enable logging.</param>
+            <param name="logFileName">The name of the log file or null.</param>
+            <param name="dumping">True to enable data dumping.</param>
+            <param name="dumpFileName">The name of the dump file or null.</param>
+            <param name="bufferSize">The size of the data buffer.</param>
+            <returns>Zero if successful; a COM error code otherwise.</returns>
+        </member>
+        <member name="M:DirectShow.BDAGraph.#ctor(System.String,DomainObjects.TuningSpec,DomainObjects.Tuner)">
+            <summary>
+            Initialize a new instance of the BDAGraph1 class.
+            </summary>
+            <param name="componentName">The name of the current component.</param>
+            <param name="tuningSpec">A tuning spec instance with details of the tuning requirements.</param>
+            <param name="tunerSpec">A tuner spec instance specifying the tuner to be used.</param>
+        </member>
+        <member name="M:DirectShow.BDAGraph.#ctor(System.String,DomainObjects.TuningSpec,DomainObjects.Tuner,System.String)">
+            <summary>
+            Initialize a new instance of the BDAGraph1 class for dumping a transport stream.
+            </summary>
+            <param name="componentName">The name of the current component.</param>
+            <param name="tuningSpec">A tuning spec instance with details of the tuning requirements.</param>
+            <param name="tunerSpec">A tuner spec instance specifying the tuner to be used.</param>
+            <param name="dumpFileName">The name of the dump file.</param>
+        </member>
+        <member name="M:DirectShow.BDAGraph.FindTuner(System.Collections.ObjectModel.Collection{DomainObjects.SelectedTuner},DomainObjects.TunerNodeType,DomainObjects.TuningSpec,DomainObjects.Tuner,DirectShow.DiseqcRequest)">
+            <summary>
+            Find a tuner.
+            </summary>
+            <param name="tuners">The list of tuners to try.</param>
+            <param name="tunerNodeType">The node type the tuner must have.</param>
+            <param name="tuningSpec">A tuning spec instance with tuning details.</param>
+            <param name="lastTuner">The last tuner used or null if all are to be considered.</param>
+            <param name="diseqcRequest">The Diseqc parameters.</param>
+            <returns>A graph instance.</returns>
+        </member>
+        <member name="M:DirectShow.BDAGraph.FindTuner(System.Collections.ObjectModel.Collection{DomainObjects.SelectedTuner},DomainObjects.TunerNodeType,DomainObjects.TuningSpec,DomainObjects.Tuner,DirectShow.DiseqcRequest,System.String)">
+            <summary>
+            Find a tuner.
+            </summary>
+            <param name="tuners">The list of tuners to try.</param>
+            <param name="tunerNodeType">The node type the tuner must have.</param>
+            <param name="tuningSpec">A tuning spec instance with tuning details.</param>
+            <param name="lastTuner">The last tuner used or null if all are to be considered.</param>
+            <param name="diseqcRequest">The Diseqc parameters.</param>
+            <param name="dumpFileName">The name of the dump file.</param>
+            <returns>A graph instance.</returns>
+        </member>
+        <member name="M:DirectShow.BDAGraph.ChangePidMapping(System.Int32)">
+            <summary>
+            Change the PSI filter PID mappings.
+            </summary>
+            <param name="newPid">The new PID to be set.</param>
+        </member>
+        <member name="M:DirectShow.BDAGraph.ChangePidMapping(System.Int32[])">
+            <summary>
+            Change the PSI filter PID mappings.
+            </summary>
+            <param name="newPids">A list of the new PID's to be set.</param>
+        </member>
+        <member name="M:DirectShow.BDAGraph.Play(DirectShow.DiseqcRequest)">
+            <summary>
+            Start the graph.
+            </summary>
+            <param name="diseqcRequest">The Diseqc parameters.</param>
+            <returns>True if the graph can be started; false otherwise.</returns>
+        </member>
+        <member name="M:DirectShow.BDAGraph.Dispose">
+            <summary>
+            Dispose of the filters created by this graph.
+            </summary>
+        </member>
+        <member name="M:DirectShow.BDAGraph.LoadTuners">
+            <summary>
+            Load the installed tuners.
+            </summary>
+        </member>
+        <member name="P:DirectShow.BDAGraph.Frequency">
+            <summary>
+            Get the frequency the graph is currently tuned to.
+            </summary>
+        </member>
+        <member name="P:DirectShow.BDAGraph.SignalStrength">
+            <summary>
+            Get the current signal strength.
+            </summary>
+        </member>
+        <member name="P:DirectShow.BDAGraph.SignalQuality">
+            <summary>
+            Get the current signal quality.
+            </summary>
+        </member>
+        <member name="P:DirectShow.BDAGraph.SignalPresent">
+            <summary>
+            Return true if there is currently a signal present; false otherwise.
+            </summary>
+        </member>
+        <member name="P:DirectShow.BDAGraph.SignalLocked">
+            <summary>
+            Return true if the signal is currently locked; false otherwise.
+            </summary>
+        </member>
+        <member name="P:DirectShow.BDAGraph.DataFlowing">
+            <summary>
+            Return true if data is currently flowing through the graph; false otherwise.
+            </summary>
+        </member>
+        <member name="P:DirectShow.BDAGraph.BufferSpaceUsed">
+            <summary>
+            Get the amount of buffer space currently used by the custom PSI memory filter.
+            </summary>
+        </member>
+        <member name="P:DirectShow.BDAGraph.SyncByteSearches">
+            <summary>
+            Get the no of sync byte searches used by the custom PSI memory filter.
+            </summary>
+        </member>
+        <member name="P:DirectShow.BDAGraph.SamplesDropped">
+            <summary>
+            Get the no of samples dropped by the custom PSI memory filter.
+            </summary>
+        </member>
+        <member name="P:DirectShow.BDAGraph.MaximumSampleSize">
+            <summary>
+            Get the maximum sample size received by the custom PSI memory filter.
+            </summary>
+        </member>
+        <member name="P:DirectShow.BDAGraph.DumpFileSize">
+            <summary>
+            Get the file size of the dump file created by the custom PSI memory filter.
+            </summary>
+        </member>
+        <member name="P:DirectShow.BDAGraph.BufferAddress">
+            <summary>
+            Get the address of the buffer used by the custom PSI memory filter.
+            </summary>
+        </member>
+        <member name="P:DirectShow.BDAGraph.CurrentGraph">
+            <summary>
+            Get the current graph instance.
+            </summary>
+        </member>
+        <member name="P:DirectShow.BDAGraph.Tuner">
+            <summary>
+            Get the current tuner.
+            </summary>
+        </member>
+    </members>
+</doc>

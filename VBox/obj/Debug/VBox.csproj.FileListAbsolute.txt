@@ -1,0 +1,15 @@
+C:\Cygnus Consulting\EPGCollector 4.3\VBox\bin\Debug\VBox.dll
+C:\Cygnus Consulting\EPGCollector 4.3\VBox\bin\Debug\VBox.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\VBox\bin\Debug\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\VBox\bin\Debug\NetReceiver.dll
+C:\Cygnus Consulting\EPGCollector 4.3\VBox\bin\Debug\NetworkProtocols.dll
+C:\Cygnus Consulting\EPGCollector 4.3\VBox\bin\Debug\Newtonsoft.Json.dll
+C:\Cygnus Consulting\EPGCollector 4.3\VBox\bin\Debug\Brotli.NET.dll
+C:\Cygnus Consulting\EPGCollector 4.3\VBox\bin\Debug\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\VBox\bin\Debug\NetReceiver.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\VBox\bin\Debug\NetworkProtocols.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\VBox\obj\Debug\VBox.dll
+C:\Cygnus Consulting\EPGCollector 4.3\VBox\obj\Debug\VBox.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\VBox\obj\Debug\VBox.csproj.AssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\VBox\obj\Debug\VBox.csproj.CoreCompileInputs.cache
+C:\Cygnus Consulting\EPGCollector 4.3\VBox\obj\Debug\VBox.csproj.CopyComplete

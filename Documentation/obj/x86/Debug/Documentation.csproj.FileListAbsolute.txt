@@ -1,0 +1,5 @@
+C:\Cygnus Consulting\EPGCollector 4.3\Documentation\bin\x86\Debug\Documentation.dll
+C:\Cygnus Consulting\EPGCollector 4.3\Documentation\bin\x86\Debug\Documentation.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\Documentation\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\Documentation\obj\x86\Debug\Documentation.dll
+C:\Cygnus Consulting\EPGCollector 4.3\Documentation\obj\x86\Debug\Documentation.pdb

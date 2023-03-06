@@ -1,0 +1,16 @@
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\ZLib\source\bin\x86\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\ZLib\source\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\ZLib\source\obj\x86\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\ZLib\source\bin\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 4.0\EPGCollector\ZLib\source\bin\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 4.0\EPGCollector\ZLib\source\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.0\EPGCollector\ZLib\source\obj\x86\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 4.1\EPGCollector\ZLib\source\bin\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 4.1\EPGCollector\ZLib\source\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.1\EPGCollector\ZLib\source\obj\x86\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 4.2\EPGCollector\ZLib\source\bin\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 4.2\EPGCollector\ZLib\source\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.2\EPGCollector\ZLib\source\obj\x86\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\ZLib\source\bin\Release\zlib.net.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\ZLib\source\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\ZLib\source\obj\x86\Release\zlib.net.dll

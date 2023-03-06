@@ -1,0 +1,46 @@
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DirectShow\obj\Debug\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DirectShow\bin\Debug\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DirectShow\bin\Debug\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DirectShow\bin\Debug\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DirectShow\bin\Debug\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DirectShow\obj\Debug\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DirectShow\obj\Debug\DirectShow.pdb
+D:\Dump\Steve\EPGCollector\DirectShow\bin\Debug\DirectShow.dll
+D:\Dump\Steve\EPGCollector\DirectShow\bin\Debug\DirectShow.pdb
+D:\Dump\Steve\EPGCollector\DirectShow\bin\Debug\DomainObjects.dll
+D:\Dump\Steve\EPGCollector\DirectShow\bin\Debug\DomainObjects.pdb
+D:\Dump\Steve\EPGCollector\DirectShow\obj\Debug\ResolveAssemblyReference.cache
+D:\Dump\Steve\EPGCollector\DirectShow\obj\Debug\DirectShow.dll
+D:\Dump\Steve\EPGCollector\DirectShow\obj\Debug\DirectShow.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.14\EPGCollector\DirectShow\bin\Debug\DirectShow.dll
+D:\SourceCode\DVB\EPGCollector\2.0.14\EPGCollector\DirectShow\bin\Debug\DirectShow.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.14\EPGCollector\DirectShow\bin\Debug\DomainObjects.dll
+D:\SourceCode\DVB\EPGCollector\2.0.14\EPGCollector\DirectShow\bin\Debug\DomainObjects.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.14\EPGCollector\DirectShow\obj\Debug\ResolveAssemblyReference.cache
+D:\SourceCode\DVB\EPGCollector\2.0.14\EPGCollector\DirectShow\obj\Debug\DirectShow.dll
+D:\SourceCode\DVB\EPGCollector\2.0.14\EPGCollector\DirectShow\obj\Debug\DirectShow.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DirectShow\bin\Debug\DirectShow.dll
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DirectShow\bin\Debug\DirectShow.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DirectShow\bin\Debug\DomainObjects.dll
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DirectShow\bin\Debug\DomainObjects.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DirectShow\obj\Debug\ResolveAssemblyReference.cache
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DirectShow\obj\Debug\DirectShow.dll
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DirectShow\obj\Debug\DirectShow.pdb
+D:\2.0.15\EPGCollector\DirectShow\bin\Debug\DirectShow.dll
+D:\2.0.15\EPGCollector\DirectShow\bin\Debug\DirectShow.pdb
+D:\2.0.15\EPGCollector\DirectShow\bin\Debug\DomainObjects.dll
+D:\2.0.15\EPGCollector\DirectShow\bin\Debug\DomainObjects.pdb
+D:\2.0.15\EPGCollector\DirectShow\obj\Debug\ResolveAssemblyReference.cache
+D:\2.0.15\EPGCollector\DirectShow\obj\Debug\DirectShow.dll
+D:\2.0.15\EPGCollector\DirectShow\obj\Debug\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\bin\Debug\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\bin\Debug\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\bin\Debug\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\bin\Debug\Newtonsoft.Json.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\bin\Debug\Brotli.NET.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\bin\Debug\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\obj\Debug\DirectShow.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\obj\Debug\DirectShow.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\obj\Debug\DirectShow.csproj.AssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\obj\Debug\DirectShow.csproj.CoreCompileInputs.cache
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\obj\Debug\DirectShow.csproj.CopyComplete

@@ -1,0 +1,15 @@
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\bin\Release\DebugPackageViewer.exe.config
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\bin\Release\DebugPackageViewer.exe
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\bin\Release\DebugPackageViewer.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\bin\Release\Newtonsoft.Json.dll
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\bin\Release\Brotli.NET.dll
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\bin\Release\DomainObjects.xml
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\obj\x86\Release\DebugPackageViewer.Form1.resources
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\obj\x86\Release\DebugPackageViewer.Properties.Resources.resources
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\obj\x86\Release\DebugPackageViewer.exe
+C:\Cygnus Consulting\EPGCollector 4.3\DebugPackageViewer\obj\x86\Release\DebugPackageViewer.pdb

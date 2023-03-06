@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <StartArguments>/ini="C:\Users\adeye\AppData\Local\Geekzone\EPG Collector\TuningParameters\dvbt\Ireland.ini"</StartArguments>
+    <RemoteDebugEnabled>true</RemoteDebugEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <StartArguments>/ini="G:\Mark Test.ini"</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectView>ProjectFiles</ProjectView>
+    <PublishUrlHistory />
+    <InstallUrlHistory />
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <StartArguments>/INI="D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollectorGUI\Brad.ini"</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <StartArguments>/ini="G:\Sky NZ OpenTV.ini" /dummytuners</StartArguments>
+    <EnableUnmanagedDebugging>true</EnableUnmanagedDebugging>
+  </PropertyGroup>
+</Project>

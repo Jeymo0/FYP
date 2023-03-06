@@ -1,0 +1,124 @@
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\bin\Release\DomainObjects.dll
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\bin\Release\DomainObjects.pdb
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\bin\Release\Interop.WMPLib.dll
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\obj\Release\ResolveAssemblyReference.cache
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\obj\Release\DomainObjects.csproj.GenerateResource.Cache
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\obj\Release\DomainObjects.dll
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\obj\Release\DomainObjects.pdb
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\obj\Release\DomainObjects.Properties.Resources.resources
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\bin\Release\Player.pdb
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\bin\Release\Network.dll
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\bin\Release\Network.pdb
+F:\Quintek\DotNet\HomeBroadcastingSystem\DomainObjects\bin\Release\Player.dll
+C:\Cygnus Consulting\Home Broadcasting System\DomainObjects\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\Home Broadcasting System\DomainObjects\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\Home Broadcasting System\DomainObjects\bin\Release\Network.dll
+C:\Cygnus Consulting\Home Broadcasting System\DomainObjects\bin\Release\Player.dll
+C:\Cygnus Consulting\Home Broadcasting System\DomainObjects\bin\Release\Interop.WMPLib.dll
+C:\Cygnus Consulting\Home Broadcasting System\DomainObjects\bin\Release\Player.pdb
+C:\Cygnus Consulting\Home Broadcasting System\DomainObjects\bin\Release\Network.pdb
+C:\Cygnus Consulting\Home Broadcasting System\DomainObjects\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\Home Broadcasting System\DomainObjects\obj\Release\DomainObjects.Properties.Resources.resources
+C:\Cygnus Consulting\Home Broadcasting System\DomainObjects\obj\Release\DomainObjects.csproj.GenerateResource.Cache
+C:\Cygnus Consulting\Home Broadcasting System\DomainObjects\obj\Release\DomainObjects.dll
+C:\Cygnus Consulting\Home Broadcasting System\DomainObjects\obj\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DomainObjects\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DomainObjects\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DomainObjects\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DomainObjects\obj\Release\DomainObjects.Properties.Resources.resources
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DomainObjects\obj\Release\DomainObjects.csproj.GenerateResource.Cache
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DomainObjects\obj\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector\EPGCollector\DomainObjects\obj\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\DomainObjects\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\DomainObjects\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\DomainObjects\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\DomainObjects\obj\Release\DomainObjects.Properties.Resources.resources
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\DomainObjects\obj\Release\DomainObjects.csproj.GenerateResource.Cache
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\DomainObjects\obj\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 2.0.14\EPGCollector\DomainObjects\obj\Release\DomainObjects.pdb
+D:\2.0.15\EPGCollector\DomainObjects\bin\Release\DomainObjects.dll
+D:\2.0.15\EPGCollector\DomainObjects\bin\Release\DomainObjects.pdb
+D:\2.0.15\EPGCollector\DomainObjects\obj\Release\ResolveAssemblyReference.cache
+D:\2.0.15\EPGCollector\DomainObjects\obj\Release\DomainObjects.Properties.Resources.resources
+D:\2.0.15\EPGCollector\DomainObjects\obj\Release\DomainObjects.csproj.GenerateResource.Cache
+D:\2.0.15\EPGCollector\DomainObjects\obj\Release\DomainObjects.dll
+D:\2.0.15\EPGCollector\DomainObjects\obj\Release\DomainObjects.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DomainObjects\bin\Release\DomainObjects.dll
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DomainObjects\bin\Release\DomainObjects.pdb
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DomainObjects\obj\Release\ResolveAssemblyReference.cache
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DomainObjects\obj\Release\DomainObjects.Properties.Resources.resources
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DomainObjects\obj\Release\DomainObjects.csproj.GenerateResource.Cache
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DomainObjects\obj\Release\DomainObjects.dll
+D:\SourceCode\DVB\EPGCollector\2.0.15\EPGCollector\DomainObjects\obj\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\DomainObjects\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\DomainObjects\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\DomainObjects\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\DomainObjects\obj\Release\DomainObjects.Properties.Resources.resources
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\DomainObjects\obj\Release\DomainObjects.csproj.GenerateResource.Cache
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\DomainObjects\obj\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 2.0.16\EPGCollector\DomainObjects\obj\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\DomainObjects\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\DomainObjects\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\DomainObjects\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\DomainObjects\obj\Release\DomainObjects.Properties.Resources.resources
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\DomainObjects\obj\Release\DomainObjects.csproj.GenerateResource.Cache
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\DomainObjects\obj\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 2.0.17\EPGCollector\DomainObjects\obj\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\DomainObjects\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\DomainObjects\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\DomainObjects\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\DomainObjects\obj\Release\DomainObjects.Properties.Resources.resources
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\DomainObjects\obj\Release\DomainObjects.csproj.GenerateResource.Cache
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\DomainObjects\obj\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 2.0.18\EPGCollector\DomainObjects\obj\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\DomainObjects\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\DomainObjects\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\DomainObjects\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\DomainObjects\obj\Release\DomainObjects.Properties.Resources.resources
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\DomainObjects\obj\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\DomainObjects\obj\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\DomainObjects\obj\Release\GenerateResource-ResGen.read.1.tlog
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\DomainObjects\obj\Release\GenerateResource-ResGen.read.4.tlog
+C:\Cygnus Consulting\EPGCollector 3.1\EPGCollector\DomainObjects\obj\Release\GenerateResource-ResGen.write.1.tlog
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\DomainObjects\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\DomainObjects\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\DomainObjects\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\DomainObjects\obj\Release\DomainObjects.Properties.Resources.resources
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\DomainObjects\obj\Release\GenerateResource-ResGen.read.1.tlog
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\DomainObjects\obj\Release\GenerateResource-ResGen.write.1.tlog
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\DomainObjects\obj\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\DomainObjects\obj\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 3.2\EPGCollector\DomainObjects\obj\Release\GenerateResource-ResGen.read.4.tlog
+C:\Cygnus Consulting\EPGCollector 4.1\EPGCollector\DomainObjects\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.1\EPGCollector\DomainObjects\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.1\EPGCollector\DomainObjects\obj\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.1\EPGCollector\DomainObjects\obj\Release\DomainObjects.Properties.Resources.resources
+C:\Cygnus Consulting\EPGCollector 4.1\EPGCollector\DomainObjects\obj\Release\GenerateResource-ResGen.read.1.tlog
+C:\Cygnus Consulting\EPGCollector 4.1\EPGCollector\DomainObjects\obj\Release\GenerateResource-ResGen.read.4.tlog
+C:\Cygnus Consulting\EPGCollector 4.1\EPGCollector\DomainObjects\obj\Release\GenerateResource.read.1.tlog
+C:\Cygnus Consulting\EPGCollector 4.1\EPGCollector\DomainObjects\obj\Release\GenerateResource-ResGen.write.1.tlog
+C:\Cygnus Consulting\EPGCollector 4.1\EPGCollector\DomainObjects\obj\Release\GenerateResource.write.1.tlog
+C:\Cygnus Consulting\EPGCollector 4.1\EPGCollector\DomainObjects\obj\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.1\EPGCollector\DomainObjects\obj\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\bin\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\bin\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\bin\Release\Brotli.NET.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Release\DomainObjects.Properties.Resources.resources
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Release\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Release\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\bin\Release\DomainObjects.XML
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Release\DomainObjects.csproj.AssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Release\DomainObjects.csproj.GenerateResource.cache
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Release\DomainObjects.csproj.CoreCompileInputs.cache
+C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Release\DomainObjects.csproj.CopyComplete
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DomainObjects\bin\Release\DomainObjects.XML
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DomainObjects\bin\Release\DomainObjects.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DomainObjects\bin\Release\DomainObjects.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DomainObjects\bin\Release\Brotli.NET.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Release\DomainObjects.csproj.AssemblyReference.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Release\DomainObjects.Properties.Resources.resources
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Release\DomainObjects.csproj.GenerateResource.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Release\DomainObjects.csproj.CoreCompileInputs.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Release\DomainObjects.csproj.CopyComplete
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Release\DomainObjects.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DomainObjects\obj\Release\DomainObjects.pdb

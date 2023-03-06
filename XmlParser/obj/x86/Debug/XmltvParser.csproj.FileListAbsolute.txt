@@ -1,0 +1,9 @@
+C:\Cygnus Consulting\EPGCollector 4.3\XmlParser\bin\x86\Debug\XmltvParser.dll
+C:\Cygnus Consulting\EPGCollector 4.3\XmlParser\bin\x86\Debug\XmltvParser.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\XmlParser\bin\x86\Debug\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\XmlParser\bin\x86\Debug\Newtonsoft.Json.dll
+C:\Cygnus Consulting\EPGCollector 4.3\XmlParser\bin\x86\Debug\Brotli.NET.dll
+C:\Cygnus Consulting\EPGCollector 4.3\XmlParser\bin\x86\Debug\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\XmlParser\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\XmlParser\obj\x86\Debug\XmltvParser.dll
+C:\Cygnus Consulting\EPGCollector 4.3\XmlParser\obj\x86\Debug\XmltvParser.pdb

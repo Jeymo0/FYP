@@ -1,0 +1,9 @@
+C:\Cygnus Consulting\EPGCollector 3.2\WMCExport\bin\Release\WMCExport.exe.config
+C:\Cygnus Consulting\EPGCollector 3.2\WMCExport\bin\Release\WMCExport.exe
+C:\Cygnus Consulting\EPGCollector 3.2\WMCExport\bin\Release\WMCExport.pdb
+C:\Cygnus Consulting\EPGCollector 3.2\WMCExport\bin\Release\ehRecObj.dll
+C:\Cygnus Consulting\EPGCollector 3.2\WMCExport\bin\Release\mcepg.dll
+C:\Cygnus Consulting\EPGCollector 3.2\WMCExport\bin\Release\mcstore.dll
+C:\Cygnus Consulting\EPGCollector 3.2\WMCExport\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 3.2\WMCExport\obj\x86\Release\WMCExport.exe
+C:\Cygnus Consulting\EPGCollector 3.2\WMCExport\obj\x86\Release\WMCExport.pdb

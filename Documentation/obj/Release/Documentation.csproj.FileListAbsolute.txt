@@ -1,0 +1,6 @@
+C:\Cygnus Consulting\EPGCollector 4.3\Documentation\bin\Release\Documentation.dll
+C:\Cygnus Consulting\EPGCollector 4.3\Documentation\bin\Release\Documentation.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\Documentation\obj\Release\Documentation.dll
+C:\Cygnus Consulting\EPGCollector 4.3\Documentation\obj\Release\Documentation.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\Documentation\obj\Release\Documentation.csproj.CoreCompileInputs.cache
+C:\Cygnus Consulting\EPGCollector 4.3\Documentation\obj\Release\Documentation.csproj.AssemblyReference.cache

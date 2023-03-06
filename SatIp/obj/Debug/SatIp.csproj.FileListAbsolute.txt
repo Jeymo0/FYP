@@ -1,0 +1,31 @@
+C:\Cygnus Consulting\Utilities\IPTVTester\SatIp\bin\Debug\SatIp.dll
+C:\Cygnus Consulting\Utilities\IPTVTester\SatIp\bin\Debug\SatIp.pdb
+C:\Cygnus Consulting\Utilities\IPTVTester\SatIp\bin\Debug\DomainObjects.dll
+C:\Cygnus Consulting\Utilities\IPTVTester\SatIp\bin\Debug\RTP.dll
+C:\Cygnus Consulting\Utilities\IPTVTester\SatIp\bin\Debug\Rtsp.dll
+C:\Cygnus Consulting\Utilities\IPTVTester\SatIp\bin\Debug\SessionDescriptionProtocol.dll
+C:\Cygnus Consulting\Utilities\IPTVTester\SatIp\bin\Debug\UPnP.dll
+C:\Cygnus Consulting\Utilities\IPTVTester\SatIp\bin\Debug\DomainObjects.pdb
+C:\Cygnus Consulting\Utilities\IPTVTester\SatIp\bin\Debug\RTP.pdb
+C:\Cygnus Consulting\Utilities\IPTVTester\SatIp\bin\Debug\Rtsp.pdb
+C:\Cygnus Consulting\Utilities\IPTVTester\SatIp\bin\Debug\SessionDescriptionProtocol.pdb
+C:\Cygnus Consulting\Utilities\IPTVTester\SatIp\bin\Debug\UPnP.pdb
+C:\Cygnus Consulting\Utilities\IPTVTester\SatIp\obj\Debug\ResolveAssemblyReference.cache
+C:\Cygnus Consulting\Utilities\IPTVTester\SatIp\obj\Debug\SatIp.dll
+C:\Cygnus Consulting\Utilities\IPTVTester\SatIp\obj\Debug\SatIp.pdb
+C:\Cygnus Consulting\Utilities\IPTVTester\SatIp\bin\Debug\UdpReceiver.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\Debug\SatIp.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\Debug\SatIp.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\Debug\DomainObjects.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\Debug\NetReceiver.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\Debug\NetworkProtocols.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\Debug\Newtonsoft.Json.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\Debug\Brotli.NET.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\Debug\DomainObjects.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\Debug\NetReceiver.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\bin\Debug\NetworkProtocols.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\obj\Debug\SatIp.dll
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\obj\Debug\SatIp.pdb
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\obj\Debug\SatIp.csproj.AssemblyReference.cache
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\obj\Debug\SatIp.csproj.CoreCompileInputs.cache
+C:\Cygnus Consulting\EPGCollector 4.3\SatIp\obj\Debug\SatIp.csproj.CopyComplete

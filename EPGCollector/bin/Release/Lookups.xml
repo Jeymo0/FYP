@@ -1,0 +1,3888 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Lookups</name>
+    </assembly>
+    <members>
+        <member name="M:Lookups.TmdbTVLookup.Process(DomainObjects.EPGEntry)">
+            <summary>
+            Process an EPG entry.
+            </summary>
+            <param name="epgEntry">The EPG entry.</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:Lookups.TmdbTVLookup.LogStats">
+            <summary>
+            Log stats.
+            </summary>
+        </member>
+        <member name="T:Lookups.LookupController">
+            <summary>
+            The class that controls metadata lookup.
+            </summary>
+        </member>
+        <member name="P:Lookups.LookupController.AssemblyVersion">
+            <summary>
+            Get the full assembly version number.
+            </summary>
+        </member>
+        <member name="T:Lookups.LookupController.LookupReply">
+            <summary>
+            The possible replies from metadata lookup.
+            </summary>
+        </member>
+        <member name="F:Lookups.LookupController.LookupReply.InStore">
+            <summary>
+            Metadata was added from existing information.
+            </summary>
+        </member>
+        <member name="F:Lookups.LookupController.LookupReply.WebLookup">
+            <summary>
+            Metadata was added from the web databases.
+            </summary>
+        </member>
+        <member name="F:Lookups.LookupController.LookupReply.NoData">
+            <summary>
+            No data located.
+            </summary>
+        </member>
+        <member name="F:Lookups.LookupController.LookupReply.NotMovie">
+            <summary>
+            The EPG entry is not considered to be a movie.
+            </summary>
+        </member>
+        <member name="F:Lookups.LookupController.LookupReply.NotTVSeries">
+            <summary>
+            The EPG entry is not considered a TV series.
+            </summary>
+        </member>
+        <member name="F:Lookups.LookupController.LookupReply.NotEnabled">
+            <summary>
+            The type of lookup has not been enabled by the user.
+            </summary>
+        </member>
+        <member name="F:Lookups.LookupController.LookupReply.NotProcessed">
+            <summary>
+            The EPG entry has not been processed.
+            </summary>
+        </member>
+        <member name="M:Lookups.LookupController.Process(System.Collections.ObjectModel.Collection{DomainObjects.TVStation})">
+            <summary>
+            Run the metadata lookup process.
+            </summary>
+            <param name="stations">The channels to process.</param>
+        </member>
+        <member name="M:Lookups.LookupController.CompareLikeStrings(System.String,System.String)">
+            <summary>
+            Compares the two strings based on letter pair matches
+            </summary>
+            <param name="str1"></param>
+            <param name="str2"></param>
+            <returns>The percentage match from 0.0 to 1.0 where 1.0 is 100%</returns>
+        </member>
+        <member name="M:Lookups.LookupController.wordLetterPairs(System.String)">
+            <summary>
+            Gets all letter pairs for each
+            individual word in the string
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Lookups.LookupController.letterPairs(System.String)">
+            <summary>
+            Generates an array containing every
+            two consecutive letters in the input string
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Lookups.LookupCategory">
+            <summary>
+            The class that describes the category created from a TMDB lookup.
+            </summary>
+        </member>
+        <member name="P:Lookups.LookupCategory.XmltvDescription">
+            <summary>
+            Get the XMLTV part of the description.
+            </summary>
+        </member>
+        <member name="P:Lookups.LookupCategory.WMCDescription">
+            <summary>
+            Get or set the Windows Media Centre part of the description.
+            </summary>
+        </member>
+        <member name="P:Lookups.LookupCategory.DVBLogicDescription">
+            <summary>
+            Get or set the DVBLogic part of the description.
+            </summary>
+        </member>
+        <member name="P:Lookups.LookupCategory.DVBViewerDescription">
+            <summary>
+            Get or set the DVBViewer part of the description.
+            </summary>
+        </member>
+        <member name="M:Lookups.LookupCategory.#ctor">
+            <summary>
+            Initialize a new instance of the MovieCategory class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbSeriesDetail">
+            <summary>
+            The class that describes a TV series detail.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeriesDetail.Genres">
+            <summary>
+            Get or set the genres.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeriesDetail.NumberOfSeasons">
+            <summary>
+            Get or set the number of seasons.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbSeriesDetail.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbSeriesDetail class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbSeriesDetail.GetDetails(Lookups.Tmdb.TmdbAPI,System.Int32)">
+            <summary>
+            Get series details.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="identity">The identity of the series.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbSeason">
+            <summary>
+            The class that describes a TV season.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeason.AirDateString">
+            <summary>
+            Get or set the release date as a string.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeason.Episodes">
+            <summary>
+            Get or set the episode list.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeason.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeason.Overview">
+            <summary>
+            Get or set the overview.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeason.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeason.PosterPath">
+            <summary>
+            Get or set the poster path.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeason.SeasonNumber">
+            <summary>
+            Get or set the season number.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbSeason.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbMovie class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbEpisode">
+            <summary>
+            The class that describes a TV episode.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbEpisode.AirDateString">
+            <summary>
+            Get or set the air date as a string.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbEpisode.EpisodeNumber">
+            <summary>
+            Get or set the episode number.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbEpisode.EpisodeName">
+            <summary>
+            Get or set the episode name.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbEpisode.Overview">
+            <summary>
+            Get or set the overview.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbEpisode.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbEpisode.SeasonNumber">
+            <summary>
+            Get or set the season number.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbEpisode.VoteAverage">
+            <summary>
+            Get or set the average vote.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbEpisode.VoteCount">
+            <summary>
+            Get or set the number of votes.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbEpisode.Cast">
+            <summary>
+            Get or set the list of cast members.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbEpisode.Images">
+            <summary>
+            Get or set the list of images.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbEpisode.AirDate">
+            <summary>
+            Get the first aired date.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbEpisode.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbMovie class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbEpisode.LoadLists(Lookups.Tmdb.TmdbAPI,System.Int32,System.Int32)">
+            <summary>
+            Load this instance with the optional data for the movie.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbEpisode.GetPosterImage(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Get the poster image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbSeries">
+            <summary>
+            The class that describes a TV series.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeries.BackdropPath">
+            <summary>
+            Get or set the poster path.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeries.FirstAirDateString">
+            <summary>
+            Get or set the first air date as a string.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeries.GenresIds">
+            <summary>
+            Get or set the genres.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeries.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeries.Name">
+            <summary>
+            Get or set the series name.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeries.OriginalLanguage">
+            <summary>
+            Get or set the original language.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeries.OriginalName">
+            <summary>
+            Get or set the original name.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeries.OriginCountries">
+            <summary>
+            Get or set the origin countries.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeries.Overview">
+            <summary>
+            Get or set the series overview.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeries.PosterPath">
+            <summary>
+            Get or set the poster path.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeries.Popularity">
+            <summary>
+            Get or set the popularity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeries.VoteAverage">
+            <summary>
+            Get or set the average vote.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeries.VoteCount">
+            <summary>
+            Get or set the number of votes.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeries.Genres">
+            <summary>
+            Get or set the series genre.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeries.Cast">
+            <summary>
+            Get or set the list of cast members.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeries.FirstAirDate">
+            <summary>
+            Get the first aired date.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeries.Seasons">
+            <summary>
+            Get the list of seasons.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbSeries.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbMovie class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbSeries.GetBackdropImage(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Get the backdrop image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbSeries.GetPosterImage(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Get the poster image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbSeries.Search(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Search for a TV show.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="title">The title or part of it.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbSeries.Search(Lookups.Tmdb.TmdbAPI,System.String,System.String)">
+            <summary>
+            Search for a TV show with a language code.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="title">The title or part of it.</param>
+            <param name="languageCode">The language code.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbSeriesSearchResults">
+            <summary>
+            The class that describes the results from a TV series search.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeriesSearchResults.Page">
+            <summary>
+            Get or set the page number.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeriesSearchResults.Series">
+            <summary>
+            Get or set the list of TV shows.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeriesSearchResults.TotalPages">
+            <summary>
+            Get or set the total number of pages.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSeriesSearchResults.TotalResults">
+            <summary>
+            Get or set the total number of movies.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbSeriesSearchResults.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbMovieSearchResults class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbAlternativeTitle">
+            <summary>
+            The class that describes an alternative title.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbAlternativeTitle.LanguageCode">
+            <summary>
+            Get or set the language code.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbAlternativeTitle.Title">
+            <summary>
+            Get or set the alternative title.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAlternativeTitle.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbAlternativeTitle class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbAlternativeTitles">
+            <summary>
+            The class that describes a movies alternative titles.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbAlternativeTitles.Identity">
+            <summary>
+            The identity of the collection.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbAlternativeTitles.Titles">
+            <summary>
+            The collection of alternative titles.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAlternativeTitles.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbAlternativeTitles class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbAPI">
+            <summary>
+            The class that contains the Tmdb low level calls.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbAPI.AssemblyVersion">
+            <summary>
+            Get the full assembly version number.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbAPI.MinimumAccessTime">
+            <summary>
+            Get the minimum access time.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbAPI.TotalRequestCount">
+            <summary>
+            Get the total number of requests.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbAPI.TotalRequestTime">
+            <summary>
+            Get the total request time.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbAPI.TotalDelays">
+            <summary>
+            Get the total number of delays.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbAPI.TotalDelayTime">
+            <summary>
+            Get the total delay time.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbAPI.TotalTimeBetweenRequests">
+            <summary>
+            Get the total time between requests.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbAPI.MinimumTimeBetweenRequests">
+            <summary>
+            Get the minimum time between requests.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbAPI.MaximumTimeBetweenRequests">
+            <summary>
+            Get the maximum time between requests.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbAPI.Configuration">
+            <summary>
+            Get the configuration record.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbAPI.DefaultLanguageCode">
+            <summary>
+            Get the current default language code.
+            </summary>
+            
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbAPI.LogResponse">
+            <summary>
+            Get or set the flag that determines if responses are logged or not.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.#ctor(System.String,DomainObjects.Logger,System.String)">
+            <summary>
+            Initialize a new instance of the TmdbAPI class.
+            </summary>
+            <param name="apiKey">The API key.</param>
+            <param name="logger">The logger instance.</param>
+            <param name="logHeader">The prefix for log messages.</param>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetMovies(System.String)">
+            <summary>
+            Get all movies matching a search string..
+            </summary>
+            <param name="title">The title or partial title of the movie to search for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetMovies(System.String,System.Int32)">
+            <summary>
+            Get a page of movie titles given a search string.
+            </summary>
+            <param name="title">The title of the movie to search for.</param>
+            <param name="page">The page number.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetMovieInfo(System.Int32)">
+            <summary>
+            Retrieve specific information about a movie. Things like overview, release date, cast data, genre's, YouTube trailer link, etc...
+            </summary>
+            <param name="id">The ID of the TMDb movie you are searching for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetMovieAlternativeTitles(System.Int32)">
+            <summary>
+            Retrieve alternative titles for a movie.
+            </summary>
+            <param name="id">The ID of the TMDb movie you are searching for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetMovieCast(System.Int32)">
+            <summary>
+            Retrieve cast information about a movie.
+            </summary>
+            <param name="id">The ID of the TMDb movie you are searching for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetMovieImages(System.Int32)">
+            <summary>
+            Retrieve images for a movie.
+            </summary>
+            <param name="id">The ID of the TMDb movie you are searching for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetMovieKeywords(System.Int32)">
+            <summary>
+            Retrieve keywords for a movie.
+            </summary>
+            <param name="id">The ID of the TMDb movie you are searching for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetMovieReleaseInfo(System.Int32)">
+            <summary>
+            Retrieve release info for a movie.
+            </summary>
+            <param name="id">The ID of the TMDb movie you are searching for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetMovieTrailers(System.Int32)">
+            <summary>
+            Retrieve trailers for a movie.
+            </summary>
+            <param name="id">The ID of the TMDb movie you are searching for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetMovieTranslations(System.Int32)">
+            <summary>
+            Retrieve translations for a movie.
+            </summary>
+            <param name="id">The ID of the TMDb movie you are searching for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetPeople(System.String)">
+            <summary>
+            Get all people matching a search string.
+            </summary>
+            <param name="name">The name or partial name of the person to search for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetPeople(System.String,System.Int32)">
+            <summary>
+            Search for a person.
+            </summary>
+            <param name="name">The name of the person you are searching for.</param>
+            <param name="page">The page number.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetPersonInfo(System.Int32)">
+            <summary>
+            Retrieve the full filmography.
+            </summary>
+            <param name="id">The ID of the person you are searching for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetPersonCredits(System.Int32)">
+            <summary>
+            Retrieve the credits for a person.
+            </summary>
+            <param name="id">The ID of the TMDb person you are searching for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetPersonImages(System.Int32)">
+            <summary>
+            Retrieve the images for a person.
+            </summary>
+            <param name="id">The ID of the person you are searching for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetCollectionInfo(System.Int32)">
+            <summary>
+            Get the information for a film collection.
+            </summary>
+            <param name="id">The ID of the collection.</param>
+            <returns>A TmdbCollectionInfo instance.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetCompanyInfo(System.Int32)">
+            <summary>
+            Get the information for a company.
+            </summary>
+            <param name="id">The ID of the company.</param>
+            <returns>A TmdbCompanyInfo instance.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.CompanyMovieSearch(System.Int32)">
+            <summary>
+            Get all movies for a company.
+            </summary>
+            <param name="identity">The identity of the company.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.CompanyMovieSearch(System.Int32,System.Int32)">
+            <summary>
+            Get a page of movie titles for a company.
+            </summary>
+            <param name="identity">The identity of the company to search for.</param>
+            <param name="page">The page number.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetImage(Lookups.Tmdb.ImageType,System.String,System.Int32,System.String)">
+            <summary>
+            Get an image.
+            </summary>
+            <param name="imageType">The type of image.</param>
+            <param name="filePath">The source path.</param>
+            <param name="size">The size of the image.</param>
+            <param name="outputPath">The output path.</param>
+            <returns>True if the image is downloaded; flase otherwise.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.SearchForSeries(System.String,System.String)">
+            <summary>
+            Get all TV series matching a search string..
+            </summary>
+            <param name="title">The title or partial title of the show to search for.</param>
+            <param name="languageCode">The language code or null if not specified.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.SearchForSeries(System.String,System.String,System.Int32)">
+            <summary>
+            Get a page of tv titles given a search string.
+            </summary>
+            <param name="title">The title of the movie to search for.</param>
+            <param name="languageCode">The language code or null if not specified.</param>
+            <param name="page">The page number.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetSeriesDetail(System.Int32)">
+            <summary>
+            Retrieve details for a series.
+            </summary>
+            <param name="id">The ID of the TMDb series you are searching for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetSeriesCast(System.Int32)">
+            <summary>
+            Retrieve cast information about a series.
+            </summary>
+            <param name="id">The ID of the TMDb series you are searching for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetSeriesImages(System.Int32)">
+            <summary>
+            Retrieve images for a series.
+            </summary>
+            <param name="id">The ID of the TMDb series you are searching for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetSeasonDetails(System.Int32,System.Int32)">
+            <summary>
+            Retrieve details of a season.
+            </summary>
+            <param name="seriesId">The ID of the TMDb series you are searching for.</param>
+            <param name="seasonId">The ID of the TMDb seeason you are searching for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetEpisodeDetails(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Retrieve details of an episode.
+            </summary>
+            <param name="seriesId">The ID of the TMDb series you are searching for.</param>
+            <param name="seasonId">The ID of the TMDb seeason you are searching for.</param>
+            <param name="episodeId">The ID of the TMDb episode you are searching for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAPI.GetEpisodeCast(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Retrieve cast information about an episode.
+            </summary>
+            <param name="seriesId">The series ID.</param>
+            <param name="seasonNumber">The season number.</param>
+            <param name="episodeId">The episode ID.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbAsyncEventArgs">
+            <summary>
+            The class that describes the asynce event arguments.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbAsyncEventArgs.ReplyObject">
+            <summary>
+            Get or set the reply object.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbAsyncEventArgs.#ctor(System.Object)">
+            <summary>
+            Initialize a new instance of the TmdbAsyncEventArgs.
+            </summary>
+            <param name="replyObject">The reply object created by the event.</param>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbCast">
+            <summary>
+            The class the describes the cast of a movie.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCast.Cast">
+            <summary>
+            Get or set the cast members.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCast.Crew">
+            <summary>
+            Get or set the crew members.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCast.GuestStars">
+            <summary>
+            Get or set the guest stars.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCast.CastNames">
+            <summary>
+            Get the collection of cast names.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCast.DirectorNames">
+            <summary>
+            Get the collection of director names.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCast.ProducerNames">
+            <summary>
+            Get the collection of producer names.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCast.WriterNames">
+            <summary>
+            Get the collection of writer names.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCast.Others">
+            <summary>
+            Get the collection of other members of the crew.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCast.GuestStarNames">
+            <summary>
+            Get the collection of guest star names.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbCast.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbCast class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbCastMember">
+            <summary>
+            The class that describes a cast member.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCastMember.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCastMember.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCastMember.Character">
+            <summary>
+            Get or set the character.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCastMember.Order">
+            <summary>
+            Get or set the order.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCastMember.ProfilePath">
+            <summary>
+            Get or set the profile path.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbCastMember.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbCastMember class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbCastMember.GetProfileImage(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Get the profile image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbCollectionEntry">
+            <summary>
+            The class that describes the collection data structure.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCollectionEntry.BackdropPath">
+            <summary>
+            Get or set the path to the backdrop.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCollectionEntry.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCollectionEntry.PosterPath">
+            <summary>
+            Get or set the poster path.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCollectionEntry.ReleaseDateString">
+            <summary>
+            Get or set the release date.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCollectionEntry.Title">
+            <summary>
+            Get or set the title.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCollectionEntry.ReleaseDate">
+            <summary>
+            Get the release date.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbCollectionEntry.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbCollectionEntry class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbCollectionEntry.GetBackdropImage(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Get the backdrop image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbCollectionEntry.GetPosterImage(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Get the poster image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbCollectionInfo">
+            <summary>
+            The class that describes a movie collection.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCollectionInfo.BackdropPath">
+            <summary>
+            Get or set the backdrop path.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCollectionInfo.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCollectionInfo.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCollectionInfo.CollectionEntry">
+            <summary>
+            Get or set the list of collection entries.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCollectionInfo.PosterPath">
+            <summary>
+            Get or set the poster path.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbCollectionInfo.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbCollectionInfo class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbCollectionInfo.GetBackdropImage(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Get the backdrop image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbCollectionInfo.GetPosterImage(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Get the poster image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbCompanyInfo">
+            <summary>
+            The class that describes a production company.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyInfo.Description">
+            <summary>
+            Get or set the description.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyInfo.Headquarters">
+            <summary>
+            Get or set the headquarters.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyInfo.HomePage">
+            <summary>
+            Get or set the home page.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyInfo.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyInfo.LogoPath">
+            <summary>
+            Get or set the logo path.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyInfo.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyInfo.ParentCompany">
+            <summary>
+            Get or set the parent company.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbCompanyInfo.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbCompanyInfo class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbCompanyInfo.GetLogo(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Get the poster image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbCompanyMovie">
+            <summary>
+            The class that describes a company movie entry.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyMovie.BackdropPath">
+            <summary>
+            Get or set the backdrop path.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyMovie.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyMovie.OriginalTitle">
+            <summary>
+            Get or set the original title.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyMovie.ReleaseDate">
+            <summary>
+            Get or set the release date.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyMovie.PosterPath">
+            <summary>
+            Get or set the poster path.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyMovie.Title">
+            <summary>
+            Get or set the title.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyMovie.VoteAverage">
+            <summary>
+            Get or set the average vote.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyMovie.VoteCount">
+            <summary>
+            Get or set the number of votes.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbCompanyMovie.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbCompanyMovie class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbCompanyMovie.GetBackdropImage(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Get the backdrop image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbCompanyMovie.GetPosterImage(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Get the poster image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbCompanyMovies">
+            <summary>
+            The class that describes the movies produced by a company.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyMovies.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyMovies.Page">
+            <summary>
+            Get or set the page.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyMovies.Movies">
+            <summary>
+            Get or set the list of movies.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyMovies.Total_Pages">
+            <summary>
+            Get or set the total number of pages.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCompanyMovies.Total_Results">
+            <summary>
+            Get or set the total number of movies.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbCompanyMovies.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbCompanyMovies class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbConfiguration">
+            <summary>
+            The class that describes the Tmdb configuration.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbConfiguration.Images">
+            <summary>
+            Get or set the image configuration parameters.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbConfiguration.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbConfiguration class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbCrewMember">
+            <summary>
+            The class that describes a crew member.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCrewMember.Department">
+            <summary>
+            Get or set the department.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCrewMember.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCrewMember.Job">
+            <summary>
+            Get or set the job.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCrewMember.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbCrewMember.ProfilePath">
+            <summary>
+            Get or set the profile path.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbCrewMember.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbCrewMember class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbCrewMember.GetProfileImage(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Get the profile image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="T:Lookups.Tmdb.ImageType">
+            <summary>
+            Image type values.
+            </summary>
+        </member>
+        <member name="F:Lookups.Tmdb.ImageType.Backdrop">
+            <summary>
+            The image type for a backdrop image.
+            </summary>
+        </member>
+        <member name="F:Lookups.Tmdb.ImageType.Poster">
+            <summary>
+            The image type for a poster image.
+            </summary>
+        </member>
+        <member name="F:Lookups.Tmdb.ImageType.Profile">
+            <summary>
+            The image type for a profile image.
+            </summary>
+        </member>
+        <member name="F:Lookups.Tmdb.ImageType.Logo">
+            <summary>
+            The image type for a compony logo.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbGenre">
+            <summary>
+            The class that describes a file genre.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbGenre.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbGenre.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbGenre.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbGenre class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbImage">
+            <summary>
+            The class that describes an image.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbImage.AspectRatio">
+            <summary>
+            Get or set the aspect ratio.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbImage.FilePath">
+            <summary>
+            Get or set the file path.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbImage.Height">
+            <summary>
+            Get or set the height.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbImage.CountryCode">
+            <summary>
+            Get or set the country code.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbImage.Width">
+            <summary>
+            Get or set the width.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbImage.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbImage class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbImage.GetImage(Lookups.Tmdb.TmdbAPI,Lookups.Tmdb.ImageType,System.String)">
+            <summary>
+            Get the image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="imageType">The type of image.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbImageConfiguration">
+            <summary>
+            The class that describes the image configuration.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbImageConfiguration.BackdropSizes">
+            <summary>
+            Get or set the backdrop sizes.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbImageConfiguration.BaseUrl">
+            <summary>
+            Get or set the base url.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbImageConfiguration.PosterSizes">
+            <summary>
+            Get or set the poster sizes.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbImageConfiguration.ProfileSizes">
+            <summary>
+            Get or set the profile sizes.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbImageConfiguration.OriginalSize">
+            <summary>
+            Get the original size.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbImageConfiguration.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbImageConfiguration class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbMovie">
+            <summary>
+            The class that describes a movie.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.BackdropPath">
+            <summary>
+            Get or set the backdrop path.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.OriginalTitle">
+            <summary>
+            Get or set the original title.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.Popularity">
+            <summary>
+            Get or set the popularity rating.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.PosterPath">
+            <summary>
+            Get or set the poster path.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.ReleaseDateString">
+            <summary>
+            Get or set the release date as a string.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.Title">
+            <summary>
+            Get or set the title.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.Adult">
+            <summary>
+            Get or set the adult flag.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.BelongsToCollection">
+            <summary>
+            Get or set the collection the movie belongs to.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.Budget">
+            <summary>
+            Get or set the budget.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.Genres">
+            <summary>
+            Get or set the gnere list.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.HomePage">
+            <summary>
+            Get or set the home page address.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.ImdbIdentity">
+            <summary>
+            Get or set the IMDB identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.Overview">
+            <summary>
+            Get or set the overview.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.ProductionCompanies">
+            <summary>
+            Get or set the list of production companies.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.ProductionCountries">
+            <summary>
+            Get or set the list of production countries.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.Revenue">
+            <summary>
+            Get or set the revenue.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.RuntimeString">
+            <summary>
+            Get or set the running time.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.SpokenLanguages">
+            <summary>
+            Get or set the languages.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.TagLine">
+            <summary>
+            Get or set the tag line.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.VoteAverage">
+            <summary>
+            Get or set the average vote.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.VoteCount">
+            <summary>
+            Get or set the number of votes.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.Cast">
+            <summary>
+            Get or set the list of cast members.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.AlternativeTitles">
+            <summary>
+            Get or set the list of alternative titles.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.Images">
+            <summary>
+            Get or set the list of images.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.Keywords">
+            <summary>
+            Get or set the list of keywords.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.ReleaseInfo">
+            <summary>
+            Get or set the release information.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.Trailers">
+            <summary>
+            Get or set the list of trailers.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.Translations">
+            <summary>
+            Get or set the list of translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.Runtime">
+            <summary>
+            Get the string representation of the running time.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.ReleaseDate">
+            <summary>
+            Get the release date.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.GenreString">
+            <summary>
+            Get the genres as a comma separated list.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.KeywordString">
+            <summary>
+            Get the keywords as a comma separated list.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovie.ProductionCompanyNames">
+            <summary>
+            Get the list of production company names.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbMovie.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbMovie class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbMovie.LoadAllData(Lookups.Tmdb.TmdbAPI)">
+            <summary>
+            Load this instance with all the data for a movie.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbMovie.LoadAdditionalData(Lookups.Tmdb.TmdbAPI)">
+            <summary>
+            Load this instance with the extended information for the movie.
+            </summary>       
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbMovie.LoadLists(Lookups.Tmdb.TmdbAPI)">
+            <summary>
+            Load this instance with the optional data for the movie.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbMovie.GetBackdropImage(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Get the backdrop image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbMovie.GetBackdropImage(Lookups.Tmdb.TmdbAPI,System.Int32,System.String)">
+            <summary>
+            Get the backdrop image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="index">The index of the image.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbMovie.GetPosterImage(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Get the poster image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbMovie.Search(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Search for a movie title.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="title">The movie title or part of it.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbImages">
+            <summary>
+            The class that describes a list of images.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbImages.Backdrops">
+            <summary>
+            Get or set the backdrops.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbImages.Posters">
+            <summary>
+            Get or set a movies posters.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbImages.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbMovieImages class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbMovieKeyword">
+            <summary>
+            The class that describes a movie keyword.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieKeyword.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieKeyword.Keyword">
+            <summary>
+            Get or set the keyword.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbMovieKeyword.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbMovieKeyword class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbMovieKeywords">
+            <summary>
+            The class that describes the keywords for a movie.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieKeywords.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieKeywords.Keywords">
+            <summary>
+            Get or set the list of keywords.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbMovieKeywords.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbMovieKeywords class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbMovieRelease">
+            <summary>
+            The class that describes a movie release.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieRelease.Certification">
+            <summary>
+            Get or set the certification.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieRelease.LanguageCode">
+            <summary>
+            Get or set the language code.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieRelease.ReleaseDateString">
+            <summary>
+            Get or set the release date.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieRelease.ReleaseDate">
+            <summary>
+            Get the release date.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbMovieRelease.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbMovieRelease class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbMovieReleaseInfo">
+            <summary>
+            The class that describes the release information for a movie.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieReleaseInfo.Countries">
+            <summary>
+            Get or set the release information.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbMovieReleaseInfo.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbMovieReleaseInfo class. 
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbMovieSearchResults">
+            <summary>
+            The class that describes the results from a movie search.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieSearchResults.Page">
+            <summary>
+            Get or set the page number.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieSearchResults.Movies">
+            <summary>
+            Get or set the list of movies.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieSearchResults.TotalPages">
+            <summary>
+            Get or set the total number of pages.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieSearchResults.TotalResults">
+            <summary>
+            Get or set the total number of movies.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbMovieSearchResults.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbMovieSearchResults class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbMovieTrailer">
+            <summary>
+            The class that describes a movie trailer.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieTrailer.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieTrailer.Size">
+            <summary>
+            Get or set the size.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieTrailer.Source">
+            <summary>
+            Get or set the source.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbMovieTrailer.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbMovieTrailer class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbMovieTrailers">
+            <summary>
+            The class the describes the trailers for a movie.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieTrailers.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieTrailers.QuickTime">
+            <summary>
+            Get or set the list of Quicktime trailers.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieTrailers.YouTube">
+            <summary>
+            Get or set the list of YouTube trailers.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbMovieTrailers.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbMovieTrailers class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbMovieTranslation">
+            <summary>
+            The class that describes a movie translation.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieTranslation.EnglishName">
+            <summary>
+            Get or set the English name of the translation.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieTranslation.LanguageCode">
+            <summary>
+            Get or set the language code.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieTranslation.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbMovieTranslation.#ctor">
+            <summary>
+            Initialise a new instance of the TmdbMovieTranslation class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbMovieTranslations">
+            <summary>
+            The class that describes the translations for a movie.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieTranslations.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbMovieTranslations.Translations">
+            <summary>
+            Get or set the list of translations.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbMovieTranslations.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbMovieTranslations class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbPerson">
+            <summary>
+            The class that describes a person.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPerson.Adult">
+            <summary>
+            Get or set the adult flag.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPerson.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPerson.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPerson.ProfilePath">
+            <summary>
+            Get or set the profile path.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPerson.AlsoKnownAs">
+            <summary>
+            Get or set the alternative names.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPerson.Biography">
+            <summary>
+            Get or set the biography.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPerson.BirthdayString">
+            <summary>
+            Get or set the birthday.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPerson.DeathdayString">
+            <summary>
+            Get or set the date of death.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPerson.HomePage">
+            <summary>
+            Get or set the home page.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPerson.PlaceOfBirth">
+            <summary>
+            Get or set the place of birth.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPerson.Credits">
+            <summary>
+            Get or set the credits.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPerson.Images">
+            <summary>
+            Get or set the list of images.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPerson.AlsoKnownAsString">
+            <summary>
+            Get the alias names as a single comma separated string.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPerson.Birthday">
+            <summary>
+            Get the persons birthday.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPerson.Deathday">
+            <summary>
+            Get the persons deathday.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbPerson.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbPerson class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbPerson.LoadAllData(Lookups.Tmdb.TmdbAPI)">
+            <summary>
+            Load this instance with all available data.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbPerson.LoadAdditionalData(Lookups.Tmdb.TmdbAPI)">
+            <summary>
+            Load this instance with the extended information.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbPerson.LoadLists(Lookups.Tmdb.TmdbAPI)">
+            <summary>
+            Load this instance with the optional data.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbPerson.GetProfileImage(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Get the profile image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbPerson.GetProfileImage(Lookups.Tmdb.TmdbAPI,System.Int32,System.String)">
+            <summary>
+            Get the profile image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="index">The index of the image.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbPerson.Search(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Search for a person.
+            </summary>
+            <param name="instance">The aAPI instance.</param>
+            <param name="name">The persons name or part of it.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbPersonCredit">
+            <summary>
+            The class that describes the credits for a person.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPersonCredit.Character">
+            <summary>
+            Get or set the name of the character.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPersonCredit.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPersonCredit.OriginalTitle">
+            <summary>
+            Get or set the original title.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPersonCredit.PosterPath">
+            <summary>
+            Get or set the poster path.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPersonCredit.ReleaseDateString">
+            <summary>
+            Get or set the release date as a string.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPersonCredit.Title">
+            <summary>
+            Get or set the title.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPersonCredit.ReleaseDate">
+            <summary>
+            Get the release date.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbPersonCredit.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbPersonCredit class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbPersonCredit.GetPosterImage(Lookups.Tmdb.TmdbAPI,System.String)">
+            <summary>
+            Get the poster image.
+            </summary>
+            <param name="instance">The API instance.</param>
+            <param name="fileName">The output path.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbPersonCredits">
+            <summary>
+            The class that describes a list of credits for a person.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPersonCredits.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPersonCredits.Cast">
+            <summary>
+            Get or set the list of credits.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbPersonCredits.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbPersonCredits class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbPersonImages">
+            <summary>
+            The class that describes an image for a person.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPersonImages.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPersonImages.Profiles">
+            <summary>
+            Get or set the list of images.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbPersonImages.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbPersonImages class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbPersonSearchResults">
+            <summary>
+            The class that describes the search results for a person.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPersonSearchResults.Page">
+            <summary>
+            Get or set the page number.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPersonSearchResults.People">
+            <summary>
+            Get or set the results.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPersonSearchResults.TotalPages">
+            <summary>
+            Get or set the total number of pages.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbPersonSearchResults.TotalResults">
+            <summary>
+            Get or set the total number of people.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbPersonSearchResults.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbPersonSearchResults class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbProductionCompany">
+            <summary>
+            The class that describes a production company.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbProductionCompany.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbProductionCompany.Name">
+            <summary>
+            Get or set the company name.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbProductionCompany.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbProductionCompany class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbProductionCountry">
+            <summary>
+            The class that describes a country of production.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbProductionCountry.CountryCode">
+            <summary>
+            Get or set the country code.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbProductionCountry.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbProductionCountry.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbProductionCompany class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tmdb.TmdbSpokenLanguage">
+            <summary>
+            The class that describes a spoken language.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSpokenLanguage.ISO_639_1">
+            <summary>
+            Get or set the language code.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tmdb.TmdbSpokenLanguage.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tmdb.TmdbSpokenLanguage.#ctor">
+            <summary>
+            Initialize a new instance of the TmdbSpokenLanguage class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbAirsDays">
+            <summary>
+            The class that describes air days.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAirsDays.Sunday">
+            <summary>
+            Get or set if Sunday is an air day.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAirsDays.Monday">
+            <summary>
+            Get or set if Monday is an air day.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAirsDays.Tuesday">
+            <summary>
+            Get or set if Tuesday is an air day.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAirsDays.Wednesday">
+            <summary>
+            Get or set if Wednesday is an air day.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAirsDays.Thursday">
+            <summary>
+            Get or set if Thursday is an air day.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAirsDays.Friday">
+            <summary>
+            Get or set if Friday is an air day.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAirsDays.Saturday">
+            <summary>
+            Get or set if Saturday is an air day.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbAirsDays.#ctor">
+            <summary>
+            Intialize a new instance of the TvdbAirDays class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbAlias">
+            <summary>
+            The class that describes an alias.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAlias.Language">
+            <summary>
+            Get or set the language code.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAlias.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbAlias.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbAlias class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbAPI">
+            <summary>
+            The class that contains the TVDB low level calls.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAPI.AssemblyVersion">
+            <summary>
+            Get the full assembly version number.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAPI.DefaultLanguageCode">
+            <summary>
+            Get the current default language code.
+            </summary>
+            
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAPI.ResponseKeys">
+            <summary>
+            The web response keys.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAPI.MinimumAccessTime">
+            <summary>
+            Get the minimum web access time.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAPI.TotalRequestCount">
+            <summary>
+            Get the total number of requests.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAPI.TotalRequestTime">
+            <summary>
+            Get the total web request time.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAPI.TotalDelays">
+            <summary>
+            Get the total number of delayed web requests.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAPI.TotalDelayTime">
+            <summary>
+            Get the total web request delay time.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAPI.TotalTimeBetweenRequests">
+            <summary>
+            Get the total time between requests.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAPI.MinimumTimeBetweenRequests">
+            <summary>
+            Get the minimum time between web requests.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAPI.MaximumTimeBetweenRequests">
+            <summary>
+            Get the maximum time between requests.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbAPI.Level">
+            <summary>
+            The level of the query.
+            </summary>
+        </member>
+        <member name="F:Lookups.Tvdb.TvdbAPI.Level.Series">
+            <summary>
+            Query is for series.
+            </summary>
+        </member>
+        <member name="F:Lookups.Tvdb.TvdbAPI.Level.Season">
+            <summary>
+            Query is for season.
+            </summary>
+        </member>
+        <member name="F:Lookups.Tvdb.TvdbAPI.Level.Episode">
+            <summary>
+            Query is for episode.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbAPI.ImageType">
+            <summary>
+            The image type.
+            </summary>
+        </member>
+        <member name="F:Lookups.Tvdb.TvdbAPI.ImageType.Banner">
+            <summary>
+            Image type is banner.
+            </summary>
+        </member>
+        <member name="F:Lookups.Tvdb.TvdbAPI.ImageType.Poster">
+            <summary>
+            Image type is poster.
+            </summary>
+        </member>
+        <member name="F:Lookups.Tvdb.TvdbAPI.ImageType.FanArt">
+            <summary>
+            Image type is fan art.
+            </summary>
+        </member>
+        <member name="F:Lookups.Tvdb.TvdbAPI.ImageType.Actor">
+            <summary>
+            Image type is actor.
+            </summary>
+        </member>
+        <member name="F:Lookups.Tvdb.TvdbAPI.ImageType.SmallPoster">
+            <summary>
+            Image type is small poster.
+            </summary>
+        </member>
+        <member name="F:Lookups.Tvdb.TvdbAPI.ImageType.SmallFanArt">
+            <summary>
+            Image type is small fan art.
+            </summary>
+        </member>
+        <member name="F:Lookups.Tvdb.TvdbAPI.ImageType.SmallActor">
+            <summary>
+            Image type is small actor.
+            </summary>
+        </member>
+        <member name="F:Lookups.Tvdb.TvdbAPI.ImageType.Season">
+            <summary>
+            Image type is season.
+            </summary>
+        </member>
+        <member name="F:Lookups.Tvdb.TvdbAPI.ImageType.SmallSeason">
+            <summary>
+            Image type is small season.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAPI.InitializeResult">
+            <summary>
+            Get or set the result of initializing.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAPI.LogResponse">
+            <summary>
+            Get or set the flag that determines if responses are logged or not.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbAPI.#ctor(System.String,System.String,DomainObjects.Logger,System.String)">
+            <summary>
+            Initialize a new instance of the TvdbAPI class.
+            </summary>
+            <param name="apiKey">The API key.</param>
+            <param name="pin">The users PIN.</param>
+            <param name="logger">The logger instance to use.</param>
+            <param name="logHeader">The prefix for log messages.</param>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbAPI.#ctor(System.String,System.String,System.String,DomainObjects.Logger,System.String)">
+            <summary>
+            Initialize a new instance of the TvdbAPI class.
+            </summary>
+            <param name="apiKey">The API key.</param>
+            <param name="pin">The users PIN.</param>
+            <param name="defaultLanguageCode">The default language code.</param>
+            <param name="logger">The logger instance to use.</param>
+            <param name="logHeader">The prefix for log messages.</param>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbAPI.GetSeries(System.String)">
+            <summary>
+            Search for the basic series data. 
+            </summary>
+            <param name="title">Part or all of the title.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbAPI.GetSeries(System.String,System.String)">
+            <summary>
+            Search for the basic series data for a language code. 
+            </summary>
+            <param name="title">Part or all of the title.</param>
+            <param name="languageCode">The language code.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbAPI.GetSeriesDetails(System.String)">
+            <summary>
+            Get the details of a series.
+            </summary>
+            <param name="identity">The series identity.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbAPI.GetSeriesDetails(System.String,System.String)">
+            <summary>
+            Get the details of a series for a language code.
+            </summary>
+            <param name="identity">The series identity.</param>
+            <param name="languageCode">The language code.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbAPI.GetEpisodeDetails(System.Int32)">
+            <summary>
+            Get the details of an episode.
+            </summary>
+            <param name="episodeIdentity">The episode identity.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbAPI.GetEpisodeDetails(System.Int32,System.String)">
+            <summary>
+            Get the details of an episode for a language code.
+            </summary>
+            <param name="episodeIdentity">The episode identity.</param>
+            <param name="languageCode">The language code.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbAPI.GetImage(Lookups.Tvdb.TvdbAPI.ImageType,System.String,System.Int32,System.String)">
+            <summary>
+            Download an image.
+            </summary>
+            <param name="imageType">The type of image.</param>
+            <param name="filePath">The filename of the image.</param>
+            <param name="size">The size of the image. Currently not used.</param>
+            <param name="outputPath">The output path for the downloaded image.</param>
+            <returns>True if the image is downloaded; false otherwise.</returns>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbArtwork">
+            <summary>
+            The class that describes artwork.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbArtwork.Identity">
+            <summary>
+            Get or set the identity of the artwork.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbArtwork.Image">
+            <summary>
+            Get or set the image address.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbArtwork.Language">
+            <summary>
+            Get or set the language code.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbArtwork.Score">
+            <summary>
+            Get or set the score.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbArtwork.Thumbnail">
+            <summary>
+            Get or set the thumbnail image address.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbArtwork.Type">
+            <summary>
+            Get or set the type of artwork.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbArtwork.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbArtwork class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbArtwork.IsType(Lookups.Tvdb.TvdbAPI.Level,Lookups.Tvdb.TvdbAPI.ImageType)">
+            <summary>
+            Check if the artwork is a specified type.
+            </summary>
+            <param name="level">The level of the query.</param>
+            <param name="imageType">The image type to check for.</param>
+            <returns>Returns true if the artwork is of the specified type; false otherwise.</returns>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbArtworkType">
+            <summary>
+            The class that describes the artwork type.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbArtworkType.Height">
+            <summary>
+            Get or set the height.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbArtworkType.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbArtworkType.ImageFormat">
+            <summary>
+            Get or set the image format.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbArtworkType.Name">
+            <summary>
+            Get or set the name of the artwork.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbArtworkType.RecordType">
+            <summary>
+            Get or set the record type.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbArtworkType.Slug">
+            <summary>
+            Get or set the slug.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbArtworkType.ThumbnailHeight">
+            <summary>
+            Get or set the thumbnail height.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbArtworkType.ThumbnailWidth">
+            <summary>
+            Get or set the thumbnail width.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbArtworkType.Types">
+            <summary>
+            Ge or set the list of artwork types.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbArtworkType.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbArtworkType class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbArtworkTypesResult">
+            <summary>
+            The class that contains the Artwork Types query result.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbArtworkTypesResult.ArtworkTypes">
+            <summary>
+            Get or set the artwork types.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbArtworkTypesResult.Status">
+            <summary>
+            Get or set the query status.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbArtworkTypesResult.#ctor">
+            <summary>
+            Intialize a new instance of the TvdbArtworkTypesResult class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbAward">
+            <summary>
+            The class that describes an award.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAward.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbAward.Name">
+            <summary>
+            Get or set the name of the award.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbAward.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbAward class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbCharacter">
+            <summary>
+            The class that describes a character.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCharacter.Aliases">
+            <summary>
+            Get or set the aliases.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCharacter.EpisodeIdentity">
+            <summary>
+            Get or set the episode identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCharacter.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCharacter.Image">
+            <summary>
+            Get or set the image.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCharacter.IsFeatured">
+            <summary>
+            Returns true if the character is featured; false otherwise.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCharacter.MovieIdentity">
+            <summary>
+            Get or set the movie identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCharacter.Name">
+            <summary>
+            Get or setthe name.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCharacter.NameTranslations">
+            <summary>
+            Get or set the name translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCharacter.OverviewTranslations">
+            <summary>
+            Get or set the overview translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCharacter.PeopleIdentity">
+            <summary>
+            Get or set the person identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCharacter.PeopleType">
+            <summary>
+            Get or set the person type.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCharacter.PersonName">
+            <summary>
+            Get or set the person name.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCharacter.SeriesIdentity">
+            <summary>
+            Get or set the series identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCharacter.Sort">
+            <summary>
+            Get or set the sort priority.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCharacter.Translations">
+            <summary>
+            Get or set the translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCharacter.Type">
+            <summary>
+            Get or set the character type.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCharacter.Url">
+            <summary>
+            Get or set the url.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbCharacter.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbCharacter class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbCharacter.GetCharacterNames(System.Collections.ObjectModel.Collection{Lookups.Tvdb.TvdbCharacter},System.String[])">
+            <summary>
+            Get a list of character names.
+            </summary>
+            <param name="characters">The collection to be filled.</param>
+            <param name="types">The types of characters required.</param>
+            <returns>A collection of names or null if none can be located.</returns>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbCompany">
+            <summary>
+            The class that describes a company.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCompany.ActiveDate">
+            <summary>
+            Get or set the active date.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCompany.Aliases">
+            <summary>
+            Get or set the list of aliases.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCompany.Country">
+            <summary>
+            Get or set the name of the country.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCompany.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCompany.InactiveDate">
+            <summary>
+            Get or set the inactive date.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCompany.Name">
+            <summary>
+            Get or set the name of the company.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCompany.NameTranslations">
+            <summary>
+            Get or set the list of name translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCompany.OverviewTranslations">
+            <summary>
+            Get or set the list of overview translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCompany.PrimaryCompanyType">
+            <summary>
+            Get or set the primary company type.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCompany.Slug">
+            <summary>
+            Get or set the slug.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbCompany.Translations">
+            <summary>
+            Get or set the list of translations.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbCompany.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbCompany class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbContentRating">
+            <summary>
+            The class that describes a content rating.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbContentRating.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbContentRating.Name">
+            <summary>
+            Get or set the name of the rating.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbContentRating.Country">
+            <summary>
+            Get or set the name of the country.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbContentRating.Description">
+            <summary>
+            Get or set the description.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbContentRating.ContentType">
+            <summary>
+            Get or set the content type.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbContentRating.Order">
+            <summary>
+            Get or set the order.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbContentRating.FullName">
+            <summary>
+            Get or set the full name of the rating.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbContentRating.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbContentRating class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbContentRating.GetContentRatingDescriptions(System.Collections.ObjectModel.Collection{Lookups.Tvdb.TvdbContentRating})">
+            <summary>
+            Get a list of the content rating descriptions.
+            </summary>
+            <param name="ratings"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbEpisode">
+            <summary>
+            The class that describes an episode.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.Aired">
+            <summary>
+            Get or set the aired date.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.AirsAfterSeason">
+            <summary>
+            Get or set the airs after season.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.AirsBeforeEpisode">
+            <summary>
+            Get or set the airs before episode.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.AirsBeforeSeason">
+            <summary>
+            Get or set the airs before season.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.Awards">
+            <summary>
+            Get or set the awards.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.Characters">
+            <summary>
+            Get or set the characters.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.ContentRatings">
+            <summary>
+            Get or set the content ratings.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.Identity">
+            <summary>
+            Get or set the episode ID.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.Image">
+            <summary>
+            Get or set the image.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.ImageType">
+            <summary>
+            Get or set the image type.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.IsMovie">
+            <summary>
+            Get or set the movie flag.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.NameTranslations">
+            <summary>
+            Get or set the name translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.Network">
+            <summary>
+            Get or set the network.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.Number">
+            <summary>
+            Get or set the episode number.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.OverviewTranslations">
+            <summary>
+            Get or set the overview translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.ProductionCode">
+            <summary>
+            Get or set the production code.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.RemoteIds">
+            <summary>
+            Get or set the remote ID's.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.Runtime">
+            <summary>
+            Get or set the runtime.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.SeasonNumber">
+            <summary>
+            Get or set the season number.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.Seasons">
+            <summary>
+            Get or set the list of seasons.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.SeriesId">
+            <summary>
+            Get or set the series ID.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.TagOptions">
+            <summary>
+            Get or set the tag options.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.Trailers">
+            <summary>
+            Get or set the trailers.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.Translations">
+            <summary>
+            Get or set the translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.FirstAiredDate">
+            <summary>
+            Get the first air date. Returns null if not present or invalid.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.Actors">
+            <summary>
+            Get a list of actors.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.ActorsDisplayString">
+            <summary>
+            Get a comma separated string of actors.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.Directors">
+            <summary>
+            Get a list of directors.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.DirectorsDisplayString">
+            <summary>
+            Get a comma separated string of actors.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.Writers">
+            <summary>
+            Get a list of writers.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.WritersDisplayString">
+            <summary>
+            Get a comma separated string of actors.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.GuestStars">
+            <summary>
+            Get a list of guest stars.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.GuestStarsDisplayString">
+            <summary>
+            Get a comma separated string of guest stars.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisode.ContentRatingsDisplayString">
+            <summary>
+            Get a comma separated string of content ratings.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbEpisode.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbEpisode class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbEpisode.GetImage(Lookups.Tvdb.TvdbAPI,System.String)">
+            <summary>
+            Get the episode image.
+            </summary>
+            <param name="instance">An API instance.</param>
+            <param name="fileName">The output filename.</param>
+            <returns>True if the images is downloaded; false otherwise.</returns>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbEpisode.GetSmallImage(Lookups.Tvdb.TvdbAPI,System.String)">
+            <summary>
+            Get the small episode image.
+            </summary>
+            <param name="instance">An API instance.</param>
+            <param name="fileName">The output filename.</param>
+            <returns>True if the images is downloaded; false otherwise.</returns>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbEpisode.GetOverview(System.String)">
+            <summary>
+            Get the translation overview.
+            </summary>
+            <param name="languageCode">The language code.</param>
+            <returns>The overview or null if none exists.</returns>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbEpisodeInfoResult">
+            <summary>
+            The class that describes the results from a episode details request.
+            </summary>    
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbEpisodeInfoResult.Episode">
+            <summary>
+            Get or set the series.
+            </summary>        
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbEpisodeInfoResult.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbEpisodeInfoResult class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbGenre">
+            <summary>
+            The class that describes a genre.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbGenre.Identity">
+            <summary>
+            Get or set the genre.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbGenre.Name">
+            <summary>
+            Get or set the name of the genre.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbGenre.Slug">
+            <summary>
+            Get or set the slug.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbGenre.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbOverview class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbList">
+            <summary>
+            The class that describes a list.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbList.Aliases">
+            <summary>
+            Get or set the list of aliases.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbList.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbList.IsOfficial">
+            <summary>
+            Returns true if the list is official; false otherwise.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbList.Name">
+            <summary>
+            Get or set the name of the list.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbList.NameTranslations">
+            <summary>
+            Get or set the list of name translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbList.Overview">
+            <summary>
+            Get or set the overview.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbList.OverviewTranslations">
+            <summary>
+            Get or set the list of overview translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbList.Translations">
+            <summary>
+            Get or set the list of translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbList.Url">
+            <summary>
+            Get or set the url.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbList.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbList class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbLogin">
+            <summary>
+            The class that describes a login response.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbLogin.Token">
+            <summary>
+            Get or set the session token.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbLogin.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbLogin class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbLoginResult">
+            <summary>
+            The class that describes a login response.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbLoginResult.Status">
+            <summary>
+            Get or set the status.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbLoginResult.Login">
+            <summary>
+            Get or set the login response data.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbLoginResult.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbLoginResult class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbNetwork">
+            <summary>
+            The class that describes a network.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbNetwork.Abbreviation">
+            <summary>
+            Get or set the abbreviation.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbNetwork.Country">
+            <summary>
+            Get or set the country.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbNetwork.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbNetwork.Name">
+            <summary>
+            Get or set the name of the network.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbNetwork.Slug">
+            <summary>
+            Get or set the slug.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbNetwork.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbNetwork class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbRemoteId">
+            <summary>
+            The class that describes a remote ID.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbRemoteId.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbRemoteId.Type">
+            <summary>
+            Get or set the type.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbRemoteId.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbRemoteId class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbSeason">
+            <summary>
+            The class that describes a season.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeason.Abbreviation">
+            <summary>
+            Get or set the abbreviation.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeason.Country">
+            <summary>
+            Get or set the country.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeason.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeason.Image">
+            <summary>
+            Get or set the image address.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeason.ImageType">
+            <summary>
+            Get or set the image type.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeason.Name">
+            <summary>
+            Get or set the name of the season.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeason.NameTranslations">
+            <summary>
+            Get or set the list of name translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeason.Number">
+            <summary>
+            Get or set the season number.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeason.OverviewTranslations">
+            <summary>
+            Get or set the list of overview translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeason.SeriesIdentity">
+            <summary>
+            Get or set the series identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeason.Slug">
+            <summary>
+            Get or set the slug.
+            </summary>       
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeason.Translations">
+            <summary>
+            Get or set the list of translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeason.Type">
+            <summary>
+            Get or set the season type.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbSeason.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbSeason class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbSeries">
+            <summary>
+            The class that describes a series.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Abbreviation">
+            <summary>
+            Get or set the abbreviation.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.AirsDays">
+            <summary>
+            Get or set the air days.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.AirsTime">
+            <summary>
+            Get or set the airs time.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Aliases">
+            <summary>
+            Get or set the aliases.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Artworks">
+            <summary>
+            Get or set the artworks.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.AverageRuntime">
+            <summary>
+            Get or set the average runtime.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Characters">
+            <summary>
+            Get or set the characters.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Companies">
+            <summary>
+            Get or set the companies.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Country">
+            <summary>
+            Get or set the country.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.DefaultSeasonType">
+            <summary>
+            Get or set the default season type.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Episodes">
+            <summary>
+            Get or set the episodes.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.FirstAired">
+            <summary>
+            Get or set the first air date string.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Genres">
+            <summary>
+            Get or set the genres.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Identity">
+            <summary>
+            Get or set the internal identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Image">
+            <summary>
+            Get or set the image.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.IsOrderRandomized">
+            <summary>
+            Get or set if the order randomized.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.LastAired">
+            <summary>
+            Get or set the last air date string.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Lists">
+            <summary>
+            Get or set the lists.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.SeriesName">
+            <summary>
+            Get or set the series name.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.NameTranslations">
+            <summary>
+            Get or set the series name translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.NextAired">
+            <summary>
+            Get or set the next air date string.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.OriginalCountry">
+            <summary>
+            Get or set the original country.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.OriginalLanguage">
+            <summary>
+            Get or set the original language.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.OverviewTranslations">
+            <summary>
+            Get or set the overview translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.RemoteIds">
+            <summary>
+            Get or set the remote ID's.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Score">
+            <summary>
+            Get or set the score.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Seasons">
+            <summary>
+            Get or set the seasons.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Slug">
+            <summary>
+            Get or set the slug.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Status">
+            <summary>
+            Get or set the status.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Trailers">
+            <summary>
+            Get or set the trailers.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Translations">
+            <summary>
+            Get or set the translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.FirstAiredDate">
+            <summary>
+            Get or set the first air date.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.FirstAiredString">
+            <summary>
+            Get the string representation of the first aired date.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.RunningTime">
+            <summary>
+            Get the running time. Returns null if not available or invalid.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.RunningTimeString">
+            <summary>
+            Get the string representation of the running time.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.GenresDisplayString">
+            <summary>
+            Get a comma separated string of genres.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Actors">
+            <summary>
+            Get a list of actors.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.ActorsDisplayString">
+            <summary>
+            Get a comma separated string of actors.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Directors">
+            <summary>
+            Get a list of directors.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.DirectorsDisplayString">
+            <summary>
+            Get a comma separated string of directors.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.Writers">
+            <summary>
+            Get a list of writers.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.GuestStars">
+            <summary>
+            Get a list of guest stars.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.GuestStarsDisplayString">
+            <summary>
+            Get a comma separated string of guest stars.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.WritersDisplayString">
+            <summary>
+            Get a comma separated string of writers.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeries.LastError">
+            <summary>
+            Get the last error message.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbSeries.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbSeries class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbSeries.Search(Lookups.Tvdb.TvdbAPI,System.String)">
+            <summary>
+            Search for series given a title.
+            </summary>
+            <param name="instance">An API instance..</param>
+            <param name="title">The title to search for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbSeries.Search(Lookups.Tvdb.TvdbAPI,System.String,System.String)">
+            <summary>
+            Search for a series in an specific language.
+            </summary>
+            <param name="instance">An API instance.</param>
+            <param name="title">Part or all of the title.</param>
+            <param name="languageCode">The language code.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbSeries.GetBanner(Lookups.Tvdb.TvdbAPI,System.String)">
+            <summary>
+            Get a banner.
+            </summary>
+            <param name="instance">An API instance.</param>
+            <param name="fileName">The full name of the file to create.</param>
+            <returns>Returns true if the banner was downloaded to the file; false otherwise.</returns>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbSeries.GetPoster(Lookups.Tvdb.TvdbAPI,System.String)">
+            <summary>
+            Get the poster image.
+            </summary>
+            <param name="instance">An API instance.</param>
+            <param name="fileName">The output filename.</param>
+            <returns>True if the poster was downloaded; false otherwise.</returns>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbSeries.GetSmallPoster(Lookups.Tvdb.TvdbAPI,System.String)">
+            <summary>
+            Get the small poster image.
+            </summary>
+            <param name="instance">An API instance.</param>
+            <param name="fileName">The name of the output file.</param>
+            <returns>True if the image was downloaded; false otherwise.</returns>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbSeries.GetFanArt(Lookups.Tvdb.TvdbAPI,System.String)">
+            <summary>
+            Get the fan art image.
+            </summary>
+            <param name="instance">An API instance.</param>
+            <param name="fileName">The output filename.</param>
+            <returns>True if the image was downloaded; false otherwise.</returns>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbSeries.GetSmallFanArt(Lookups.Tvdb.TvdbAPI,System.String)">
+            <summary>
+            Get the small fan art image.
+            </summary>
+            <param name="instance">An API instance.</param>
+            <param name="fileName">The output filename.</param>
+            <returns>True if the image was downloaded; false otherwise.</returns>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbSeries.GetOverview(System.String)">
+            <summary>
+            Get the translation overview.
+            </summary>
+            <param name="languageCode">The language code.</param>
+            <returns>The overview or null if none exists.</returns>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbSeriesInfoResult">
+            <summary>
+            The class that describes the results from a series search.
+            </summary>    
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesInfoResult.Series">
+            <summary>
+            Get or set the series.
+            </summary>        
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbSeriesInfoResult.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbSeriesInfoResult class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbSeriesSearch">
+            <summary>
+            The class that describes a series search.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.Aliases">
+            <summary>
+            Get or set the aliases.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.Companies">
+            <summary>
+            Get or set the companies.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.CompanyType">
+            <summary>
+            Get or set the company type.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.Country">
+            <summary>
+            Get or set the country.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.Director">
+            <summary>
+            Get or set the director.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.ExtendedTitle">
+            <summary>
+            Get or set the extended title.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.Genres">
+            <summary>
+            Get or set the string of genres.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.Identity">
+            <summary>
+            Get or set the internal identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.ImageUrl">
+            <summary>
+            Get or set the image URL.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.SeriesName">
+            <summary>
+            Get or set the series name.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.NameTranslated">
+            <summary>
+            Get or set the series name translated.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.OfficialList">
+            <summary>
+            Get or set the official list.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.Overview">
+            <summary>
+            Get or set the overview.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.OverviewTranslated">
+            <summary>
+            Get or set the overview translated.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.Posters">
+            <summary>
+            Get or set the posters.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.PrimaryLanguage">
+            <summary>
+            Get or set the primary language.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.PrimaryType">
+            <summary>
+            Get or set the primary type.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.Status">
+            <summary>
+            Get or set the status.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.TranslationsWithLanguage">
+            <summary>
+            Get or set the translations with language.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.TvdbIdentity">
+            <summary>
+            Get or set the TVDB identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.Type">
+            <summary>
+            Get or set the type.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.Year">
+            <summary>
+            Get or set the year.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.GenresDisplayString">
+            <summary>
+            Get a comma separated string of genres.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.LastError">
+            <summary>
+            Get the last error message.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearch.Series">
+            <summary>
+            Get or set the series details.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbSeriesSearch.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbSeries class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbSeriesSearch.Search(Lookups.Tvdb.TvdbAPI,System.String)">
+            <summary>
+            Search for series given a title.
+            </summary>
+            <param name="instance">An API instance..</param>
+            <param name="title">The title to search for.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbSeriesSearch.Search(Lookups.Tvdb.TvdbAPI,System.String,System.String)">
+            <summary>
+            Search for a series in an specific language.
+            </summary>
+            <param name="instance">An API instance.</param>
+            <param name="title">Part or all of the title.</param>
+            <param name="languageCode">The language code.</param>
+            <returns>The results object.</returns>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbSeriesSearchResult">
+            <summary>
+            The class that describes the results from a series search.
+            </summary>    
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearchResult.Series">
+            <summary>
+            Get or set the list of series.
+            </summary>        
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbSeriesSearchResult.Status">
+            <summary>
+            Get or set the status.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbSeriesSearchResult.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbSeriesSearchResults class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbStatus">
+            <summary>
+            The class that describes the status.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbStatus.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbStatus.KeepUpdated">
+            <summary>
+            Returns true if the status is to be kept updated; false otherwise.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbStatus.Name">
+            <summary>
+            Get or set the name of the status.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbStatus.RecordType">
+            <summary>
+            Get or set the record type.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbStatus.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbStatus class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbTagOption">
+            <summary>
+            The class that describes a tag option.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbTagOption.HelpText">
+            <summary>
+            Get or set the help text.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbTagOption.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbTagOption.Name">
+            <summary>
+            Get or set the name of the option.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbTagOption.Tag">
+            <summary>
+            Get or set the tag.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbTagOption.TagName">
+            <summary>
+            Get or set the name of the tag.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbTagOption.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbTagOption class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbTrailer">
+            <summary>
+            The class that describes a trailer.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbTrailer.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbTrailer.Language">
+            <summary>
+            Get or set the language.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbTrailer.Name">
+            <summary>
+            Get or set the name of the trailer.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbTrailer.Url">
+            <summary>
+            Get or set the url.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbTrailer.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbTrailer class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbTranslation">
+            <summary>
+            The class that describes a translation.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbTranslation.Name">
+            <summary>
+            Get or set the name.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbTranslation.IsAlias">
+            <summary>
+            Returns true if the translation is an alias; false otherwise.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbTranslation.Overview">
+            <summary>
+            Get or set the overview.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbTranslation.Language">
+            <summary>
+            Get or set the language.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbTranslation.IsPrimary">
+            <summary>
+            Returns true if it is the primary translation; false otherwise.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbTranslation.Aliases">
+            <summary>
+            Get or set the list of aliases.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbTranslation.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbTranslation class.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbTranslation.FindTranslation(System.Collections.ObjectModel.Collection{Lookups.Tvdb.TvdbTranslation},System.String)">
+            <summary>
+            Find a translation.
+            </summary>
+            <param name="translations">The list of translation to search.</param>
+            <param name="languageCode">The language code to search for.</param>
+            <returns>The translation or null if it cannot be located.</returns>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbTranslations">
+            <summary>
+            The class that prvoides a container for translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbTranslations.NameTranslations">
+            <summary>
+            Get or set the list of name translations.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbTranslations.OverviewTranslations">
+            <summary>
+            Get or set the list of overview translations.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbTranslations.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbTranslations class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbType">
+            <summary>
+            The class that describes a type.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbType.Identity">
+            <summary>
+            Get or set the identity.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbType.Name">
+            <summary>
+            Get or set the name of the type.
+            </summary>
+        </member>
+        <member name="P:Lookups.Tvdb.TvdbType.Type">
+            <summary>
+            Get or set the type.
+            </summary>
+        </member>
+        <member name="M:Lookups.Tvdb.TvdbType.#ctor">
+            <summary>
+            Initialize a new instance of the TvdbType class.
+            </summary>
+        </member>
+        <member name="T:Lookups.Tvdb.TvdbUtils">
+            <summary>
+            Utility functions for the TVDB library.
+            </summary>
+        </member>
+        <member name="M:Lookups.TvdbTVLookup.Process(DomainObjects.EPGEntry)">
+            <summary>
+            Process an EPG entry.
+            </summary>
+            <param name="epgEntry">The EPG entry.</param>
+            <returns>The result of the process.</returns>
+        </member>
+        <member name="M:Lookups.TvdbTVLookup.LogStats">
+            <summary>
+            Log statistics.
+            </summary>
+        </member>
+    </members>
+</doc>

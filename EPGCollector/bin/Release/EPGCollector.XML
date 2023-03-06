@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EPGCollector</name>
+    </assembly>
+    <members>
+        <member name="P:EPGCollector.Program.AssemblyVersion">
+            <summary>
+            Get the full assembly version number.
+            </summary>
+        </member>
+    </members>
+</doc>
