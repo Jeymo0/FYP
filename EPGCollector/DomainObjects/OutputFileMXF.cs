@@ -45,13 +45,13 @@ namespace DomainObjects
         private static Collection<string> programImages;
         private static Collection<string> duplicateStationNames;
         private static Collection<ImportedImage> importedImages;
-        
+
         private static bool isSpecial;
         private static bool isMovie;
         private static bool isSports;
         private static bool isKids;
         private static bool isNews;
-        
+
         private static string importName;
         private static string importReference;
 
@@ -96,11 +96,11 @@ namespace DomainObjects
             mcepgVersion = getAssemblyVersion("mcepg.dll");
             if (string.IsNullOrWhiteSpace(mcepgVersion))
                 return ("Failed to get the assembly version for mcpeg.dll");
- 
+
             mcepgPublicKey = getAssemblyPublicKey("mcepg.dll");
             if (string.IsNullOrWhiteSpace(mcepgPublicKey))
                 return ("Failed to get the public key for mcpeg.dll");
-            
+
             mcstoreVersion = getAssemblyVersion("mcstore.dll");
             if (string.IsNullOrWhiteSpace(mcstoreVersion))
                 return ("Failed to get the assembly version for mcstore.dll");
@@ -154,7 +154,7 @@ namespace DomainObjects
             else
                 settings.Encoding = new UnicodeEncoding();
             settings.CloseOutput = true;
-            
+
             try
             {
                 using (XmlWriter xmlWriter = XmlWriter.Create(actualFileName, settings))
@@ -164,7 +164,7 @@ namespace DomainObjects
                     xmlWriter.WriteStartElement("MXF");
                     xmlWriter.WriteAttributeString("generator-info-name", Assembly.GetCallingAssembly().GetName().Name
                         + "/" + Assembly.GetCallingAssembly().GetName().Version.ToString());
-                    
+
                     xmlWriter.WriteStartElement("Assembly");
                     xmlWriter.WriteAttributeString("name", "mcepg");
                     xmlWriter.WriteAttributeString("version", mcepgVersion);
@@ -435,7 +435,7 @@ namespace DomainObjects
                     foreach (EPGEntry epgEntry in station.EPGCollection)
                     {
                         if (epgEntry.EventCategory != null)
-                            processCategory(xmlWriter, groups, epgEntry.EventCategory.GetDescription(EventCategoryMode.Wmc));                        
+                            processCategory(xmlWriter, groups, epgEntry.EventCategory.GetDescription(EventCategoryMode.Wmc));
                     }
                 }
             }
@@ -444,7 +444,7 @@ namespace DomainObjects
             {
                 xmlWriter.WriteStartElement("Keyword");
                 xmlWriter.WriteAttributeString("id", "k" + ((groups.IndexOf(group) + 1)));
-                xmlWriter.WriteAttributeString("word", group.Name.Trim()); 
+                xmlWriter.WriteAttributeString("word", group.Name.Trim());
                 xmlWriter.WriteEndElement();
 
                 foreach (string keyword in group.Keywords)
@@ -467,7 +467,7 @@ namespace DomainObjects
                 return;
 
             if (parts.Length == 1)
-            {                
+            {
                 foreach (KeywordGroup keywordGroup in groups)
                 {
                     if (keywordGroup.Name == parts[0])
@@ -513,7 +513,7 @@ namespace DomainObjects
             for (int partAddIndex = 1; partAddIndex < parts.Length; partAddIndex++)
                 newGroup.Keywords.Add(parts[partAddIndex]);
 
-            groups.Add(newGroup);            
+            groups.Add(newGroup);
         }
 
         private static string[] removeSpecialCategories(string category)
@@ -584,7 +584,7 @@ namespace DomainObjects
         private static void processGuideImages(XmlWriter xmlWriter)
         {
             string stationDirectory = Path.Combine(RunParameters.DataDirectory, "Images") + Path.DirectorySeparatorChar;
-            
+
             if (Directory.Exists(stationDirectory))
             {
                 stationImages = new Collection<int>();
@@ -607,7 +607,7 @@ namespace DomainObjects
                             xmlWriter.WriteEndElement();
                         }
                         catch (FormatException) { }
-                        catch (OverflowException) { }                        
+                        catch (OverflowException) { }
                     }
                 }
             }
@@ -789,9 +789,9 @@ namespace DomainObjects
                                 xmlWriter.WriteAttributeString("endAirdate", convertDateTimeToString(epgEntry.SeriesEndDate.Value, false));
                             else
                                 xmlWriter.WriteAttributeString("endAirdate", convertDateTimeToString(DateTime.MinValue, false));
-                            
+
                             setGuideImage(xmlWriter, epgEntry);
-       
+
                             xmlWriter.WriteEndElement();
                         }
                     }
@@ -887,7 +887,7 @@ namespace DomainObjects
             isMovie = false;
             isSports = false;
             isKids = false;
-            isNews = false; 
+            isNews = false;
 
             xmlWriter.WriteStartElement("Program");
             xmlWriter.WriteAttributeString("id", "prg" + programNumber);
@@ -907,7 +907,7 @@ namespace DomainObjects
                 else
                     xmlWriter.WriteAttributeString("description", "No Description");
             }
-            
+
             if (epgEntry.EventSubTitle != null)
                 xmlWriter.WriteAttributeString("episodeTitle", epgEntry.EventSubTitle);
 
@@ -921,7 +921,7 @@ namespace DomainObjects
                 xmlWriter.WriteAttributeString("hasNudity", "1");
             if (epgEntry.HasStrongSexualContent)
                 xmlWriter.WriteAttributeString("hasStrongSexualContent", "1");
-            
+
             if (epgEntry.MpaaParentalRating != null)
             {
                 switch (epgEntry.MpaaParentalRating)
@@ -1024,7 +1024,7 @@ namespace DomainObjects
             if (epgEntry.IsSports)
                 isSports = true;
             processCategoryAttributes(xmlWriter);
-            
+
             setGuideImage(xmlWriter, epgEntry);
 
             if (epgEntry.Cast != null && epgEntry.Cast.Count != 0)
@@ -1071,12 +1071,12 @@ namespace DomainObjects
                     if (DebugEntry.IsDefined(DebugName.LogMxfWarnings))
                         Logger.Instance.Write("<w> Duplicate UID generated for '" + uidTitle + "' and '" + epgEntry.EventName + "'");
                 }
-                
+
                 return epgEntry.UniqueIdentifier;
             }
 
             UidEntry.AddEntry(epgEntry.UniqueIdentifier, epgEntry.EventName);
-                                    
+
             return (epgEntry.UniqueIdentifier);
         }
 
@@ -1093,7 +1093,7 @@ namespace DomainObjects
                 sha256 = SHA256.Create();
 
             matchString = matchString.ToLowerInvariant();
-            
+
             string uniqueId = Convert.ToBase64String(sha256.ComputeHash(Encoding.ASCII.GetBytes(matchString)));
 
             ReferenceIdEntry referenceIdEntry = ReferenceIdEntry.FindTitleEntry(uniqueId);
@@ -1111,7 +1111,7 @@ namespace DomainObjects
         private static string getIdentifierFromCrids(EPGEntry epgEntry)
         {
             string eventName = string.IsNullOrWhiteSpace(epgEntry.EventName) ? "No Title" : epgEntry.EventName;
-            string tickString = string.IsNullOrWhiteSpace(epgEntry.IdentitySuffix) ? string.Empty : ":" + epgEntry.IdentitySuffix;                     
+            string tickString = string.IsNullOrWhiteSpace(epgEntry.IdentitySuffix) ? string.Empty : ":" + epgEntry.IdentitySuffix;
 
             if (!string.IsNullOrEmpty(epgEntry.SeasonCrid))
             {
@@ -1129,7 +1129,7 @@ namespace DomainObjects
                 if (!string.IsNullOrEmpty(epgEntry.EpisodeCrid))
                 {
                     totalEpisodeIds++;
-                    return getBase64String(epgEntry.SeasonCrid + ":" + epgEntry.EpisodeCrid + tickString, epgEntry.UseBase64Crids);                    
+                    return getBase64String(epgEntry.SeasonCrid + ":" + epgEntry.EpisodeCrid + tickString, epgEntry.UseBase64Crids);
                 }
                 else
                     return getBase64String(epgEntry.SeasonCrid + ":" + tickString, epgEntry.UseBase64Crids);
@@ -1141,8 +1141,8 @@ namespace DomainObjects
                     totalEpisodeIds++;
                     return getBase64String(eventName + "::" + epgEntry.EpisodeCrid + tickString, epgEntry.UseBase64Crids);
                 }
-            }                
-                
+            }
+
             if (!string.IsNullOrEmpty(epgEntry.SeriesId))
             {
                 totalSeriesIds++;
@@ -1171,12 +1171,12 @@ namespace DomainObjects
                     totalEpisodeIds++;
                     return getBase64String(eventName + "::" + epgEntry.EpisodeId + tickString, epgEntry.UseBase64Crids);
                 }
-            }        
+            }
 
             if (epgEntry.SeasonNumber != -1)
             {
                 if (epgEntry.EpisodeNumber != -1)
-                    return getBase64String(eventName + ":" + epgEntry.SeasonNumber + ":" + epgEntry.EpisodeNumber + tickString, epgEntry.UseBase64Crids);                
+                    return getBase64String(eventName + ":" + epgEntry.SeasonNumber + ":" + epgEntry.EpisodeNumber + tickString, epgEntry.UseBase64Crids);
                 else
                     return getBase64String(eventName + ":" + epgEntry.SeasonNumber + ":" + tickString, epgEntry.UseBase64Crids);
             }
@@ -1186,7 +1186,7 @@ namespace DomainObjects
                     return getBase64String(eventName + "::" + epgEntry.EpisodeNumber + tickString, epgEntry.UseBase64Crids);
             }
 
-            return getBase64String(eventName, epgEntry.UseBase64Crids);            
+            return getBase64String(eventName, epgEntry.UseBase64Crids);
         }
 
         private static void processCategoryKeywords(XmlWriter xmlWriter, string category)
@@ -1207,15 +1207,15 @@ namespace DomainObjects
             /*if (parts.Length < 2)
                 return;*/
 
-            StringBuilder keywordString = new StringBuilder();    
+            StringBuilder keywordString = new StringBuilder();
 
-            int groupNumber = 1;            
+            int groupNumber = 1;
 
             foreach (KeywordGroup group in groups)
             {
                 if (group.Name == parts[0])
-                {                    
-                    keywordString.Append("k" + groupNumber);                    
+                {
+                    keywordString.Append("k" + groupNumber);
 
                     int keywordNumber = groupNumber * 100;
 
@@ -1400,7 +1400,7 @@ namespace DomainObjects
             foreach (Person guestStar in guestStars)
             {
                 xmlWriter.WriteStartElement("GuestActorRole");
-                xmlWriter.WriteAttributeString("person", "prs" + findPerson(people, guestStar.Name));                
+                xmlWriter.WriteAttributeString("person", "prs" + findPerson(people, guestStar.Name));
                 if (guestStar.Rank != 0)
                     xmlWriter.WriteAttributeString("rank", guestStar.Rank.ToString());
                 xmlWriter.WriteEndElement();
@@ -1572,8 +1572,8 @@ namespace DomainObjects
                     xmlWriter.WriteStartElement("Service");
                     xmlWriter.WriteAttributeString("id", "s" + (RunParameters.Instance.StationCollection.IndexOf(station) + 1));
                     xmlWriter.WriteAttributeString("uid", "!Service!" +
-                        station.OriginalNetworkID + ":" + 
-                        station.TransportStreamID + ":" + 
+                        station.OriginalNetworkID + ":" +
+                        station.TransportStreamID + ":" +
                         station.ServiceID);
 
                     string serviceName = string.IsNullOrWhiteSpace(station.NewName) ? station.Name : station.NewName;
@@ -1650,7 +1650,7 @@ namespace DomainObjects
                 {
                     xmlWriter.WriteStartElement("ScheduleEntries");
                     xmlWriter.WriteAttributeString("service", "s" + (RunParameters.Instance.StationCollection.IndexOf(station) + 1));
-                    
+
                     foreach (EPGEntry epgEntry in station.EPGCollection)
                     {
                         if (!OptionEntry.IsDefined(OptionName.NoInvalidEntries) || (OptionEntry.IsDefined(OptionName.NoInvalidEntries) && epgEntry.Duration.TotalSeconds > 0))
@@ -1696,7 +1696,7 @@ namespace DomainObjects
                             xmlWriter.WriteEndElement();
 
                             programNumber++;
-                        }                        
+                        }
                     }
 
                     xmlWriter.WriteEndElement();
@@ -1739,16 +1739,16 @@ namespace DomainObjects
                                 break;
                         }
                     }
-                    
+
                     xmlWriter.WriteAttributeString("lineup", "l1");
                     xmlWriter.WriteAttributeString("service", "s" + (RunParameters.Instance.StationCollection.IndexOf(station) + 1));
-                    
+
                     if (OptionEntry.IsDefined(OptionName.AutoMapEpg))
                     {
                         if (!string.IsNullOrWhiteSpace(station.WMCMatchName))
                             xmlWriter.WriteAttributeString("matchName", station.WMCMatchName);
                         else
-                        {                            
+                        {
                             if (station.StationType == TVStationType.Dvb)
                             {
                                 switch (station.TunerType)
@@ -1770,11 +1770,11 @@ namespace DomainObjects
                                 }
                             }
                             else
-                            {                                                              
+                            {
                                 if (station.TransportStreamID != 0)
                                     xmlWriter.WriteAttributeString("matchName", "OC:" + station.TransportStreamID + ":" + station.ServiceID);
                                 else
-                                    xmlWriter.WriteAttributeString("matchName", "OC:" + station.ServiceID);                                  
+                                    xmlWriter.WriteAttributeString("matchName", "OC:" + station.ServiceID);
                             }
                         }
                     }
@@ -1802,7 +1802,7 @@ namespace DomainObjects
         {
             string runDirectory = Path.Combine(Environment.GetEnvironmentVariable("SystemRoot"), "ehome");
             Logger.Instance.Write("Running Windows Media Centre import utility LoadMXF from " + runDirectory);
- 
+
             importProcess = new Process();
 
             importProcess.StartInfo.FileName = Path.Combine(runDirectory, "LoadMXF.exe");
@@ -1866,7 +1866,7 @@ namespace DomainObjects
         {
             if (!OptionEntry.IsDefined(RunParameters.Instance.Options, OptionName.RunWmcTasks))
                 return;
-            
+
             string scheduler = "schtasks.exe";
             string schedulerReindexTaskName = "Task scheduler reindex task";
             string schedulerReindexArgument = "/run /tn \"Microsoft\\Windows\\Media Center\\ReindexSearchRoot\"";
@@ -1926,7 +1926,7 @@ namespace DomainObjects
         private static string convertDateTimeToString(DateTime dateTime, bool convertToUtc)
         {
             DateTime utcTime;
-            
+
             if (convertToUtc)
                 utcTime = getUtcTime(dateTime);
             else
@@ -1935,14 +1935,14 @@ namespace DomainObjects
             return (utcTime.Date.ToString("yyyy-MM-dd") + "T" +
                 utcTime.Hour.ToString("00") + ":" +
                 utcTime.Minute.ToString("00") + ":" +
-                utcTime.Second.ToString("00"));            
+                utcTime.Second.ToString("00"));
         }
 
         private static DateTime getUtcTime(DateTime dateTime)
         {
             try
             {
-                return(TimeZoneInfo.ConvertTimeToUtc(dateTime));
+                return (TimeZoneInfo.ConvertTimeToUtc(dateTime));
             }
             catch (ArgumentException e)
             {
@@ -1950,7 +1950,7 @@ namespace DomainObjects
                 Logger.Instance.Write("<e> " + e.Message);
                 Logger.Instance.Write("<e> Start time will be advanced by 1 hour");
 
-                return(TimeZoneInfo.ConvertTimeToUtc(dateTime.AddHours(1)));
+                return (TimeZoneInfo.ConvertTimeToUtc(dateTime.AddHours(1)));
             }
         }
 
@@ -1995,7 +1995,7 @@ namespace DomainObjects
 
             if (DebugEntry.IsDefined(DebugName.LogMxfWarnings))
                 Logger.Instance.Write("<w> No series reference ID for " + epgEntry.EventName);
-            
+
             return null;
         }
 
@@ -2073,7 +2073,7 @@ namespace DomainObjects
 
         internal class KeywordGroup
         {
-            internal string Name { get { return(name); } }
+            internal string Name { get { return (name); } }
             internal Collection<string> Keywords { get { return (keywords); } }
 
             private string name;
@@ -2088,15 +2088,15 @@ namespace DomainObjects
 
         internal class ImportedImage
         {
-            internal Guid Guid { get; private set; } 
-            internal string Path { get; private set; } 
+            internal Guid Guid { get; private set; }
+            internal string Path { get; private set; }
 
             private ImportedImage() { }
 
             internal ImportedImage(string path)
             {
                 Guid = Guid.NewGuid();
-                Path = path;                
+                Path = path;
             }
         }
 
@@ -2161,11 +2161,11 @@ namespace DomainObjects
             internal Collection<string> OtherTitles { get; private set; }
 
             internal static Collection<ReferenceIdEntry> ReferenceIdEntries;
-            
+
             private ReferenceIdEntry() { }
 
             internal ReferenceIdEntry(string referenceId, string title)
-            {                
+            {
                 ReferenceId = referenceId;
                 Title = title;
             }

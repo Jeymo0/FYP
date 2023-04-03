@@ -9,3 +9,13 @@ C:\Cygnus Consulting\EPGCollector 4.3\Lookups\obj\Debug\Lookups.pdb
 C:\Cygnus Consulting\EPGCollector 4.3\Lookups\obj\Debug\Lookups.csproj.AssemblyReference.cache
 C:\Cygnus Consulting\EPGCollector 4.3\Lookups\obj\Debug\Lookups.csproj.CoreCompileInputs.cache
 C:\Cygnus Consulting\EPGCollector 4.3\Lookups\obj\Debug\Lookups.csproj.CopyComplete
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\Lookups\bin\Debug\Lookups.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\Lookups\bin\Debug\Lookups.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\Lookups\bin\Debug\DomainObjects.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\Lookups\bin\Debug\Brotli.NET.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\Lookups\bin\Debug\DomainObjects.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\Lookups\obj\Debug\Lookups.csproj.AssemblyReference.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\Lookups\obj\Debug\Lookups.csproj.CoreCompileInputs.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\Lookups\obj\Debug\Lookups.csproj.CopyComplete
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\Lookups\obj\Debug\Lookups.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\Lookups\obj\Debug\Lookups.pdb

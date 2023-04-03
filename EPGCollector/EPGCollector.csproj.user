@@ -5,7 +5,7 @@
     <RemoteDebugEnabled>true</RemoteDebugEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <StartArguments>/ini="G:\Mark Test.ini"</StartArguments>
+    <StartArguments>/ini="C:\Users\adeye\AppData\Local\Geekzone\EPG Collector\TuningParameters\dvbt\Ireland2.ini"</StartArguments>
   </PropertyGroup>
   <PropertyGroup>
     <ProjectView>ProjectFiles</ProjectView>

@@ -130,6 +130,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChannelScanResults.cs" />
     <Compile Include="Dish Network\DishNetworkTextDescriptor.cs" />
     <Compile Include="DVB\DVBCableChannelInfoDescriptor.cs" />
     <Compile Include="DVB\DVBLinkageDescriptor.cs" />
@@ -362,6 +363,10 @@
     <ProjectReference Include="..\..\MxfParser\MxfParser.csproj">
       <Project>{52063A2C-ACC3-4C68-AB5B-D5D29C06CCA5}</Project>
       <Name>MxfParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetworkProtocols\NetworkProtocols.csproj">
+      <Project>{258FC2B2-82ED-4DD0-83C2-A1806D90AC23}</Project>
+      <Name>NetworkProtocols</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\SatIp\SatIp.csproj">
       <Project>{C53C3ABC-4054-4A89-BABE-5C641F4DED6C}</Project>

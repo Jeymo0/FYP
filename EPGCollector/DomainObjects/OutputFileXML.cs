@@ -771,7 +771,7 @@ namespace DomainObjects
             xmlWriter.WriteStartElement("episode-num");
             xmlWriter.WriteAttributeString("system", "xmltv_ns");
             xmlWriter.WriteString(seasonString + " . " + episodeString + " . " + partString);
-            xmlWriter.WriteEndElement();            
+            xmlWriter.WriteEndElement();
         }
 
         private static void createBsepgEpisodeTag(XmlWriter xmlWriter, EPGEntry epgEntry)
@@ -781,7 +781,7 @@ namespace DomainObjects
 
             if (series == string.Empty && episode == string.Empty)
                 return;
-                        
+
             xmlWriter.WriteStartElement("episode-num");
             xmlWriter.WriteAttributeString("system", "bsepg-epid");
             xmlWriter.WriteString("SE-" + series + " . " + "EP-" + episode);
@@ -790,12 +790,12 @@ namespace DomainObjects
 
         private static void createNumericCridEpisodeTag(XmlWriter xmlWriter, EPGEntry epgEntry)
         {
-            string series = epgEntry.SeasonCrid != null ? getNumber(epgEntry.SeasonCrid) : string.Empty;            
+            string series = epgEntry.SeasonCrid != null ? getNumber(epgEntry.SeasonCrid) : string.Empty;
             string episode = epgEntry.EpisodeCrid != null ? getNumber(epgEntry.EpisodeCrid) : string.Empty;
 
             if (series == string.Empty && episode == string.Empty)
                 return;
-            
+
             xmlWriter.WriteStartElement("episode-num");
             xmlWriter.WriteAttributeString("system", "crid_numeric");
             xmlWriter.WriteString(series + " . " + episode + " . ");
@@ -828,7 +828,7 @@ namespace DomainObjects
 
             if (series == string.Empty && episode == string.Empty)
                 return;
-            
+
             xmlWriter.WriteStartElement("episode-num");
             xmlWriter.WriteAttributeString("system", "crid");
             xmlWriter.WriteString(series + " . " + episode + " . ");
@@ -844,7 +844,7 @@ namespace DomainObjects
 
             while (seedString.Length < 32)
                 seedString = seedString + seedString;
-            
+
             int xmltvSeasonNumber = epgEntry.SeasonNumber > 0 ? epgEntry.SeasonNumber - 1 : -1;
             int xmltvEpisodeNumber = epgEntry.EpisodeNumber > 0 ? epgEntry.EpisodeNumber - 1 : -1;
 

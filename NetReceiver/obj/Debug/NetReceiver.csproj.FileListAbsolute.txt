@@ -9,3 +9,14 @@ C:\Cygnus Consulting\EPGCollector 4.3\NetReceiver\obj\Debug\NetReceiver.pdb
 C:\Cygnus Consulting\EPGCollector 4.3\NetReceiver\obj\Debug\NetReceiver.csproj.AssemblyReference.cache
 C:\Cygnus Consulting\EPGCollector 4.3\NetReceiver\obj\Debug\NetReceiver.csproj.CoreCompileInputs.cache
 C:\Cygnus Consulting\EPGCollector 4.3\NetReceiver\obj\Debug\NetReceiver.csproj.CopyComplete
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetReceiver\bin\Debug\NetReceiver.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetReceiver\bin\Debug\NetReceiver.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetReceiver\bin\Debug\DomainObjects.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetReceiver\bin\Debug\Brotli.NET.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetReceiver\bin\Debug\Newtonsoft.Json.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetReceiver\bin\Debug\DomainObjects.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetReceiver\obj\Debug\NetReceiver.csproj.AssemblyReference.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetReceiver\obj\Debug\NetReceiver.csproj.CoreCompileInputs.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetReceiver\obj\Debug\NetReceiver.csproj.CopyComplete
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetReceiver\obj\Debug\NetReceiver.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetReceiver\obj\Debug\NetReceiver.pdb

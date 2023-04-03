@@ -55,7 +55,7 @@ namespace DomainObjects
                 Logger.Instance.Write("File delete exception: " + e.Message);
             }
 
-            Logger.Instance.Write("Creating temporary SageTV frequency file " + tempFileName);            
+            Logger.Instance.Write("Creating temporary SageTV frequency file " + tempFileName);
 
             using (StreamWriter streamWriter = new StreamWriter(tempFileName, false))
             {
@@ -274,7 +274,7 @@ namespace DomainObjects
             streamWriter.Write("rate:" + (frequency.SymbolRate / 1000) + " ");
 
             switch (frequency.Modulation)
-            {                
+            {
                 case SignalModulation.Modulation.QAM16:
                     streamWriter.Write("mod:1 ");
                     break;
@@ -386,6 +386,6 @@ namespace DomainObjects
                     break;
             }
         }
-    }        
+    }
 }
 

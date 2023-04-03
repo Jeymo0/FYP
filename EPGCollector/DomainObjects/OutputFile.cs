@@ -38,7 +38,7 @@ namespace DomainObjects
         }
 
         private static bool useUnicodeEncoding;
-        
+
         private OutputFile() { }
 
         /// <summary>
@@ -51,6 +51,7 @@ namespace DomainObjects
 
             if (RunParameters.Instance.OutputFileSet)
             {
+                //creation of xml file
                 reply = OutputFileXML.Process(RunParameters.Instance.OutputFileName);
                 if (reply != null)
                     return (reply);
@@ -70,7 +71,7 @@ namespace DomainObjects
                     return (reply);
             }
 
-            return (null);                       
+            return (null);
         }
 
         /// <summary>
@@ -95,13 +96,13 @@ namespace DomainObjects
                     return (reply);
             }
 
-            if (OptionEntry.IsDefined(OptionName.PluginImport)  || (!RunParameters.Instance.OutputFileSet && !OptionEntry.IsDefined(OptionName.WmcImport)))
+            if (OptionEntry.IsDefined(OptionName.PluginImport) || (!RunParameters.Instance.OutputFileSet && !OptionEntry.IsDefined(OptionName.WmcImport)))
             {
                 FileInfo iniFileInfo = new FileInfo(CommandLine.IniFileName);
                 string outputFileName = Path.Combine(iniFileInfo.DirectoryName, "EPG Collector Plugin.xml");
                 reply = OutputFilePlugin.Process(outputFileName);
                 if (reply != null)
-                    return (reply);                    
+                    return (reply);
             }
 
             return (null);

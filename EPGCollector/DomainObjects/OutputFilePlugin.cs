@@ -339,14 +339,14 @@ namespace DomainObjects
                         xmlWriter.WriteElementString("stars_num", "7");
                         break;
                     case "****":
-                        xmlWriter.WriteElementString("stars_num", "8");                        
+                        xmlWriter.WriteElementString("stars_num", "8");
                         break;
                     default:
                         xmlWriter.WriteElementString("stars_num", "4");
                         break;
                 }
 
-                xmlWriter.WriteElementString("starsmax_num", "8"); 
+                xmlWriter.WriteElementString("starsmax_num", "8");
             }
 
             if (epgEntry.Date != null)

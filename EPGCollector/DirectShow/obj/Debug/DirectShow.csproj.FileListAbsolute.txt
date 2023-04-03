@@ -44,3 +44,14 @@ C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\obj\Debug\DirectSh
 C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\obj\Debug\DirectShow.csproj.AssemblyReference.cache
 C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\obj\Debug\DirectShow.csproj.CoreCompileInputs.cache
 C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\DirectShow\obj\Debug\DirectShow.csproj.CopyComplete
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\bin\Debug\DirectShow.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\bin\Debug\DirectShow.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\bin\Debug\DomainObjects.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\bin\Debug\Brotli.NET.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\bin\Debug\Newtonsoft.Json.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\bin\Debug\DomainObjects.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\obj\Debug\DirectShow.csproj.AssemblyReference.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\obj\Debug\DirectShow.csproj.CoreCompileInputs.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\obj\Debug\DirectShow.csproj.CopyComplete
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\obj\Debug\DirectShow.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\DirectShow\obj\Debug\DirectShow.pdb

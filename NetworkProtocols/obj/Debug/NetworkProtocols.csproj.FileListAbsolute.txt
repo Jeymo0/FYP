@@ -9,3 +9,14 @@ C:\Cygnus Consulting\EPGCollector 4.3\NetworkProtocols\obj\Debug\NetworkProtocol
 C:\Cygnus Consulting\EPGCollector 4.3\NetworkProtocols\obj\Debug\NetworkProtocols.csproj.AssemblyReference.cache
 C:\Cygnus Consulting\EPGCollector 4.3\NetworkProtocols\obj\Debug\NetworkProtocols.csproj.CoreCompileInputs.cache
 C:\Cygnus Consulting\EPGCollector 4.3\NetworkProtocols\obj\Debug\NetworkProtocols.csproj.CopyComplete
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetworkProtocols\bin\Debug\NetworkProtocols.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetworkProtocols\bin\Debug\NetworkProtocols.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetworkProtocols\bin\Debug\DomainObjects.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetworkProtocols\bin\Debug\Brotli.NET.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetworkProtocols\bin\Debug\Newtonsoft.Json.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetworkProtocols\bin\Debug\DomainObjects.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetworkProtocols\obj\Debug\NetworkProtocols.csproj.AssemblyReference.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetworkProtocols\obj\Debug\NetworkProtocols.csproj.CoreCompileInputs.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetworkProtocols\obj\Debug\NetworkProtocols.csproj.CopyComplete
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetworkProtocols\obj\Debug\NetworkProtocols.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\NetworkProtocols\obj\Debug\NetworkProtocols.pdb

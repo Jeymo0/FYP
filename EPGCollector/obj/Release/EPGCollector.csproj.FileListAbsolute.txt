@@ -183,9 +183,7 @@ C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.cspr
 C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.csproj.SuggestedBindingRedirects.cache
 C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.csproj.CoreCompileInputs.cache
 C:\Cygnus Consulting\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.csproj.CopyComplete
-C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\EPGCollector.exe.config
 C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\EPGCollector.XML
-C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\EPGCollector.exe
 C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\EPGCollector.pdb
 C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\ChannelUpdate.dll
 C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\DirectShow.dll
@@ -225,8 +223,10 @@ C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\DomainOb
 C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\DVBServices.pdb
 C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\DVBServices.xml
 C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.csproj.AssemblyReference.cache
-C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.csproj.SuggestedBindingRedirects.cache
 C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.csproj.CoreCompileInputs.cache
 C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.csproj.CopyComplete
-C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.exe
 C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\EPGCollector.exe.config
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\bin\Release\EPGCollector.exe
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.csproj.SuggestedBindingRedirects.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\obj\Release\EPGCollector.exe

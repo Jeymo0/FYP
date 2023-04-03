@@ -10,3 +10,15 @@ C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\obj\Debug\SchedulesDirect.
 C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\obj\Debug\SchedulesDirect.csproj.AssemblyReference.cache
 C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\obj\Debug\SchedulesDirect.csproj.CoreCompileInputs.cache
 C:\Cygnus Consulting\EPGCollector 4.3\SchedulesDirect\obj\Debug\SchedulesDirect.csproj.CopyComplete
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\SchedulesDirect\bin\Debug\SchedulesDirect.dll.config
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\SchedulesDirect\bin\Debug\SchedulesDirect.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\SchedulesDirect\bin\Debug\SchedulesDirect.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\SchedulesDirect\bin\Debug\DomainObjects.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\SchedulesDirect\bin\Debug\Newtonsoft.Json.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\SchedulesDirect\bin\Debug\Brotli.NET.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\SchedulesDirect\bin\Debug\DomainObjects.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\SchedulesDirect\obj\Debug\SchedulesDirect.csproj.AssemblyReference.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\SchedulesDirect\obj\Debug\SchedulesDirect.csproj.CoreCompileInputs.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\SchedulesDirect\obj\Debug\SchedulesDirect.csproj.CopyComplete
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\SchedulesDirect\obj\Debug\SchedulesDirect.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\SchedulesDirect\obj\Debug\SchedulesDirect.pdb

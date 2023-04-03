@@ -18,6 +18,7 @@
 //  http://www.gnu.org/copyleft/gpl.html                                        //
 //                                                                              //  
 //////////////////////////////////////////////////////////////////////////////////
+#define Debug
 
 using System;
 using System.Threading;
@@ -40,9 +41,12 @@ using SatIpDomainObjects;
 using NetworkProtocols;
 using VBox;
 using SchedulesDirect;
+using System.Diagnostics;
 
 namespace EPGCollector
 {
+
+
     class Program
     {
         /// <summary>
@@ -58,7 +62,7 @@ namespace EPGCollector
         }
 
         private static ITunerDataProvider graph;
-        
+
         private static TimerCallback timerDelegate;
         private static System.Threading.Timer timer;
 
@@ -70,7 +74,7 @@ namespace EPGCollector
 
         private static bool cancelGraph;
         private static bool ignoreProcessComplete;
-        
+
         private static int collectionsWorked;
         private static int tuneFailed;
         private static int timeOuts;
@@ -81,8 +85,26 @@ namespace EPGCollector
 
         private static bool pluginAbandon = false;
 
+        private static Stopwatch stopwatch;
+        private static PerformanceCounter cpuCounter;
+        private static PerformanceCounter memoryCounter;
+        private static string buildcheck = build();
+        private static string dumpfile = "StreamDump.ts";
+        private static TransportStreamDumpControl dump;
+
+
         static void Main(string[] args)
         {
+            stopwatch = new Stopwatch();
+            cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
+            memoryCounter = new PerformanceCounter("Memory", "Available MBytes");
+
+            // Obtain initial values of counters and start stopwatch
+            cpuCounter.NextValue();
+            memoryCounter.NextValue();
+            stopwatch.Start();
+            Console.WriteLine("Starting application ...");
+
             RunParameters.BaseDirectory = Application.StartupPath;
 
             try
@@ -93,7 +115,7 @@ namespace EPGCollector
             {
                 Console.WriteLine("Cannot write log file");
                 Console.WriteLine(e.Message);
-                System.Environment.Exit((int)ExitCode.LogFileNotAvailable);                
+                System.Environment.Exit((int)ExitCode.LogFileNotAvailable);
             }
 
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(unhandledException);
@@ -131,7 +153,7 @@ namespace EPGCollector
             {
                 Logger.Instance.Write("<e> Incorrect command line");
                 Logger.Instance.Write("<e> Exiting with code = 4");
-                System.Environment.Exit((int)ExitCode.CommandLineWrong);                
+                System.Environment.Exit((int)ExitCode.CommandLineWrong);
             }
 
             if (RunParameters.IsMono)
@@ -150,6 +172,15 @@ namespace EPGCollector
                 runNormalCollection();
             else
                 runPluginCollection();
+        }
+        static string build()
+        {
+#if DEBUG
+            string type = "Debug";
+#else
+    string type = "Release";
+#endif
+            return type;
         }
 
         private static void runNormalCollection()
@@ -185,6 +216,55 @@ namespace EPGCollector
             }
 
             processTunerCollection();
+        }
+
+        private static void processDumpCollection(bool reply)
+        {
+            bool dumpreply = reply;
+
+
+            TransportStreamDumpControl.ProcessComplete += new TransportStreamDumpControl.ProcessCompleteHandler(dumpControllerProcessComplete);
+
+            //Initialize background worker to start graphworker process in a seperate thread
+            graphWorker = new BackgroundWorker();
+            graphWorker.WorkerSupportsCancellation = true;
+            graphWorker.DoWork += new DoWorkEventHandler(graphWorkerDoWork);
+            graphWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(graphWorkerCompleted);
+            graphWorker.RunWorkerAsync();
+
+            // allow process to be cancelled in console by pressing q with keyboard worker
+            if (RunParameters.IsWine)
+                Logger.Instance.Write("Keyboard inhibited in Wine environment - cancellation not available");
+            else
+            {
+                if (OptionEntry.IsDefined(OptionName.RunFromService))
+                    Logger.Instance.Write("Keyboard inhibited by parameter - cancellation not available");
+                else
+                {
+                    keyboardWorker = new BackgroundWorker();
+                    keyboardWorker.WorkerSupportsCancellation = true;
+                    keyboardWorker.DoWork += new DoWorkEventHandler(keyboardWorkerDoWork);
+                    keyboardWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(keyboardWorkerCompleted);
+                    keyboardWorker.RunWorkerAsync();
+                }
+            }
+            // Toggle the EVENT to continue
+            dumpreply = endProgramEvent.WaitOne();
+
+
+            if (timer != null)
+                timer.Dispose();
+
+            if (RunParameters.Instance.AbandonRequested)
+            {
+                HistoryRecord.Current.CollectionResult = CommandLine.GetCompletionCodeShortDescription(ExitCode.AbandonedByUser);
+                Logger.Write(HistoryRecord.Current);
+
+                Logger.Instance.Write("Cancelled by user - no dump created");
+                Logger.Instance.Write("<C> Exiting with code = " + (int)ExitCode.AbandonedByUser);
+                System.Environment.Exit((int)ExitCode.AbandonedByUser);
+            }
+            bool endReply = dump.finish();
         }
 
         private static void processTunerCollection()
@@ -223,8 +303,13 @@ namespace EPGCollector
                 }
             }
 
+            processDumpCollection(checkConfiguration());
+
             EPGController.ProcessComplete += new EPGController.ProcessCompleteHandler(epgControllerProcessComplete);
 
+            //clear dump file name to allow for EPGCollection
+            dumpfile = null;
+            //Initialize background worker to start graphworker process in a seperate thread
             graphWorker = new BackgroundWorker();
             graphWorker.WorkerSupportsCancellation = true;
             graphWorker.DoWork += new DoWorkEventHandler(graphWorkerDoWork);
@@ -246,9 +331,10 @@ namespace EPGCollector
                     keyboardWorker.RunWorkerAsync();
                 }
             }
-
+            // Toggle the EVENT to wait
             reply = endProgramEvent.WaitOne();
 
+            //release keyboard background worker to function
             if (timer != null)
                 timer.Dispose();
 
@@ -291,7 +377,7 @@ namespace EPGCollector
             int recordCountTotal = TVStation.EPGCount(RunParameters.Instance.StationCollection);
             Logger.Instance.Write("<C> Finished - output " + recordCountOutput + " EPG entries" +
                 (recordCountTotal == recordCountOutput ? "" : " out of " + recordCountTotal));
-            HistoryRecord.Current.CollectionCount = recordCountOutput;            
+            HistoryRecord.Current.CollectionCount = recordCountOutput;
 
             if (collectionsWorked != RunParameters.Instance.FrequencyCollection.Count || timeOuts != 0)
             {
@@ -330,8 +416,108 @@ namespace EPGCollector
             HistoryRecord.Current.CollectionResult = CommandLine.GetCompletionCodeShortDescription(ExitCode.OK);
             Logger.Write(HistoryRecord.Current);
 
+
+            //Call python script
+            Pythonscript();
+
             Logger.Instance.Write("<C> Exiting with code = " + (int)ExitCode.OK);
+            stopwatch.Stop();
+            //Output performance of application run
+            Console.WriteLine("Time elapsed: {0}", stopwatch.Elapsed);
+            Console.WriteLine("CPU usage: {0}%", cpuCounter.NextValue());
+            Console.WriteLine("Available memory: {0} MB", memoryCounter.NextValue());
+
             System.Environment.Exit((int)ExitCode.OK);
+        }
+
+        private static void Pythonscript()
+        {
+            ProcessStartInfo script = new ProcessStartInfo();
+            //Prcoess to call
+            script.FileName = "python";
+            //Arguements passed to process
+            script.Arguments = @"""C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\XmlParser\main.py""";
+            //Use shell set to false
+            script.UseShellExecute = false;
+            //Redirect error and output to this application
+            script.RedirectStandardError = true;
+            script.RedirectStandardOutput = true;
+            Process process = new Process();
+
+            //Event handlers for correct output and error reponses
+            process.OutputDataReceived += new DataReceivedEventHandler(Process_OutputResponse);
+            process.ErrorDataReceived += new DataReceivedEventHandler(Process_ErrorResponse);
+
+
+            process.StartInfo = script;
+
+            //method to copy channel images into bin directory
+            copyimages();
+
+            process.Start();
+            Console.WriteLine("Starting python script...");
+
+            string output = process.StandardOutput.ReadToEnd();
+
+            // Wait for the process to finish
+            process.WaitForExit();
+
+            //open output html file
+
+            string html = $"C:\\Users\\adeye\\Desktop\\Plan B\\EPGCollector 4.3\\EPGCollector\\bin\\{buildcheck}\\EPGdata.html";
+            Console.WriteLine(html);
+            Process.Start(new ProcessStartInfo { FileName = html, UseShellExecute = true });
+
+        }
+
+        private static void copyimages()
+        {
+
+            string source = @"C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\EPGCollector\XmlParser\imgs";
+            string target = $"C:\\Users\\adeye\\Desktop\\Plan B\\EPGCollector 4.3\\EPGCollector\\bin\\{buildcheck}";
+
+            //obtain source directory
+            if (Directory.Exists(source))
+            {
+                string[] files = Directory.GetFiles(source);
+
+                // Create the target directory if it doesn't exist
+                if (!Directory.Exists(target))
+                {
+                    Directory.CreateDirectory(target);
+                }
+
+
+                // copy files from source to target
+                foreach (string file in files)
+                {
+                    string filename = Path.GetFileName(file);
+                    string targetpath = Path.Combine(target, filename);
+                    File.Copy(file, targetpath, true);
+                }
+
+            }
+
+        }
+
+        private static void Process_OutputResponse(object sent, DataReceivedEventArgs d)
+        {
+            if (!string.IsNullOrEmpty(d.Data))
+            {
+                Console.WriteLine("Python output: " + d.Data);
+                if (d.Data.Contains("html"))
+                {
+                    Process.Start(d.Data);
+                }
+            }
+        }
+
+        private static void Process_ErrorResponse(object sent, DataReceivedEventArgs d)
+        {
+            if (!string.IsNullOrEmpty(d.Data))
+            {
+                Console.WriteLine("Python error in: " + d.Data);
+            }
         }
 
         private static void graphWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -377,6 +563,13 @@ namespace EPGCollector
             endFrequencyEvent.Set();
         }
 
+        private static void dumpControllerProcessComplete(object sender, EventArgs e)
+        {
+            if (ignoreProcessComplete)
+                return;
+
+            endFrequencyEvent.Set();
+        }
         private static void timerCallback(object stateObject)
         {
             Logger.Instance.Write("");
@@ -387,13 +580,14 @@ namespace EPGCollector
 
         private static void graphWorkerDoWork(object sender, DoWorkEventArgs e)
         {
+            // stop graph worker
             int frequencyIndex = 0;
 
             while (frequencyIndex < RunParameters.Instance.FrequencyCollection.Count && !cancelGraph)
             {
                 TuningFrequency frequency = RunParameters.Instance.FrequencyCollection[frequencyIndex];
                 RunParameters.Instance.CurrentFrequency = frequency;
-                
+
                 switch (frequency.TunerType)
                 {
                     case TunerType.File:
@@ -429,9 +623,19 @@ namespace EPGCollector
                         bool tuned = tuneFrequency(frequency);
                         if (!tuned)
                             tuneFailed++;
-                        else
+                        else if (tuned == true)
                         {
-                            getData(frequency, graph as ISampleDataProvider);
+                            //check if dump collection or epg collection is called
+                            if (string.IsNullOrEmpty(dumpfile))
+                            {
+                                getData(frequency, graph as ISampleDataProvider);
+                            }
+                            else
+                            {
+                                getData(frequency, graph);
+
+                            }
+
 
                             if (graph != null)
                                 graph.Dispose();
@@ -462,7 +666,7 @@ namespace EPGCollector
                     tuningSpec = new TuningSpec((TerrestrialFrequency)frequency);
                     tunerNodeType = TunerNodeType.Terrestrial;
                     break;
-                case TunerType.Cable:                
+                case TunerType.Cable:
                     tuningSpec = new TuningSpec((CableFrequency)frequency);
                     tunerNodeType = TunerNodeType.Cable;
                     break;
@@ -494,7 +698,16 @@ namespace EPGCollector
 
             while (!finished)
             {
-                graph = BDAGraph.FindTuner(frequency.SelectedTuners, tunerNodeType, tuningSpec, currentTuner);
+                if (string.IsNullOrEmpty(dumpfile))
+                {
+                    graph = BDAGraph.FindTuner(frequency.SelectedTuners, tunerNodeType, tuningSpec, currentTuner);
+
+                }
+                else
+                {
+                    graph = BDAGraph.FindTuner(frequency.SelectedTuners, tunerNodeType, tuningSpec, currentTuner, dumpfile);
+                }
+
                 if (graph == null)
                 {
                     graph = SatIpController.FindReceiver(frequency.SelectedTuners, tunerNodeType, tuningSpec, currentTuner, getDiseqcSetting(tuningSpec.Frequency));
@@ -556,7 +769,7 @@ namespace EPGCollector
 
                     if (frequencyRetries == 2)
                     {
-                        currentTuner = graph.Tuner; 
+                        currentTuner = graph.Tuner;
                         frequencyRetries = 0;
                     }
                     else
@@ -579,10 +792,10 @@ namespace EPGCollector
         {
             SatelliteFrequency satelliteFrequency = frequency as SatelliteFrequency;
             if (satelliteFrequency == null)
-                return(0);
+                return (0);
 
             if (satelliteFrequency.DiseqcRunParamters.DiseqcSwitch == null)
-                return(0);
+                return (0);
 
             switch (satelliteFrequency.DiseqcRunParamters.DiseqcSwitch)
             {
@@ -623,9 +836,29 @@ namespace EPGCollector
             return (true);
         }
 
+        private static bool getData(TuningFrequency frequency, ITunerDataProvider dataProvider)
+        {
+            //creating a timer to hold graph destruction until data is obtained
+            timerDelegate = new TimerCallback(timerCallback);
+            timer = new System.Threading.Timer(timerDelegate, null, RunParameters.Instance.FrequencyTimeout, RunParameters.Instance.FrequencyTimeout);
+            ignoreProcessComplete = false;
+            // Initialize dump object with BDA graph file name string
+            dump = new TransportStreamDumpControl(dataProvider, dumpfile);
+            // start dump process
+            dump.Process();
+
+            bool reply = endFrequencyEvent.WaitOne();
+            ignoreProcessComplete = true;
+            dump.Stop();
+            timer.Dispose();
+
+            return true;
+        }
+
+
         private static void keyboardWorkerDoWork(object sender, DoWorkEventArgs e)
         {
-            bool abandon = false;            
+            bool abandon = false;
 
             do
             {
@@ -637,7 +870,7 @@ namespace EPGCollector
                 else
                 {
                     Mutex cancelMutex = new Mutex(false, "EPG Collector Cancel Mutex " + CommandLine.RunReference);
-                    cancelMutex.WaitOne();                    
+                    cancelMutex.WaitOne();
                     cancelMutex.Close();
                     abandon = true;
                 }
@@ -646,7 +879,7 @@ namespace EPGCollector
 
             cancelGraph = true;
             RunParameters.Instance.AbandonRequested = true;
-            Logger.Instance.Write("Abandon request from user");            
+            Logger.Instance.Write("Abandon request from user");
 
             endFrequencyEvent.Set();
         }
@@ -802,7 +1035,7 @@ namespace EPGCollector
                         tvStation.EPGLink.TransportStreamID + "," +
                         tvStation.EPGLink.ServiceID + " Time offset " + tvStation.EPGLink.TimeOffset;
 
-                Logger.Instance.Write("Station: " + tvStation.FixedLengthName + " (" + tvStation.FullID + " EPG: " + epg + epgLink + ") " + dataMissing);                
+                Logger.Instance.Write("Station: " + tvStation.FixedLengthName + " (" + tvStation.FullID + " EPG: " + epg + epgLink + ") " + dataMissing);
             }
             else
             {
@@ -893,8 +1126,8 @@ namespace EPGCollector
 
             int recordCount = TVStation.EPGCount(RunParameters.Instance.StationCollection);
             Logger.Instance.Write("<C> Finished - created " + recordCount + " EPG entries");
-            HistoryRecord.Current.CollectionCount = recordCount; 
-            
+            HistoryRecord.Current.CollectionCount = recordCount;
+
             if (TVStation.EPGCount(RunParameters.Instance.StationCollection) == 0)
             {
                 HistoryRecord.Current.CollectionResult = CommandLine.GetCompletionCodeShortDescription(ExitCode.NoDataCollected);
@@ -936,19 +1169,19 @@ namespace EPGCollector
         {
             string cancellationName = "EPG Collector Cancellation Mutex " + CommandLine.RunReference;
             Logger.Instance.Write("Cancellation mutex name is " + cancellationName);
-            
+
             Mutex cancelMutex = new Mutex(false, cancellationName);
 
             try
             {
                 cancelMutex.WaitOne();
                 cancelMutex.Close();
-            }       
+            }
             catch (AbandonedMutexException)
             {
-                Logger.Instance.Write("<E> TVSource has failed - the collection will be abandoned");                
+                Logger.Instance.Write("<E> TVSource has failed - the collection will be abandoned");
             }
-            
+
             pluginAbandon = true;
 
             endProgramEvent.Set();
@@ -965,12 +1198,12 @@ namespace EPGCollector
             Logger.Instance.WriteSeparator("Channel Update Starting");
 
             DVBLinkController.Load();
-            
+
             if (RunParameters.Instance.ChannelReloadData)
                 DVBLinkController.ClearData();
 
             Collection<Provider> providers = createProviderList();
-            
+
             foreach (Provider provider in providers)
                 provider.LogNetworkInfo();
 
@@ -1001,10 +1234,10 @@ namespace EPGCollector
             Logger.Instance.Write(processed + " frequencies processed");
             Logger.Instance.Write(unprocessedFrequencies.Count + " frequencies not processed");
             Logger.Instance.Write(string.Empty);
-            
+
             if (unprocessedFrequencies.Count != 0)
             {
-                Logger.Instance.Write(string.Empty);                
+                Logger.Instance.Write(string.Empty);
 
                 Logger.Instance.Write("The following frequencies have not been processed:");
 
@@ -1070,7 +1303,7 @@ namespace EPGCollector
                     }
                     else
                         Logger.Instance.Write("Scanned station " + scannedStation.FullDescription + " not loaded");
-                }                
+                }
             }
 
             DVBLinkController.Process(frequency);
@@ -1123,7 +1356,7 @@ namespace EPGCollector
                     return (processSatelliteStream(transportStreams));
                 case TunerType.Terrestrial:
                     return (processTerrestrialStream(transportStreams));
-                case TunerType.Cable:                
+                case TunerType.Cable:
                     return (processCableStream(transportStreams));
                 default:
                     return (null);
@@ -1135,13 +1368,13 @@ namespace EPGCollector
             Collection<Provider> satellites = new Collection<Provider>();
 
             foreach (TransportStream transportStream in transportStreams)
-            {                
+            {
                 int orbitalPosition = (NetworkInformationSection.GetOrbitalPosition(transportStream.OriginalNetworkID, transportStream.TransportStreamID));
                 bool eastFlag = (NetworkInformationSection.GetEastFlag(transportStream.OriginalNetworkID, transportStream.TransportStreamID));
 
                 Satellite satellite = findSatellite(satellites, NetworkInformationSection.NetworkInformationSections[0].NetworkName,
                     orbitalPosition, eastFlag);
-                
+
                 SatelliteFrequency frequency = findFrequency(satellite, NetworkInformationSection.GetFrequency(transportStream.OriginalNetworkID, transportStream.TransportStreamID) * 10);
                 frequency.CollectionType = CollectionType.MHEG5;
                 frequency.FEC = FECRate.ConvertDVBFecRate(transportStream.Fec);
@@ -1158,7 +1391,7 @@ namespace EPGCollector
                 frequency.SatelliteDish = ((SatelliteFrequency)RunParameters.Instance.FrequencyCollection[0]).SatelliteDish;
                 frequency.SymbolRate = transportStream.SymbolRate * 100;
                 frequency.Provider = satellite;
-                frequency.ModulationSystem = transportStream.ModulationSystem;  
+                frequency.ModulationSystem = transportStream.ModulationSystem;
 
                 Collection<ServiceListEntry> serviceListEntries = transportStream.ServiceList;
 
@@ -1167,7 +1400,7 @@ namespace EPGCollector
                     foreach (ServiceListEntry serviceListEntry in serviceListEntries)
                     {
                         TVStation station = TVStation.FindStation(RunParameters.Instance.StationCollection,
-                            transportStream.OriginalNetworkID, transportStream.TransportStreamID, 
+                            transportStream.OriginalNetworkID, transportStream.TransportStreamID,
                             serviceListEntry.ServiceID);
                         if (station != null)
                         {
@@ -1222,7 +1455,7 @@ namespace EPGCollector
                 }
 
             }
-            
+
             SatelliteFrequency addFrequency = new SatelliteFrequency();
             addFrequency.Frequency = frequency;
 
@@ -1281,7 +1514,7 @@ namespace EPGCollector
                 TerrestrialFrequency frequency = findFrequency(provider, NetworkInformationSection.GetFrequency(transportStream.OriginalNetworkID, transportStream.TransportStreamID) * 10);
                 frequency.CollectionType = CollectionType.MHEG5;
                 frequency.Bandwidth = transportStream.Bandwidth;
-                
+
                 Collection<ServiceListEntry> serviceListEntries = transportStream.ServiceList;
 
                 if (serviceListEntries != null && serviceListEntries.Count != 0)
@@ -1289,7 +1522,7 @@ namespace EPGCollector
                     foreach (ServiceListEntry serviceListEntry in serviceListEntries)
                     {
                         TVStation station = TVStation.FindStation(RunParameters.Instance.StationCollection,
-                            transportStream.OriginalNetworkID, transportStream.TransportStreamID, 
+                            transportStream.OriginalNetworkID, transportStream.TransportStreamID,
                             serviceListEntry.ServiceID);
                         if (station != null)
                         {
@@ -1358,7 +1591,7 @@ namespace EPGCollector
                 frequency.CollectionType = CollectionType.MHEG5;
                 frequency.FEC = FECRate.ConvertDVBFecRate(transportStream.CableFec);
                 frequency.DVBModulation = transportStream.CableModulation;
-                frequency.Modulation = getCableModulation(transportStream.CableModulation);                
+                frequency.Modulation = getCableModulation(transportStream.CableModulation);
                 frequency.SymbolRate = transportStream.CableSymbolRate * 100;
 
                 Collection<ServiceListEntry> serviceListEntries = transportStream.ServiceList;
@@ -1367,8 +1600,8 @@ namespace EPGCollector
                 {
                     foreach (ServiceListEntry serviceListEntry in serviceListEntries)
                     {
-                        TVStation station = TVStation.FindStation(RunParameters.Instance.StationCollection, 
-                            transportStream.OriginalNetworkID, transportStream.TransportStreamID, 
+                        TVStation station = TVStation.FindStation(RunParameters.Instance.StationCollection,
+                            transportStream.OriginalNetworkID, transportStream.TransportStreamID,
                             serviceListEntry.ServiceID);
                         if (station != null)
                         {
@@ -1461,6 +1694,544 @@ namespace EPGCollector
 
             frequencies.Add(newFrequency);
         }
+    }
+
+
+
+    public class TransportStreamDumpControl
+    {
+        /// <summary>
+        /// Get the default file name
+        /// </summary>
+        public string DefaultFileName { get { return filename; } set { filename = value; } }
+
+        private BackgroundWorker workerDump;
+
+        private double finalSize;
+        private bool running;
+        public DumpParameters dumpParameters;
+        private static string buildcheck = build();
+        private static string path = $"C:\\Users\\adeye\\Desktop\\Plan B\\EPGCollector 4.3\\EPGCollector\\bin\\{buildcheck}\\StreamDump.ts";
+        private string filename;
+        private ITunerDataProvider dataProvider;
+        // signal end of dump 
+        private AutoResetEvent resetEvent = new AutoResetEvent(false);
+        //process complete handler method
+        public delegate void ProcessCompleteHandler(object sender, EventArgs e);
+        public static event ProcessCompleteHandler ProcessComplete;
+        static string build()
+        {
+#if DEBUG
+            string type = "Debug";
+#else
+            string type = "Release";
+#endif
+            return type;
+        }
+        public TransportStreamDumpControl(ITunerDataProvider dumpgraph, string filename)
+        {
+            // set string to hold file name
+            this.DefaultFileName = filename;
+            dataProvider = dumpgraph;
+            dumpParameters = new DumpParameters();
+            dumpParameters.FileName = filename;
+        }
+
+        public void Run(ITunerDataProvider dumpgraph, string filename)
+        {
+            dumpParameters = new DumpParameters();
+            dataProvider = dumpgraph;
+            dumpParameters.FileName = filename;
+
+        }
+
+
+        public void Process()
+        {
+            if (!checkData())
+                return;
+
+            Logger.Instance.Write("Dump started");
+            //Initialize background worker to start dump process in a seperate thread
+            workerDump = new BackgroundWorker();
+            workerDump.WorkerReportsProgress = true;
+            workerDump.WorkerSupportsCancellation = true;
+            workerDump.DoWork += new DoWorkEventHandler(doDump);
+            workerDump.RunWorkerCompleted += new RunWorkerCompletedEventHandler(runWorkerCompleted);
+            workerDump.RunWorkerAsync(getDumpParameters(filename));
+
+            running = true;
+        }
+
+
+        public void Stop()
+        {
+            Logger.Instance.Write("Stop request received");
+
+            if (running)
+            {
+                Logger.Instance.Write("Stopping background worker thread");
+                workerDump.CancelAsync();
+                bool reply = resetEvent.WaitOne(new TimeSpan(0, 0, 45));
+                if (!reply)
+                    Logger.Instance.Write("Failed to stop background worker thread");
+                running = false;
+            }
+
+            Logger.Instance.Write("Stop request processed");
+            Logger.Instance.Write("");
+        }
+
+
+        private bool checkData()
+        {
+            //check dump file already exitsts
+            if (File.Exists(path))
+            {
+                Logger.Instance.Write("Overriding existing stream dump");
+            }
+
+            return (true);
+        }
+
+        private void doDump(object sender, DoWorkEventArgs e)
+        {
+            finalSize = -1;
+
+            dumpParameters = e.Argument as DumpParameters;
+            // set dump parameters within scope
+            RunParameters.Instance.CurrentFrequency = dumpParameters.ScanningFrequency;
+
+            TunerNodeType tunerNodeType;
+            TuningSpec tuningSpec;
+
+            SatelliteFrequency satelliteFrequency = dumpParameters.ScanningFrequency as SatelliteFrequency;
+            if (satelliteFrequency != null)
+            {
+                tunerNodeType = TunerNodeType.Satellite;
+                tuningSpec = new TuningSpec((Satellite)satelliteFrequency.Provider, satelliteFrequency);
+            }
+            else
+            {
+                TerrestrialFrequency terrestrialFrequency = dumpParameters.ScanningFrequency as TerrestrialFrequency;
+                if (terrestrialFrequency != null)
+                {
+                    tunerNodeType = TunerNodeType.Terrestrial;
+                    tuningSpec = new TuningSpec(terrestrialFrequency);
+                }
+                else
+                {
+                    CableFrequency cableFrequency = dumpParameters.ScanningFrequency as CableFrequency;
+                    if (cableFrequency != null)
+                    {
+                        tunerNodeType = TunerNodeType.Cable;
+                        tuningSpec = new TuningSpec(cableFrequency);
+                    }
+                    else
+                    {
+                        AtscFrequency atscFrequency = dumpParameters.ScanningFrequency as AtscFrequency;
+                        if (atscFrequency != null)
+                        {
+                            if (atscFrequency.TunerType == TunerType.
+                                ATSC)
+                                tunerNodeType = TunerNodeType.ATSC;
+                            else
+                                tunerNodeType = TunerNodeType.Cable;
+                            tuningSpec = new TuningSpec(atscFrequency);
+                        }
+                        else
+                        {
+                            ClearQamFrequency clearQamFrequency = dumpParameters.ScanningFrequency as ClearQamFrequency;
+                            if (clearQamFrequency != null)
+                            {
+                                tunerNodeType = TunerNodeType.Cable;
+                                tuningSpec = new TuningSpec(clearQamFrequency);
+                            }
+                            else
+                            {
+                                ISDBSatelliteFrequency isdbSatelliteFrequency = dumpParameters.ScanningFrequency as ISDBSatelliteFrequency;
+                                if (isdbSatelliteFrequency != null)
+                                {
+                                    tunerNodeType = TunerNodeType.ISDBS;
+                                    tuningSpec = new TuningSpec((Satellite)satelliteFrequency.Provider, isdbSatelliteFrequency);
+                                }
+                                else
+                                {
+                                    ISDBTerrestrialFrequency isdbTerrestrialFrequency = dumpParameters.ScanningFrequency as ISDBTerrestrialFrequency;
+                                    if (isdbTerrestrialFrequency != null)
+                                    {
+                                        tunerNodeType = TunerNodeType.ISDBT;
+                                        tuningSpec = new TuningSpec(isdbTerrestrialFrequency);
+                                    }
+                                    else
+                                    {
+                                        FileFrequency fileFrequency = dumpParameters.ScanningFrequency as FileFrequency;
+                                        if (fileFrequency != null)
+                                        {
+                                            tunerNodeType = TunerNodeType.Other;
+                                            tuningSpec = new TuningSpec();
+                                        }
+                                        else
+                                        {
+                                            StreamFrequency streamFrequency = dumpParameters.ScanningFrequency as StreamFrequency;
+                                            if (streamFrequency != null)
+                                            {
+                                                tunerNodeType = TunerNodeType.Other;
+                                                tuningSpec = new TuningSpec();
+                                            }
+                                            else
+                                                throw (new InvalidOperationException("Tuning frequency not recognized"));
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            Tuner currentTuner = null;
+            bool finished = false;
+
+            // set local variable graph to inputted BDA graph
+            ITunerDataProvider graph = dataProvider;
+            while (!finished)
+            {
+                if ((sender as BackgroundWorker).CancellationPending)
+                {
+                    Logger.Instance.Write("Scan abandoned by user");
+                    e.Cancel = true;
+                    resetEvent.Set();
+                    return;
+                }
+
+
+                if (dumpParameters.ScanningFrequency.TunerType != TunerType.File && dumpParameters.ScanningFrequency.TunerType != TunerType.Stream)
+                {
+
+                    if (graph == null)
+                    {
+                        graph = SatIpController.FindReceiver(dumpParameters.ScanningFrequency.SelectedTuners, tunerNodeType, tuningSpec, currentTuner, TuningFrequency.GetDiseqcSetting(tuningSpec.Frequency), dumpParameters.FileName);
+                        if (graph == null)
+                        {
+                            graph = VBoxController.FindReceiver(dumpParameters.ScanningFrequency.SelectedTuners, tunerNodeType, tuningSpec, currentTuner, TuningFrequency.GetDiseqcSetting(tuningSpec.Frequency), dumpParameters.FileName,
+                                dumpParameters.PidList == null ||
+                                dumpParameters.PidList.Count == 0 ||
+                                dumpParameters.PidList[0] == -1 ? true : false);
+                            if (graph == null)
+                            {
+                                Logger.Instance.Write("<e> No tuner able to tune frequency " + dumpParameters.ScanningFrequency.ToString());
+                                finished = true;
+                            }
+                        }
+                    }
+
+                    if (!finished)
+                    {
+                        string tuneReply = checkTuning(graph, dumpParameters, sender as BackgroundWorker);
+
+                        if ((sender as BackgroundWorker).CancellationPending)
+                        {
+                            Logger.Instance.Write("Scan abandoned by user");
+                            graph.Dispose();
+                            e.Cancel = true;
+                            resetEvent.Set();
+                            return;
+                        }
+
+                        if (tuneReply == null)
+                        {
+                            try
+                            {
+                                getData(graph as ISampleDataProvider, dumpParameters, sender as BackgroundWorker);
+                            }
+                            catch (IOException ex)
+                            {
+                                Logger.Instance.Write("<e> Failed to create dump file");
+                                Logger.Instance.Write("<e> " + ex.Message);
+                            }
+                            finished = true;
+                        }
+                        else
+                        {
+                            Logger.Instance.Write("Failed to tune frequency " + dumpParameters.ScanningFrequency.ToString());
+                            graph.Dispose();
+                            currentTuner = graph.Tuner;
+                        }
+                    }
+                }
+                else
+                {
+                    if (dumpParameters.ScanningFrequency.TunerType == TunerType.File)
+                    {
+                        SimulationDataProvider dataProvider = new SimulationDataProvider(((FileFrequency)dumpParameters.ScanningFrequency).Path, dumpParameters.ScanningFrequency, dumpParameters.FileName);
+                        string providerReply = dataProvider.Run();
+                        if (providerReply != null)
+                        {
+                            Logger.Instance.Write("<e> Simulation Data Provider failed");
+                            Logger.Instance.Write("<e> " + providerReply);
+                        }
+                        else
+                        {
+                            getData(dataProvider as ISampleDataProvider, dumpParameters, sender as BackgroundWorker);
+                            dataProvider.Stop();
+
+                            finished = true;
+                        }
+                    }
+                    else
+                    {
+                        StreamFrequency streamFrequency = dumpParameters.ScanningFrequency as StreamFrequency;
+                        StreamController streamController = new StreamController(streamFrequency.IPAddress, streamFrequency.PortNumber);
+                        ErrorSpec errorSpec = streamController.Run(streamFrequency, dumpParameters.FileName);
+                        if (errorSpec != null)
+                        {
+                            Logger.Instance.Write("<e> Stream Data Provider failed");
+                            Logger.Instance.Write("<e> " + errorSpec);
+                        }
+                        else
+                        {
+                            getData(streamController as ISampleDataProvider, dumpParameters, sender as BackgroundWorker);
+                            streamController.Stop();
+                        }
+                    }
+
+                    finished = true;
+                }
+            }
+            graph.Dispose();
+            e.Cancel = true;
+            resetEvent.Set();
+
+        }
+
+        private string checkTuning(ITunerDataProvider graph, DumpParameters dumpParameters, BackgroundWorker worker)
+        {
+            TimeSpan timeout = new TimeSpan();
+            bool done = false;
+            bool locked = false;
+            int frequencyRetries = 0;
+
+            while (!done)
+            {
+                if (worker.CancellationPending)
+                {
+                    Logger.Instance.Write("Dump abandoned by user");
+                    return (null);
+                }
+
+                locked = graph.SignalLocked;
+                if (!locked)
+                {
+                    if (graph.SignalQuality > 0)
+                    {
+                        locked = true;
+                        done = true;
+                    }
+                    else
+                    {
+                        if (graph.SignalPresent)
+                        {
+                            locked = true;
+                            done = true;
+                        }
+                        else
+                        {
+                            Logger.Instance.Write("Signal not acquired: lock is " + graph.SignalLocked + " quality is " + graph.SignalQuality + " signal not present");
+                            Thread.Sleep(1000);
+                            timeout = timeout.Add(new TimeSpan(0, 0, 1));
+                            done = (timeout.TotalSeconds == dumpParameters.SignalLockTimeout);
+                        }
+                    }
+
+                    if (done)
+                    {
+                        done = (frequencyRetries == 2);
+                        if (done)
+                            Logger.Instance.Write("<e> Failed to acquire signal");
+                        else
+                        {
+                            Logger.Instance.Write("Retrying frequency");
+                            timeout = new TimeSpan();
+                            frequencyRetries++;
+                        }
+                    }
+                }
+                else
+                {
+                    Logger.Instance.Write("Signal acquired: lock is " + graph.SignalLocked + " quality is " + graph.SignalQuality + " strength is " + graph.SignalStrength);
+                    done = true;
+                }
+            }
+
+            if (locked)
+                return (null);
+            else
+                return ("<e> The tuner failed to acquire a signal for frequency " + dumpParameters.ScanningFrequency.ToString());
+        }
+
+        private void getData(ISampleDataProvider graph, DumpParameters dumpParameters, BackgroundWorker worker)
+        {
+            Logger.Instance.Write("Starting dump");
+            // method to check pid list for specific channels
+
+            int[] newPids;
+
+            if (dumpParameters.PidList != null && dumpParameters.PidList.Count != 0)
+            {
+                newPids = new int[dumpParameters.PidList.Count];
+                for (int index = 0; index < dumpParameters.PidList.Count; index++)
+                    newPids[index] = dumpParameters.PidList[index];
+            }
+            else
+            {
+                newPids = new int[1];
+                newPids[0] = -1;
+            }
+
+            Logger.Instance.Write("Changing pid mapping to " + (newPids[0] == -1 ? "all pids" : "selected pids"));
+            graph.ChangePidMapping(newPids);
+
+            DateTime startTime = DateTime.Now;
+
+            int lastSize = 0;
+
+            while ((DateTime.Now - startTime).TotalSeconds < dumpParameters.DataCollectionTimeout && !worker.CancellationPending)
+            {
+                Thread.Sleep(1000);
+
+                Logger.Instance.Write("Buffer space used: " + graph.BufferSpaceUsed);
+
+                int increment = 5;
+                if (dumpParameters.PidList != null && dumpParameters.PidList.Count != 0)
+                    increment = 1;
+
+                int size = graph.DumpFileSize / (1024 * 1024);
+                if (size >= lastSize + increment)
+                {
+                    Logger.Instance.Write("Dump now " + size + "Mb");
+                    worker.ReportProgress((int)size);
+                    lastSize = size;
+                }
+            }
+        }
+
+        private void runWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Error != null)
+            {
+                throw new InvalidOperationException("Background worker failed - see inner exception", e.Error);
+            }
+
+            Thread.Sleep(2000);
+            //checking if dump file exists
+            if (File.Exists(dumpParameters.FileName))
+                finalSize = new FileInfo(dumpParameters.FileName).Length;
+            else
+                finalSize = -1;
+
+            Logger.Instance.Write("Dump completed - file size now " + finalSize + " bytes");
+
+            if (finalSize != -1)
+            {
+                string sizeString;
+
+                if (finalSize < 1024)
+                    sizeString = finalSize + " bytes";
+                else
+                {
+                    if (finalSize < 1024 * 1024)
+                        sizeString = Math.Round(finalSize / 1024, 2) + "KB.";
+                    else
+                        sizeString = Math.Round(finalSize / (1024 * 1024), 2) + "MB.";
+                }
+                string output = "The file size is " + sizeString;
+
+                Logger.Instance.Write("The transport stream dump has been completed." +
+                    Environment.NewLine + Environment.NewLine + output);
+
+            }
+            else
+            {
+                string output = "No file created.";
+
+                Logger.Instance.Write("The transport stream dump has been completed." +
+                    Environment.NewLine + Environment.NewLine + output);
+            }
+
+            if (ProcessComplete != null)
+                ProcessComplete(this, new EventArgs());
+
+        }
+
+        public bool finish()
+        {
+            // used to signify dump collection is complete
+            return true;
+        }
+
+        private DumpParameters getDumpParameters(string file)
+        {
+            DumpParameters dumpParameters = new DumpParameters();
+            //initalise dump parameters from Transport Stream Dump Control
+            dumpParameters.ScanningFrequency = RunParameters.Instance.FrequencyCollection[0];
+            int signal, timeout;
+            signal = 10;
+            //duration of ts file
+            timeout = 90;
+            dumpParameters.SignalLockTimeout = signal;
+            dumpParameters.DataCollectionTimeout = timeout;
+            dumpParameters.FileName = file;
+
+            return (dumpParameters);
+        }
+
+        /// <summary>
+        /// Prepare to save update data.
+        /// </summary>
+        /// <returns>False. This function is not implemented.</returns>
+        public bool PrepareToSave()
+        {
+            return (false);
+        }
+
+        /// <summary>
+        /// Save updated data.
+        /// </summary>
+        /// <returns>False. This function is not implemented.</returns>
+        public bool Save()
+        {
+            return (false);
+        }
+
+        /// <summary>
+        /// Save updated data to a file.
+        /// </summary>
+        /// <param name="fileName">The name of the file.</param>
+        /// <returns>False. This function is not implemented.</returns>
+        public bool Save(string fileName)
+        {
+            return (false);
+        }
+
+        private void inProgressCancelled(object sender, EventArgs e)
+        {
+            Logger.Instance.Write("Stop dump requested");
+            workerDump.CancelAsync();
+            resetEvent.WaitOne(new TimeSpan(0, 0, 45));
+        }
+
+        public class DumpParameters
+        {
+            internal TuningFrequency ScanningFrequency { get; set; }
+            internal int SignalLockTimeout { get; set; }
+            internal int DataCollectionTimeout { get; set; }
+            internal Collection<int> PidList { get; set; }
+            internal string FileName { get; set; }
+
+            internal DumpParameters() { }
+        }
+
     }
 }
 

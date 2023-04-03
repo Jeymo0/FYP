@@ -9,3 +9,14 @@ C:\Cygnus Consulting\EPGCollector 4.3\MxfParser\obj\Debug\MxfParser.pdb
 C:\Cygnus Consulting\EPGCollector 4.3\MxfParser\obj\Debug\MxfParser.csproj.CoreCompileInputs.cache
 C:\Cygnus Consulting\EPGCollector 4.3\MxfParser\obj\Debug\MxfParser.csproj.CopyComplete
 C:\Cygnus Consulting\EPGCollector 4.3\MxfParser\obj\Debug\MxfParser.csproj.AssemblyReference.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\MxfParser\bin\Debug\MxfParser.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\MxfParser\bin\Debug\MxfParser.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\MxfParser\bin\Debug\DomainObjects.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\MxfParser\bin\Debug\Brotli.NET.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\MxfParser\bin\Debug\Newtonsoft.Json.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\MxfParser\bin\Debug\DomainObjects.pdb
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\MxfParser\obj\Debug\MxfParser.csproj.AssemblyReference.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\MxfParser\obj\Debug\MxfParser.csproj.CoreCompileInputs.cache
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\MxfParser\obj\Debug\MxfParser.csproj.CopyComplete
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\MxfParser\obj\Debug\MxfParser.dll
+C:\Users\adeye\Desktop\Plan B\EPGCollector 4.3\MxfParser\obj\Debug\MxfParser.pdb

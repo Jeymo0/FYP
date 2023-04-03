@@ -125,7 +125,7 @@ namespace DomainObjects
                         if (!writeStart)
                             xmlWriter.WriteEndElement();
                     }
-                } 
+                }
 
                 bool firstRegion = true;
 
@@ -159,12 +159,12 @@ namespace DomainObjects
 
                         if (tuningFrequency.AdvancedRunParamters.ChannelRegion == -1 || region == 65535)
                             return (true);
-                            
+
                         return (region == tuningFrequency.AdvancedRunParamters.ChannelRegion);
                     }
                 }
             }
-            
+
             return (false);
         }
 
@@ -229,13 +229,13 @@ namespace DomainObjects
         {
             if (processedStations.Contains(station))
                 return false;
-            
+
             if (station.TunerType == TunerType.Satellite)
                 return false;
- 
+
             if (station.LogicalChannelNumber == -1)
                 return false;
-            
+
             if (!isServiceType(serviceTypes, station.ServiceType))
                 return false;
 
